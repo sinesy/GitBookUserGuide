@@ -1,0 +1,2 @@
+# Server global variables
+
