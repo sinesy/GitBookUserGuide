@@ -18,3 +18,7 @@ More in general, a grid has a mode, a sort of state that determines the supporte
 * when pressing the save button the grid mode changes to readonly again, if the saving operation succedes
 * when pressing the cancel button the grid mode changes to readonly and all the changes applied to the grid in insert/edit mode are lost
 
+---
+
+
+

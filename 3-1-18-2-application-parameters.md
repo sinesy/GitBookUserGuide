@@ -5,12 +5,17 @@ When saving parameters, these will be accessible from an application when the us
 These parameters are used by specific functionalities of the interpreted application and they are reported in the following list:
 
 * Google Maps
+
 * Start Point Latitude
+
 * Start Point Longitude
 * Start Point Name
+
 * Remote Server URL to use in case of 4WS.Platform used on Google App Engine and reports generated remotely in another server
 * UI
+
 * Top menubar
+
 * First level menu height \(pixel\)
 * Second level menu height \(pixel\)
 * Filter button position \(LEFT/RIGHT\)
@@ -28,13 +33,19 @@ These parameters are used by specific functionalities of the interpreted applica
 * width/height for images
 * number of columns to use for buttons layout
 * round border radix for buttons
+
 * Alfresco
+
 * Alfresco: Admin Password when connecting to Alfresco Server
+
 * Alfresco: Admin Username when connecting to Alfresco Server
 * Alfresco: URL when connecting to Alfresco Server
 * Alfresco: model file name when connecting to Alfresco Server
+
 * Permissions
+
 * Login controls to hide
+
 * Authentication
 * \(optional def. ‘4ws’\) Authentication chain
 * \(optional def. true\) LDAP checking enabled
@@ -60,8 +71,11 @@ These parameters are used by specific functionalities of the interpreted applica
 * \(optional\) fields to manage in LDAP groups
 * \(optional\) field types to manage in LDAP groups
 * \(optional\) LDAP attribute for group id
+
 * Scheduler
+
 * "From email address" when sending email from Scheduler
+
 * Email notification system
 * SMTP host when sending email
 * \(optional\) SMTP port when sending email
@@ -69,17 +83,23 @@ These parameters are used by specific functionalities of the interpreted applica
 * \(optional\) SMTP username when sending email
 * \(optional\) SMTP password when sending email
 * \(optional\) Use TLS when sending email: E/F
+
 * Application Access
+
 * Enable users
+
 * \(optional\) Access Unavailable message
+
 * Password management
+
 * Password regular expression: you can define a regular expression for users password.
 
-  **Example**
+  ## Example
 
   Translation **:**
 
 * matches a string of six or more characters;
+
 * that contains at least one digit \(d is shorthand for \[0-9\]\);
 * at least one lowercase character; and
 * at least one uppercase character.
@@ -88,13 +108,14 @@ First, create a server side js action when defining the custom logic; this actio
 
 * Password: number of erroneous login attempts
 * Order of Grid Export: ordered list of types export for grids
+
 * Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
 
 Second, report the action id just defined as the “Customize Datastore” application parameter.
 
 ## Example
 
-```javascript
+```js
 if (reqParams.dataStoreId==null || reqParams.dataStoreId==0 || reqParams.dataStoreId==-1) {
     utils.setReturnValue("");
 }
@@ -114,4 +135,8 @@ else {
     }
 }
 ```
+
+---
+
+
 

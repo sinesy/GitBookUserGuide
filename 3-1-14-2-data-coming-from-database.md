@@ -22,3 +22,7 @@ There is a special settings in this panel that allows to specify how to manage t
 In the first case, the user who is configuring the columns has to specify for each field which is the associated language. In this way the interpreter will be able to save automatically a description for each language, since it knows where to save them for all languages.  
 In the second case, the data model related to the main table has to include a relation to the dictionary table, which has to be defined as a data model too. Using this relation, the interpreter is able to save records on the dictionary table, for each language.
 
+---
+
+
+

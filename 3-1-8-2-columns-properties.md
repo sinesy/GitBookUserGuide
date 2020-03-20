@@ -50,13 +50,13 @@ These are all properties defined for a column:
 
 Example for a Web Application:
 
-```javascript
+```js
 if (value&lt;0) return "negative"; if (value&gt;0) return "positive"; return "zero";
 ```
 
 Example for a Mobile Application:
 
-```javascript
+```js
 var obj = { value: vo["COD_PRODOTTO"] }; 
 if (vo["VALIDATO"]=="N") { 
   obj.backgroundColor = "FFDDDD";
@@ -70,7 +70,7 @@ return val;
 
 * **Not editable if**  – boolean expression, expressed in javascript, indicating when the cells of the selected column are editable; this property overrides the default behavior of the cells, defined through the combination of grid mode \(insert/edit\) + can insert/can edit properties. This property is useful when the behavior of the cell should change according to a dynamic value, such as "a document state" represented by the value of another attribute of the same row.
 
-Only for a **pivot grid** , these are all the properties defined for a column:
+Only for a  **pivot grid** , these are all the properties defined for a column:
 
 * **Pivot column**  – flag used to set pivoting column
 * **Grouping column**  – flag used to set column that is grouped value
@@ -93,16 +93,16 @@ Allowed application types for columns, according to the related database field t
 | File identifier | File upload/download |
 
 There is a difference between File upload/download, Image Path, File Path column types:  
-**File upload/download** – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the grid columns designer; when saving, the uploaded file will be stored within the following subfolders structure:  
+ **File upload/download**  – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the grid columns designer; when saving, the uploaded file will be stored within the following subfolders structure:  
 ///filename.xxx  
 That structure allows to store multiple versions of the file \(file versioning\).  
-**Image Path** – this column type can be used to show a preview of the previously uploaded image; it cannot be used to upload or download imags; the images to show are retrieved starting from the path in the server file system starting from the path specified through "directory upload" property in the grid columns designer.  
-**File Path** – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the grid columns designer; when saving, the uploaded file will be stored in that path.  
+ **Image Path**  – this column type can be used to show a preview of the previously uploaded image; it cannot be used to upload or download imags; the images to show are retrieved starting from the path in the server file system starting from the path specified through "directory upload" property in the grid columns designer.  
+ **File Path**  – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the grid columns designer; when saving, the uploaded file will be stored in that path.  
 This column type does not allow to store multiple versions of the file.  
-The **Button** type column allows to show a clickable button within a cell, for each cell of that column. It is then possible to attach a "cell click" event to it and consequently manage the binded action.  
+The  **Button**  type column allows to show a clickable button within a cell, for each cell of that column. It is then possible to attach a "cell click" event to it and consequently manage the binded action.  
 The default behavior of that button is to show the cell value as its text, painted in white color on a blue background color. You can change the default behavior by setting the "renderer" property for that column, which has this default content:
 
-```javascript
+```js
 function(value, metaData, record, rowIndex, colIndex, store) {
     metaData.style = 'text-align: center;color: white; background: #3d71b8';
     return value
@@ -110,4 +110,8 @@ function(value, metaData, record, rowIndex, colIndex, store) {
 ```
 
 Note that it is not allowed to insert/delete columns in a grid: columns are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model. The only exception to this rule is when the user is defining a business component "Query for a report to show on grid", where no data model is required: the select clause can be manually defined by the user and changes to this part of the SQL query are automatically reflected on the columns list of the linked grids.
+
+---
+
+
 

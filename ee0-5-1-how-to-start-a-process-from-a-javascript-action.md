@@ -1,6 +1,6 @@
 # How to start a process from a JavaScript action
 
-var processInstanceId =  **startActivitiProcess** \(processId, obj\);
+var  processInstanceId  = ** startActivitiProcess** \(processId, obj\);
 
 * processId: process id
 
@@ -15,11 +15,11 @@ More precisely, if you have defined variables like MY\_EMAIL\_ADDRESS and MY\_NA
 { myEmailAddress: “…”, myName: “…” }  
 that is to say, variable names must be expressed in "camel-case".
 
-Note: the **start** variable is a boolean value representing the outcome of the process start.
+Note: the  **start**  variable is a boolean value representing the outcome of the process start.
 
 ## Example
 
-```javascript
+```js
 var obj = {
   requestDate: new Date(),
   docId: vo.documentId,
@@ -35,4 +35,8 @@ catch(e) {
   // in case of failure when attempting to start a process, an exception is fired here: e.toString() contains the error message
 }
 ```
+
+---
+
+
 

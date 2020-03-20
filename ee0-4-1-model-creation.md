@@ -16,3 +16,7 @@ The Modeler is split up in 3 main areas:
 
 After modeling the process, it must be saved by pressing the "Save" button on the top of the Web Modeler. The Modeler window can finally be closed by pressing the X button on the top right of the window \(be sure to press the outermost one\).
 
+---
+
+
+

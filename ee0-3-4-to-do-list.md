@@ -8,3 +8,7 @@ Once assigned the task, the user has to complete it, at some point. Properties l
 Once of the key points about the integration between Platform and Activiti is that properties binded to a manual task become input controls of a detail form in Platform.  
 That means that it is possible to enrich the form content using the rich set of graphics components provided by Platform, such as code selectors, combo boxes, etc.
 
+---
+
+
+

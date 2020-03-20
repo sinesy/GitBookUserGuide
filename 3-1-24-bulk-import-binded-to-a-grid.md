@@ -42,7 +42,7 @@ RTRIM\(FIELDNAME\) – remove right spaces from the string value
 LPAD\(FIELDNAME,NUM\) – add spaces to the left of the string value, until the whole string will reach NUM characters  
 RPAD\(FIELDNAME,NUM\) – add spaces to the right of the string value, until the whole string will reach NUM characters
 
-**Events supported while importing rows in grid**  
+**Events supported while importing rows in grid**   
 There are a few events which can be configured in the grid and invokable when importing data from a csv or xls file:
 
 * **Before importinga row** 
@@ -51,12 +51,12 @@ There are a few events which can be configured in the grid and invokable when im
 * **After importing all rows** 
 
 The action to link to these events MUST be a server-side js action.  
-In case of “ **Before importing a row** ” event, the js action will have in input a **vo** variable, containing the values of the current row under process. That js object contains all the value read from the input file and you can override some of them through the method:  
+In case of “ **Before importing a row** ” event, the js action will have in input a  **vo**  variable, containing the values of the current row under process. That js object contains all the value read from the input file and you can override some of them through the method:  
 utils.setAttributeName\(“COLUNM\_XXX”,value\);
 
 That row has not been inserted yet, so that you can skip its processing, by launch an instruction like:
 
-```javascript
+```js
 throw "message";
 ```
 
@@ -65,9 +65,9 @@ values in the vo variable are expressed in two alternative ways, according to th
 * in case of an xls file, vo attributes are: COLUMN\_A, COLUMN\_B, …
 * in case of an csvfile, vo attributes are: COLUMN\_0, COLUMN\_1, …
 
-In case of “ **After importing all rows** ” event, the js action will have in input a **vo** variable, containing an attribute named “ **importedRows** ” reporting the number of processed rows.
+In case of “ **After importing all rows** ” event, the js action will have in input a  **vo**  variable, containing an attribute named “ **importedRows** ” reporting the number of processed rows.
 
-**How to manage the insert/update of records whose primary key is a progressive**  
+**How to manage the insert/update of records whose primary key is a progressive**   
 In case you need to fill a table whose primary key is a progressive reckoned through an application table, you cannot use the GET\_VALUE or PROGRESSIVE functions, since the first can only get back a value, not change it and the second function can only work with progressives determined through an internal counter directly managed by Platform.  
 If you have your own application table used to get the current value for a progressive, the PROGRESSIVE function cannot help you.  
 In such a scenario, you can use the “before import row” event and link to it a server-side js action whose content should include:
@@ -90,4 +90,8 @@ At this point, you have a progressive: either fetchedfrom the first query or gen
 be sure that COLUMN\_XYZ does not exists in the input file, so you can set it as you wish
 
 * finally, in the mapping between input fields and table fields in output, you have to map COLUMN\_XYZ with your YOUR\_PK field, so that the value is correctly set to the record to insert/update. The insert/update operations will do the rest!
+
+---
+
+
 

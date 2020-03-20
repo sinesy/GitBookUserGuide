@@ -10,3 +10,7 @@ Requirements related to the Community Edition are:
 * You can use any kind of OS: Windows, Linux or MacOS.
 * A development database schema is also required; the supported databases are: Oracle, MySQL, MS SQLServer, PostgreSQL
 
+---
+
+
+

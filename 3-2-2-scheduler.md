@@ -13,3 +13,7 @@ Process execution history is also available and automatically cleaned up over ti
 
 ![](http://4wsplatform.org/wp-content/plugins../../uploads/media/copiadiplatformmanual_part3/image13.png)
 
+---
+
+
+

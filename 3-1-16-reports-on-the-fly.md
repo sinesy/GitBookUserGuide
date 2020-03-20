@@ -7,3 +7,7 @@ In order to overcome this limit, a special kind of business component called " *
 A menu item can also be created along with the business component + grid: in this way it is possible to create powerful reports and access to them directly from the application menu.  
 They are a window containing a grid panel, having the same features ofany other panel, so it is possible to include it in any other panel or window too.
 
+---
+
+
+

@@ -14,3 +14,7 @@ Since you have specified the dataset id per Google Cloud Project, every Datastor
 
 Once done that, you can start creating entities, defining enquiries using the GQL query language, creating panels connected to these components and manage all reading and writing operations involved with the panes.
 
+---
+
+
+

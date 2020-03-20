@@ -9,3 +9,7 @@ Single interval: you can specify the start and the end date;
 Multiple interval: you can select the day, the months and the years for define the rule.  
 You can remove the interval but you must selected the exact date for it.
 
+---
+
+
+

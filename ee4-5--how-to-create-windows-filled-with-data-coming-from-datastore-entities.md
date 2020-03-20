@@ -4,3 +4,7 @@ Once created an object representing a datastore entity and a few business compon
 A grid panel or a form panel can be fill in with data coming from business components linked to a datastore entity.  
 In this way, you can read and write data stored in the Google Datastore.
 
+---
+
+
+

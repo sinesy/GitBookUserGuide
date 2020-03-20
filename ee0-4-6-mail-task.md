@@ -9,3 +9,7 @@ Once completed the initial configuration of the SMTP server, a mail task can be 
 * To/From/Subject/Cc/Bcc: to and from address and subject are required; the other properties are optional
 * Text/HTML: either the text or the HTML body must be provided.
 
+---
+
+
+

@@ -9,13 +9,13 @@ When writing server-side javascript in this component, you can access to a serie
 The complete javascript methods list is reported in this section.  
 A method you have always to include \(once\) at the end of the script is:
 
-```javascript
+```js
 utils.setReturnValue(jsonString);
 ```
 
-where **jsonString** is a JSON string having always this content:
+where  **jsonString**  is a JSON string having always this content:
 
-```javascript
+```js
 { ... }
 ```
 
@@ -25,7 +25,7 @@ CORPORATE\_NAME
 ENABLED  
 That means we have to get back a JSON string with this format:
 
-```javascript
+```js
 { "customerCode": "C1", "corporateName": "Customer 1", "enabled": true }
 ```
 
@@ -33,7 +33,7 @@ In case of a detail form, you have always in input all the primary key values, i
 Starting from this requisite, you can access to the primary key values through a built-in object named “reqParams”, where you can find as attributes all the input passed to the business component \(from the detail form\).  
 This is an example of how to get data to fill in a detail form using server-side javascript:
 
-```javascript
+```js
 var customerCode = reqParams.customerCode; // get the primary key from the component inputs
 
 // execute a query having only one record as a result
@@ -59,4 +59,8 @@ json = JSON.stringify(obj);
 // get back data...
 utils.setReturnValue(json);
 ```
+
+---
+
+
 

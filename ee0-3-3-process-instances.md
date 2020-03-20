@@ -1,7 +1,8 @@
 # Process instances
 
 This menu item opens a window displaying the list of process instances currently running.  
-Since the number of instances for all the processes and process versions can be huge, there are two lists within this window:
+Since the number of instances for all the processes and process versions can be huge, there are two lists within this window:  
+
 
 * a process list, where all processes are reported
 * a process instances list
@@ -13,4 +14,8 @@ On the right side of the window, the instance detail is reported:
 
 * a graphical representation of the process instance, where the current running activity is highlighted
 * details about the instance properties and completed tasks are reported as well.
+
+---
+
+
 

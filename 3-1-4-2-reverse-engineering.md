@@ -9,3 +9,7 @@ This behavior clearly shows how the product can be used: you can start with a da
 When importing tables from a database, 4WS.Platform creates always a business component to use to fetch a list of data: basically the component is a SQL query whose select clause includes all database fields for the main data model and all data models referred by the out-relations.  
 4WS.Platform checks also for primary keys or unique keys: if it has been defined for the data model, the data model is marked as "writable" and insert/update/delete operations are allowed for that data model. Moreover, a second business component will be automatically created and defined as a SQL query to fetch a single record, starting from the values of the primary key \(or unique key\).
 
+---
+
+
+

@@ -5,3 +5,7 @@ The first step is setting up the environment through the application parameters 
 See the Identity Management section of Platform manual to figure out how to configure the environment.  
 Once completed the initial configuration, the Google server-side API can be invoked.
 
+---
+
+
+

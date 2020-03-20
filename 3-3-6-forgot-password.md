@@ -8,3 +8,7 @@ The “forgot password” link is visible only if the following parameters have 
 * Administrator e-mail, i.e. the email address used for the sender
 * 4WS.Platform base URL – needed to create a dynamic link to include in the email message, used to point to the right Platform server.
 
+---
+
+
+

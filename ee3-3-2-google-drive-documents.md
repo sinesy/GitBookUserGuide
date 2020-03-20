@@ -5,9 +5,9 @@ In this way, creating a simple Document Management System based on GDrive become
 
 Typically, the steps to follow when creating a list of documents read from GDrive includes:  
 defining an object, by choosing "Add a Google Drive object" in the Objects list of the Web Designer; once define the object name and save it, the second folder becomes enabled  
-defining the properties of the document \(object\) just defined; default properties are always created by default. These include: document id, type, creation date, etc.  
+defining the properties of the document \(object\) just defined; default properties are always created by default. These include: document id, type, creation date, etc.   
 Here additional custom properties can be defined and added to each document  
-creating a business component to feed a grid; the business component to create mustbe linked to the object just created and must have "List component fed by a Google Drive folder" type.  
+creating a business component to feed a grid; the business component to create mustbe linked to the object just created and must have "List component fed by a Google Drive folder" type.   
 Here the folder id is mandatory and must be specified. Go to Google Drive to get the id.  
 An optional field is the where condition to apply, in case not all documents stored in the folder should be retrieved. The where condition must respect the Google Drive syntax, described in [https://developers.google.com/drive/v2/web/search-parameters](https://developers.google.com/drive/v2/web/search-parameters)  
 creating a grid and link it to the business component  
@@ -21,4 +21,8 @@ Note: it is also possible to retrieve documents belonging to a folder and its su
 
 Filter panels can also be linked to the grid, in order to filter documents according to a set of properties showed in that filter.  
 Note that the filter panel also contains on the top a "Search by text" field: this allows to search by document content; this feature is automatically provided by Google Drive and could not always work: it depends on the document type and not works for image based PDF documents, for instance.
+
+---
+
+
 

@@ -14,3 +14,7 @@ Apart from the action binded to the button, there are other properties that can 
 
 Through buttons it is possible to open windows from parent windows, execute business logic on the server side, perform other presentation logic, through actions, expressed as javascript, SQL statements, web services.
 
+---
+
+
+

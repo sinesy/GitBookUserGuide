@@ -16,7 +16,7 @@ Required data to specify when defining a report execution are:
 * **text**  to show in the menu item or text button, used to execute the report
 * **report name** , fetched from the list of .jasper files stored within the subfolder in the Platform web context
 * **datastore**  to use when invoking the report, that is to way, the database connection to pass to the report in order to allow the report to retrieve data from a database on its own
-* **report format**  – PDF or XLS
+* **report format ** – PDF or XLS
 * **list component**  – optional field; it can be used if the report must be filled in with a list of records expressed in JSON format and coming from a business component; the requirement is that the business component must provide a list of records, not a detail business component.
 
 Additional requirements to meet on the iReport side are:
@@ -34,7 +34,7 @@ Each parameter can be managed in 4 alternative ways:
 
 In case at least one parameter has been configured to be viewed, a filter panel is proposed each time the user press on the report: in this ways the user can set the values in the filter controls and then generate the report. In case no parameters have been defined to be showed, the report is directly generated when pressing on the report generation \(i.e. menu item or report button in grid/form\).
 
-**Filling a Jasper Report template with a server-side js business component**  
+**Filling a Jasper Report template with a server-side js business component**   
 You can use iReport to create a report template which is not connected to a SQL query, but it is fill with a list of records expressed as a JSON string, passed by Platform to the report, when executing it.  
 The steps to follow are:
 
@@ -45,4 +45,8 @@ The steps to follow are:
 * define manually every field needed in the report \(see the section “Fields”\), by pressing the “Add” button to add the field; here it is essential to set also the “description” field and not only the field name: the “description” field must be set with the attribute name reported in the JSON list of data
 * it is not possible to test the report directly from iReport: you have to publish it into Platform
 * during the publishing process of the report in platform, you have to fill also the “List component” optional lookup: here you have to choose the right business component, which has to provide the same attributes you defined in the report template
+
+---
+
+
 

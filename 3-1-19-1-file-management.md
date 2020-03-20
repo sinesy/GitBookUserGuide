@@ -1,12 +1,12 @@
 # File Management
 
 There is always the chance to add additional files to the application configured using the App Designer. In that case, a series of custom files can be created and should be stored inside the application subfolder. The file system has this organization:  
-**tomcat -&gt; webapps -&gt; platform -&gt;applicationsubfolder**  
+ **tomcat -&gt; webapps -&gt; platform -&gt;applicationsubfolder**   
 When creating a new application through the App Designer, the user specifies an "applicationsubfolder" for that application; when saving these settings, such a folder will be created by the App Designer within the "platform" web context of the Application Server \(i.e. Tomcat\).  
 The subfolder should respect this structure:  
-/ **script** – custom javascript files  
-/ **css** – custom CSS files  
-/ **xyz** – any other static or dynamic content accessible through the web
+/ **script**  – custom javascript files  
+/ **css**  – custom CSS files  
+/ **xyz**  – any other static or dynamic content accessible through the web
 
 When starting the web application, the Web interpreter will automatically scan this subfolder searching for .js/.css files and it will include all of them along with the rest of the application; in this way you can attach any custom GUI content.  
 When starting the mobile app, the Mobile Interpreter will automatically receive the content of this subfolder , which should contain static content like images or documents which should be downloaded and used locally by the mobile app; in this way you can attach any custom GUI content.  
@@ -26,4 +26,8 @@ After doing that, you can publish them into the applicationsubfolder in two alte
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/import.png)
 
 **Note** : That .zip file can then be used to import .class or report files. Once launched the import process, the App Designer will recreate the original structure of the custom files, by moving any .classes and .report file it finds to the correct classpath. Remember to restart the web container in order to make Tomcat able to find and load these classes.
+
+---
+
+
 

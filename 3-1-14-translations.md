@@ -19,3 +19,7 @@ Translations can be divided into two categories:
 
 These types of translations will be described in detail in the next two sections.
 
+---
+
+
+

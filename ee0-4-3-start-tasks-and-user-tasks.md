@@ -12,3 +12,7 @@ Another common task is the user task, which represents a manual task started and
 * Assignments: one or more assignees to set for this task \(mandatory\)
 * Form properties: additional properties that can be set, according to specific needs.
 
+---
+
+
+

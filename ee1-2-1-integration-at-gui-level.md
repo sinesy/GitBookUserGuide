@@ -7,3 +7,7 @@ Platform is more than that: it was born as an open source tool to use to quickly
 
 All the features provided by Platform when creating a GUI starting from a database are still available when connected to Alfresco. So it is possible to include code selectors, date/date+time/time controls, as well as numeric or text fields: in this way the UI can be enhanced when compared with the basic one provided together with Alfresco Share.
 
+---
+
+
+

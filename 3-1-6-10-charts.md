@@ -16,10 +16,10 @@ When the user chooses this kind of panel in the "Add window" wizard, a few setti
 * **MinMax Value V Axis** : Moves the min or max value of the vertical axis to the specified value; this will be leftward in most charts.
 * **Increment V Axis** : Replaces the automatically generated Y-axis ticks with the specified array. The array values start from Min Value and create tick with +Increment formula.
 * **Legend Field** : field of the legend.
-* **Unique query for all series** ,  **Series List** : check it if you want to define a query common to all the series and another query to control how many times to execute the first query, that is to say, one for each record read by the latter query.
+* **Unique query for all series** , ** Series List** : check it if you want to define a query common to all the series and another query to control how many times to execute the first query, that is to say, one for each record read by the latter query.
 * **Options** : this field allows to add optional settings , usually to customize the default behavior of a chart, according to the Google Chart options. Example:
 
-```javascript
+```js
 legend: {position: 'none'}, colors:['#ff6600', '#779aab']
 ```
 
@@ -36,7 +36,7 @@ In the next form the user can define any number of series.
   Please bear in mind that when a filter panel is created, all filter contrals defined within it are disabled. Consequently, you have to select which filter fields will be visible.  
   Finally, if you want to apply a \(hidden\) filter without a filter panel, i.e. without prompting the user to specify the filter value, you have to create an action containing:
 
-```javascript
+```js
 baseParamsChartPanelXXX.filterNames = ‘field’;
 baseParamsChartPanelXXX.filterValues = ‘value’;
 baseParamsChartPanelXXX.filterOps = ‘=’;
@@ -46,9 +46,12 @@ drawChartXXX();
 
 This javascript action should be linked to the "Before loading data" event of the chart panel.
 
-## **Example to colorize columns with a single series:**
+---
 
-**NOTE:** **This shouldn’t be done with lots of columns/data since it involves overwriting a function by specifying all the chart columns again. Do it only if you have few columns.**
+### **Example to colorize columns with a single series:** 
+
+**NOTE:**  **This shouldn’t be done with lots of columns/data since it involves overwriting a function by specifying all the chart columns again. Do it only if you have few columns.**  
+
 
 As can be seen on the relative Google Docs page \(this example considers column charts\) you might want to colorize different columns with different colors even if you have a single serie, check example below.
 
@@ -56,9 +59,9 @@ As can be seen on the relative Google Docs page \(this example considers column 
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/singleSerieMultipleColors.jpg)
 
-As explained in the Google documentation, there’s a column type called **role** that helps us on achieving this:
+As explained in the Google documentation, there’s a column type called **role**  that helps us on achieving this:
 
-```javascript
+```js
 var data = google.visualization.arrayToDataTable([
          ['Element', 'Density', { role: 'style' }],
          ['Copper', 8.94, '#b87333'],
@@ -71,7 +74,7 @@ var data = google.visualization.arrayToDataTable([
 In Platform we can do it by overwriting the chart column declaration inside an action, such as the “After Data Load” on the related grid.  
 In this example we only had 4 columns so we declared an array with colors codes and with a cycle we assigned the color code to the related column
 
-```javascript
+```js
 function getChart292DataStoreWithStyles(list) {
   var data = new google.visualization.DataTable();
   data.addColumn('string', Ext.translate.Cache.getTranslation('CHART_TITLE.292.DESCRIPTION_IT'));
@@ -89,9 +92,13 @@ function getChart292DataStoreWithStyles(list) {
 };
 ```
 
-## Special charts
+---
+
+### Special charts
 
 Some charts requires a specific number of mandatory fields to correctly work. In the following sections it is reported how to correctly set up a chart.
+
+
 
 **Timelane**
 
@@ -105,7 +112,7 @@ Common cases:
 
 In order to do it, you can use Options multitext field in the Chart definition panel and set the following setting:
 
-```javascript
+```js
 timeline: { colorByRowLabel: true }
 ```
 
@@ -127,7 +134,11 @@ where the CSS name must always defined as x-chart-panel + the panel id
 
 the width should be relatively lower than the real chart length, which is consequently auto enlarged, according to the provided timing for activities.
 
-## Common mistakes
+
+
+---
+
+### Common mistakes
 
 Not all charts works in the same way and require the same configuration. When configuring charts, you have to pay attention to the settings you define, according to the chart type.  
 These are the most common mistakes made when configuring charts:
@@ -141,4 +152,8 @@ These are the most common mistakes made when configuring charts:
   * a description, related to the activity to draw into a lane
   * start time, related to the initial time of the activity to draw; a common mistake is to pass forward a null value or provide a not date value
   * end time, related to the final time of the activity to draw; a common mistake is to pass forward a null value or provide a not date value
+
+---
+
+
 

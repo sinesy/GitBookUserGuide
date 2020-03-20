@@ -19,9 +19,7 @@ Values to link to each field can be:
 * a field in the select clause of the main query \(in case of a main report field\)
 * you can map that field to a tag
 * you can map the prefix of a field in the select clause to a tag, in case of translations not stored in a dictionary table but to a series of fields, one for each language; so if you have a table mapped to the select clause having a set of fields for each language, here you have to map the prefix common to al these fields.
-
   For example, if you have a table with fields: DESCRIPTION\_IT, DESCRIPTION\_EN, DESCRIPTION\_DE defined in the select clause, you can map a tag to DESCRIPTION; in this way, the report generator will automatically choose the DESCRIPTION\_xx field, according to the current language, that is to say, xx will be the value of the current language.
-
 * a field in the select clause of a subquery \(in case of a subreport field – aka table\)
 * a constant
 * a system variable, such as :TODAY, :USERNAME, etc
@@ -30,7 +28,7 @@ Values to link to each field can be:
 * PROGRESSIVE\(TABLENAME,COLNAME\) – generates an internal counter, incremented by 10, using CON09\_PROGRESSIVES table, where there is a record for each counter, whose primary key is composed of tablename and columname
 * COUNTER\(TABLENAME,VALUECOLNANE,INCREMENTVALUE,WHERE\) – generates a generic counter, incremented by the specified value, using an external table, provided by the user, where a single record can be identified throught the specified where clause \(the word WHERE must NOT be included\); the table name and the column name containing the current value must be specified too.
 
-## Example
+### Example
 
 COUNTER\(DOC\_COUNTERS,CURR\_VALUE,1,DOC\_TYPE=’SELLORD’ and  
 YEAR=2014\)
@@ -52,9 +50,9 @@ Independently of the field, additional settings can be defined:
 
 The program must terminate by returning the result string to show, through the command: utils.setReturnValue\(valueToReturn\);
 
-## Example
+### Example
 
-```javascript
+```js
 var showDecimals = false;
 
 var decimals = 2;
@@ -65,4 +63,8 @@ var text = utils.numberToText(vo.number,decimals,langId,showDecimals,’/’);
 
 utils.setReturnValue(text);
 ```
+
+---
+
+
 

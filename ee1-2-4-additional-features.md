@@ -6,3 +6,7 @@ rating of a document
 
 These features can be enabled in a grid panel definition, through the ad hoc checkboxes available in that pane.
 
+---
+
+
+

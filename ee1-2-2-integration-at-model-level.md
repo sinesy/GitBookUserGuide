@@ -12,3 +12,7 @@ upload/download/preview documents stored in Alfresco
 
 One of the key point of this integration is that metadata values to store in Alfresco CMS can be chosen starting from data provided by a database: that means that documents and database data can be mixed together, with 4WS.Platform as the central bus able to communicate with both the systems.
 
+---
+
+
+

@@ -9,13 +9,13 @@ When writing server-side javascript in this component, you can access to a serie
 The complete javascript methods list is reported in this section.  
 A method you have always to include \(once\) at the end of the script is:
 
-```javascript
+```js
 utils.setReturnValue(jsonString);
 ```
 
-where **jsonString** is a JSON string having always this content:
+where  **jsonString**  is a JSON string having always this content:
 
-```javascript
+```js
 { "valueObjectList": [{...},{...},...], "moreRows": true|false }
 ```
 
@@ -27,7 +27,7 @@ CORPORATE\_NAME
 ENABLED  
 That means we have to get back a JSON string with this format:
 
-```javascript
+```js
 { 
    "valueObjectString": [
       { "customerCode": "C1", "corporateName": "Customer 1", "enabled": true },
@@ -37,7 +37,7 @@ That means we have to get back a JSON string with this format:
 }
 ```
 
-How to generate the list of javascript objects to pass to the “ **valueObjectList** “? The easiest way is through the **utils.getPartialResult** method. This method has been designed to work with a grid: it support data pagination, data filtering and sorting. It means that when the end user will scroll data in the grid, apply filters or sort columns, these settings will be passed automatically behind the scene to this business component and the getPartialResult method will use them automatically: you have just to define the “base” SQL query in getPartialResult and this method will enhance the “base” SQL with what needed to manage pagination, filtering/sorting conditions.
+How to generate the list of javascript objects to pass to the “ **valueObjectList** “? The easiest way is through the  **utils.getPartialResult**  method. This method has been designed to work with a grid: it support data pagination, data filtering and sorting. It means that when the end user will scroll data in the grid, apply filters or sort columns, these settings will be passed automatically behind the scene to this business component and the getPartialResult method will use them automatically: you have just to define the “base” SQL query in getPartialResult and this method will enhance the “base” SQL with what needed to manage pagination, filtering/sorting conditions.
 
 **Notice the difference between getPartialResult and executeQuery: the second always get back the whole result set, not a block of data end it ignores the filtering/sorting conditions coming from the grid. Pay attention to its usage: you should not use to get the main data to pass back to the grid: the right method to use is getPartialResult.**
 
@@ -50,7 +50,7 @@ A typical scenario when you have to use javascript is when you cannot retrieve a
 
 This is an example where all these steps are reported:
 
-```javascript
+```js
 var json = utils.getPartialResult(
     "SELECT CUSTOMER_CODE,CORPORATE_NAME,ENABLED FROM CUSTOMERS WHERE ENABLED=?",
     null,
@@ -89,6 +89,8 @@ json = JSON.stringify(obj);
 utils.setReturnValue(json);
 ```
 
+---
+
 **Working with complex SQL queries and decoding fields**
 
 In case of a complex SQL query to pass to getPartialResult method, involving multiple tables and fields, it could happen that a filtering or sorting condition will not be applied correctly, since on the grid \(UI\) an attribute is passed forward to the javascript business component and here the attribute is not translated correctly.
@@ -97,7 +99,7 @@ In such a scenario, you can use a utility method to use for each attribute to de
 
 **utils.decodeField\(attributeName,databaseField\);**
 
-where **attributeName** is the attribute coming from the grid \(UI\), like "contacts.customerCode" and **databaseField** represents the tablename.fieldname to use instead of the attribute, like "CONTACTS.CUSTOMER\_CODE".
+where **attributeName** is the attribute coming from the grid \(UI\), like "contacts.customerCode"  and **databaseField** represents the tablename.fieldname to use instead of the attribute, like "CONTACTS.CUSTOMER\_CODE".
 
 In case of multiple mappings, i.e. for more than one attribute, you can use setDecodeField for each of them.
 

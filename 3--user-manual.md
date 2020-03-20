@@ -9,3 +9,7 @@ In any case, when clicking on one of these links, the Login Page is showed: once
 Since the default authentication & authorization system is based on the module provided with 4WS.Platform, the Login Page requires 4 data: a "Company Id", a "Site Id", a "Username" and a "Password". Typically the "Company Id" and "Site Id" values are defined initially, when creating and filling out the database schema.  
 There is the chance to hide them if they are not useful. Check out the "4WS schema" to find more detail information about the meaning of "Company Id" and "Site Id" and "Customize the application" about how to hide them.
 
+---
+
+
+

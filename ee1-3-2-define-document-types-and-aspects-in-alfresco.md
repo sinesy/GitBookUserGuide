@@ -7,3 +7,7 @@ A document type is composed of a set of properties or a set of aspects. That mea
 Independently of the kind of organization to use when creating document types, these settings must be manually written in an XML file, named "alfresco documents model".  
 Alfresco supports multiple models, but generally one model is enough, since it can contain all the required document types.
 
+---
+
+
+

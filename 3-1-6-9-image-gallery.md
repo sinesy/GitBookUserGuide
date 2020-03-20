@@ -9,3 +9,7 @@ When the user chooses this kind of panel in the "Add window" wizard, a few setti
 
 In order to correctly render the image gallery panel, the user has also to specify which column contains the data needed to show the image for each record; in order to specify that column, after creating the panel, the user has to open it, click on its columns definition and choose the column to set as the "image" column, by setting the column type to "Image path" or "Image URL".
 
+---
+
+
+

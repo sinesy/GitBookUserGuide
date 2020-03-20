@@ -45,7 +45,7 @@ When clicking on a panel you can always:
 In case of a panel which is a panel container, that is, a panel which can contain additional content, there is also an Add command through which you can add any other kind of panel.
 
 **Panel containers and layouts**  
-Platform supports a variety of different **panel containers** , each managing the layout of its children panels in a different way:
+Platform supports a variety of different  **panel containers** , each managing the layout of its children panels in a different way:
 
 * tab panel
 * alternative panes
@@ -85,7 +85,7 @@ This container allows to include any number of sub-panels, organized vertically.
 This container allows to include any number of sub-panels, organized horizontally. Each sub-panel will occupy exactly the same width, which is distributed equally among all the sub-panels.
 
 **Table panel \(responsive layout\)**  
-This container allows to include any number of sub-panels, organized with different **widths** , **heights** and **row/column spans** .  
+This container allows to include any number of sub-panels, organized with different  **widths** ,  **heights**  and  **row/column spans** .  
 This is the most flexible layout and also the most complex to configure.  
 It allows to organize sub-panels in a way that they can use all the available space. Moreover, with different display sizes or when resizing the browser window, the organization of the panels can change. At panel container level, it is possible to set the maximum number of columns allowed: the content of the container will be then calculated at run-time, according to the available space.
 
@@ -95,11 +95,11 @@ That behavior is what usually is called a responsive layout: a container whose c
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/table.png)
 
-It is essential to understand how to definecorrectly a table panel. At panel level there is a **Nr of columns** property to set.  
-For every sub-panel, you have to define an **Height** .  
-For every sub-panel which does not have a dynamic width \(panels having a dynamic width are grids and charts\), you have to define a **Width** as well, otherwise it will not be possible to render it correctly.  
-Optionally, for every sub-panel you can define also the **Column span** , i.e. the number of cells that the panel has to occupy horizontally.  
-Optionally, for every sub-panel you can define also the **Rows span** , i.e. the number of cells that the panel has to occupy vertically.  
+It is essential to understand how to definecorrectly a table panel. At panel level there is a  **Nr of columns**  property to set.  
+For every sub-panel, you have to define an  **Height** .  
+For every sub-panel which does not have a dynamic width \(panels having a dynamic width are grids and charts\), you have to define a  **Width**  as well, otherwise it will not be possible to render it correctly.  
+Optionally, for every sub-panel you can define also the  **Column span** , i.e. the number of cells that the panel has to occupy horizontally.  
+Optionally, for every sub-panel you can define also the  **Rows span** , i.e. the number of cells that the panel has to occupy vertically.  
 Thanks to all these settings, you can arrange the window content in a very flexible way.  
 Please pay attention to the mandatory properties reported above: if you have not set them, the window content will not be rendered correctly, when executing the web application.
 
@@ -117,4 +117,8 @@ Five regions are supported:
 
 There must be at least one sub-panel, arranged automatically in the center region.  
 This is also the default layout for the window \(the root node in the tree\) and it cannot be changed.
+
+---
+
+
 

@@ -16,7 +16,7 @@
 * boolean javascript expression "disable when", to disable everything when the boolean condition is true flags "enable columns permission" and "enable columns profile", used to manage these special features, described in a separate section.
 
 When creating the grid, a grid toolbar is automatically showed on top of it; this toolbar always includes the reload button; the other buttons \(insert, edit, delete and save/cancel\) are showed/hidden according to the flags described above.  
-These buttons change the current grid mode, according to the following policy:
+These buttons  change the current grid mode, according to the following policy:
 
 * insert button, from readonly mode -&gt; insert mode, insert/edit/delete buttons are disabled, save/cancel buttons are enabled
 * edit button, from readonly mode -&gt; edit mode, insert/edit/delete buttons are disabled, save/cancel buttons are enabled
@@ -24,24 +24,28 @@ These buttons change the current grid mode, according to the following policy:
 * cancel button, from insert/edit mode -&gt; after confirming the operation, the grid is switched to readonly mode and the content reloaded
 * save button, from insert/edit mode -&gt; the grid is switched to readonly mode if the saving operation has been performed successfully.
 
+---
+
 ## Summary row
 
-Optionally, a **summary locked row** can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.  
+Optionally, a **summary locked row**  can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.  
 In order to avoid setting a total value for a specific cell, a ‘’ can be returned to that callback in the action. It is possible to set foreground and background colors for a cell through css class names \(see details specified below for the "update summary row" event\).
 
 Example:
 
-```javascript
+```js
 if (colAttr!='attributenameofaspecificcolumn') return '';
 return formattedValue;
 ```
 
 or
 
-```javascript
+```js
 params.css = 'red';
 return total;
 ```
+
+---
 
 ## Grouped columns in multiple groups
 
@@ -49,9 +53,9 @@ Optionally , it is possible to **group columns in multiple groups**, so that the
 
 In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition.
 
-An example of such a definition is the following:
+An example  of such a definition is the following:
 
-```javascript
+```js
 // example for 45  columns, grouped in 5 main headers
 // colspan is used to define how many headers to include in each main header
 return [[
@@ -78,9 +82,11 @@ return [[
 ]];
 ```
 
+---
+
 ## Locked columns
 
-Optionally, a group of **locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
+Optionally, a group of** locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
 
 In case **locked columns are combined with grouping columns, a new grid is rendered, composed of a tree+grid,** where grouping columns become tree nodes, which are anchored on the left side of the grid. That means it is not supported a grid having grouped columns+locked columns.
 

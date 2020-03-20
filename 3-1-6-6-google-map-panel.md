@@ -8,10 +8,17 @@
 * flags to show/hide border and to set panel opacity
 * zoom \(from 1 to 24\) set the initial zoom of the map. 1 for few detail map, 24 for full detail map.
 * type set the map visualization. Four types are available:
+
 * hybrid
+
 * road map
 * satellite
 * terrain
+
 * **Mandatory** : latitude and longitude fields \(retrieved by business component\)
 * **Mandatory** : note field \(usually description or civic address\)
+
+---
+
+
 

@@ -50,3 +50,7 @@ Allowed application types for controls, according to the related database field 
 
 Note that it is not allowed to insert/delete filter controls in this list: filter controls are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model.
 
+---
+
+
+

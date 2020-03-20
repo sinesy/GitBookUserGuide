@@ -8,3 +8,7 @@ The following task properties must be defined:
 * Script format:  **JavaScript**  \(pay attention to the way you write this word\)
 * Script: javascript to execute
 
+---
+
+
+

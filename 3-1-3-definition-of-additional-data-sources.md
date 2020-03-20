@@ -14,3 +14,7 @@ Typical URL to set as JDBC URL are:
 * Oracle database:  **jdbc:oracle:thin:@:1521:** 
 * PostgreSQL database:  **jdbc:postgresql://:5432/** 
 
+---
+
+
+

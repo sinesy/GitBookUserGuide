@@ -4,7 +4,7 @@ A panel can fire several events, according to the panel type.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/panelEvents-1024x519.jpg)
 
-In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
+In case of a  **grid ** \(or ** pivot grid** \), these are the allowed events:
 
 * row click
 * row double click
@@ -29,7 +29,7 @@ In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
 * before import row \(Javascript Server only\)
 * after import row \(Javascript Server only\)
 
-In case of a **detail form** , these are the allowed events:
+In case of a  **detail form** , these are the allowed events:
 
 * before the rendering of the detail form
 * before data loading
@@ -42,22 +42,26 @@ In case of a **detail form** , these are the allowed events:
 * after the deleting of the content
 * on button click \(listen to any additional button added to the top toolbar\)
 
-In case of a **tree** , these are the allowed events:
+In case of a  **tree** , these are the allowed events:
 
 * node click
 * tree check selected
 * tree expand node
 
-In case of a **filter** , these are the allowed events:
+In case of a  **filter** , these are the allowed events:
 
 * after loading data
 * before render
 * when pressing search button
 * when pressing undo button
 
-In case of a **detail form** , these are the allowed events:
+In case of a  **detail form** , these are the allowed events:
 
 * Before data load
 
 For each event it is possible to link an action defined through the "Actions" menu item.
+
+---
+
+
 

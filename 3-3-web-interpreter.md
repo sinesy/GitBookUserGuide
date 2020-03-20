@@ -13,3 +13,7 @@ The application menu is showed at a container level and can have the most common
 The other regions of the container can be customized: top bar and bottom bar can contain the typical gadgets, such as user id, environment, language, etc.  
 Graphics components include editable grids, detail forms, trees, maps, image panes. These panels can be combined together to create frames to show inside the MDI container.
 
+---
+
+
+

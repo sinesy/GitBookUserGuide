@@ -7,7 +7,7 @@ For every imported object \(described in the previous section\), two business co
 
 ## Business components for a list of documents
 
-The first component is basically web service: each time a grid has to show a list of documents by invoking this component, it will call the Alfresco web service layer to get the required data and it will pass back that content to the Platform’s grid.  
+The first component is basically  web service: each time a grid has to show a list of documents by invoking this component, it will call the Alfresco web service layer to get the required data and it will pass back that content to the Platform’s grid.  
 The data flow is as follow:
 
 Platform’s Grid \(browser\) -&gt; Platform’s business component \(Platform server\) -&gt; Alfresco CMS Web service layer  
@@ -36,7 +36,7 @@ You can define any number of filtering conditions in this list: the only require
 
 Example:
 
-```javascript
+```js
 AND (FIELD1 = :MY_VAR OR FIELD2 = :MY_VAR )
 ```
 
@@ -44,7 +44,7 @@ In this example, the variable name is MY\_VAR and such condition will be automat
 
 On the UI layer, such parameter is passed forward in a client-side javascript action in this way:
 
-```javascript
+```js
 gridxxx.store.baseParams.myVar = "...";
 ```
 
@@ -52,25 +52,27 @@ Note that every filter condition is appended to the base WHERE clause so it must
 
 Suppose you need to define a condition in an IN, where you don't know in advance if 1, 2 or 3 values will be passed forward. You can manage this scenario by defining multiple filtering conditions, each one with different variable names:
 
-```text
+```
 AND FIELD IN ( :VAR1 )
 ```
 
-```text
+```
 AND FIELD IN ( :VAR2_1 , :VAR2_2 )
 ```
 
-```text
+```
 AND FIELD IN ( :VAR3_1 , :VAR3_2 , :VAR3_3 )
 ```
 
 In this way, each filter condition will be applied alternatively. As a consequence. on the client side, you need to manage different variable names, according to the amount of values to pass forward.
 
+
+
 ## Filtering conditions on Alfresco connected grids
 
 A typical setting of a business component for grids is as the follow:
 
-```javascript
+```js
 service/getList?format=json&type=...&model=...&prefix=...
 ```
 
@@ -78,39 +80,41 @@ service/getList?format=json&type=...&model=...&prefix=...
 * the parameter type is used to define which document type to filter.
 
 Consequently, such a kind of URL would retrieve all the documents stored in Alfresco having the specified document type \(and related to the specified model\).  
-This is typically the starting point when retrieving list of documents from Alfresco. It is likely to add further filters to that base request. In order to do that, it is needed to include in the URL a parameter named **filterBy** , used to add filter conditions.  
+This is typically the starting point when retrieving list of documents from Alfresco. It is likely to add further filters to that base request. In order to do that, it is needed to include in the URL a parameter named  **filterBy** , used to add filter conditions.  
 These conditions must be expressed according to the Alfresco Query Syntax.  
 For instance, this is an URL including a filtering condition:
 
-```text
+```
 service/getList?format=json&filterBy=zig:Flag_Stato:"C"&type=...
 ```
 
 zig:Flag\_Stato represents the model prefix + property name related to the specified document type, whereas the : symbol represents the " **starts with** " comparison operator and "…" is the value to compare.  
 So prefix:property:"value" means the property must start with the specified value.
 
-Another common comparison operator is the one where a property is **between** a specified interval, which is expressed in this way:
+Another common comparison operator is the one where a property is  **between**  a specified interval, which is expressed in this way:
 
-```javascript
+```js
 prefix:property:[minValue TO maxValue]
 ```
 
-You can filter documents belonging to a specified **aspect** :
+You can filter documents belonging to a specified  **aspect** :
 
-```javascript
+```js
 ASPECT:"cm:aspectName"
 ```
 
-To filter documents stored in a specified **path** :
+To filter documents stored in a specified  **path** :
 
-```javascript
+```js
 +PATH:"/cm:generalclassifiable/cm:Software_x0020_Document_x0020_Classification/member"
 ```
 
-You can also combine multiple expressions using the logical operators\*\* AND, OR and NOT.
+You can also combine multiple expressions using the logical operators\*\*  AND, OR and NOT.
 
 You can have a deep look at the Alfresco syntax through these two links:
 
 * [http://wiki.alfresco.com/wiki/Search](http://wiki.alfresco.com/wiki/Search)
 * [http://wiki.alfresco.com/wiki/Full\_Text\_Search\_Query\_Syntax](http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax)
+
+
 

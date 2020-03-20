@@ -19,3 +19,7 @@ The following table reports all available variables:
 | NOW | Date | Current date+time |
 | APPLICATION\_ID | String | application identifier |
 
+---
+
+
+

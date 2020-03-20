@@ -9,7 +9,7 @@ This limit can be changed in the Platform Enterprise Edition through a global pa
 An export process in CSV format can also be started as a web service and therefore automated, for instance a a web service scheduled using the embedded scheduler available in the in the Platform Enterprise Edition.  
 This is an example of such an URL, used to export data:
 
-```javascript
+```js
 http://host:port/contextpath/getlist?applicationId=...&amp;functionId=...&amp;compId=...&amp;panelId=...&amp;quickFilterNames=...,&amp;quickFilterValues=...,&amp;quickFilterOps=....,&amp;quickFilterCaseSensitives=...,&amp;sort=&amp;dir=&amp;exportColumns=...&amp;exportAttributes=...&amp;exportColWidths=...&amp;exportFormat=CSV&amp;title=...&amp;directExport=true
 ```
 
@@ -32,4 +32,8 @@ Meaning of the other parameters:
 * exportAttributes – list of attributes to export, separated by a comma \(,\); they must be a subset of the attributes supported by the grid
 * exportColWidths – list of column widths, expressed in pixels, separated by a comma \(,\)
 * exportFormat – format to use when exporting data: CSV
+
+---
+
+
 

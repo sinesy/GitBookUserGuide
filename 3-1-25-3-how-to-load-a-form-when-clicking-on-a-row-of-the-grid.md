@@ -6,3 +6,7 @@ A few wizards are available in the settings panel for a grid in the App Designer
 For each of them, the user has to bind a value to that parameter, which can be a constant value, a variable \(such as username, current date, etc.\) or a value coming from the selected row in the current grid.  
 In this way, the wizard has all information needed to create a javascript action and bind it to the "row click" event.
 
+---
+
+
+

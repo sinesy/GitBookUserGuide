@@ -7,3 +7,7 @@ Consequently, if the application identified by "TEST" has two languages "EN" and
 Each of them will contain the translations for a specific language, related to the custom part developed using javascript.  
 More information about how to include custom artifacts with 4WS.Platform are provided in the section named "Customizations and import .zip file".
 
+---
+
+
+

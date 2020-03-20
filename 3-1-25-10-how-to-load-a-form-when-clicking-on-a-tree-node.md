@@ -6,3 +6,7 @@ A few wizards are available in the settings panel for a tree in the App Designer
 For each of them, the user has to bind a value to that parameter, which can be a constant value, a variable \(such as username, current date, etc.\) or a value coming from the current selected node.  
 In this way, the wizard has all information needed to create a javascript action and bind it to the "node clicked" event.
 
+---
+
+
+

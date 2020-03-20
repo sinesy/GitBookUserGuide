@@ -22,3 +22,7 @@ Each created object will have:
 
 Starting from this object definition, you can create any number of panels, combined together, and manage documents in lists or detail forms, as you wish and take advantage of all the advanced features provided by the Platform UI to organize the content in panes and panes in rich input controls.
 
+---
+
+
+

@@ -11,7 +11,7 @@ The followings are global parameters, grouped per topic:
 * Base Rest URL
 * Base Designer URL
 
-**Alfresco -** parameters related to the ECM module
+**Alfresco - **parameters related to the ECM module
 
 * Admin Password when connecting to Alfresco Server
 * Admin Username when connecting to Alfresco Server
@@ -26,9 +26,11 @@ The followings are global parameters, grouped per topic:
 
 **Export** - parameters related to the xls export module
 
-**File upload** - parameters used to manage the file upload
+**File upload **- parameters used to manage the file upload 
 
-**Google -** parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
+
+
+**Google - **parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
 
 * Apps domain admin user for Google Service Account
 * Service Account Email
@@ -48,7 +50,7 @@ The followings are global parameters, grouped per topic:
 * Type of fields extracted from group information for sync
 * Sync: company, site to use when creating records from Google
 
-**LDAP -** parameters used to integrate the app with an LDAP server, like MS Active Directory
+**LDAP - **parameters used to integrate the app with an LDAP server, like MS Active Directory
 
 * Autocreate user from LDAP
 * Autoupdate user from LDAP
@@ -89,7 +91,7 @@ The followings are global parameters, grouped per topic:
 * Password: number of days to use for the password expiration
 * Password: number of erroneous login attempts
 
-**Permissions -** parameters used to define the authentication process
+**Permissions - **parameters used to define the authentication process
 
 * Login controls to hide
 * Encript all passwords
@@ -119,7 +121,7 @@ The followings are global parameters, grouped per topic:
 * Interval when Redis is not working - in case of auto creation/destroy of the Google service based on Redis, this optional value represents the interval \[0-24\] expressed with hours, where the service is not operating
 * VPC name - in case of auto creation/destroy of the Google service based on Redis, this value represents the VPN name used by Redis and by the Compute Engine instances where Platform is running
 
-**Scheduler -** parameters used by the scheduler module
+**Scheduler - **parameters used by the scheduler module
 
 * "From email address" when sending email from Scheduler
 * * Collaboration
@@ -138,4 +140,12 @@ The followings are global parameters, grouped per topic:
 * Access unavailable message
 * Duplicate data per company
 * Application activation key path
+
+
+
+
+
+---
+
+
 

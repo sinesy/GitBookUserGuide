@@ -13,3 +13,7 @@ Many events are supported:
 * **row selected**  – in case of a code selector column, the user can select the code from the lookup grid; through this is event it is possible to intercept the grid selection value.
 * **button click**  – in case of a button controls, the user can select the action to execute on click.
 
+---
+
+
+

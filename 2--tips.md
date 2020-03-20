@@ -13,3 +13,7 @@ The design of common functionalities using the App Designer are split up in two 
 * Use cases for Web Applications
 * Use cases for Mobile Applications
 
+---
+
+
+

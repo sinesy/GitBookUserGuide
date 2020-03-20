@@ -21,3 +21,7 @@ Properties needed by the Call activity are:
 * Out parameters \(parameters to pass from the sub-process to the parent process, at the end of the execution of the child process\).
 * These parameters are similar to the ones specified for the In parameters.
 
+---
+
+
+

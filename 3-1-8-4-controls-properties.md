@@ -60,22 +60,26 @@ Allowed application types for controls, according to the related database field 
 | File identifier | File upload/download |
 
 There is a difference between File upload/download, Image Path, File Path control types:  
-**File upload/download** – an upload/download button is showed as graphics control; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the form controls designer; when saving, the uploaded file will be stored within the following subfolders structure:  
+ **File upload/download**  – an upload/download button is showed as graphics control; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the form controls designer; when saving, the uploaded file will be stored within the following subfolders structure:  
 ///filename.xxx  
 That structure allows to store multiple versions of the file \(file versioning\).  
-**Image Path** – this control type does not show a preview of the image, as for the grid it works exactly as the "File path" control type.  
-**File Path** – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the form controls designer; when saving, the uploaded file will be stored in that path.  
+ **Image Path**  – this control type does not show a preview of the image, as for the grid it works exactly as the "File path" control type.  
+ **File Path**  – an upload/download button is showed inside that column; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the form controls designer; when saving, the uploaded file will be stored in that path.  
 This column type does not allow to store multiple versions of the file.  
-Note that **if you need to show a preview of an image in a detail window** , you should follow these steps:
+Note that  **if you need to show a preview of an image in a detail window** , you should follow these steps:
 
 * create a window containing a form panel, through the windows wizard feature of the web designer
 * add an "Image Panel" to that window, so that the window would contain the form panel in the north and the image panel in the center of the window
 * create an "after loading" event linked to the form panel, used to force the loading of the image in the image panel named loadImagePanelXXX, each time the form panel is loaded; a javascript action should be linked to that event containing the following instruction:
 
-```javascript
+```js
 loadImagePanelXXX(vo);
 ```
 
 Note that it is allowed to insert/delete "virtual" controls in this list for added controls to form. This controls are not saved.  
 Not "virtual" controls are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model.
+
+---
+
+
 

@@ -14,8 +14,10 @@ More in general, authorizations cover several topics:
 * enabled  **menu items** , i.e. the ones showed in the application menu
 * for each  **grid**  included in a window opened starting from a menu item, the grid toolbar can be defined in terms of habilitations for the insert, edit, delete buttons; in this way it is possible to disable these operations through roles
 * for each  **detail form**  included in a window opened starting from a menu item, the form toolbar can be defined in terms of habilitations for the insert, edit, delete buttons; in this way it is possible to disable these operations through roles
-* starting from an enabled grid, it is possible to set the habilitations for its **columns** \(only if the "enable profile and permissions" flag in column grid has been enabled\), in terms of:
+* starting from an enabled grid, it is possible to set the habilitations for its  **columns**  \(only if the "enable profile and permissions" flag in column grid has been enabled\), in terms of:
+
 * columnvisibility
+
 * habilitation in insert
 * habilitation in edit
 * mandatory
@@ -41,5 +43,9 @@ The first set of data is used when authenticating users; authentication will be 
 * the user has at least one role associated and that role has at least one function enabled
 
 Once authenticated, the application menu will include only the menu items enabled according to the roles binded to the user.  
-**Note** : 4WS.Platform has a strong security policy which does not allow the invocation of Ajax requests to the server side without an authentication process. Moreover, only requests related to functionalities enabled for the user will be processed. For instance, if the user can access to a function but he is not granted for change data, any request involving a change to data will be rejected.
+ **Note** : 4WS.Platform has a strong security policy which does not allow the invocation of Ajax requests to the server side without an authentication process. Moreover, only requests related to functionalities enabled for the user will be processed. For instance, if the user can access to a function but he is not granted for change data, any request involving a change to data will be rejected.
+
+---
+
+
 

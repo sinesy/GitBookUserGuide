@@ -6,3 +6,7 @@ In that case, the select clause will not be editable, since all the fields decla
 Neither relationships nor the from clause are enabled.  
 You are free to define the where clause, according to the GQL syntax \(see [https://cloud.google.com/datastore/docs/apis/gql/gql\_reference](https://cloud.google.com/datastore/docs/apis/gql/gql_reference)\).
 
+---
+
+
+

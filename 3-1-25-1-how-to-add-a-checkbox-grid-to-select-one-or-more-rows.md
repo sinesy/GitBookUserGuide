@@ -23,7 +23,7 @@ When saving data, two parameters are provided to the server side js action:
 
 The input provided to such an action class is a JSON object having this format:
 
-```javascript
+```js
 {
 "selRows": [{ attr1:... attrN:... },{...},...],
 "noSelRows": : [{ attr1:... attrN:... },{...},...]
@@ -32,7 +32,11 @@ The input provided to such an action class is a JSON object having this format:
 
 The same action class must return a success flag to the client side:
 
-```javascript
+```js
 { "success": true }
 ```
+
+---
+
+
 

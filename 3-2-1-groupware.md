@@ -1,9 +1,8 @@
-# 3-2-1-Groupware
-
-This module includes a series of features related to communities and data sharing. It consists of:
+This module includes a series of features related to communities and data sharing.
+It consists of:
 
 * a mail server integration
-* integration with calendar \(Microsoft and Google calendars are supported\)
+* integration with calendar (Microsoft and Google calendars are supported)
 * activities and processes integration
 * CMS integration for document management
 * Lotus Domino migration tool
@@ -11,5 +10,10 @@ This module includes a series of features related to communities and data sharin
 * send email
 * calendar and activities
 * documents
-* activities and processes \(connected to the BPM module\)
+* activities and processes (connected to the BPM module)
+
+                
+
+---
+
 

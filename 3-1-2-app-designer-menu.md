@@ -14,3 +14,7 @@ This menu organization groups functionalities per topic, according to the MVC pa
 
 The rest of this chapter describes in detail each of these functionalities provided by the App Designer Menu.
 
+---
+
+
+

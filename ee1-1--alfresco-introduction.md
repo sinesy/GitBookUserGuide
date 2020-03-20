@@ -34,3 +34,7 @@ However, there are a few issues involved with Alfresco Share and it is time to d
 This kind of information should be stored together with the document and they are helpful particularly when the user is searching for documents starting from these data.  
 In most of the cases, this type of data is managed through other applications and it is typically stored in databases; consequently, it can be cumbersome to access this data from Share, which is connected to the rest of the Alfresco suite and has not been designed to access other systems.
 
+---
+
+
+

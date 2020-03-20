@@ -2,7 +2,7 @@
 
 A BPMN process is composed of a set of **activities** and **properties**.
 
-![](https://github.com/4wsplatform/user-guide/tree/9616dd242a5114c844958b3511899aafdb20b2d1/assets/Schermata%202020-01-28%20alle%2008.39.36.png)
+![](/assets/Schermata 2020-01-28 alle 08.39.36.png)
 
 **Properties** represent data that the process has to manage, composed of data passed to the process when starting it and data created or updated when moving from an activity to the other. Properties can be read only or updatable and can be linked to specific activities, in order to show or edit them.
 
@@ -11,4 +11,8 @@ In the first case, it must be started manually by a user, carried out and comple
 
 An automatic activity can be of several types: **an email**, a **command to execute from the shell, a program, a web service to invoke, a SQL query** to fetch data to work with or a **SQL statement to write data** on a database.  
 According to the activity type, different settings are required; for instance, in case of an email to send, the "from address", "destination addresses", "object" and "body" are required. A SQL task is totally different and requires different settings.
+
+---
+
+
 

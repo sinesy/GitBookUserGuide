@@ -12,3 +12,7 @@ From the perpective of the document management, the main benefits coming from th
 * the chance to create a web solution not limited to the document management area only, by means of a unique tool and a unique and uniform user interface
 * user authentication and authorizations can be delegated to external systems, such as an LDAP Server like Active Directory.
 
+---
+
+
+

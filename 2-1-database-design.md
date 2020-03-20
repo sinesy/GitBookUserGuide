@@ -2,36 +2,55 @@
 
 In case you need to design a new database, it can be helpful to create tables having a common structure, in terms of field names and type.  
 These are some rules that we suggest to follow:  
-**PRIMARY KEY** : You should not define fields called ID or FUNCTION in the DB, as they may conflict with some Javascript commands. A possible variant is to call ID\_ or \_ID, e.g. CUSTOMER\_ID, PRODUCT\_ID, etc.  
+ **PRIMARY KEY** : You should not define fields called ID or FUNCTION in the DB, as they may conflict with some Javascript commands. A possible variant is to call ID\_ or \_ID, e.g. CUSTOMER\_ID, PRODUCT\_ID, etc.  
 Every table must have either a primary key or unique keys.  
 Platform does not replace the business analysis: this important task must be carried out before the development of the application, as well as the database design. Independently of the way an application will be developed, the analysis still plays a foundamental role in the development cycle of the application.  
-**DATABASE TYPES** : field types must be defined according to the database types; these are common types that can be used with Platform:
+ **DATABASE TYPES** : field types must be defined according to the database types; these are common types that can be used with Platform:
 
 * Oracle database
+
   * NUMBER\(N\)
+
   * DATE
+
   * CHAR\(N\)
+
   * CLOB
+
 * MS SQLServer database
+
   * NUMERIC\(N\)
+
   * DECIMAL\(M,N\)
+
   * DATE
+
   * DATETIME
   * NVARCHAR\(N\)
   * NCHAR\(N\)
   * TEXT
+
 * MySQL database
+
   * NUMERIC\(N\)
+
   * DECIMAL\(M,N\)
+
   * DATE
+
   * DATETIME
   * VARCHAR\(N\)
   * CHAR\(N\)
   * TEXT
+
 * PostgreSQL database
+
   * NUMERIC\(N\)
+
   * DECIMAL\(M,N\)
+
   * DATE
+
   * DATETIME
   * VARCHAR\(N\)
   * CHAR\(N\)
@@ -74,4 +93,8 @@ It is important to being aware of these issues and the right way to deal with th
 
 It is not advisable to rename PK columns in a table. The application uses the PK fields to generate unique keys as well as to set the parameters of input/output for windows and panels.  
 If you decide to change the primary keys fields, you have to align the data model, through the ad hoc button available in the detail model form and then manually align the input/output parameters folder of panes using that object.
+
+---
+
+
 

@@ -25,3 +25,7 @@ The main advantages provided by this integration are:
 
 Thanks to this integration, 4WS.Platform allows to design and configure web and mobile applications with a high level of customization and this is due to the availability of the business processes too, managed at business and GUI levels.
 
+---
+
+
+

@@ -7,3 +7,7 @@ However, this is not the only way to work with 4WS.Platform: it is also possible
 
 Consequently, it is always possible to start from an empty schema and create tables, models and so forth.
 
+---
+
+
+

@@ -5,17 +5,17 @@ The value stored in that property is expressed in JSON format. Consequently, a s
 
 Javascript example related to the query:
 
-```javascript
+```js
 select CODE,VALUE from …
 ```
 
 generating a JSON string:
 
-```javascript
+```js
 [{ "CODE": "...", "VALUE": "..." }]
 ```
 
-```javascript
+```js
 try {
   var result = execution.getVariable("result");
   var res = eval("(" + result + ")");
@@ -29,7 +29,11 @@ try {
 
 Note: if you need to get the email address for the user initiating the process, this is the query to define:
 
-```javascript
+```js
 SELECT E_MAIL FROM SUB01_PEOPLE WHERE COMPANY_ID=:COMPANY_ID AND SUBJECT_ID IN (SELECT SUBJECT_ID_SUB02 FROM PRM01_USERS WHERE COMPANY_ID=:COMPANY_ID AND USER_CODE_ID=:INITIATOR) and E_MAIL is not null
 ```
+
+---
+
+
 

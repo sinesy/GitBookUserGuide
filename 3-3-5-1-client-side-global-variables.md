@@ -16,3 +16,7 @@ The following table reports all available variables:
 | username | String | username of the current logged user |
 | applUserPars |  | collection of couples related to tuser parameters, defined through the user detail form. |
 
+---
+
+
+

@@ -10,6 +10,10 @@ This module is used to monitor an application executed through Platform, from se
 * **data audit** , i.e. listening to data writing \(insert, update and delete operations\) defined per table. Once activated that listening for a specified set of tables, Platform automatically records any change internally. After that, you can access to these records through an ad hoc monitor panel, accessible through  **Administration -&gt; Audit** .
 
 This data can be used to identify bottlenecks in the application, misconfigurations or simply to tune the whole system.  
-The first 4 functionalities can be accessed from within the Web Designer, through **Monitoring -&gt;Log and Analysis**  
+The first 4 functionalities can be accessed from within the Web Designer, through  **Monitoring -&gt;Log and Analysis**  
 See the sub-sections for more information about each of these functionalities.
+
+---
+
+
 

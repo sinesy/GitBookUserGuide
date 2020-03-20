@@ -12,8 +12,8 @@ For each table it is possible to define the following properties:
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/Object-1024x522.jpg)
 
 Through these settings, it is possible to manage automatically some very common tasks: logical delete and optimistic locking.  
-**Logical delete** is used when you do not want to physically delete records, because there are many relations that make that delete complex or maybe because you do not want to lose data, since you could decide to restore logical delete data in the future. In any case, logical delete can be automated by simply defining with is the field having that meaning and the values it can have: a filtering condition is automatically appliedto business components pointing to this data model to retrieve only not logically deleted records. In addition, records are logically deleted automatically, when you cancel a record from the GUI.  
-**Optimistic locking** is a common practice used in multi-user applications, used to ensure that a record can be updated by one user per time. Each time a record is updated, the version field is incremented and future updates are allowed only if the version value for the update is the one currently stored in the record. This behavior is automatically managed with the version field, if specified.  
+ **Logical delete**  is used when you do not want to physically delete records, because there are many relations that make that delete complex or maybe because you do not want to lose data, since you could decide to restore logical delete data in the future. In any case, logical delete can be automated by simply defining with is the field having that meaning and the values it can have: a filtering condition is automatically appliedto business components pointing to this data model to retrieve only not logically deleted records. In addition, records are logically deleted automatically, when you cancel a record from the GUI.  
+ **Optimistic locking**  is a common practice used in multi-user applications, used to ensure that a record can be updated by one user per time. Each time a record is updated, the version field is incremented and future updates are allowed only if the version value for the update is the one currently stored in the record. This behavior is automatically managed with the version field, if specified.  
 Version and logical delete fields are optional.  
 For each field belonging to the table, the following metadata are fetched:
 
@@ -33,4 +33,8 @@ For each field belonging to the table, the following metadata are fetched:
 * combobox used to define if the field must be managed as a translation
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/DataFields-1024x483.jpg)
+
+---
+
+
 
