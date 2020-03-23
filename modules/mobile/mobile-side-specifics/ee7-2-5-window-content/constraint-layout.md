@@ -1,4 +1,4 @@
-# Constraint Layout
+# Constraint layout
 
 In mobile apps it is possible to define a responsive layout named Constraints Layout. This layout works:
 

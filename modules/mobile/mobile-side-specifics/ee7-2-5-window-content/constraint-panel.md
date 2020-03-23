@@ -1,4 +1,4 @@
-# Constraint Panel
+# Constraint panel
 
 > Since 6.0.0
 
