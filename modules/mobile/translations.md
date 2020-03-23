@@ -10,6 +10,13 @@ You can change most of the app's messages or buttons, if you want to change a tr
 
 Bellow the standard translation key and value:
 
+```text
+    body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:x-small }  
+    a.comment-indicator:hover + comment { background:\#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  }   
+    a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  }   
+    comment { display:none;  }   
+```
+
 | Key | English | Italiano |
 | :--- | :--- | :--- |
 | yes | Yes | Si |

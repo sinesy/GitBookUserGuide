@@ -19,5 +19,5 @@ The main features of a detail form are:
 
 A for can be fill with a business component \(Form Panel\) or can exists without a business component \(Editable panel\).
 
-Form Panel, Editable panel and Filter Panel support the [constraints layout](../../constraint-layout.md).
+Form Panel, Editable panel and Filter Panel support the [constraints layout](constraint-layout.md).
 

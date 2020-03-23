@@ -13,6 +13,6 @@ The design and maintenance of a database passes through a set of rules to follow
 
 The design of common functionalities using the App Designer are split up in two sections:
 
-* [Use cases for Web Applications](https://github.com/sinesy/GitBookUserGuide/tree/5b75ab3a1579c00ad708d3df6cb69f860232d49b/2-3-Creating-a-web-app-common-use-cases.md)
-* [Use cases for Mobile Applications](https://github.com/sinesy/GitBookUserGuide/tree/5b75ab3a1579c00ad708d3df6cb69f860232d49b/2-4-Creating-a-mobile-app-common-use-cases.md)
+* [Use cases for Web Applications](2-3-creating-a-web-app-common-use-cases.md)
+* [Use cases for Mobile Applications](2-4-creating-a-mobile-app-common-use-cases.md)
 
