@@ -158,3 +158,5 @@ In order to use it, Google Analytics account must be set up before. Once done th
 
 ![](../../../.gitbook/assets/ana.png)
 
+If you want to log your custom event use [**sendAnalyticsEvent**](https://4wsplatform.gitbook.io/api/mobile-javascript-api/others#sendanalyticsevent-category-action-label) javascript function, see the [API](https://4wsplatform.gitbook.io/api/mobile-javascript-api/others#sendanalyticsevent-category-action-label).
+
