@@ -30,7 +30,7 @@ Other fields are not considered.
 
 Apart from these settings, required while creating the pivot grid component, it is needed to specify three additional settings in the list of columns:
 
-* the column named " **Pivot Columns** " requires to check at least one field to use as a pivot column, i.e. the list of fields that identify a single row in the grid \(i.e. they are used to group multiple records in one row in grid\); for instance, if a row shows a list of sizes for a product having a specific item name and color, then the item code and color represent the pivot fields, whereas the size must be showed along the columns of the grid; the result is the execution of the SQL query linked to the grid with the additional group by clause composed by all the pivot fields.
+* the column named " **Pivot Columns** " requires to check at least one field to use as a pivot column, i.e. the **list of fields that identify a single row in the grid except for the identifying field** \(i.e. they are used to group multiple records in one row in grid\); for instance, if a row shows a list of sizes for a product having a specific item name and color, then the item code and color represent the pivot fields, whereas the size must be showed along the columns of the grid; the result is the execution of the SQL query linked to the grid with the additional group by clause composed by all the pivot fields.
 
 Consequently, never define the identifying column as part of the “pivot columns”.
 
