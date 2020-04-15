@@ -13,6 +13,6 @@ Moreover, there could be \(real\) users who never and very rarely would synchron
 
 For reducing the amount of space required for these operations, Platform provides 2 important settings, which have the purpose of deleting useless data from the server file system:
 
-* an application parameter \(**MOBILE -&gt; Days nr before deleting devices**\) defining the maximum number of days after that a device will be deleted from the system, if it has not synchronized at least once in that time. Thanks to this parameter, sync process is faster, since data will not be duplicated for each device of the same user and consequently also the required space on the file system is reduced
+* an application parameter \(**MOBILE -&gt; Days nr before deleting devices**\) defining the maximum number of days after a device will be deleted from the system, if it has not synchronized at least once in that time. Moreover, files and folders prepared for that device are deleted as well for "dml\_scripts" and "db" folders \(since 5.3.2 version\). 
 * "**Data delete wait time**" setting \(expressed in days\), available in the **application detail** \(mobile section\), used to delete from the file system all files older than the specified number of days; this parameter will remove old data for devices who never synchronize, independently of the value of the previous parameter. In case a device will synchronize after a long time and data for it has been already removed, the whole data will be recreated and only for it, the sync process would be longer than usual.
 
