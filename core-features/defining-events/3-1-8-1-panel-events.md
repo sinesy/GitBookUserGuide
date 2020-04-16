@@ -42,6 +42,23 @@ gridXXX.store.baseParams.streamExport = "Y";
 * column headers
 * before import row \(Javascript Server only\)
 * after import row \(Javascript Server only\)
+* before export
+
+```text
+return { // all these attributes are optional
+  cols: [ 
+   // list of columns to prompt in the Export Dialog window: 
+   // each element represents a column to show in the Export Dialog window, in terms of: attribute name, title, width, exportable/not exportable (pre-set value)
+   ["userCodeId","User Code Id",100,true],
+   [...],
+   ...
+  ], 
+  defaultExportFormat: "...", // export format to pre-set in the Export Dialog window; allowed values: "XLS", "CSV (;)", "CSV (,)" 
+  enqueue: true|false // if set to true, the export task is enqueued, i.e. only one export for this grid will be allowed at a time
+}
+```
+
+>
 
 In case of a **detail form** , these are the allowed events:
 
