@@ -139,3 +139,11 @@ The followings are global parameters, grouped per topic:
 * Duplicate data per company
 * Application activation key path
 
+**Alert** - parameters related to alert messages in case of a cluster based Platform installation \(multiple servers\)
+
+Pre-requisite: the WEB-INF/web.xml file must have been set with "cluster" tag value set to "true"
+
+* Messages messages main node URL - if set, this public URL will be used to send all notification events; this URL represents the public URL for the main fixed node; use this setting ONLY when you have a cluster where there is a fixed main node
+* Port for the messages main node \(opt.\) - this parameter must be filled together with the next one: it represents the internal Tomcat port where the main current node is listen for requests
+* Protocol for the messages main node \(opt.\) - this parameter must be filled together with the previous one: it represents the HTTP protocol to use \(http vs https\) to use when communicating with the internal Tomcat where the main current node is listen for requests
+
