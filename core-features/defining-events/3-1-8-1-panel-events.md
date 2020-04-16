@@ -13,7 +13,21 @@ In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
 * before the deleting of a row
 * before inserting data in grid/form
 * before editing data in grid/form
-* before data loading
+* before data loading - 
+
+```text
+gridXXX.store.baseParams.streamExport = "Y"; 
+// use this scriptet to force the grid data export in stream mode, 
+// i.e. to generate the CSV content step by step, when exporting the grid content
+// in this way, the memory consumption is limited and the export if faster
+// IMPORTANT NOTE: do not use this hint if your grid is filled by a 
+// javascript based business component where the grid content is generated 
+// (i) starting from multiple seocndary queries 
+// or 
+// (ii) the whole result set is fetched
+
+```
+
 * before data saving on copy mode
 * before data saving on insert mode
 * before data saving on edit mode
