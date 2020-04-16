@@ -183,5 +183,25 @@ gridXXX.store.baseParams.streamExport = "Y";
 
 ```
 
+Moreover, it is also suggested to enqueue the export task, in order to take control of the memory consumption, since there can be many concurrent uses who try to export data at the same time.
+
+Consequently, see also the next section.
+
+
+
+**very slow export from grid, due to many concurrent exports**
+
+In case there are many concurrent uses who try to export data at the same time, the CPU usage and the memory consumption can reach critical levels. In order to limit the resource consumption, it is a god practice to enqueue the export tasks, at least for the most critical ones \(i.e. the ones who involves a large amount of cells to export\).
+
+It is possible to activate the export enqueuing at grid level, through the "before export" event, where linking a client-side javascript action containing the following scriptlet:
+
+```text
+return {
+  enqueue: true
+};
+```
+
+ 
+
 
 
