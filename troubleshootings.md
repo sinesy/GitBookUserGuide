@@ -159,3 +159,29 @@ The diagnosis tool provided by Platform \(**Monitoring -&gt; Application** **Log
 * slow queries
 * database locks, often due to design errors when creating the application
 
+**out of memory errors when exporting a large amount of rows from a grid**
+
+It is a very bad idea to show on grid a large amount of columns, which should never be larger than a hundred columns. Even worse, it is trying to export a large amount of rows: this would lead to a long waiting time to export the whole content and a very high memory consumption.
+
+In such a scenario, it is strongly recommended to:
+
+* limit the number of columns to export
+* apply as many filtering conditions as possible, in order to limit the total amount of rows to export
+* export always in CSV format: xls/xlsx formats consume a very large amount of memory and consequently they should be avoided
+* export data in "stream mode", i.e. the server will generate the CSV content step by step and return the CSV as a stream of data, so that the server memory consumption is limited and the export time is reduced; in order to do it, add a "before load data" event to the grid and include in the client-side javascript action the following scriptlet:
+
+```text
+gridXXX.store.baseParams.streamExport = "Y"; 
+// use this scriptlet to force the grid data export in stream mode, 
+// i.e. to generate the CSV content step by step, when exporting the grid content
+// in this way, the memory consumption is limited and the export if faster
+// IMPORTANT NOTE: do not use this hint if your grid is filled by a 
+// javascript based business component where the grid content is generated 
+// (i) starting from multiple seocndary queries 
+// or 
+// (ii) the whole result set is fetched
+
+```
+
+
+

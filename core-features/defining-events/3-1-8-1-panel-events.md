@@ -13,7 +13,7 @@ In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
 * before the deleting of a row
 * before inserting data in grid/form
 * before editing data in grid/form
-* before data loading - 
+* before data loading 
 
 ```text
 gridXXX.store.baseParams.streamExport = "Y"; 
