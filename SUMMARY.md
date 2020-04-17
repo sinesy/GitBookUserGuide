@@ -181,6 +181,7 @@
     * [App analyzer](modules/ee10-1-log-and-analysis/app-analyzer.md)
     * [Table log](modules/ee10-1-log-and-analysis/table-log.md)
     * [Threads](modules/ee10-1-log-and-analysis/threads.md)
+    * [Sessions and heap memory](modules/ee10-1-log-and-analysis/sessions-and-heap-memory.md)
     * [Heap memory analysis](modules/ee10-1-log-and-analysis/heap-memory-analysis.md)
     * [Service Monitoring](modules/ee10-1-log-and-analysis/service-monitoring/README.md)
       * [Introduction](modules/ee10-1-log-and-analysis/service-monitoring/introduction.md)
