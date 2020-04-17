@@ -3,7 +3,7 @@
 This folder reports the list of all application threads, grouped by topic: 
 
 * http/ajp connection pool
-* database connection pool
+* database connection pools, grouped by datasource id
 * monitoring threads
 * scheduled processes
 * dequeued elements \(under execution\)
