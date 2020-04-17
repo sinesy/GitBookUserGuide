@@ -6,6 +6,9 @@ This module is used to monitor an application executed through Platform, from se
 * analyze aggregated data from the application log, in order to  **log**  **statistics**  about server-side operations, such as CPU/memory consumption, HTTP requests
 * **analyze the app**  behavior, from different perspectives, including queues and scheduled processes performance, resources consumption, grave misconfigurations, user sessions and threads, etc.
 * monitor the **table log** , i.e. server-side log stored in a table and automatically generated for specific events, like javascript or mobile errors, SMS/email sendings, etc.
+* **application threads**, including http requests pool, database connections pool, enqueued elements, scheduled processes, etc.
+* **user sessions**, i.e. authenticated on-line users and creation date/time and session memory consumption
+* **memory heap analysys**, in terms of total memory, consumed memory, free memory
 * **heap memory consumption** , i.e. the amount of memory consumed by the app, in terms of data and metadata; this feature should be used carefully, since it consumes a lot of CPU and disk space and it can be helpful only in case of grave issues related to out of memory errors
 * **data audit** , i.e. listening to data writing \(insert, update and delete operations\) defined per table. Once activated that listening for a specified set of tables, Platform automatically records any change internally. After that, you can access to these records through an ad hoc monitor panel, accessible through  **Administration -&gt; Audit** .
 
