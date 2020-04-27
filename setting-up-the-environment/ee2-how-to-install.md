@@ -49,6 +49,10 @@ In the next sections, you can find detailed descriptions about how to install bo
 * **installation path**, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
 * **JDK path**: pay attention to this path! it is NOT the JRE path, but **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
 * **4WS.Platform web context**; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
+* **Environment**: a free input text representing the usage of this installation; you can fill it with a text like "DEV" or "TEST" or "PRODUCTION". This label will be reported on the bottom part of the App Designer
+* **Initial Value**: it represents the value to use for each internal counter used by the App Designer; it is strongly recommended to specify different values for different execution environments
+* **Server port:** set the listening ports used by Tomcat AS; be sure to specify ports not already used in your server
+* **Activate secured cookies with HTTPS access**: d_o NOT check_ the "" if you don't have a Web Server \(e.g. Apache\) in front of the Platform's Tomcat, since you will use HTTP protocol only. 
 * **Run Tomcat** A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)
 
 The default account to use is:  
@@ -70,32 +74,6 @@ In case you already have a Platform installation previous to Platform rel. 6 \(p
 * remove the previous service defined at o.s. level
 * add a new service defined at o.s. level
 
-## 4WS.PLATFORM INSTALLER STEPS
-
-* **START**
-
-  Type the following command from the shell: installgui.sh or installgui.bat.
-
-  ![](http://4wsplatform.org/wp-content/uploads/2013/10/Install0-300x206.png)
-
-* **SETTING DATABASE**
-
-  Insert data of database connection.
-
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install1-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install1.png)
-
-* **SETTING CONFIG**
-
-  Complete configuration fields for installation.
-
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install2-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install2.png)
-
-* **END**
-
-  Enjoy 4WS.Platform.
-
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install3-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install3.png)
-
 ## INSTALLING 4WS.PLATFORM COMMUNITY EDITION - JAVA 1.7 \(OLDER VERSION\)
 
 * **Install JDK 1.7** in your machine, if not already available; please, **do NOT use other versions**, such as OpenJDK, otherwise some parts of the product would not work correctly.
@@ -114,6 +92,10 @@ In case you already have a Platform installation previous to Platform rel. 6 \(p
 * **installation path**, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
 * **JDK path**: pay attention to this path! it is NOT the JRE path, but **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
 * **4WS.Platform web context**; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
+* **Environment**: a free input text representing the usage of this installation; you can fill it with a text like "DEV" or "TEST" or "PRODUCTION". This label will be reported on the bottom part of the App Designer
+* **Initial Value**: it represents the value to use for each internal counter used by the App Designer; it is strongly recommended to specify different values for different execution environments
+* **Server port:** set the listening ports used by Tomcat AS; be sure to specify ports not already used in your server
+* **Activate secured cookies with HTTPS access**: d_o NOT check_ the "" if you don't have a Web Server \(e.g. Apache\) in front of the Platform's Tomcat, since you will use HTTP protocol only. 
 * **Run Tomcat** A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)
 
 The default account to use is:  
@@ -145,13 +127,6 @@ password: admin
 * **OTHER SETTINGS**
 
   Complete configuration fields for installation.
-
-  A few settings:
-
-  * **Environment**: a free input text representing the usage of this installation; you can fill it with a text like "DEV" or "TEST" or "PRODUCTION". This label will be reported on the bottom part of the App Designer
-  * **Initial Value**: it represents the value to use for each internal counter used by the App Designer; it is strongly recommended to specify different values for different execution environments
-  * **Server port:** set the listening ports used by Tomcat AS; be sure to specify ports not already used in your server
-  * **Activate secured cookies with HTTPS access**: d_o NOT check_ the "" if you don't have a Web Server \(e.g. Apache\) in front of the Platform's Tomcat, since you will use HTTP protocol only. 
 
 ![](../.gitbook/assets/schermata-2020-04-26-alle-18.10.44.png)
 
