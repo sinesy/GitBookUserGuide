@@ -170,9 +170,17 @@ In case of Java 11, you MUST use Open JDK 11.x, not other versions like Oracle J
 
 If the installation process has been completed correctly but the wen app is not accessible from the local URL typed in the browser, there can be different reasons:
 
-* you have typed the wrong URL in the browser, for instance an URL having the wrong port; if you have installed Platform with the default settings, a valid URL can be: http://localhost:8080/platform/
-* you have erroneously set the SSL for cookies during the installation process: this setting can be enabled only if you have an Web Server in front of Platform's tomcat, receiving requests in HTTPS; in such a scenario,  change the cookies settings in the tomcatpath/webapps/platform/WEB-INF/web.xml and disable the cookies use with SSL or, as an alternative, reinstall Platform from the beginning
-* Tomcat is up but not Platform: you have typed in the browser http://localhost:8080 and Tomcat responds with a valid web page but the Platform URL: http://localhost:8080/platform/ returns an error, it is likely there is an error when running it. More information can be retrieved by opening the log files located in tomcatpath/log. Here you can find catalina.out and localhost.0.log which can contain an helpful error message. 
+* you have typed the **wrong URL** in the browser, for instance an URL having the **wrong port** or the **wrong web context**; if you have installed Platform with the default settings, a valid URL can be: http://localhost:8080/platform/
+* you have erroneously set the SSL for cookies during the installation process: this setting can be enabled only if you have an Web Server in front of Platform's tomcat, receiving requests in HTTPS; in such a scenario,  change the cookies settings in the tomcatpath/webapps/platform/WEB-INF/web.xml and **disable secured cookies setting** or, as an alternative, reinstall Platform from the beginning
+
+```markup
+		<cookie-config>
+        <http-only>false</http-only>
+        <secure>false</secure>
+    </cookie-config>
+```
+
+* Tomcat is up but not Platform: you have typed in the browser http://localhost:8080 and Tomcat responds with a valid web page but the Platform URL: http://localhost:8080/platform/ returns an error, it is likely there is an error when running it. More information can be retrieved by opening the log files located in tomcatpath/log. Here you can find **catalina.out** and **localhost.0.log** which can contain an helpful error message. 
 
 ## UPGRADES
 
