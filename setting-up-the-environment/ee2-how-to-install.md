@@ -6,7 +6,7 @@ The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not
 There are two alternative versions of 4WS.Platform:
 
 * **Java 1.7 based version** - Platform started with this version and it spreads up to the **5.2.3 version**
-* **Java 11 new version** - this is the most recent version of **Platform: 6.0**, which is functionally equivalent to 5.2.3 version
+* **Java 11 new version** - this is the most recent version of **Platform: 6.0 or greater;** the 6.0 version is functionally equivalent to 5.2.3 version
 
 In the next sections, you can find detailed descriptions about how to install both of them.
 
@@ -23,11 +23,12 @@ In the next sections, you can find detailed descriptions about how to install bo
 
   Supported databases are:
 
-| **Oracle Database**  - release 11.2.0.4 e 12.2 e 12.1 |
+| **Database** |
 | :--- |
 | **Microsoft SQL Server** - release 2008R2 or above |
 | **MySQL / Google CloudSQL** - release 5.5 or 5.6 |
 | **PostgreSQL** |
+| **Oracle Database**  - release 11.2.0.4 e 12.2 e 12.1 |
 
 * Once installed the database, you have to create a schema, a user and link this user to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.
 
@@ -60,12 +61,14 @@ password: admin
 
 ## PORTING FROM JAVA 1.7 TO JAVA 11
 
-In case you already have a Platform installation previous to Platform 6 \(previous to Java 11\) and need to migrate it to the last version, you have to follow the steps reported above: installing the new version of Plaftorm, specify the same settings for the database connection.
+In case you already have a Platform installation previous to Platform rel. 6 \(previous to Java 11\) and need to migrate it to the last version, you have to follow the steps reported in the previous section, i.e. execute the installer for the new version of Platform \(rel.6+\); during the installation process:
 
-After doing it, bear in mind that you have also to copy a few other files:
-
-* copy the application static content from one installation to the other
-* copy the WEb-INF/classes/reports subfolder from the previous installation to the new one
+* define a different location for the new installation \(i.e. do NOT install the new version in the same installation path of the previous one
+* specify the same settings for the database connection; in this way, the installer will upgrade the Platform repository
+* copy & paste the application web/mobile context for each configured application, from the previous installation path to the new one
+* copy & paste the WEB-INF/classes/reports subfolder from the previous installation to the new one
+* remove the previous service defined at o.s. level
+* add a new service defined at o.s. level
 
 ## 4WS.PLATFORM INSTALLER STEPS
 
@@ -127,41 +130,74 @@ password: admin
 
   Type the following command from the shell: installgui.sh or installgui.bat.
 
-  ![](http://4wsplatform.org/wp-content/uploads/2013/10/Install0-300x206.png)
+  In case of installgui.sh, a UI will be prompted to the user, in order to graphically define all required settings. The first step is choosing between a new installation or an upgrade.
 
-* **SETTING DATABASE**
+![](../.gitbook/assets/schermata-2020-04-26-alle-18.09.45.png)
+
+* **DATABASE SETTINGS**
 
   Insert data of database connection.
 
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install1-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install1.png)
+  Be sure to specify a user having enough grants on the specified schema so that the installer can create objects \(such as tables, constraints, etc.\)
 
-* **SETTING CONFIG**
+![](../.gitbook/assets/schermata-2020-04-26-alle-18.09.59.png)
+
+* **OTHER SETTINGS**
 
   Complete configuration fields for installation.
 
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install2-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install2.png)
+  A few settings:
+
+  * **Environment**: a free input text representing the usage of this installation; you can fill it with a text like "DEV" or "TEST" or "PRODUCTION". This label will be reported on the bottom part of the App Designer
+  * **Initial Value**: it represents the value to use for each internal counter used by the App Designer; it is strongly recommended to specify different values for different execution environments
+  * **Server port:** set the listening ports used by Tomcat AS; be sure to specify ports not already used in your server
+  * **Activate secured cookies with HTTPS access**: d_o NOT check_ the "" if you don't have a Web Server \(e.g. Apache\) in front of the Platform's Tomcat, since you will use HTTP protocol only. 
+
+![](../.gitbook/assets/schermata-2020-04-26-alle-18.10.44.png)
 
 * **END**
 
   Enjoy 4WS.Platform.
 
-  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install3-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install3.png)
+  At the end of the installation process, the wizard will show the credentials you can use to access Platform.
 
 ## TROUBLESHOOTING
+
+**INVALID PATH** 
 
 Be careful : **avoid the installation of Tomcat in paths having a space in folders**, such as C:\Program Files
 
 Windows operating system could have problems in recognizing the correct path.
 
+**USER GRANTS**
+
 If you are using recent versions of Windows \(Vista or next versions\), you have to use a superuser and open the prompt by right clicking on it and choose “Run as Administrator”: that is the right way to install the program. DO NOT simply execute the installer using a superuser \(e.g. administrator\), since this has not the same effect.
+
+**INVALID LISTENING PORT**
 
 Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat.
 
-If the installation process was successfully completed but when you start Tomcat it terminates immediately or 4WS.Platform is not accessible, it is likely that you have specified the wrong JDK path during the installation process: it is NOT the JRE path, but**the JDK path:** in that case, you have to delete the installation and run the installer again.
+If the installation process was successfully completed but when you start Tomcat it terminates immediately or 4WS.Platform is not accessible, it is likely that you have specified the wrong JDK path during the installation process: it is NOT the JRE path, but **the JDK path:** in that case, you have to delete the installation and run the installer again.
 
 **If you have changed the HTTP port in tomcat/conf/server.xml file, the URL to use in the browser to connect to 4WS.Platform changes as well.**
 
-**If** **you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transactions; if this is the table type defined for yuor tables, you have to change it to InnoDB.
+**MYSQL DEFINITION**
+
+**If** **you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transactions; if this is the table type defined for your tables, you have to change it to InnoDB.
+
+Another common error is not associating a user to the schema or do not provide the right grants to the user when working on the schema used by the installer when creating all tables and data: it is better to assign full grants to the user \(creating objects, writing and reading permissions, etc.\)
+
+**INVALID JDK**
+
+In case of Java 11, you MUST use Open JDK 11.x, not other versions like Oracle JDK 11. If you have erroneously installed Oracle JDK, uninstall it, re-install Open JDK 11.x and change manually the Platform service and catalina.sh/.bat files, by replacing the old JDK PATH with the new one.
+
+**OTHER ERRORS**
+
+If the installation process has been completed correctly but the wen app is not accessible from the local URL typed in the browser, there can be different reasons:
+
+* you have typed the wrong URL in the browser, for instance an URL having the wrong port; if you have installed Platform with the default settings, a valid URL can be: http://localhost:8080/platform/
+* you have erroneously set the SSL for cookies during the installation process: this setting can be enabled only if you have an Web Server in front of Platform's tomcat, receiving requests in HTTPS; in such a scenario,  change the cookies settings in the tomcatpath/webapps/platform/WEB-INF/web.xml and disable the cookies use with SSL or, as an alternative, reinstall Platform from the beginning
+* Tomcat is up but not Platform: you have typed in the browser http://localhost:8080 and Tomcat responds with a valid web page but the Platform URL: http://localhost:8080/platform/ returns an error, it is likely there is an error when running it. More information can be retrieved by opening the log files located in tomcatpath/log. Here you can find catalina.out and localhost.0.log which can contain an helpful error message. 
 
 ## UPGRADES
 
