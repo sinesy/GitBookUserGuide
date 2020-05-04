@@ -23,13 +23,15 @@ Required data change according to the " **Execution Type** " chosen. There are s
 * **Execute the tests of the collection -** service used to execute the automated testings defined for the current application, belonging to the same collection
 * **Execute all tests -** service used to execute all automated testings defined for the current application
 
-When automating the execution of a process, two data must be provided:  
-**scheduling** – execution frequency, i.e. the measure unit to use when automating the process start: it can be expressed in minutes \(minumum value: 2 minutes\), days, months and "end month".  
-The latter choice, "End month", means that the process will be automatically started every month, the last day of the month.  
-**frequency** – number of executions per measure unit; for instance, the value "5", combined with "minutes", means that the process will be executed every "5 minutes"  
-The combination of this two sizes allows to define how often to execute the process.  
-**Start day/time** – this combination defines when the process will start to execute: that day at that time; after that time, ther execution will be automatically restarted according to the scheduling+frequency.  
-**Max executions** – maximum number of executions before cleaning up the old recordings of previous executions, showing in the "Executions" folder.  
-**Username** – optional input field, used to specify a username to use when executing the process; this could be needed in some processes where there is a business logic based on a specific user.  
-**Suspended** – flag used to suspend the automatic execution of the process: when selected, the process will no more autostarted; the manual execution is still allowed, by pressing the "Start process" button.
+When automating the execution of a process, two data must be provided:
+
+* **scheduling** – execution frequency, i.e. the measure unit to use when automating the process start: it can be expressed in minutes \(minumum value: 2 minutes\), days, months and "end month". The latter choice, "End month", means that the process will be automatically started every month, the last day of the month.
+* **frequency** – number of executions per measure unit; for instance, the value "5", combined with "minutes", means that the process will be executed every "5 minutes" The combination of this two sizes allows to define how often to execute the process.
+* **start day/time** – this combination defines when the process will start to execute: that day at that time; after that time, ther execution will be automatically restarted according to the scheduling+frequency.
+* **max executions** – maximum number of executions before cleaning up the old recordings of previous executions, showing in the "Executions" folder.
+* **username** – optional input field, used to specify a username to use when executing the process; this could be needed in some processes where there is a business logic based on a specific user.
+* **suspended** – flag used to suspend the automatic execution of the process: when selected, the process will no more autostarted; the manual execution is still allowed, by pressing the "Start process" button.
+* **parent process** - optional field: if specified, it describes the scheduled process to execute before the current one, which can remain "suspended"; in this way, after the termination of the parent process, the current one will be automatically executed; this property is helpful to create a sequence of processes depending from each other and to execute in sequence, instead of executing them at a specified fixed time
+* **parent exit code** - optional field: ignored if the current one has not been filled; it represents the exit value for the last execution of the parent process: only in case the parent node has terminated with the specified "parent exit node", the current process will be automatically started; this is helpful to create a hierarchy of processe to execute in alternative; for example: P1 is executed, if it terminates with a 0 code \(all right\), then execute P2, otherwise \(1 code, i.e. error\), execute P3, which can be used to "undo" what done by P1
+* **executing node** - optional field: helpful when the application has been installed in a clustered environment, i.e. there is a group of nodes running the same application; in such a scenario, it is possible to define here the IP address for the node where this process must be executed; helpful to distribute the computational load of many processed among a group of nodes.
 
