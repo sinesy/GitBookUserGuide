@@ -203,5 +203,19 @@ return {
 
  
 
+## Error while reading email messages
+
+Platform distribution can work within a Tomcat web container or inside Google App Engine container.
+
+According to the execution environment, a library is needed to work correctly.
+
+If you get the following error
+
+> java.lang.NoSuchMethodError: javax.mail.internet.ParameterList.combineSegments\(\)V at com.sun.mail.imap.protocol.BODYSTRUCTURE.parseParameters\(BODYSTRUCTURE.java:424\) at com.sun.mail.imap.protocol.BODYSTRUCTURE.\(BODYSTRUCTURE.java:244\) at com.sun.mail.imap.protocol.BODYSTRUCTURE.\(BODYSTRUCTURE.java:110\) at com.sun.mail.imap.protocol.FetchResponse.parseItem\(FetchResponse.java:244\) at com.sun.mail.imap.protocol.FetchResponse.parse\(FetchResponse.java:199\)
+
+when trying to read email messages from Platform standard edition \(within Tomcat\), it means there is a library to remove from WEB-INF/lib subfolder of Platform web application: you have to remove 
+
+appengine-api-1.0-sdk-1.9.64.jar
+
 
 
