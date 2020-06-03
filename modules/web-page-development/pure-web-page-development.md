@@ -110,7 +110,7 @@ This is an example of code to include in your web page in order to do it:
                     alert(e);
                 }
             });
-
+        </script>
 </head>
     <body>
 ...
