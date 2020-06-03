@@ -137,13 +137,13 @@ This class requires a few arguments:
 * callbackError - a js function invoked in case of errors when loading data
 * synchronous - optional flag true\|false, used to force synchronous data loading; if not specified, data loading is asynchronous \(strongly recommended\)
 
-Once created this object, you can force any number of time the data loading through a method it provides:
+Once created this object, you can force any number of times the data loading through a method it provides:
 
 `load({ startPos: xyz, blockSize: xyz, filters: [{ attrName: "", op: "", value: "" },...] });`
 
 You can simply use this method by calling it without arguments:
 
-load\(\);
+load\({}\);
 
 or using it with any of its arguments, according to the need.
 
@@ -190,7 +190,7 @@ Just to give you an example of a simple rendering of a grid, starting from basic
                           myGrid.append( createTableRow(
                               list[i],
                               ["clientCode","name","createDate","totalAmount","country"],
-                              null
+                              null,
                               null
                           ) );
                         }
@@ -388,7 +388,7 @@ This class requires a few arguments:
 * callback - a js function invoked at the end of every data loading
 * callbackError - a js function invoked in case of errors when loading data
 
-Once created this object, you can force any number of time the data loading through a method it provides:
+Once created this object, you can force any number of times the data loading through a method it provides:
 
 `load({ filters: [{ attrName: "", op: "", value: "" },...] });`
 
