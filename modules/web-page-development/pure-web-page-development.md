@@ -35,31 +35,16 @@ login(
 
 Once the login operation has been successfully completed, a set of global js variables are filled and available everywhere inside the web page:
 
-context- string representing the web context for this web page
-
-applicationId- string
-
-companyId- string
-
-siteId- number
-
-username- string
-
-password- string
-
-languageId- string
-
-userRoles- js array, whose elements are strings related to role id
-
-translations- map containing all translations
-
-init\(callback,vo\)
-
-This method allows to by-pass the authentication on Platform, since it has been already done and sets the global js variables from the internal state available on the server layer.
-
-The callback argument must be a js function, automatically invoked after the authentication process. It passes forward a js object containing 2 attributes: success \(true\|false\) and an optional message string, containing the error message, in case of authentication failure.
-
-The js object named “vo” is optional, since in case of user already authenticated, this is not required.
+* **context** - string representing the web context for this web page
+* **applicationId** - string
+* **companyId** - string
+* **siteId** - number
+* **username** - string
+* **password** - string
+* **languageId** - string
+* **userRoles** - js array, whose elements are strings related to role id
+* **translations** - map containing all translations
+* **init**\(callback,vo\) - this method allows to by-pass the authentication on Platform, since it has been already done and sets the global js variables from the internal state available on the server layer. The callback argument must be a js function, automatically invoked after the authentication process. It passes forward a js object containing 2 attributes: success \(true\|false\) and an optional message string, containing the error message, in case of authentication failure. The js object named “vo” is optional, since in case of user already authenticated, this is not required.
 
 Example:
 
