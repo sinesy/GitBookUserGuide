@@ -297,8 +297,9 @@ Once create that grid, be sure there is a column that can be used to store the f
 * press the “ **Save** ” button to confirm the setting
 * select “ **Application Management** ” -&gt; “ **Windows** ” and select the window containing the  **second**  grid, choose the “ **Panels** ” subfolder and  **double click on the grid** 
 * in the folder named “Grid columns“, press the “ **Edit** ” buttonand select the row related to the column which will host the file name
-* change its t **ype to “File Upload”** 
-* select also thepath where saving files:  **choose the directory previously defined**  in the “Directory” column
+* change its **type to “File Upload”** 
+* select also the path where saving files:  **choose the directory previously defined**  in the “Directory” column
+* optionally set the "**File type**" advanced property, in order to limit the file types to upload when choosing a file from your local file system; this property is a String containing the list of allowed file types, expressed as mime types separated by a comma; example: "image/jpg,image/png"
 * press the “ **Save** ” button to confirm the setting
 
 At this point, the file name column will show a button used to show a small dialog through which upload/download/preview files.
