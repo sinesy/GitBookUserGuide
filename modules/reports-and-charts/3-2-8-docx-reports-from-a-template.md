@@ -110,6 +110,54 @@ utils.setReturnValue(text);
 
 
 
+### Supported business components
+
+You can use either SQL based business components to fill in the docx template or javascript based business components.
+
+Pay attention to the right type of component you bound to the template:
+
+* the main form must be linked either to a SQL based component for a form or to a **Detail component filled by a server-side JS** \(do not link a Grid component\)
+* a sub-form must be linked either to a SQL based component for a form or to a **javascript based component for a form** \(do not link a Grid component\)
+* a sub-table must be linked either to a SQL based component for a grid or to a **Grid component filled by a server-side JS** \(do not link a  component for a form\)
+
+Moreover, in case of javascript based business components, you have to get back the right JSON content, like in the following examples.
+
+Detail component filled by a server-side JS**:**
+
+```javascript
+var json = utils.executeQuery(
+    "SELECT CUSTOMERS.CUSTOMER_CODE,CUSTOMERS.CORPORATE_NAME,CUSTOMERS.ADDRESS,CUSTOMERS.CITY,CUSTOMERS.PROV,CUSTOMERS.COUNTRY,CUSTOMERS.PHONE,CUSTOMERS.FAX,CUSTOMERS.EMAIL,CUSTOMERS.WEB_SITE,CUSTOMERS.ENABLED,CUSTOMERS.EXTRACTED,CUSTOMERS.ROW_ROW_VERSION,CUSTOMERS.NAME,CUSTOMERS.SURNAME,CUSTOMERS.FULL_ADDRESS,CUSTOMERS.LONGITUDE,CUSTOMERS.LATITUDE,CUSTOMERS.MYDATE "+
+    "FROM CUSTOMERS WHERE CUSTOMERS.CUSTOMER_CODE= ?",
+    null,
+    false,
+    true,
+    [reqParams.customerCode]
+);
+var list = JSON.parse(json);
+utils.setReturnValue(JSON.stringify(list[0])); // first element only!
+```
+
+Grid component filled by a server-side JS:
+
+```javascript
+var json = utils.executeQuery(
+    "SELECT ORDER_ROWS.PROGRESSIVE,ORDER_ROWS.ROW_NR,ORDER_ROWS.PRODUCT_CODE,ORDER_ROWS.UNIT_PRICE,ORDER_ROWS.QUANTITY,ORDER_ROWS.ROW_TOTAL,ORDER_ROWS.ENABLED,ORDER_ROWS.CREATE_DATE,ORDER_ROWS.CUSTOMER_CODE,ORDER_ROWS.DESCRIPTION "+
+    "FROM ORDER_ROWS WHERE ORDER_ROWS.CUSTOMER_CODE= ?",
+    null,
+    false,
+    true,
+    [reqParams.customerCode]
+);
+var list = JSON.parse(json);
+var res = {
+    valueObjectList: list,
+    moreRows : false
+};
+utils.setReturnValue(JSON.stringify(res)); // the whole content
+```
+
+
+
 ### Generating the report, starting from the docx template
 
 Once completed the configuration of the docx template \(filling the docx with tags, uploading it, one for each supported language, mapping tags to business components fields\), it is possibile to execute it.
