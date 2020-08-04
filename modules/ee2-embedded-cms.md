@@ -74,6 +74,61 @@ Starting from 6.0.1 version, it is possible to store documents in 3 alternative 
   * Google Service Account Key
   * Google Apps Domain Admin User - which must be set with an email having grants to read/save documents
 
+**A unique advantage provided by Google Drive is the possibility to search for content**, i.e. it allows to search for documents not only based on metadata assigned to documents when uploading them, but also by the content of the document \(for text based documents as well as PDFs\).
+
+In order to search for content with Google Drive, you can use the server-side javascript function "searchInGoogleDrive", where passing the text pattern to search and the folders where searching for documents. You have to provide all folders containing documents, which are stored in a Platform table. 
+
+The following example shows how to get a list of documents matching the text pattern "rego,lamento":
+
+```javascript
+// 1. retrieve all GDrive folder UUIDs containing documents to search for...
+var json = utils.executeQuery(
+  "SELECT DISTINCT PATH FROM CON91_DOCUMENTS_INDEX WHERE APPLICATION_ID='DRIVE' ",
+  null,
+  false,
+  true,
+  []
+);
+var list = JSON.parse(json);
+
+// prepare the WHERE condition, according to GDrive quert language,
+// including all folders UUID...
+var parentsWhere = "";
+for(var i=0;i<list.length;i++) {
+    parentsWhere += "'"+list[i].path+"' in parents or ";
+}
+if (parentsWhere.length>0)
+  parentsWhere = parentsWhere.substring(0,parentsWhere.length-3);
+
+var googleAppsAdminEmail = "...";
+
+var res = utils.searchInGoogleDrive( 
+  googleAppsAdminEmail,
+  10, // read up to 10 results
+  0, // starting from page 0
+  null, // token used to read next blocks of data 
+  null, 
+  true, 
+  "fullText contains 'regolamento' and ("+parentsWhere+") ", // search pattern
+  false
+); // this method always returns a block of data and a token used to read next blocks...
+
+var list = res.getList(); // list of File objects, each related to a document matching the search criteria
+
+// scroll the list and extract document UUID and its title, for each element...
+var docs = [];
+for(var i=0;i<list.size();i++) {
+    var doc = list.get(i);
+    docs.push({
+      docId: doc.id,
+      title: doc.title
+    });
+}
+utils.setReturnValue(JSON.stringify(docs));
+```
+
+
+
 ## Working with documents
 
 At this point you are ready to fill your application with metadata and files, through the upload feature: when pressing on the upload/download button, a dialog window is shown. Through it you can upload/download/preview a document.
