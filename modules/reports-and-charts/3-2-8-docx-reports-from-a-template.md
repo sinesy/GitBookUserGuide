@@ -1,7 +1,23 @@
 # Docx templating
 
 4WS.Platform provides a feature to create docx documents on the fly, starting from a docx template. The template can contain images, paragraphs, tables or any other kind of object; it can also contain special tags that will be replaced by values by Platform, when the template is executed to produce the final docx. Values to fill in come from a main query or from a subquery, linked to a report table.  
-Through the App Designer it is possible to define a list of reports and for each of them a set of docx template, one for each supported language. In this way when launching a report, Platform will use the template related to the current language.  
+Through the App Designer it is possible to define a list of reports and for each of them a set of docx template, one for each supported language. In this way when launching a report, Platform will use the template related to the current language. 
+
+### Importing a template
+
+The starting point in the App Designer is the sub-menu **UI -&gt; Reports**:
+
+* **Docx** - through this functionality, it is possible to the list of reports mentioned above, in terms of: 
+  * **report name**
+  * **main business component**, i.e. a business component of a form, used to map &lt;control&gt; tags; this is the easiest way to create a template: a document containing a few fields to replace. It is possible to make it more complex, by adding additional business components, used to fill in other fields \(in sub-forms\) or to fill in a list of items \(as for a grid\)
+  * **a list of docx templates to upload** - one for each supported language; all these templates must have the same layout and contain the same tags to replace; they should differ only for the language used for the text
+
+![](../../.gitbook/assets/schermata-2020-08-04-alle-09.30.06.png)
+
+* **Upload Report documents** - after the first docx upload through the "Docx" funcionality reported above, it is possible to update the docx template through this second feature
+
+### Templates tags content
+
 When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These are the supported tags:
 
 * **&lt;table&gt;**
@@ -13,29 +29,55 @@ When uploading a template, the App Designer will analyze the docx content, searc
 * **&lt;subcontrol&gt;**
 * **&lt;subcontroltranslation&gt;** 
 
-For each tag belonging to the main report \(control or translation\), a corresponding field will be created and linked to the report definition: when configuring the report, a value must be mapped to each of these fields, in order to provide a value to fill in for each of them.  
+For each tag belonging to the main report \(control or translation\), a corresponding field will be created and linked to the report definition: when configuring the report, a value must be mapped to each of these fields, in order to provide a value to fill in for each of them.
+
+
+
+### Docx template example
+
+![](../../.gitbook/assets/schermata-2020-08-04-alle-10.10.56.png)
+
+This is an example of a docx template composed of:
+
+* a main form, including &lt;control&gt; tags
+* a sub-list, including &lt;td&gt; tags
+* a sub-form, including &lt;subcontrol&gt; tags
+
+The following screenshot reports the the resulting docx, after completing the mapping between tags and business components \(see section below\) and after executing the report:
+
+![](../../.gitbook/assets/schermata-2020-08-04-alle-10.10.47.png)
+
+
+
+### Mapping between tags and business components
+
 Values to link to each field can be:
 
-* a field in the select clause of the main query \(in case of a main report field\)
-* you can map that field to a tag
-* you can map the prefix of a field in the select clause to a tag, in case of translations not stored in a dictionary table but to a series of fields, one for each language; so if you have a table mapped to the select clause having a set of fields for each language, here you have to map the prefix common to al these fields.
+* a **field in the select clause of the main query** \(in case of a main report field\)
+  * you can map that field to a tag
+  * you can map the prefix of a field in the select clause to a tag, in case of translations not stored in a dictionary table but to a series of fields, one for each language; so if you have a table mapped to the select clause having a set of fields for each language, here you have to map the prefix common to al these fields.
 
-  For example, if you have a table with fields: DESCRIPTION\_IT, DESCRIPTION\_EN, DESCRIPTION\_DE defined in the select clause, you can map a tag to DESCRIPTION; in this way, the report generator will automatically choose the DESCRIPTION\_xx field, according to the current language, that is to say, xx will be the value of the current language.
+    For example, if you have a table with fields: DESCRIPTION\_IT, DESCRIPTION\_EN, DESCRIPTION\_DE defined in the select clause, you can map a tag to DESCRIPTION; in this way, the report generator will automatically choose the DESCRIPTION\_xx field, according to the current language, that is to say, xx will be the value of the current language.
 
-* a field in the select clause of a subquery \(in case of a subreport field – aka table\)
-* a constant
-* a system variable, such as :TODAY, :USERNAME, etc
-* a predefined function with its argument values; supported functions are:
-* INCREMENT\_DATE\(NUMBEROFDAYS\) – creates a date, starting from the current day, incremented by a number of days specified as the first argument
-* PROGRESSIVE\(TABLENAME,COLNAME\) – generates an internal counter, incremented by 10, using CON09\_PROGRESSIVES table, where there is a record for each counter, whose primary key is composed of tablename and columname
-* COUNTER\(TABLENAME,VALUECOLNANE,INCREMENTVALUE,WHERE\) – generates a generic counter, incremented by the specified value, using an external table, provided by the user, where a single record can be identified throught the specified where clause \(the word WHERE must NOT be included\); the table name and the column name containing the current value must be specified too.
+![](../../.gitbook/assets/schermata-2020-08-04-alle-10.08.24.png)
 
-## Example
+* a **field in the select clause of a subquery** \(in case of a subreport field, linked to a sub-form or a sub-table\)
+
+![](../../.gitbook/assets/schermata-2020-08-04-alle-10.09.26.png)
+
+* a **constant**
+* a **system variable**, such as :TODAY, :USERNAME, etc
+* a **predefined function** with its argument values; supported functions are:
+  * INCREMENT\_DATE\(NUMBEROFDAYS\) – creates a date, starting from the current day, incremented by a number of days specified as the first argument
+  * PROGRESSIVE\(TABLENAME,COLNAME\) – generates an internal counter, incremented by 10, using CON09\_PROGRESSIVES table, where there is a record for each counter, whose primary key is composed of tablename and columname
+  * COUNTER\(TABLENAME,VALUECOLNANE,INCREMENTVALUE,WHERE\) – generates a generic counter, incremented by the specified value, using an external table, provided by the user, where a single record can be identified throught the specified where clause \(the word WHERE must NOT be included\); the table name and the column name containing the current value must be specified too.
+
+Example:
 
 COUNTER\(DOC\_COUNTERS,CURR\_VALUE,1,DOC\_TYPE=’SELLORD’ and  
 YEAR=2014\)
 
-Supported system variables are the same used in the rest of Platform.  
+The supported system variables are the same used in the rest of Platform.  
 The report definition requires the following data:
 
 * report description
@@ -52,7 +94,7 @@ Independently of the field, additional settings can be defined:
 
 The program must terminate by returning the result string to show, through the command: utils.setReturnValue\(valueToReturn\);
 
-## Example
+Example:
 
 ```javascript
 var showDecimals = false;
@@ -65,4 +107,22 @@ var text = utils.numberToText(vo.number,decimals,langId,showDecimals,’/’);
 
 utils.setReturnValue(text);
 ```
+
+
+
+### Generating the report, starting from the docx template
+
+Once completed the configuration of the docx template \(filling the docx with tags, uploading it, one for each supported language, mapping tags to business components fields\), it is possibile to execute it.
+
+In order to execute it, you have to define a server-side javascript action, receiving in input all required data needed to execute the docx template, i.e. it must provide the list of input parameters required by the template \(the ones defined in the **Params** sub-folder\).
+
+In order to execute the report, use the generateDocx method, like in the following example:
+
+```javascript
+var path = "..."; // local path where saving the final result
+utils.generateDocx(9,vo,"IT",path,"myreport.docx");
+
+```
+
+### 
 
