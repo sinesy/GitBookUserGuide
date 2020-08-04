@@ -18,14 +18,14 @@ Platform Enterprise Edition \(from version 5.2\) provides a basic CMS, including
 * a CMS engine, through which it can store and retrieve documents, using a UUID identifier for each document
 * organization of documents in folders
 * definition of metadata for each document type, stored in a specific folder
-* optional support for versioneddocuments, i.e. the simultaneous storage of all versions for the same document name
-* optimized for storaging up to 16 billions documents
+* optional support for versioned documents, i.e. the simultaneous storage of all versions for the same document name
+* optimized for storaging up to 16 billions documents \(in the server file system\)
 * definition of any number of filtering/sorting conditions for documents
 * upload/download/preview of documents
-* bulk import of documents from an external FTP server or from the serverfile system, combined with a CSV file containing metadata linked to files
+* bulk import of documents from an external FTP server or from the server file system, combined with a CSV file containing metadata linked to files
 * optional backup of documents in input folders
-* custom logic \(expressed as server-side javascript actions\), which can be executed before importing everyrow in the CSV, in order to perform additional checking and optionally skip the row importing
-* custom logic \(expressed as server-side javascript actions\), which can be executed just afterimporting arow in the CSV, in order to perform additionalenquiry and fill data for the same record
+* custom logic \(expressed as server-side javascript actions\), which can be executed before importing every row in the CSV, in order to perform additional checking and optionally skip the row importing
+* custom logic \(expressed as server-side javascript actions\), which can be executed just after importing a row in the CSV, in order to perform additional enquiry and fill data for the same record
 
 ## **How to use it**
 
@@ -60,6 +60,19 @@ You can define a unique directory id for all your document types \(for all your 
 
 A constraint you have to respect when importing documents is that **a file name must be unique per directory id** : you cannot import two distinct documents having the same name and save them in the same directory.  
 Consequently, it is a good idea to **define distinct directories for different panels/data models, if you are not sure you can have the same file names for different usages**.
+
+## Directory definition
+
+Starting from 6.0.1 version, it is possible to store documents in 3 alternative media:
+
+* **Server file system** - the fastest solution, through which saving up to 16 billion documents; in order to set this choice, simply define a directory having "File system" storage type 
+* **Google Cloud Storage** - an alternative solution, good when there are multiple instances of the VM and it is not possible to mount a server disk shared by all VMs; there is no limit in the amount of documents that can be saved in GCS, even though, the uploading/downloading processes are not as fast as for the File System setting; in order to set this choice, you have to define a directory having "Cloud Storage" storage type and set correctly all required Google settings \(see GOOGLE folder in the global parameters\) , i.e. 
+  * Google Service Account Email
+  * Google Service Account Key
+* **Google Drive** - an alternative solution, good when there are multiple instances of the VM and it is not possible to mount a server disk shared by all VMs; it is possible to store up to approximately 768 million documents \(for single document type, if they are saved in distinct folders\) even though, the downloading process is not as fast as for the File System setting and the uploading process is the slowest; in order to set this choice, simply define a directory having "GDrive" storage type and have available Google Drive service as well and set correctly all required Google settings \(see GOOGLE folder in the global parameters\) , i.e. 
+  * Google Service Account Email
+  * Google Service Account Key
+  * Google Apps Domain Admin User - which must be set with an email having grants to read/save documents
 
 ## Working with documents
 
