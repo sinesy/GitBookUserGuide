@@ -28,6 +28,8 @@ When uploading a template, the App Designer will analyze the docx content, searc
 * **&lt;subform&gt;**
 * **&lt;subcontrol&gt;**
 * **&lt;subcontroltranslation&gt;** 
+* **&lt;bulletlist&gt;**
+* **&lt;numberedlist&gt;**
 
 For each tag belonging to the main report \(control or translation\), a corresponding field will be created and linked to the report definition: when configuring the report, a value must be mapped to each of these fields, in order to provide a value to fill in for each of them.
 
@@ -35,19 +37,19 @@ For each tag belonging to the main report \(control or translation\), a correspo
 
 ### Docx template example
 
-![](../../.gitbook/assets/schermata-2020-08-04-alle-10.10.56.png)
+![](../../.gitbook/assets/schermata-2020-08-04-alle-15.56.13.png)
 
 This is an example of a docx template composed of:
 
 * a main form, including &lt;control&gt; tags
 * a sub-list, including &lt;td&gt; tags
 * a sub-form, including &lt;subcontrol&gt; tags
+* a bullet list, including &lt;td&gt; tags
+* a numbered list, including &lt;td&gt; tags
 
 The following screenshot reports the the resulting docx, after completing the mapping between tags and business components \(see section below\) and after executing the report:
 
-![](../../.gitbook/assets/schermata-2020-08-04-alle-10.10.47.png)
-
-
+![](../../.gitbook/assets/schermata-2020-08-04-alle-15.57.47.png)
 
 ### Mapping between tags and business components
 
@@ -61,7 +63,7 @@ Values to link to each field can be:
 
 ![](../../.gitbook/assets/schermata-2020-08-04-alle-10.08.24.png)
 
-* a **field in the select clause of a subquery** \(in case of a subreport field, linked to a sub-form or a sub-table\)
+* a **field in the select clause of a subquery** \(in case of a subreport field, linked to a sub-form or a sub-table or bullet/numbered list\)
 
 ![](../../.gitbook/assets/schermata-2020-08-04-alle-10.09.26.png)
 
