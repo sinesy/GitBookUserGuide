@@ -184,6 +184,7 @@
     * [Sessions and heap memory](modules/ee10-1-log-and-analysis/sessions-and-heap-memory.md)
     * [Heap memory analysis](modules/ee10-1-log-and-analysis/heap-memory-analysis.md)
     * [Datastore statistics](modules/ee10-1-log-and-analysis/datastore-statistics.md)
+    * [Total monthly costs with Google Datastore](modules/ee10-1-log-and-analysis/total-monthly-costs-with-google-datastore.md)
     * [Service Monitoring](modules/ee10-1-log-and-analysis/service-monitoring/README.md)
       * [Introduction](modules/ee10-1-log-and-analysis/service-monitoring/introduction.md)
       * [Defining a service to monitor](modules/ee10-1-log-and-analysis/service-monitoring/defining-a-service-monitoring.md)

@@ -13,7 +13,7 @@ It is possible to search for a specific company/app id or day.
 
 Month and years are mandatory.
 
-![](../../.gitbook/assets/schermata-2020-09-29-alle-16.22.24.png)
+![](../../.gitbook/assets/schermata-2020-09-29-alle-16.22.24%20%281%29.png)
 
 Data is automatically collected when using panels connected to Datastore, export SQL tables to datastore, when using any of the utils.xxx methods working on Google Datastore.
 
