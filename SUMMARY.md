@@ -143,6 +143,7 @@
         * [Constraint panel](modules/mobile/mobile-side-specifics/ee7-2-5-window-content/constraint-panel.md)
         * [Collection grid view](modules/mobile/mobile-side-specifics/ee7-2-5-window-content/collection-grid-view.md)
         * [Preview panel](modules/mobile/mobile-side-specifics/ee7-2-5-window-content/preview-panel.md)
+      * [Form Controls](modules/mobile/mobile-side-specifics/form-controls.md)
     * [Reference guide](modules/mobile/ee7-3-reference-guide.md)
     * [Cleaning up data](modules/mobile/cleaning-up-data.md)
     * [How to](modules/mobile/ee7-4-how-to.md)
