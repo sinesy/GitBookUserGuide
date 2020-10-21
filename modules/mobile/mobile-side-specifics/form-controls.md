@@ -30,7 +30,7 @@ This kind of field  use the Google Place API for suggest a valid address to the 
 5. repeat steps 2-3-4 for iOs
 6. In the Platform Application params go to Mobile folder and set the Autocomplete key for iOs and Android
 
-This control has 2  events:
+This control has 2 events:
 
 * select: fire when user click and address
 * change: fire after select if user select  a different address from previous
