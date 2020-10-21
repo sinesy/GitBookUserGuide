@@ -1,6 +1,6 @@
 # Form Controls
 
-The controls of a form can be of this type:
+The controls of a form can be:
 
 * Label
 * Text \(normal text, email, password\)
