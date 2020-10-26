@@ -2,18 +2,113 @@
 
 **In case of grid or filter+grid or grid+detail form** , the grid definition panel is showed; through it the user has to define settings related to the grid component:
 
-* grid title \(optional, can be hidden\)
-* business component \(for list of data\) to link to the grid; the fields specified in the select clause are used to automatically 
-* create the grid columns; user can then show/hide each of them, as well as define many other column settings
-* grid width and height
-* flags to show/hide border and to set panel opacity
-* flags to allow the CRUD operations, i.e. insert, update and delete \(only if the data model linked to the selected business component is writable\); in case of insert enabled, it is possible to specify the maximum number of rows to insert before saving them
-* data fetching policy: read all or a block of data and its size
-* flag to define if data loading is automatically performed when the grid is showed
-* initial grid mode, when the grid is showed; grids and forms have 3 alternative modes: readonly, insert, edit; in insert mode a new row is showed; through up/down arrows is possible to add/remove \(empty\) rows; in edit mode, all rows are editable or the one only \(selected row\), according to the flag "multiple changes"
-* flag "copy enabled", used to show a "copy" button in the grid toolbar, used to switch to insert mode the grid, add a new row an copy the values from the selected row to the new one
-* number of columns anchored to the left of the grid \(0 by default\)
-* boolean javascript expression "disable when", to disable everything when the boolean condition is true flags "enable columns permission" and "enable columns profile", used to manage these special features, described in a separate section.
+* **grid** **title** \(optional, can be hidden\)
+* **business component** \(for list of data\) to link to the grid; the fields specified in the select clause are used to automatically 
+* create the grid columns; user can then **show/hide** each of them, as well as define many other column settings
+* grid **width** and **height**
+* flags to **show/hide border** and to set panel opacity
+* flags to **allow the CRUD operations**, i.e. insert, update and delete \(only if the data model linked to the selected business component is writable\); in case of insert enabled, it is possible to specify the maximum number of rows to insert before saving them
+* **data fetching policy**: read all or a block of data and its size
+* flag to define if **data loading is automatically performed** when the grid is showed
+* **initial grid mode**, when the grid is showed; grids and forms have 3 alternative modes: readonly, insert, edit; in insert mode a new row is showed; through up/down arrows is possible to add/remove \(empty\) rows; in edit mode, all rows are editable or the one only \(selected row\), according to the flag "multiple changes"
+* flag "**copy enabled**", used to show a "copy" button in the grid toolbar, used to switch to insert mode the grid, add a new row an copy the values from the selected row to the new one
+* number of **columns anchored to the lef**t of the grid \(0 by default\)
+* boolean javascript expression "**disable when**", to disable everything when the boolean condition is true flags "enable columns permission" and "enable columns profile", used to manage these special features, described in a separate section
+* **find empty** - flag used to include two additional buttons to the quick filter panel: a "Find empty" and "Find not empty" values. These buttons have their own CSS class: "filterempty" and "filternotempty". Use it only with a relational database. When flagging this check-box, you have also to change the x-theme.css content and define how to render these two buttons, according to your theme. If your them does not show icons but it shows text, you could change the grid filter section of your theme in this way:
+
+```javascript
+/* filtro in griglia*/
+
+    .x-panel.w-filter{
+        background-color: var(--panel-light-background);
+    }
+    .w-filter .x-panel,
+    .w-filter .x-panel-header,
+    .w-filter .x-panel-body{
+        background-color: transparent;
+    }
+
+    #filterMenu .x-plain-header{
+        padding-top: 5px
+    }
+    #filterMenu .x-plain-header-text b{
+        font: 10pt arial;
+        margin-left: 7px;
+    }
+    #filterMenu .x-panel.x-panel-noborder.x-abs-layout-item{
+        margin-top: 5px;
+    }
+    .x-filter-panel .x-btn-text-icon .x-btn-icon-small-left .x-btn-text,
+    #filterMenu .x-btn-text{
+        margin: 0px 7px;
+    }
+    /* tasto filtra in griglia */
+    div#filterMenu table:first-of-type{
+    	top: 65px !important;
+        left: 0px !important;
+    }
+    /* tasto rimuovi filtra in griglia */
+    div#filterMenu table:last-of-type{
+    	top: 65px !important;
+        left: 125px !important;
+    }
+    #filterMenu .x-btn-text.filter,
+    #filterMenu .x-btn-text.filterempty,     /* <-- NEW ENTRY */
+    #filterMenu .x-btn-text.filternotempty,  /* <-- NEW ENTRY */
+    #filterMenu .x-btn-text.removefilter{
+		width: 100px;
+		text-indent:0;
+		border-radius: 5px;
+		padding: 0;
+	}
+
+
+	#filterMenu .x-btn-text.filter,
+	#filterMenu .x-btn-text.filterempty,      /* <-- NEW ENTRY */
+	#filterMenu .x-btn-text.filternotempty{   /* <-- NEW ENTRY */
+		border: 2px solid #44ceb0;
+		color: #44ceb0;
+    }
+	#filterMenu .x-btn-text.removefilter{
+		border:2px solid #F2627D;
+		color: #F2627D;
+	}
+
+	#filterMenu .x-btn-text.filter:hover,
+	#filterMenu .x-btn-text.filterempty:hover,      /* <-- NEW ENTRY */
+	#filterMenu .x-btn-text.filternotempty:hover{   /* <-- NEW ENTRY */ 
+		background-color: #bdf9ec;
+	}
+	#filterMenu .x-btn-text.removefilter:hover{
+		background-color: #F0CBD2;
+	}
+	#filterMenu .x-form-text{
+		height: 20px;
+	}
+
+	#filterMenu .x-form-field-wrap.x-form-field-trigger-wrap.x-trigger-wrap-focus{
+		width: 224px !important;
+	}
+
+	#filterMenu .x-form-trigger.x-form-arrow-trigger{
+		background-position-y: 0;
+		background-color: transparent;
+	}
+
+    .x-filter-panel, .x-filter-panel .x-plain-header, .x-filter-panel .x-plain-body, .x-window .x-filter-panel form.x-plain-body{
+        background: var(--panel-light-background);
+    }
+    .x-filter-panel{
+    	padding-left:10px;
+    }
+    .x-filter-panel input{
+    	background: white;
+    }
+    .x-tool-toggle{
+    	background-position: center;
+    	border-radius: 8px;
+    }
+```
 
 When creating the grid, a grid toolbar is automatically showed on top of it; this toolbar always includes the reload button; the other buttons \(insert, edit, delete and save/cancel\) are showed/hidden according to the flags described above.  
 These buttons change the current grid mode, according to the following policy:
