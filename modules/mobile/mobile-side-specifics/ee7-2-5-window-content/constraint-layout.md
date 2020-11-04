@@ -14,7 +14,7 @@ The latter represents another type of panel, an alternative to a generic panel \
 
 ## Constraint panel
 
-You can create a Constraint panel through the **window detail**: as for any other kind of container \(generic, tabs, accordion, card, etc.\), just go to edit mode in the **Window Settings** folder and right click on a node in the hierarchical representation of the window content. In the popup menu, choose **Add panel with layout constraint**.
+You can create a Constraint panel through the **window detail**: as for any other kind of container \(generic, tabs, accordion, card, etc.\), just go to edit mode in the **Panels** folder and right click on a node in the hierarchical representation of the window content. In the popup menu, choose **Add panel with layout constraint**.
 
 After saving this change, you can click on any child of that panel and the folder named **Layout Constraint** will be unlocked.
 
