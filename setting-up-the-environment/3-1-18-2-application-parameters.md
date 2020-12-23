@@ -527,13 +527,13 @@ Start voice command \(e.g. platform\)
 
 ### WHATSAPP
 
-Secret key
+**Secret key** - required as well as "account id": the value is defined in the Twilio Whatsapp Admin Console
 
-Phone number used as sender
+**Phone number used as sender** - the phone number to use when sending email; it is required and to define first in the Twilio Whatsapp Admin Console
 
-Action id for Whatsapp callback
+**Action id for Whatsapp callback** - optional value: if set, it is a server-side action, defined as PUBLIC web service \(i.e. no credentials are required when invoking it\); this field is needed only in case you want not only send Whatsapp messages but also get feedbacks, like "message sent" or "message read": this is the callback ws which receives these events from the Whatsapp service.
 
-Account id
+**Account id** - required as well as "secret key": the value is defined in the Twilio Whatsapp Admin Console
 
 
 
