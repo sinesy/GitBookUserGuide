@@ -139,99 +139,367 @@ http://host/
 
 
 
+### ALERT
+
+**Alert message template** - optional text
+
+**Show title in the alert message list \(def. N\)** - checkbox used to show/hide the title of the message in each alter message arrived
+
+**Disable click on alert message \(def. N\)** - checkbox used to ignore the click of an alert message and NOT mark it as read
+
+**List of commands to include in the alter dialog** - optional JSON string, containing a list of commands to add. For more details:
+
+[https://4wsplatform.gitbook.io/knowledge-base/how-to-customize-the-alert-message-content](https://4wsplatform.gitbook.io/knowledge-base/how-to-customize-the-alert-message-content)
 
 
-* Google Maps
-  * Start Point Latitude
-  * Start Point Longitude
-  * Start Point Name
-  * Remote Server URL to use in case of 4WS.Platform used on Google App Engine and reports generated remotely in another server
-* UI
-  * Top menubar
-  * First level menu height \(pixel\)
-  * Second level menu height \(pixel\)
-  * Filter button position \(LEFT/RIGHT\)
-* Main UI
-  * Number of menu levels
-  * Flag to show/hide the menu filter \(true/false\)
-  * Status bar height \(pixel\)
-  * Top bar height \(pixel\)
-  * Menu tree width
-  * Show window icon \(Y/N\)
-  * Show menu icon \(Y/N\)
-  * Buttons menu
-  * autosize buttons
-  * width/height for buttons
-  * width/height for images
-  * number of columns to use for buttons layout
-  * round border radix for buttons
-* Alfresco
-  * Alfresco: Admin Password when connecting to Alfresco Server
-  * Alfresco: Admin Username when connecting to Alfresco Server
-  * Alfresco: URL when connecting to Alfresco Server
-  * Alfresco: model file name when connecting to Alfresco Server
-* Permissions
-  * Login controls to hide
-  * Authentication
-  * \(optional def. ‘4ws’\) Authentication chain
-  * \(optional def. true\) LDAP checking enabled
-  * \(optional def. 389\) LDAP port
-* LDAP server
-  * LDAP account format \(e.g. {u}@domain\)
-  * Destinations for the sync process groups/users
-  * Sources for the sync process groups/users
-  * \(optional def. false\) Logical delete of users before sync
-  * \(optional def. tutte\) company/site couples to use when creating records
-  * \(optional\) fields to manage in 4WS users table
-  * \(optional\) fields to manage in 4WS groups table
-* LDAP synchronization
-  * Password to use when connecting to LDAP
-  * Username to use when connecting to LDAP
-  * Base LDAP path when searching for users
-  * \(optional\) Users LDAP filter
-  * \(optional\) fields to manage in LDAP users
-  * \(optional\) field types to manage in LDAP users
-  * \(optional\) LDAP attribute for user id
-  * Base LDAP path when searching from groups
-  * \(optional\) Groups LDAP filter
-  * \(optional\) fields to manage in LDAP groups
-  * \(optional\) field types to manage in LDAP groups
-  * \(optional\) LDAP attribute for group id
-* Scheduler
-  * "From email address" when sending email from Scheduler
-* Email notification system
-  * SMTP host when sending email
-  * \(optional\) SMTP port when sending email
-  * \(optional\) SMTP protocol when sending email
-  * \(optional\) SMTP username when sending email
-  * \(optional\) SMTP password when sending email
-  * \(optional\) Use TLS when sending email: E/F
-* Application Access
-  * Enable users
-  * \(optional\) Access Unavailable message
-  * Password: number of erroneous login attempts
-  * Order of Grid Export: ordered list of types export for grids
-  * Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
-  * Password: number of days to use for the password expiration
-  * Password regular expression: you can define a regular expression for users password.
 
-    **^\(?=.\*\[a-z\]\)\(?=.\*\[A-Z\]\)\(?=.\*\\d\)\(?=.\*\[@$!%\*?&\]\)\[A-Za-z\\d@$!%\*?&\]{8,}$**
+### ALFRESCO
 
-  * which means
-    * matches a string of 8 or more characters;
-    * that contains at least one digit \(d is shorthand for \[0-9\]\);
-    * at least one lowercase character and
-    * at least one special character and
-    * at least one uppercase character.
-* Customize Datastore
+Alfresco: base dir for folders explorer - 
 
-First, create a server side javascript action when defining the custom logic; this action receives in input the **dataStoreId** value \(in the **reqParams** input object\) and the current user and other user information \(contained in the userInfo input object\). 
+Alfresco: URL when connecting to Alfresco Server - 
 
-You can use this information to decide which datasource to return back, through the **setReturnValue**\(\);
+Alfresco: sync roles in Alfresco \(Y/N\) - 
 
-Finally, it is possible to define a custom logic to figure out which additional datasource to use, according to the user. For instance, if you have a table reporting which datasource to use for each user, you can define a server-side javascript action and use it to dynamically decide the additional datasource to use.
+Alfresco: sync users in Alfresco \(Y/N\) - 
 
-Second, fill in the action id just defined as the “Customize Datastore” application parameter.
+Alfresco: Admin Password when connecting to Alfresco Server - 
+
+Alfresco: Admin Username when connecting to Alfresco Server - 
+
+Alfresco: model file name when connecting to Alfresco Server - 
+
+Alfresco: sync user roles in Alfresco \(Y/N\) - 
+
+
+
+### ARCHIFLOW
+
+ARCHIFLOW\_DOMAIN - 
+
+ARCHIFLOW\_BASE\_URL - 
+
+ARCHIFLOW\_LANGUAGE - e.g. 0
+
+ARCHIFLOW\_PASSWORD - 
+
+ARCHIFLOW\_USERNAME - 
+
+ARCHIFLOW\_DATE\_FORMAT - e.g. dd/MM/yyyy
+
+
+
+### **AUDIT**
+
+Days for keeping data logs
+
+
+
+### COLLABORATION
+
+Collaboration
+
+
+
+### CONTACTS\_SYNC
+
+Contacts synchronization sources \(4WS, LDAP, GOOGLE,...\)
+
+
+
+### GOOGLE
+
+Password Platform for GAE
+
+Google Analytics Id
+
+Google SSO: needed OAUTH scopes \(white space separated list. See [https://developers.google.com/identity/protocols/googlescopes](https://developers.google.com/identity/protocols/googlescopes)\)
+
+
+
+### JIRA
+
+Jira URL
+
+Jira project Id
+
+
+
+### LDAP
+
+LDAP port \(opt. def. 389\) 
+
+LDAP checking enabled \(opt. def. true\) 
+
+LDAP server 
+
+LDAP protocol \(ldap or ldaps. Opt. def. ldap\) 
+
+LDAP: Password to use when connecting to LDAP 
+
+LDAP: Username to use when connecting to LDAP 
+
+LDAP account auth format \(e.g. {u}@domain\) 
+
+LDAP: Query page size \(opt. default 1000\) 
+
+LDAP: Base path when searching for users 
+
+LDAP: Base path when searching from groups 
+
+LDAP: Field types to manage in groups \(opt.\) 
+
+LDAP: Fields to manage in groups \(opt.\) 
+
+LDAP: Groups filter \(opt.\) 
+
+LDAP attribute for user id \(opt.\) DEPRECATED: Autoassign roles to new LDAP user \(';' separated list - see PERMISSIONS section\) 
+
+LDAP: Gropu key attribute \(opt.\) 
+
+LDAP: Activate pagination \(true or false, opt., def. true\) 
+
+LDAP: Query result limit \(opt. default none\) Action Id to use on login to replace the username 
+
+SYNC\_LDAP\_GROUP\_UNIQUE\_NAME
+
+
+
+### LOGS
+
+Max days to log 
+
+Max days to log per Type \(e.g. QUEUE=1,JS\_ERROR=1\)
+
+
+
+### LOGIN
+
+Enabled users
+
+Version of Login Form
+
+Show combos for Company and Site \(YN\)
+
+Login label in controls
+
+Access Unavailable message
+
+Translate login labels with browser language
+
+
+
+### MAIL
+
+SMTP host when sending email
+
+SMTP port when sending email \(opt.\)
+
+SMTP username when sending email \(opt.\)
+
+SMTP password when sending email \(opt.\)
+
+Use TLS when sending email: E/F \(opt.\)
+
+
+
+### MAPS
+
+Google Maps: Start Point Latitude
+
+Google Maps: Start Point Longitude
+
+Google Maps: Start Point Name
+
+Google Maps: Do not set a default position
+
+
+
+### MOBILE
+
+Fee-paying mobile app \(Y/N def. N\)
+
+Google key for autocomplete place in iOS
+
+Google key for autocomplete place in Android
+
+
+
+### PERMISSIONS
+
+Show role id \(Y/N\)
+
+Login controls to hide exit Check function Ids when reading data \(Y/N def. N\)
+
+Show only enabled roles
+
+Autoassign roles to new user \(';' separated list\)
+
+Default value for login controls
+
+
+
+### REPORTS
+
+Remote reports Server URL
+
+
+
+### SCHEDULER
+
+From email address when sending email from Scheduler
+
+
+
+### SECURITY\_SYNC
+
+Destinations for the sync process groups/users
+
+Sync users \(true/false def. true\)
+
+Sync also groups \(true/false\) \(opt.\)
+
+Sources for the sync process groups/users
+
+
+
+### SMS
+
+Email suffix when sending SMS
+
+From SMS Phone Nr
+
+Default International prefix for SMS
+
+Twilio SMS Account SID
+
+Twilio SMS Auth Token
+
+
+
+### SSO
+
+Authentication chain \(opt. def. '4ws'\)
+
+Sync: Company,site couples to use when creating records \(opt. def. all\)
+
+Sync: Logical delete of users before sync \(opt. def. false\)
+
+Sync: Fields to manage in 4WS users table \(opt.\)
+
+Sync: Fields to manage in 4WS groups table \(opt.\)
+
+
+
+### TENSOR FLOW
+
+TensorFlow password
+
+TensorFlow url
+
+
+
+### UI
+
+Single Document Interface \(Y/N\) \(predef. N\)
+
+Application icon
+
+Menu levels 1
+
+Show window icon \(Y/N\)
+
+Context help
+
+Top bar height \(pixels\) 60
+
+Enable menu file \(true/false\)
+
+Favourite icon suffix
+
+Popup windows with closing button \(def. N\)
+
+Menu tree width
+
+Modal windows with closing button \(def. N\)
+
+Enable menu filter \(true/false\)
+
+Status bar height \(pixels\)
+
+Use default icon for user profile when not found \(def. N\)
+
+Order of Grid Export
+
+View asterisk on mandatory controls \(Y/N\) \(default N\)
+
+Message for empty panel
+
+First level menu height \(pixels\) 0
+
+Second level menu height \(pixels\)
+
+Grid in edit with double click \(YN\) \(default N\)
+
+Show alert in menubar \(Y/N\)
+
+Hide icons in tabs menu \(Y/N\)
+
+Text filter by enter \(Y/N\) \(default N\)
+
+Show short unique key
+
+Toolbar buttons expand \(Y/N\) \(default N\)
+
+Loading order of the context css files Default
+
+Read CSS context files only from css/css\_login folders
+
+View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)
+
+Label position of Designer functionality
+
+
+
+### USERS
+
+Supported user languages Component Id 69
+
+Action id \(JSServer\) to use after change password
+
+Action Id \(server-side js\) to be performed after insert/update/delete a user
+
+Flag used to hide the warning message when saving user roles \(def. N\)
+
+Action Id \(server-side js\) to take before you insert/update/delete a user
+
+Action id \(JSServer\) to use after application user logout
+
+
+
+### VOICE
+
+Activate voice synthesize \(Y/N, def. N\)
+
+Start voice command \(e.g. platform\)
+
+
+
+### WHATSAPP
+
+Secret key
+
+Phone number used as sender
+
+Action id for Whatsapp callback
+
+Account id
+
+
+
+
+
+
 
 ## Example
 
