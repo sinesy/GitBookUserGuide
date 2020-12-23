@@ -242,9 +242,9 @@ Google SSO: needed OAUTH scopes \(white space separated list. See [https://devel
 
 ### JIRA
 
-Jira URL
+**Jira URL** - URL to Jira Server or Jira Cloud, related to a specific tenant
 
-Jira project Id
+**Jira project Id** - id for the activated tenant in Jira
 
 
 
@@ -278,7 +278,7 @@ LDAP: Groups filter \(opt.\)
 
 LDAP attribute for user id \(opt.\) DEPRECATED: Autoassign roles to new LDAP user \(';' separated list - see PERMISSIONS section\) 
 
-LDAP: Gropu key attribute \(opt.\) 
+LDAP: Group key attribute \(opt.\) 
 
 LDAP: Activate pagination \(true or false, opt., def. true\) 
 
@@ -290,9 +290,26 @@ SYNC\_LDAP\_GROUP\_UNIQUE\_NAME
 
 ### LOGS
 
-Max days to log 
+**Max days to log** - this parameter is related to the Table Log, i.e. log saved to CON60\_LOGS table.
 
-Max days to log per Type \(e.g. QUEUE=1,JS\_ERROR=1\)
+It is essential to put a limit to the log events to save here. Please always set it, for example to 60 \(days\).
+
+**Max days to log per Type \(e.g. QUEUE=1,JS\_ERROR=1\)** - this is more detailed than the previous parameters, where you can distinguish among each even type; you can define the max amount of days for each log type, by separating them using the comma.
+
+Available log types are:
+
+* QUEUE - a message logged when an element extracted from a queue has been processed, but only in case of calls like: utils.enqueueAction\(....,true\)
+* JS\_ERROR - a message logged in case of errors when executing a server-side js action \(a js/java exception not managed\)
+* ALERT - a message logged in case of an alert message
+* SMS - a message logged in case of SMS messages sent
+* EMAIL - a message logged in case of email messages sent
+* MOBILE\_ERROR - a message logged in case of errors within the mobile app
+* CENTRAL\_SYNC\_ERROR - a message logged in case of errors when synchronizing a mobile app
+* APP\_ANALYSIS - a message logged each time the app is analyzed
+* NETTEST - a message logged each time a user executes the network test
+* TEST - a message logged each time an automated test is executed
+* EXPORT\_TABLE - a message logged each time an "export from table" is executed
+* APP\_EVENT - a message logged each time an application event is fetched \(e.g. login, out of memory, etc.\)
 
 
 
