@@ -6,7 +6,7 @@ These parameters are used by specific functionalities of the interpreted applica
 
 
 
-#### 4WS.PLATFORM
+### 4WS.PLATFORM
 
 **Starting web page** - URL representing the base URL of this Platform installation; it is recommended to set it up, since it is used widely by Platform, for example when sending emails containing references to this server.
 
@@ -117,7 +117,27 @@ It is strongly recommended to select it.
 
 
 
-#### ACTIVITI
+### ACTIVITI
+
+**Tomcat Path of Activiti** - the absolute path to set, related to the installation of Activiti within a Tomcat.
+
+Example: 
+
+/opt/tomcat-activiti/
+
+**Base Rest URL of Activiti** -  base URL of Activiti; it can be an internal URL not a public URL.
+
+Example:
+
+[http://localhost:8280](http://localhost:8280)
+
+**Base Designer URL of Activiti** - base URL of Activiti, used to access Activiti Explorer \(i.e. the BPM designer\); it must be a public URL.
+
+Example:
+
+http://host/
+
+
 
 
 
