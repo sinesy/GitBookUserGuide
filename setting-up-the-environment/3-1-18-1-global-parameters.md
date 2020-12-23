@@ -89,6 +89,29 @@ The followings are global parameters, grouped per topic:
 * Password: number of days to use for the password expiration
 * Password: number of erroneous login attempts
 
+
+
+Application Access
+
+* Enable users
+* \(optional\) Access Unavailable message
+* Password: number of erroneous login attempts
+* Order of Grid Export: ordered list of types export for grids
+* Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
+* Password: number of days to use for the password expiration
+* Password regular expression: you can define a regular expression for users password.
+
+  **^\(?=.\*\[a-z\]\)\(?=.\*\[A-Z\]\)\(?=.\*\\d\)\(?=.\*\[@$!%\*?&\]\)\[A-Za-z\\d@$!%\*?&\]{8,}$**
+
+* which means
+  * matches a string of 8 or more characters;
+  * that contains at least one digit \(d is shorthand for \[0-9\]\);
+  * at least one lowercase character and
+  * at least one special character and
+  * at least one uppercase character.
+
+
+
 **Permissions -** parameters used to define the authentication process
 
 * Login controls to hide
