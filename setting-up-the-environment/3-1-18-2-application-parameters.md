@@ -389,7 +389,7 @@ Remote reports Server URL
 
 ### SCHEDULER
 
-From email address when sending email from Scheduler
+**From email address when sending email from Scheduler** - this parameter is essential in case you have defined scheduled processes and include also a notification email, i.e. an email address \(or more than one\) to use to send email messages according to the exit code of the scheduled terminated process. This parameter represents the "from email address" to use when sending notification emails.
 
 
 
@@ -407,29 +407,57 @@ Sources for the sync process groups/users
 
 ### SMS
 
-Email suffix when sending SMS
+This section represents all settings needed when sending SMS messages from the App Diagnosys functionality, in case there is a notification to send to the specified address \(phone number\) and the analyzed results are sent to that address. 
 
-From SMS Phone Nr
+Not all these settings are needed:
 
-Default International prefix for SMS
+* if you send SMS messages through an **external SMS email gateway,** you have first of all to specify the  SMTP settings through the MAIL parameters section and then fill in here the first two parameters
+* if you send SMS messages through the **Twilio SMS service**, you have first of all to setup and buy the Twilio SMS service; once don that, you have to specify the last three parameters in this section.
 
-Twilio SMS Account SID
+**Email suffix when sending SMS** - used in case of an external SMS email gateway: it represents the domain of the email service; for example, if you have a phone number like "3401234567", you email suffix can be "mycompany.com" and Platform will send an email message like "3401234567@mycompany.com" to the SMS gateway, which then sends the SMS message to the specified number \(the left part of the email address\).
 
-Twilio SMS Auth Token
+**From SMS Phone Nr** - used in case of an external SMS email gateway: it represents the "from number" to use when sending SMS messages and it must be recognized by the SMS email gateway.
+
+**Default International prefix for SMS** - used in case of SMS sent through the Twilio SMS service: it represents the international prefix number to include to the specified phone number, in case this one does not include also the international prefix number; for example, suppose you have defined here a default international prefix like "+39", if you pass forward a phone number like "+393401234567", this number does not change, but if you pass forward a phone number like "3401234567", this number will be replaced internally by Platform with "+393401234567" and passed to the Twilio SMS service.
+
+**Twilio SMS Account SID** - used in case of SMS sent through the Twilio SMS service: it represents the username provided by your Twilio account that you have already had to setup.
+
+**Twilio SMS Auth Token** - used in case of SMS sent through the Twilio SMS service: it represents the authorization token provided by your Twilio account that you have already had to setup.
 
 
 
 ### SSO
 
-Authentication chain \(opt. def. '4ws'\)
+Use this section when you want to log on into your web application using an authentication system different from the default one, provided by Platform and named "4WS".
 
-Sync: Company,site couples to use when creating records \(opt. def. all\)
+Platform supports multiple authentication mechanisms:
 
-Sync: Logical delete of users before sync \(opt. def. false\)
+* **4WS** - the default authentication mechanism, based on the internal table named PRM01\_USERS
+* **LDAP** - when a user is logging on, the authentication process is forwarded to an external LDAP server \(e.g. Microsoft Active Directory\), containing all user credentials \(username + password + additional user properties, like name, last name, email, etc.\); in such a scenario, it would be a good idea to activate also the LDAP synchronization feature provided by Platform, in order to retrieve all usernames \(not the passwords which are only maintained internally yo the LDAP server\) and additional properties and store them in Platform as well; in this way, you can inherit and access all additional properties and link these usernames to the authorization module provided by Platform \(i.e. what a user can do after a successful authentication process - permissions\)
+* **GMail SSO** - the login page would include also the Google SSO dialog, composed of the Google email input field and password input field and the Login button: in case the user has already logged on Google suite, this login page would automatically recognize the login and by-pass it, by showing after a few seconds the Platform web app main page.
+* _**Custom SSO server**_ - you can define a server-side javascript action which would be invoked behind the scenes by Platform when the user attempts to log-on: it is up to this action to figure out if the user is allowed to log on, by invoking external authentication system; this action receives in input the user credential typed by the user in the login page and can pass them forward to external system: finally the action be provide the outcome and even replace some input data with others \(e.g. change the username provided by the user and expressed as an email address to a totally different value for the username, provided by the external system\).
 
-Sync: Fields to manage in 4WS users table \(opt.\)
+All these authentication mechanisms can be combined together, if needed, as an **authentication chain**, that is to say, the authentication process can try more than one mechanisms, combined in sequence, like a chain: for example "4WS + LDAP": try first to authenticate through the default auth mechanism and in case of failure try through the external LDAP server.
 
-Sync: Fields to manage in 4WS groups table \(opt.\)
+**Authentication chain \(opt. def. '4ws'\)** - this parameter is mandatory \(here or as global parameter\); it defines the authentication chain described above; allowed values are for example: 4WS, 4WS + LDAP, etc.
+
+**Sync: Company,site couples to use when creating records \(opt. def. all\)** - this is an optional parameter; if specified, you have to define couples of company + site ids, where the company id is separated by the site id with a comma \(,\) and a couple with another with a ;
+
+Example: 
+
+```javascript
+00888,100;00888,101;00889,100
+```
+
+Platform will use this parameter to auto-create user entries in the internal user table PRM01\_USERS, starting from the username provided by the external LDAP server: for each LDAP's username, Platform will duplicate this username for each company and site specified, in case of a multi-tenant web application.
+
+If this parameter has not been specified, the default behavior would be to auto-create usernames for each combination of company and site ids.
+
+**Sync: Logical delete of users before sync \(opt. def. false\)** - 
+
+**Sync: Fields to manage in 4WS users table \(opt.\)** - 
+
+**Sync: Fields to manage in 4WS groups table \(opt.\)** - 
 
 
 
