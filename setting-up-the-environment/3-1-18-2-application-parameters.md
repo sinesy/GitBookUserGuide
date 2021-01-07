@@ -333,27 +333,31 @@ Translate login labels with browser language
 
 ### MAIL
 
-SMTP host when sending email
+This section is mandatory in case there are functionalities which send email messages, like an email to send with template, app diagnosys, scheduled processes which notifies by email, etc.
 
-SMTP port when sending email \(opt.\)
+**SMTP host when sending email** - the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
 
-SMTP username when sending email \(opt.\)
+**SMTP port when sending email \(opt.\)** - the port used by the SMTP server to accept email messages to send; if not specified, the default port 25 is used; bear in mind that you cannot use the default port 25 if your Platform server has been installed in the Google Cloud Platform, since this port is blocked in the GCP. Moreover, the port also depends on the protocol used: smtp or smtps \(SMTP over SSL\).
 
-SMTP password when sending email \(opt.\)
+**SMTP username when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
 
-Use TLS when sending email: E/F \(opt.\)
+**SMTP password when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
+
+**Use TLS when sending email: E/F \(opt.\)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
 
 
 
 ### MAPS
 
-Google Maps: Start Point Latitude
+This section is used in case your application uses Google Map feature and show a google map within a "Google Map panel". In such a scenario, all these properties are required.
 
-Google Maps: Start Point Longitude
+**Google Maps: Start Point Latitude** - default latitude coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
 
-Google Maps: Start Point Name
+**Google Maps: Start Point Longitude** - default longitude coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
 
-Google Maps: Do not set a default position
+**Google Maps: Start Point Name** - default caption text to show for the default coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
+
+**Google Maps: Do not set a default position** - checkbox used to set or not a default coordinate for a Google Map panel which has not been filled with a coordinate. If not checked, the default settings defined above will be used.
 
 
 
