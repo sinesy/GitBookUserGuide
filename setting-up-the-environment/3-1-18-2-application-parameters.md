@@ -547,63 +547,100 @@ TensorFlow url
 
 ### UI
 
-Single Document Interface \(Y/N\) \(predef. N\)
+This section contains a set of properties which change the UI appearance of your web application. The correct values for these settings depend on the chosen theme, since a specific them has a different menu, topbar content, bottom bar, etc.
 
-Application icon
+**Single Document Interface \(Y/N\) \(predef. N\) -** check this property only in case you want to create a single document interface, i.e. a very simple web application \(like a web site\), where there aren't multiple windows to show at the same time \(e.g. a list of data + a detail window for a selected row\); the SDI paradigm states that only only window is visible at a time and consequently only very basic application UIs can be created.
 
-Menu levels 1
+**Application icon** - a .ico public file to use as "favourite icon" for the web application \(i.e. showed by the browser on the URL bar\). If specified, this .ico file is loaded starting from the platform web context.
 
-Show window icon \(Y/N\)
+Example:
 
-Context help
+&lt;my app web context&gt;/images/favicon.ico
 
-Top bar height \(pixels\) 60
+**Menu levels 1** - to use only for web apps having two levels of menubars, i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
 
-Enable menu file \(true/false\)
+This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
 
-Favourite icon suffix
+**Show window icon \(Y/N\)** - Platform supports a context help for the App Designer and for a web app.
 
-Popup windows with closing button \(def. N\)
+In the App Designer is accessible by clicking on a label of an input field in any Designer's window.
 
-Menu tree width
+In order to activate the context help, this parameter must be set to "Readonly": in this case, the end user can click on the link and see a tooltip explaining the meaning of the current field.
 
-Modal windows with closing button \(def. N\)
+If you set it to "Edit" \(in your dev env\), these links on labels are clickable and editable: the dev user can click on the link and see/edit the tooltip explaining the meaning of the current field.
 
-Enable menu filter \(true/false\)
+**Context help** - 
 
-Status bar height \(pixels\)
+**Top bar height \(pixels\)** - the top bar is showed on the top part of a web application. This parameter allows to define its height. Default value: 60. The value to set strongly depends on the chosen theme.
 
-Use default icon for user profile when not found \(def. N\)
+**Enable menu file \(true/false\)** - 
 
-Order of Grid Export
+**Favourite icon suffix** - 
 
-View asterisk on mandatory controls \(Y/N\) \(default N\)
+**Popup windows with closing button \(def. N\)** - 
 
-Message for empty panel
+**Menu tree width** - 
 
-First level menu height \(pixels\) 0
+**Modal windows with closing button \(def. N\)** - 
 
-Second level menu height \(pixels\)
+**Enable menu filter \(true/false\)** - 
 
-Grid in edit with double click \(YN\) \(default N\)
+**Status bar height \(pixels\)** - the status bar is the bottom part of a web application. This parameter allows to define the bottom bar height.
 
-Show alert in menubar \(Y/N\)
+**Use default icon for user profile when not found \(def. N\)** - 
 
-Hide icons in tabs menu \(Y/N\)
+**Order of Grid Export** - 
 
-Text filter by enter \(Y/N\) \(default N\)
+**View asterisk on mandatory controls \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
 
-Show short unique key
+When this checkbox is selected, an alternative approach is used to highlight the mandatory controls: an asterisk \(\*\) is showed at the right of each label, for each mandatory input control. Consequently, this approach consumes more space horizontally in a window, since a \(\*\) text is also included for each mandatory control.
 
-Toolbar buttons expand \(Y/N\) \(default N\)
+Moreover, a legend explaining the meaning of the \(\*\) is reported at the bottom of each panel and subpanel.
 
-Loading order of the context css files Default
+**Message for empty panel** \(mobile apps only\) - for a grid having no rows, the default behavior is to report on the bottom of the grid the number of rows fetched, in this case zero.
 
-Read CSS context files only from css/css\_login folders
+If this checkbox is selected, an additional message is also prompted to the user.
 
-View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)
+**First level menu height \(pixels\) 0** - 
 
-Label position of Designer functionality
+**Second level menu height \(pixels\)** - 
+
+**Grid in edit with double click \(YN\) \(default N\)** - 
+
+**Show alert in menubar \(Y/N\)** - checkbox used to show an icon on the topbar, on the right. This icon highlights when an alert message is arriving for the current logged user \(generated on the server layer through the utils.sendAlertMessage method\). This is a clickable icon: when the user clicks on it, a popup menu is showed, reporting all incoming alert messages \(not read yet\).
+
+**Hide icons in tabs menu \(Y/N\)** - 
+
+**Text filter by enter \(Y/N\) \(default N\)** - checkbox used to listen to ENTER pressure: when selected, the end user can move from an input field to the next one, not only using the TAB key but also using the ENTER key.
+
+Note: usually the ENTER key should be used only for lookup  controls, where its pressure lead to the code validation for the text just typed in.
+
+**Show short unique key** - checkbox used to show a more user friendly error message, in case of SQL errors on saving data due to a unique key violation on the database.
+
+If selected, Platform does not show the error coming from the database, but a more user friendly message. You can customize this error message through the Translations functionality, by adding the custom entry:
+
+common.a unique key has been violated
+
+**Toolbar buttons expand \(Y/N\) \(default N\)** - 
+
+**Loading order of the context css files Default** - 
+
+**Read CSS context files only from css/css\_login folders** - checkbox used to limit the amount of .css files to read form the web public context of the application. As default behavior:
+
+* in the login page, Platform scans and load on the UI all .css files found in the "css\_login" subfolder
+* for the main page \(i.e. after a successful login\), Platform scans and load on the UI all .css files found in the whole public web context, except for the "css\_login" subfolder
+
+If this checkbox is selected, for the main page \(i.e. after a successful login\), Platform scans and load on the UI only .css files found in the "css" subfolder.
+
+**View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+
+When the checkbox "View asterisk on mandatory controls**"** \(described above\) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the \(\*\) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
+
+**Label position of Designer functionality** - for each input field defined in a form panel, editor panel and filter panel, a label is also included, explaining the meaning of the field.
+
+This label can be showed either on the left of the input field or on top of it.
+
+This parameter allows to define the position of the label: Top or Left \(default\).
 
 
 
