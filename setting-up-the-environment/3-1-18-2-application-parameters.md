@@ -557,11 +557,18 @@ Example:
 
 &lt;my app web context&gt;/images/favicon.ico
 
-**Menu levels 1** - to use only for web apps having two levels of menubars, i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
+**Menu levels** - Platform supports a series of different menu types:
 
-This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
+* popup menu anchored to the left side of the application, opened by clicking on the button on the top-left side \(the most modern menu\); there is also a variant of this menu, where the application functionalities are organized within this popup window in a hierarchical way, rather than a plain list\). This menu is good for applications having a large amount of application functionalities
+* popup menu anchored to the top-right side of the application, opened by clicking on the corresponding button; application functionalities are organized in folders and subfolders, within this popup window. This menu is good for small applications, having a limited amount of application functionalities
+* the application main area is filled with the menu, represented as a list of buttons and sub-folders
+* a menubar organized in one or two levels \(the oldest menu\); in this menu, the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
 
-**Show window icon \(Y/N\)** - Platform supports a context help for the App Designer and for a web app.
+This parameter defines the number of menu levels: it should be always set to 0 for all applications except for the ones having the oldest menu type \(menubar\), where it can be set to 1 or 2.
+
+**Show window icon \(Y/N\)** - in case of old applications where windows are not tabs but internal windows, this checkbox allows to show an icon for each window \(defined through the Window detail in the App Designer\).
+
+**Context help** - Platform supports a context help for the App Designer and for a web app.
 
 In the App Designer is accessible by clicking on a label of an input field in any Designer's window.
 
@@ -569,17 +576,15 @@ In order to activate the context help, this parameter must be set to "Readonly":
 
 If you set it to "Edit" \(in your dev env\), these links on labels are clickable and editable: the dev user can click on the link and see/edit the tooltip explaining the meaning of the current field.
 
-**Context help** - 
-
 **Top bar height \(pixels\)** - the top bar is showed on the top part of a web application. This parameter allows to define its height. Default value: 60. The value to set strongly depends on the chosen theme.
 
-**Enable menu file \(true/false\)** - 
+**Enable menu file \(true/false\)** - checkbox used to show an additional menu items in menu-bars menus, named "File" and used to include default menu commands, like "Exit".
 
 **Favourite icon suffix** - 
 
-**Popup windows with closing button \(def. N\)** - 
+**Popup windows with closing button \(def. N\)** - checkbox used to define whether all windows showed in the application which are modal must include also a close button on the top right corner. It is recommended to select it.
 
-**Menu tree width** - 
+**Menu tree width** - in case of a tree menu type \(an old menu type\), defines the menu window width
 
 **Modal windows with closing button \(def. N\)** - 
 
@@ -587,9 +592,16 @@ If you set it to "Edit" \(in your dev env\), these links on labels are clickable
 
 **Status bar height \(pixels\)** - the status bar is the bottom part of a web application. This parameter allows to define the bottom bar height.
 
-**Use default icon for user profile when not found \(def. N\)** - 
+**Use default icon for user profile when not found \(def. N\)** - checkbox used to define if a the default icon for the user profiles must be used if not defined in the CSS explicitelly. Otherwise the icon will not be showed at all.
 
-**Order of Grid Export** - 
+**Order of Grid Export** - this text parameter allows to define which export formats are supported by the application, when clicking on the export button in a grid: a popup window is prompted where the end user can choose among the export formats supported. This parameter defines the formats list and the order in the combobox. Supported values are:
+
+* XLS
+* Extended XLS
+* CSV;
+* CSV,
+
+The parameter value can contain any of these values, separated by the pipe symbol \|
 
 **View asterisk on mandatory controls \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
 
@@ -601,7 +613,9 @@ Moreover, a legend explaining the meaning of the \(\*\) is reported at the botto
 
 If this checkbox is selected, an additional message is also prompted to the user.
 
-**First level menu height \(pixels\) 0** - 
+**First level menu height \(pixels\)** - to use only for web apps having two levels of menubars \("Menu level" parameter set to 2\), i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
+
+This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
 
 **Second level menu height \(pixels\)** - 
 
@@ -609,7 +623,7 @@ If this checkbox is selected, an additional message is also prompted to the user
 
 **Show alert in menubar \(Y/N\)** - checkbox used to show an icon on the topbar, on the right. This icon highlights when an alert message is arriving for the current logged user \(generated on the server layer through the utils.sendAlertMessage method\). This is a clickable icon: when the user clicks on it, a popup menu is showed, reporting all incoming alert messages \(not read yet\).
 
-**Hide icons in tabs menu \(Y/N\)** - 
+**Hide icons in tabs menu \(Y/N\)** - checkbox used to show an icon on the tabs representing opened windows. The icon can be defined in the Window detail.
 
 **Text filter by enter \(Y/N\) \(default N\)** - checkbox used to listen to ENTER pressure: when selected, the end user can move from an input field to the next one, not only using the TAB key but also using the ENTER key.
 
@@ -623,7 +637,7 @@ common.a unique key has been violated
 
 **Toolbar buttons expand \(Y/N\) \(default N\)** - 
 
-**Loading order of the context css files Default** - 
+**Loading order of the context css files** - "Default" to load all .css files found the app web context in the order they have been written in the file system; "Sort by name" to read them by name. The second option is safer, since it is always predictable and conflicting CSS class names would be read in the clear order.
 
 **Read CSS context files only from css/css\_login folders** - checkbox used to limit the amount of .css files to read form the web public context of the application. As default behavior:
 
