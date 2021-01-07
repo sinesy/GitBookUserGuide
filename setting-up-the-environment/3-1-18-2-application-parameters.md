@@ -373,15 +373,34 @@ Google key for autocomplete place in Android
 
 ### PERMISSIONS
 
-Show role id \(Y/N\)
+**Show role id \(Y/N\)** - checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes. 
 
-Login controls to hide exit Check function Ids when reading data \(Y/N def. N\)
+You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
 
-Show only enabled roles
+**Login controls to hide exit Check function Ids when reading data \(Y/N def. N\)** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant \(one only company id\) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled. 
 
-Autoassign roles to new user \(';' separated list\)
+This parameter allows not only to define the list of input fields to hide but also the value to preset for them.
 
-Default value for login controls
+Example:
+
+exit,companyId=00000,siteId=100
+
+The example above would hide the exit button, the company id input field and preset it with a value of 00000, hide the site id input field and preset it with a value of 100.
+
+Allowed input fields that can be hidden:
+
+* companyId
+* siteId
+* language
+* exit
+
+**Show only enabled roles** - used in the user detail window: if this checkbox is selected, the list of roles to show is filtered by the roles already owned by the current user; if not selected, all users can see all defined roles at application level, but can only select in the grid \(in edit mode\) the ones owned by the current user.
+
+**Autoassign roles to new user \(';' separated list\)** - in case a user is auto-created when logging on \(e.g. when the authentication is managed externally by an LDAP server\), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
+
+If this checkbox is selected, a user not having roles assigned yet, would inherit automatically the role \(or list of roles separated by a comma\) specified through this parameter and consequently he can access successfully the application.
+
+**Default value for login controls** - ?
 
 
 
@@ -399,14 +418,34 @@ Remote reports Server URL
 
 ### SECURITY\_SYNC
 
-Destinations for the sync process groups/users
+As part of the integration with external authentication systems \(SSO, LDAP, AD, Google or other federated SSO systems\), Platform offers the ability to synchronize the users and/or groups from these sources.
 
-Sync users \(true/false def. true\)
+This operation is helpful to have the usernames defined in the LDAP also internally to Platform: only in this case you could associate roles to users. 
 
-Sync also groups \(true/false\) \(opt.\)
+If a user is not defined in Platform too, it would be impossible to refer it and link to it a set of roles!  
 
-Sources for the sync process groups/users
 
+To enable this feature, the following parameters must be set in the general configuration or the application specific configuration.  
+
+
+**Destinations for the sync process groups/users** - semicolon \(“;”\) separated list of destinations to put information in. Possible values: 4WS. Default: empty list
+
+**Sync users \(true/false def. true\)** - flag to enable or disable the synchronization of users. Possible values: “true” or “false”. Default: “true”.
+
+**Sync also groups \(true/false\) \(opt.\)** - flag to enable or disable the synchronization of groups. Possible values: “true” or “false”. Default: “true”.
+
+**Sources for the sync process groups/users** - semicolon \(“;”\) separated list of sources to get information from. Possible values are: GOOGLE, LDAP. Default: empty list
+
+\*\*\*\*
+
+**Note**: To configure more than one source per type \(LDAP1, LDAP2, …\) use this syntax: LDAP1;LDAP2. Where LDAP1/2 is the prefix of the source.
+
+**Note:** You can automate the synchronization of users and roles, using a predefined scheduled process: the following URL must be called:
+
+http\[s\]://secursync
+
+  
+  
 
 
 ### SMS
@@ -457,11 +496,44 @@ Platform will use this parameter to auto-create user entries in the internal use
 
 If this parameter has not been specified, the default behavior would be to auto-create usernames for each combination of company and site ids.
 
-**Sync: Logical delete of users before sync \(opt. def. false\)** - 
+**Sync: Logical delete of users before sync \(opt. def. false\)** - \(opt. – true or false\). If true delete the users from the current source before trying to write the new ones. Default: false. It is important to understand if the source list is full or incremental \(only new or updated users\): this depends on the sources settings. In the first case the deletion can be enabled, in the second case must be disabled.
 
-**Sync: Fields to manage in 4WS users table \(opt.\)** - 
+**Sync: Fields to manage in 4WS users table \(opt.\)** - \(opt.\) semicolon \(;\) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
 
-**Sync: Fields to manage in 4WS groups table \(opt.\)** - 
+Default value: “pk.userCodeId;description;password;;”. 
+
+Note: in the 4WS.Platform DB the user data is spread among different tables that PRM01\_USERS. For example the mail is in SUB01 other info are in PRM08. To fill this fileds with the value from the source, specify the table prefix before the field, for example: SUB01.EMail, SUB01.firstName, SUB01.lastName.
+
+The possible values are: 
+
+* userInitial: string. User initials 
+* description: string. User description 
+* password: string. User password 
+* dateExpirationPassword: date. Password expiration date 
+* locked: string Y/N. Locked account 
+* lockDate: date. Locking date 
+* erasable: string Y/N. If Y the user can be deleted by the sync process 
+* initValidate: date. User validity starting date 
+* endValidate: date.User validity ending date 
+* isAdmin: string Y/N. The user is admin 
+* SUB01.EMail: string. Email addres 
+* SUB01.firstName: string. Names 
+* SUB01.lastName: string. Surname 
+* SUB01.sex: tipo string M/F/O. Gender 
+* SUB01.address: string. Address 
+* SUB01.zipCode: string. ZIP code 
+* SUB01.city: string. City 
+* SUB01.country: string. Country 
+* SUB01.province: string. Province or state 
+* SUB01.birthdate: date. Birth date 
+* SUB01.telephone: string. Phone number 
+* SUB01.mobile: string. Mobile number 
+* PRM08.languageId: string. ISO2 language code \(i.e.: it, en, fr, de …\) 
+* PRM08.userImageUrl: string. User image URL.
+
+**Sync: Fields to manage in 4WS groups table \(opt.\)** - \(opt.\) semicolon \(;\) separated list of 4ws.Platform group object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
+
+Default: “pk.roleId;dictionary.description” \(see Prm02Groups fields\)
 
 
 
