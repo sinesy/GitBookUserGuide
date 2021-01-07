@@ -646,17 +646,172 @@ This parameter allows to define the position of the label: Top or Left \(default
 
 ### USERS
 
-Supported user languages Component Id 69
+**Supported user languages Component Id**  - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant. 
 
-Action id \(JSServer\) to use after change password
+When not settings this parameter, the languages defined through the App Designer are valid for all applications defined in the Platform installation, through the Languages functionality. 
 
-Action Id \(server-side js\) to be performed after insert/update/delete a user
+When this parameter is set, the "Language" combobox available in the user detail would show not any more the whole list of languages defined through the Languages functionality, but a subset of it, whose sublist can be filtered according to application logic depending on the company id \(tenant\).
 
-Flag used to hide the warning message when saving user roles \(def. N\)
+In any case, if this parameter is filled in, it must be the id of a server-side javascript business component, whose JSON result must be the same required by the "Language" combobox in the user detail window.
 
-Action Id \(server-side js\) to take before you insert/update/delete a user
+Example:
 
-Action id \(JSServer\) to use after application user logout
+```javascript
+utils.setDecodeField("pk.languageId","LANGUAGE_ID");
+
+var langIdsIn = "..."; // my custom app logic
+var json = utils.getPartialResult(
+    "SELECT * FROM SYS11_LANGUAGES WHERE COMPANY_ID= ? AND STATUS='E' and LANGUAGE_ID IN ("+langIdsIn+")",
+    null, 
+    false,true,
+    [userInfo.companyId]
+);
+var res = JSON.parse(json);
+for(var i=0;i<res.valueObjectList.length;i++) {
+    res.valueObjectList[i].pk = {
+        companyId: res.valueObjectList[i].companyId,
+        siteId: res.valueObjectList[i].siteId,
+        languageId: res.valueObjectList[i].languageId
+    };
+}
+
+utils.setReturnValue(JSON.stringify(res));
+```
+
+**Action id \(JSServer\) to use after change password** - this optional parameter can be used to specify a server-side javascript action which will be invoked by Platform, each time a user changes its password. It can be used as a callback for such event and execute some custom logic.
+
+Example:
+
+```javascript
+// in input the predefined "vo" is prefilled with:
+// { 
+//   companyId: "...",
+//   siteId: ...,
+//   username: "...",
+//   oldPassword: "...",
+//   newPassword: "..."
+// }
+
+// after executing some custom logic, it is also possible to block the password change, 
+// by getting back a JSON containg a success: false:
+utils.setReturnValue(JSON.stringify({
+  success: false,
+  message: "the reason..."
+}));
+```
+
+**Action Id \(server-side js\) to be performed after insert/update/delete a user** -  this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user is added/modified or deleted. It can be used as a callback for such event and execute some custom logic.
+
+According to the operation, the input provided to the javascript action is different.
+
+In case of insert:
+
+```javascript
+reqParams = {
+  operationType: "insert"
+}
+
+vo = ... // the user detail content
+
+headers = ... // the ones provided by the browser
+```
+
+In case of update:
+
+```javascript
+reqParams = {
+  operationType: "update"
+}
+
+vo = ... // the user detail content
+
+headers = ... // the ones provided by the browser
+```
+
+In case of deletes:
+
+```javascript
+reqParams = {
+  operationType: "delete"
+}
+
+vo = { valueObjectList: [... ] } // the list of users to delete
+
+headers = ... // the ones provided by the browser
+```
+
+**Flag used to hide the warning message when saving user roles \(def. N\)** - checkbox used to hide the confirm message appearing when the user is saving a user detail
+
+**Action Id \(server-side js\) to take before you insert/update/delete a user** - this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user is about to insert/update or delete users. It can be used as a callback for such event and execute some custom logic, in order to prevent the change in the database and interrupt the operation.
+
+According to the operation, the input provided to the javascript action is different.
+
+In case of insert:
+
+```javascript
+reqParams = {
+  operationType: "insert"
+}
+
+vo = ... // the user detail content
+
+headers = ... // the ones provided by the browser
+
+// after executing some custom logic, it is also possible to block the operation, 
+// by getting back a JSON containg a success: false:
+utils.setReturnValue(JSON.stringify({
+  success: false,
+  message: "the reason..."
+}));
+```
+
+In case of update:
+
+```javascript
+reqParams = {
+  operationType: "update"
+}
+
+vo = ... // the user detail content
+
+headers = ... // the ones provided by the browser
+
+// after executing some custom logic, it is also possible to block the operation, 
+// by getting back a JSON containg a success: false:
+utils.setReturnValue(JSON.stringify({
+  success: false,
+  message: "the reason..."
+}));
+```
+
+In case of deletes:
+
+```javascript
+reqParams = {
+  operationType: "delete"
+}
+
+vo = { valueObjectList: [... ] } // the list of users to delete
+
+headers = ... // the ones provided by the browser
+
+// after executing some custom logic, it is also possible to block the operation, 
+// by getting back a JSON containg a success: false:
+utils.setReturnValue(JSON.stringify({
+  success: false,
+  message: "the reason..."
+}));
+```
+
+**Action id \(JSServer\) to use after application user logout** - this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user has logged out from the web application.
+
+Available inputs are:
+
+```javascript
+userInfo = { ... } // user info
+
+headers = ... // the ones provided by the browser
+```
 
 
 
