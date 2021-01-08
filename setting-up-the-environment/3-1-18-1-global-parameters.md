@@ -88,15 +88,21 @@ http://host/
 
 ### ALERT
 
-**Messages main node URL** - to define only in case of a cluster of nodes, where there is batch dedicated node \(main node\); in such a scenario, this parameter must be filled in with the local IP address of such a node.
+Parameters related to alert messages in case of a cluster based Platform installation \(multiple servers\)
 
-**Port for the messages main node \(opt.\)** - 
+Pre-requisite: the WEB-INF/web.xml file must have been set with "cluster" tag value set to "true"
 
-**Protocol for the messages main node \(opt.\)** - 
+**Messages messages main node URL** - if set, this public URL will be used to send all notification events; this URL represents the public URL for the main fixed node; use this setting ONLY when you have a cluster where there is a fixed main node; i this parameter is filled, it is 
+
+**Port for the messages main node \(opt.\)** - this parameter must be filled together with the next one: it represents the internal Tomcat port where the main current node is listen for requests
+
+**Protocol for the messages main node \(opt.\)** - this parameter must be filled together with the previous one: it represents the HTTP protocol to use \(http vs https\) to use when communicating with the internal Tomcat where the main current node is listen for requests
 
 
 
-**Alfresco -** parameters related to the ECM module
+### **ALFRESCO** 
+
+parameters related to the ECM module
 
 * Admin Password when connecting to Alfresco Server
 * Admin Username when connecting to Alfresco Server
@@ -105,15 +111,35 @@ http://host/
 * sync roles in Alfresco
 * sync user roles in Alfresco
 
-**App Analysis** - parameters related to the tool used to perform an assessment of the app
+### \*\*\*\*
 
-**Docx conversion** - parameters related to the services which allow to convert documents to the PDF format
+### **APP ANALYSIS** 
 
-**Export** - parameters related to the xls export module
+parameters related to the tool used to perform an assessment of the app
 
-**File upload** - parameters used to manage the file upload
+### \*\*\*\*
 
-**Google -** parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
+### **DOCX CONVERSION** 
+
+parameters related to the services which allow to convert documents to the PDF format
+
+### \*\*\*\*
+
+### **EXPORT**
+
+parameters related to the xls export module
+
+### \*\*\*\*
+
+### **FILE UPLOAD** 
+
+parameters used to manage the file upload
+
+### \*\*\*\*
+
+### **GOOGLE** 
+
+parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
 
 * Apps domain admin user for Google Service Account
 * Service Account Email
@@ -133,7 +159,11 @@ http://host/
 * Type of fields extracted from group information for sync
 * Sync: company, site to use when creating records from Google
 
-**LDAP -** parameters used to integrate the app with an LDAP server, like MS Active Directory
+### \*\*\*\*
+
+### **LDAP** 
+
+parameters used to integrate the app with an LDAP server, like MS Active Directory
 
 * Autocreate user from LDAP
 * Autoupdate user from LDAP
@@ -157,7 +187,9 @@ http://host/
 * \(optional\) field types to manage in LDAP groups
 * \(optional\) LDAP attribute for group id
 
-**Email notification system**
+### \*\*\*\*
+
+### **Email notification system**
 
 * SMTP host when sending email
 * \(optional\) SMTP port when sending email
@@ -166,9 +198,17 @@ http://host/
 * \(optional\) SMTP password when sending email
 * \(optional\) Use TLS when sending email: E/F
 
-**Mobile** - parameters used to integrate a mobile app with Firebase notification system
+### \*\*\*\*
 
-**Password** - parameters used to define the password policy
+### **MOBILE** 
+
+parameters used to integrate a mobile app with Firebase notification system
+
+### \*\*\*\*
+
+### **PASSWORD** 
+
+parameters used to define the password policy
 
 * Password regular expression: you can define a regular expression for users password
 * Password: number of days to use for the password expiration
@@ -197,7 +237,9 @@ Application Access
 
 
 
-**Permissions -** parameters used to define the authentication process
+### **PERMISSIONS** 
+
+Parameters used to define the authentication process
 
 * Login controls to hide
 * Encript all passwords
@@ -217,7 +259,11 @@ Application Access
 * Parameter name id user SSO
 * Parameter name token SSO
 
-**Redis** - parameters used to manage the integration with a shared cache for user sessions, based on Redis
+### \*\*\*\*
+
+### **REDIS** 
+
+parameters used to manage the integration with a shared cache for user sessions, based on Redis
 
 * Server host name - required in case of a fixed Redis server
 * Server host port - required in case of a fixed Redis server
@@ -227,7 +273,11 @@ Application Access
 * Interval when Redis is not working - in case of auto creation/destroy of the Google service based on Redis, this optional value represents the interval \[0-24\] expressed with hours, where the service is not operating
 * VPC name - in case of auto creation/destroy of the Google service based on Redis, this value represents the VPN name used by Redis and by the Compute Engine instances where Platform is running
 
-**Scheduler -** parameters used by the scheduler module
+### \*\*\*\*
+
+### **SCHEDULER** 
+
+parameters used by the scheduler module
 
 * "From email address" when sending email from Scheduler
 * * Collaboration
@@ -237,7 +287,11 @@ Application Access
 * show/edit site id in user detail
 * day number of log
 
-**UI** - parameters used by the UI
+### \*\*\*\*
+
+### **UI** 
+
+parameters used by the UI
 
 * Disable GoogleMaps libs loading
 * Hide Platform logo
@@ -247,11 +301,9 @@ Application Access
 * Duplicate data per company
 * Application activation key path
 
-**Alert** - parameters related to alert messages in case of a cluster based Platform installation \(multiple servers\)
+### \*\*\*\*
 
-Pre-requisite: the WEB-INF/web.xml file must have been set with "cluster" tag value set to "true"
+###  
 
-* Messages messages main node URL - if set, this public URL will be used to send all notification events; this URL represents the public URL for the main fixed node; use this setting ONLY when you have a cluster where there is a fixed main node; i this parameter is filled, it is 
-* Port for the messages main node \(opt.\) - this parameter must be filled together with the next one: it represents the internal Tomcat port where the main current node is listen for requests
-* Protocol for the messages main node \(opt.\) - this parameter must be filled together with the previous one: it represents the HTTP protocol to use \(http vs https\) to use when communicating with the internal Tomcat where the main current node is listen for requests
+
 
