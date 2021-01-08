@@ -115,7 +115,15 @@ parameters related to the ECM module
 
 ### **APP ANALYSIS** 
 
-parameters related to the tool used to perform an assessment of the app
+Parameters related to the tool used to perform an assessment of the app
+
+**Enable application analysis every X hours \(def. disable\)** - in order to start the app analysis, you have to fill in this parameter: this number represents the hours to wait before the next analysis. A good value can be 4 o 8 hours.
+
+**Email used to send notifications after an app analysis** - when the app analysis has started \(through the previous parameter\), Platform can send a notification email with all events analized which overpass the triggers set on the app analysis definition window. This is the email address where the email messages will be sent. Multiple email addresses are supported: use the comma \(,\) symbol to separate each other.
+
+**Destination Phone Nr. when sending SMSs after an app analysis** - when the app analysis has started \(through the first parameter\), Platform can send a notification SMS message with all events analized which overpass the triggers set on the app analysis definition window. You have also to correctly set Twilio parameters for SMS \(see SMS section\). This is the phone number where the SMS messages will be sent.
+
+**Subject to use in SMS/email after an app analysis** - in case of notification by email, this parameter must be filled in as well.
 
 ### \*\*\*\*
 
