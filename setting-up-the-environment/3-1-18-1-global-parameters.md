@@ -209,6 +209,24 @@ The same parameters can also be redefined at application level.
 
 parameters used to integrate a mobile app with Firebase notification system
 
+
+
+### MONITOR
+
+This section contains settings related to the "monitored services" module of Platform, i.e. the layer intercepting the server-side js action execution, when invoked by the web layer \(web services\), when invoked by the scheduled \(scheduled processes\) or when executed by the queue manager \(enqueued actions\). In all cases, these services are monitored and their execution traced. 
+
+**Email used to send a message, in case of problems on services execution** - this is a mandatory parameter if you have monitored services configured to send notification emails in case of errors during the execution.
+
+**Remote Platform URL n.1...10, used to retrieve log for the monitoring feature** - these 10 parameters can be used to connect the current Platform installation to up to 10 other remote installations, each containing monitored services. Here you have to define the remote URL to Platform installations invoked automatically to retrieve from these remote installations all monitored log and gather it in a unique repository, the current one. 
+
+For more details see:
+
+[https://4wsplatform.gitbook.io/user-guide/modules/ee10-1-log-and-analysis/service-monitoring/remote-platform-servers](https://4wsplatform.gitbook.io/user-guide/modules/ee10-1-log-and-analysis/service-monitoring/remote-platform-servers)
+
+**Wait time before import log \(hrs\)** - a number, expressed in hours, related to the amount of time to wait before automatically retrieve all collected monitored log from the remote Platform installations. This parameter work along with the previous ones.
+
+**Email subject to notify** - the email subject to use when sending notification emails.
+
 ### \*\*\*\*
 
 ### **PASSWORD** 
