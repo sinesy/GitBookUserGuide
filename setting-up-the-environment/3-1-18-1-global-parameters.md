@@ -265,13 +265,19 @@ Parameters used to define the authentication process
 
 parameters used to manage the integration with a shared cache for user sessions, based on Redis
 
-* Server host name - required in case of a fixed Redis server
-* Server host port - required in case of a fixed Redis server
-* Instance name - in case of auto creation/destroy of the Google service based on Redis, this value represents the name used to identify the cache name in the Redis server
-* Region name - in case of auto creation/destroy of the Google service based on Redis, this value represents the region name where the Redis instance will be created in the Google Cloud project
-* Rest comand to create an instance  - in case of auto creation/destroy of the Google service based on Redis, this is an optional value, espressed in JSON format, related to the BODY content to send to GPC to create the instance
-* Interval when Redis is not working - in case of auto creation/destroy of the Google service based on Redis, this optional value represents the interval \[0-24\] expressed with hours, where the service is not operating
-* VPC name - in case of auto creation/destroy of the Google service based on Redis, this value represents the VPN name used by Redis and by the Compute Engine instances where Platform is running
+**Server host name** - required in case of a fixed Redis server
+
+**Server host port** - required in case of a fixed Redis server
+
+**Instance name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the name used to identify the cache name in the Redis server
+
+**Region name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the region name where the Redis instance will be created in the Google Cloud project
+
+**Rest comand to create an instance**  - in case of auto creation/destroy of the Google service based on Redis, this is an optional value, espressed in JSON format, related to the BODY content to send to GPC to create the instance
+
+**Interval when Redis is not working** - in case of auto creation/destroy of the Google service based on Redis, this optional value represents the interval \[0-24\] expressed with hours, where the service is not operating
+
+**VPC name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the VPN name used by Redis and by the Compute Engine instances where Platform is running
 
 ### \*\*\*\*
 
