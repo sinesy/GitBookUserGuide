@@ -4,7 +4,71 @@ Global parameters are accessible starting from the menu **Administration** -&gt;
 Some parameters are global only, i.e. applied to all applications defined in the environment, others can be redefined at application level; some others can be defined at application level only.  
 The followings are global parameters, grouped per topic:
 
-**4WS.Platform** - generic parameters, not linked to a specific module
+### 
+
+### 4WS.PLATFORM
+
+**Database version** - readonly parameter, automatically set by Platform when its service is started; it reports the current version of the database/application. ****
+
+**Index page file** - optional parameter used to define which is the main page for applications.
+
+**Speed up metadata import \(def. N\)**  - checkbox used to increase the metadata import process, by speeding up the writing operations on database.
+
+**Offset of Device Application activation key path** - parameter used by the offline module
+
+**Base Mobile Sync Path**  - optional parameter; it represents a base path in the file system of the Platform server, used when creating a new mobile app: it is used as a default base path for the mobile app for all mobile sync content.
+
+**Force all names to lowercase for headers in HTTP requests \(def. Y\)** - header names are passed forward in lowercase by many web servers and cloud services, so it would be better to select this checkbox.
+
+**Starting web page** - URL representing the base URL of this Platform installation; it is recommended to set it up, since it is used widely by Platform, for example when sending emails containing references to this server.
+
+Example: 
+
+https://yourhouse/platform/
+
+**Do not allow to set server variables from the client side** - checkbox used to block any attempt to change server-side variables from the UI \(not a safe approach\).
+
+**Max nr. of actions in history** - it is strongly recommended to set it, e.g. to 10; it is used behind the scenes by Platform every time a dev saves the action content: the previous version of the action content is saved, so it is possible for the dev to compare previous version and if needed, to restore some parts.
+
+**Sinesy Email Address** - email address used as default "from address" every time an email is sent.
+
+**Database upgrade in progress** - read only value, used internally by Platform with a cluster environment, when an upgrade is in progress \(when starting up the Platform service\); used to avoid database locked due to multiple nodes started at the same time: only the first setting this flag is granted to continue the upgrade.
+
+**Web Designer activation key path** - optional parameter to use in case no activation key has been uploaded at application level; this is an absolute path in the file system of the Platform server to a folder containing the activation keys.
+
+**Duplicate data per company \(Y/N def. Y\)** - check to use with applications working with multiple tenants: if selected, every time a function is created, it is automatically duplicated for each company id.
+
+**Allow the use of additional filters \(low security\)** - it is strongly recommended NOT to select this checkbox: if you select it, you can pass forward from the UI to the server layer additional SQL conditions which could represent a security leak \(SQL injection\).
+
+**Create EntityManager for additional sources \(list of packages\)** -  ****
+
+**Do not allow to pass a SQL filter on panel loading** - checkbox used to block any additional condition when invoking the standard web service getlist, used to fetch a list of records \(for a grid or a selector\). If not checked, it is allowed to pass a SQL fragment to the base SQL query executed on the server side, which would represent a SQL injection risk.
+
+It is strongly recommended to select it.
+
+If you have SQL based business components which work with additional SQL filters, you can fix this situation using the following steps:
+
+* replace the SQL based business component with a JS business component
+* copy the same base SQL query in the new component, using utils.getPartialResult
+* embed within the new component any custom logic thast previously you defined using addional SQL filters.
+
+**Take into account the difference between UTC and GMT for datetime** - checkbox used to change the date+time value to show in grids/forms, by taking into account the time zone difference between the client and the server.
+
+It is strongly recommended to select it.
+
+**Take into account the difference between UTC and GMT for date** - checkbox used to change the date value to show in grids/forms, by taking into account the time zone difference between the client and the server.
+
+It is strongly recommended to select it.
+
+
+
+
+
+
+
+
+
+
 
 **Activiti** - parameters related to the BPM module
 
@@ -88,6 +152,29 @@ The followings are global parameters, grouped per topic:
 * Password regular expression: you can define a regular expression for users password
 * Password: number of days to use for the password expiration
 * Password: number of erroneous login attempts
+
+
+
+Application Access
+
+* Enable users
+* \(optional\) Access Unavailable message
+* Password: number of erroneous login attempts
+* Order of Grid Export: ordered list of types export for grids
+* Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
+* Password: number of days to use for the password expiration
+* Password regular expression: you can define a regular expression for users password.
+
+  **^\(?=.\*\[a-z\]\)\(?=.\*\[A-Z\]\)\(?=.\*\\d\)\(?=.\*\[@$!%\*?&\]\)\[A-Za-z\\d@$!%\*?&\]{8,}$**
+
+* which means
+  * matches a string of 8 or more characters;
+  * that contains at least one digit \(d is shorthand for \[0-9\]\);
+  * at least one lowercase character and
+  * at least one special character and
+  * at least one uppercase character.
+
+
 
 **Permissions -** parameters used to define the authentication process
 

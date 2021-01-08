@@ -317,50 +317,43 @@ Available log types are:
 
 ### LOGIN
 
-**Enabled users** - a list of usernames, separated by comma \(,\). When this field is filled, the log on is blocked for all users except for the ones specified here. This parameter is helpful during an application upgrade which consists of upgrading the database, importing metadata and web context. During that process, it would not be a good idea to let the end users access the application: through this parameter you can block users from accessing the app, except for the devs. Once finished and tested everything, you should clear up this parameter, so that all end users can access the app again.
+Enabled users
 
-**Version of Login Form** - the login page can be customized in a variety of ways; throgu this parameter you ca define how many buttons it contain, among these alternatives:
+Version of Login Form
 
-* Exit + Login Buttons
-* Login + Exit Buttons
+Show combos for Company and Site \(YN\)
 
-**Show combos for Company and Site \(YN\)** - checkbox used to replace the input fields for company and site with comboboxes, in roles/users details. 
+Login label in controls
 
-**Login label in controls** - when the checkbox is selected, in the login page the labels on the left of the input fields are removed and moved within the input fields.
+Access Unavailable message
 
-**Access Unavailable message** - when the "Enabled users" property is filled in, you can also show a customized message dialog when an end user attempts to access the application; through the current property you can define the text to show in this scenario.
-
-**Translate login labels with browser language** - checkbox used to auto-set the language in the login page, according to the browser language.
+Translate login labels with browser language
 
 
 
 ### MAIL
 
-This section is mandatory in case there are functionalities which send email messages, like an email to send with template, app diagnosys, scheduled processes which notifies by email, etc.
+SMTP host when sending email
 
-**SMTP host when sending email** - the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
+SMTP port when sending email \(opt.\)
 
-**SMTP port when sending email \(opt.\)** - the port used by the SMTP server to accept email messages to send; if not specified, the default port 25 is used; bear in mind that you cannot use the default port 25 if your Platform server has been installed in the Google Cloud Platform, since this port is blocked in the GCP. Moreover, the port also depends on the protocol used: smtp or smtps \(SMTP over SSL\).
+SMTP username when sending email \(opt.\)
 
-**SMTP username when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
+SMTP password when sending email \(opt.\)
 
-**SMTP password when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
-
-**Use TLS when sending email: E/F \(opt.\)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
+Use TLS when sending email: E/F \(opt.\)
 
 
 
 ### MAPS
 
-This section is used in case your application uses Google Map feature and show a google map within a "Google Map panel". In such a scenario, all these properties are required.
+Google Maps: Start Point Latitude
 
-**Google Maps: Start Point Latitude** - default latitude coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
+Google Maps: Start Point Longitude
 
-**Google Maps: Start Point Longitude** - default longitude coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
+Google Maps: Start Point Name
 
-**Google Maps: Start Point Name** - default caption text to show for the default coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
-
-**Google Maps: Do not set a default position** - checkbox used to set or not a default coordinate for a Google Map panel which has not been filled with a coordinate. If not checked, the default settings defined above will be used.
+Google Maps: Do not set a default position
 
 
 
@@ -376,34 +369,15 @@ Google key for autocomplete place in Android
 
 ### PERMISSIONS
 
-**Show role id \(Y/N\)** - checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes. 
+Show role id \(Y/N\)
 
-You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
+Login controls to hide exit Check function Ids when reading data \(Y/N def. N\)
 
-**Login controls to hide exit Check function Ids when reading data \(Y/N def. N\)** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant \(one only company id\) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled. 
+Show only enabled roles
 
-This parameter allows not only to define the list of input fields to hide but also the value to preset for them.
+Autoassign roles to new user \(';' separated list\)
 
-Example:
-
-exit,companyId=00000,siteId=100
-
-The example above would hide the exit button, the company id input field and preset it with a value of 00000, hide the site id input field and preset it with a value of 100.
-
-Allowed input fields that can be hidden:
-
-* companyId
-* siteId
-* language
-* exit
-
-**Show only enabled roles** - used in the user detail window: if this checkbox is selected, the list of roles to show is filtered by the roles already owned by the current user; if not selected, all users can see all defined roles at application level, but can only select in the grid \(in edit mode\) the ones owned by the current user.
-
-**Autoassign roles to new user \(';' separated list\)** - in case a user is auto-created when logging on \(e.g. when the authentication is managed externally by an LDAP server\), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
-
-If this checkbox is selected, a user not having roles assigned yet, would inherit automatically the role \(or list of roles separated by a comma\) specified through this parameter and consequently he can access successfully the application.
-
-**Default value for login controls** - ?
+Default value for login controls
 
 
 
@@ -415,128 +389,47 @@ Remote reports Server URL
 
 ### SCHEDULER
 
-**From email address when sending email from Scheduler** - this parameter is essential in case you have defined scheduled processes and include also a notification email, i.e. an email address \(or more than one\) to use to send email messages according to the exit code of the scheduled terminated process. This parameter represents the "from email address" to use when sending notification emails.
+From email address when sending email from Scheduler
 
 
 
 ### SECURITY\_SYNC
 
-As part of the integration with external authentication systems \(SSO, LDAP, AD, Google or other federated SSO systems\), Platform offers the ability to synchronize the users and/or groups from these sources.
+Destinations for the sync process groups/users
 
-This operation is helpful to have the usernames defined in the LDAP also internally to Platform: only in this case you could associate roles to users. 
+Sync users \(true/false def. true\)
 
-If a user is not defined in Platform too, it would be impossible to refer it and link to it a set of roles!  
+Sync also groups \(true/false\) \(opt.\)
 
+Sources for the sync process groups/users
 
-To enable this feature, the following parameters must be set in the general configuration or the application specific configuration.  
-
-
-**Destinations for the sync process groups/users** - semicolon \(“;”\) separated list of destinations to put information in. Possible values: 4WS. Default: empty list
-
-**Sync users \(true/false def. true\)** - flag to enable or disable the synchronization of users. Possible values: “true” or “false”. Default: “true”.
-
-**Sync also groups \(true/false\) \(opt.\)** - flag to enable or disable the synchronization of groups. Possible values: “true” or “false”. Default: “true”.
-
-**Sources for the sync process groups/users** - semicolon \(“;”\) separated list of sources to get information from. Possible values are: GOOGLE, LDAP. Default: empty list
-
-\*\*\*\*
-
-**Note**: To configure more than one source per type \(LDAP1, LDAP2, …\) use this syntax: LDAP1;LDAP2. Where LDAP1/2 is the prefix of the source.
-
-**Note:** You can automate the synchronization of users and roles, using a predefined scheduled process: the following URL must be called:
-
-http\[s\]://secursync
-
-  
-  
 
 
 ### SMS
 
-This section represents all settings needed when sending SMS messages from the App Diagnosys functionality, in case there is a notification to send to the specified address \(phone number\) and the analyzed results are sent to that address. 
+Email suffix when sending SMS
 
-Not all these settings are needed:
+From SMS Phone Nr
 
-* if you send SMS messages through an **external SMS email gateway,** you have first of all to specify the  SMTP settings through the MAIL parameters section and then fill in here the first two parameters
-* if you send SMS messages through the **Twilio SMS service**, you have first of all to setup and buy the Twilio SMS service; once don that, you have to specify the last three parameters in this section.
+Default International prefix for SMS
 
-**Email suffix when sending SMS** - used in case of an external SMS email gateway: it represents the domain of the email service; for example, if you have a phone number like "3401234567", you email suffix can be "mycompany.com" and Platform will send an email message like "3401234567@mycompany.com" to the SMS gateway, which then sends the SMS message to the specified number \(the left part of the email address\).
+Twilio SMS Account SID
 
-**From SMS Phone Nr** - used in case of an external SMS email gateway: it represents the "from number" to use when sending SMS messages and it must be recognized by the SMS email gateway.
-
-**Default International prefix for SMS** - used in case of SMS sent through the Twilio SMS service: it represents the international prefix number to include to the specified phone number, in case this one does not include also the international prefix number; for example, suppose you have defined here a default international prefix like "+39", if you pass forward a phone number like "+393401234567", this number does not change, but if you pass forward a phone number like "3401234567", this number will be replaced internally by Platform with "+393401234567" and passed to the Twilio SMS service.
-
-**Twilio SMS Account SID** - used in case of SMS sent through the Twilio SMS service: it represents the username provided by your Twilio account that you have already had to setup.
-
-**Twilio SMS Auth Token** - used in case of SMS sent through the Twilio SMS service: it represents the authorization token provided by your Twilio account that you have already had to setup.
+Twilio SMS Auth Token
 
 
 
 ### SSO
 
-Use this section when you want to log on into your web application using an authentication system different from the default one, provided by Platform and named "4WS".
+Authentication chain \(opt. def. '4ws'\)
 
-Platform supports multiple authentication mechanisms:
+Sync: Company,site couples to use when creating records \(opt. def. all\)
 
-* **4WS** - the default authentication mechanism, based on the internal table named PRM01\_USERS
-* **LDAP** - when a user is logging on, the authentication process is forwarded to an external LDAP server \(e.g. Microsoft Active Directory\), containing all user credentials \(username + password + additional user properties, like name, last name, email, etc.\); in such a scenario, it would be a good idea to activate also the LDAP synchronization feature provided by Platform, in order to retrieve all usernames \(not the passwords which are only maintained internally yo the LDAP server\) and additional properties and store them in Platform as well; in this way, you can inherit and access all additional properties and link these usernames to the authorization module provided by Platform \(i.e. what a user can do after a successful authentication process - permissions\)
-* **GMail SSO** - the login page would include also the Google SSO dialog, composed of the Google email input field and password input field and the Login button: in case the user has already logged on Google suite, this login page would automatically recognize the login and by-pass it, by showing after a few seconds the Platform web app main page.
-* _**Custom SSO server**_ - you can define a server-side javascript action which would be invoked behind the scenes by Platform when the user attempts to log-on: it is up to this action to figure out if the user is allowed to log on, by invoking external authentication system; this action receives in input the user credential typed by the user in the login page and can pass them forward to external system: finally the action be provide the outcome and even replace some input data with others \(e.g. change the username provided by the user and expressed as an email address to a totally different value for the username, provided by the external system\).
+Sync: Logical delete of users before sync \(opt. def. false\)
 
-All these authentication mechanisms can be combined together, if needed, as an **authentication chain**, that is to say, the authentication process can try more than one mechanisms, combined in sequence, like a chain: for example "4WS + LDAP": try first to authenticate through the default auth mechanism and in case of failure try through the external LDAP server.
+Sync: Fields to manage in 4WS users table \(opt.\)
 
-**Authentication chain \(opt. def. '4ws'\)** - this parameter is mandatory \(here or as global parameter\); it defines the authentication chain described above; allowed values are for example: 4WS, 4WS + LDAP, etc.
-
-**Sync: Company,site couples to use when creating records \(opt. def. all\)** - this is an optional parameter; if specified, you have to define couples of company + site ids, where the company id is separated by the site id with a comma \(,\) and a couple with another with a ;
-
-Example: 
-
-```javascript
-00888,100;00888,101;00889,100
-```
-
-Platform will use this parameter to auto-create user entries in the internal user table PRM01\_USERS, starting from the username provided by the external LDAP server: for each LDAP's username, Platform will duplicate this username for each company and site specified, in case of a multi-tenant web application.
-
-If this parameter has not been specified, the default behavior would be to auto-create usernames for each combination of company and site ids.
-
-**Sync: Logical delete of users before sync \(opt. def. false\)** - \(opt. – true or false\). If true delete the users from the current source before trying to write the new ones. Default: false. It is important to understand if the source list is full or incremental \(only new or updated users\): this depends on the sources settings. In the first case the deletion can be enabled, in the second case must be disabled.
-
-**Sync: Fields to manage in 4WS users table \(opt.\)** - \(opt.\) semicolon \(;\) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
-
-Default value: “pk.userCodeId;description;password;;”. 
-
-Note: in the 4WS.Platform DB the user data is spread among different tables that PRM01\_USERS. For example the mail is in SUB01 other info are in PRM08. To fill this fileds with the value from the source, specify the table prefix before the field, for example: SUB01.EMail, SUB01.firstName, SUB01.lastName.
-
-The possible values are: 
-
-* userInitial: string. User initials 
-* description: string. User description 
-* password: string. User password 
-* dateExpirationPassword: date. Password expiration date 
-* locked: string Y/N. Locked account 
-* lockDate: date. Locking date 
-* erasable: string Y/N. If Y the user can be deleted by the sync process 
-* initValidate: date. User validity starting date 
-* endValidate: date.User validity ending date 
-* isAdmin: string Y/N. The user is admin 
-* SUB01.EMail: string. Email addres 
-* SUB01.firstName: string. Names 
-* SUB01.lastName: string. Surname 
-* SUB01.sex: tipo string M/F/O. Gender 
-* SUB01.address: string. Address 
-* SUB01.zipCode: string. ZIP code 
-* SUB01.city: string. City 
-* SUB01.country: string. Country 
-* SUB01.province: string. Province or state 
-* SUB01.birthdate: date. Birth date 
-* SUB01.telephone: string. Phone number 
-* SUB01.mobile: string. Mobile number 
-* PRM08.languageId: string. ISO2 language code \(i.e.: it, en, fr, de …\) 
-* PRM08.userImageUrl: string. User image URL.
-
-**Sync: Fields to manage in 4WS groups table \(opt.\)** - \(opt.\) semicolon \(;\) separated list of 4ws.Platform group object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
-
-Default: “pk.roleId;dictionary.description” \(see Prm02Groups fields\)
+Sync: Fields to manage in 4WS groups table \(opt.\)
 
 
 
@@ -550,285 +443,79 @@ TensorFlow url
 
 ### UI
 
-This section contains a set of properties which change the UI appearance of your web application. The correct values for these settings depend on the chosen theme, since a specific them has a different menu, topbar content, bottom bar, etc.
+Single Document Interface \(Y/N\) \(predef. N\)
 
-**Single Document Interface \(Y/N\) \(predef. N\) -** check this property only in case you want to create a single document interface, i.e. a very simple web application \(like a web site\), where there aren't multiple windows to show at the same time \(e.g. a list of data + a detail window for a selected row\); the SDI paradigm states that only only window is visible at a time and consequently only very basic application UIs can be created.
+Application icon
 
-**Application icon** - a .ico public file to use as "favourite icon" for the web application \(i.e. showed by the browser on the URL bar\). If specified, this .ico file is loaded starting from the platform web context.
+Menu levels 1
 
-Example:
+Show window icon \(Y/N\)
 
-&lt;my app web context&gt;/images/favicon.ico
+Context help
 
-**Menu levels** - Platform supports a series of different menu types:
+Top bar height \(pixels\) 60
 
-* popup menu anchored to the left side of the application, opened by clicking on the button on the top-left side \(the most modern menu\); there is also a variant of this menu, where the application functionalities are organized within this popup window in a hierarchical way, rather than a plain list\). This menu is good for applications having a large amount of application functionalities
-* popup menu anchored to the top-right side of the application, opened by clicking on the corresponding button; application functionalities are organized in folders and subfolders, within this popup window. This menu is good for small applications, having a limited amount of application functionalities
-* the application main area is filled with the menu, represented as a list of buttons and sub-folders
-* a menubar organized in one or two levels \(the oldest menu\); in this menu, the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
+Enable menu file \(true/false\)
 
-This parameter defines the number of menu levels: it should be always set to 0 for all applications except for the ones having the oldest menu type \(menubar\), where it can be set to 1 or 2.
+Favourite icon suffix
 
-**Show window icon \(Y/N\)** - in case of old applications where windows are not tabs but internal windows, this checkbox allows to show an icon for each window \(defined through the Window detail in the App Designer\).
+Popup windows with closing button \(def. N\)
 
-**Context help** - Platform supports a context help for the App Designer and for a web app.
+Menu tree width
 
-In the App Designer is accessible by clicking on a label of an input field in any Designer's window.
+Modal windows with closing button \(def. N\)
 
-In order to activate the context help, this parameter must be set to "Readonly": in this case, the end user can click on the link and see a tooltip explaining the meaning of the current field.
+Enable menu filter \(true/false\)
 
-If you set it to "Edit" \(in your dev env\), these links on labels are clickable and editable: the dev user can click on the link and see/edit the tooltip explaining the meaning of the current field.
+Status bar height \(pixels\)
 
-**Top bar height \(pixels\)** - the top bar is showed on the top part of a web application. This parameter allows to define its height. Default value: 60. The value to set strongly depends on the chosen theme.
+Use default icon for user profile when not found \(def. N\)
 
-**Enable menu file \(true/false\)** - checkbox used to show an additional menu items in menu-bars menus, named "File" and used to include default menu commands, like "Exit".
+Order of Grid Export
 
-**Favourite icon suffix** - 
+View asterisk on mandatory controls \(Y/N\) \(default N\)
 
-**Popup windows with closing button \(def. N\)** - checkbox used to define whether all windows showed in the application which are modal must include also a close button on the top right corner. It is recommended to select it.
+Message for empty panel
 
-**Menu tree width** - in case of a tree menu type \(an old menu type\), defines the menu window width
+First level menu height \(pixels\) 0
 
-**Modal windows with closing button \(def. N\)** - 
+Second level menu height \(pixels\)
 
-**Enable menu filter \(true/false\)** - 
+Grid in edit with double click \(YN\) \(default N\)
 
-**Status bar height \(pixels\)** - the status bar is the bottom part of a web application. This parameter allows to define the bottom bar height.
+Show alert in menubar \(Y/N\)
 
-**Use default icon for user profile when not found \(def. N\)** - checkbox used to define if a the default icon for the user profiles must be used if not defined in the CSS explicitelly. Otherwise the icon will not be showed at all.
+Hide icons in tabs menu \(Y/N\)
 
-**Order of Grid Export** - this text parameter allows to define which export formats are supported by the application, when clicking on the export button in a grid: a popup window is prompted where the end user can choose among the export formats supported. This parameter defines the formats list and the order in the combobox. Supported values are:
+Text filter by enter \(Y/N\) \(default N\)
 
-* XLS
-* Extended XLS
-* CSV;
-* CSV,
+Show short unique key
 
-The parameter value can contain any of these values, separated by the pipe symbol \|
+Toolbar buttons expand \(Y/N\) \(default N\)
 
-**View asterisk on mandatory controls \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+Loading order of the context css files Default
 
-When this checkbox is selected, an alternative approach is used to highlight the mandatory controls: an asterisk \(\*\) is showed at the right of each label, for each mandatory input control. Consequently, this approach consumes more space horizontally in a window, since a \(\*\) text is also included for each mandatory control.
+Read CSS context files only from css/css\_login folders
 
-Moreover, a legend explaining the meaning of the \(\*\) is reported at the bottom of each panel and subpanel.
+View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)
 
-**Message for empty panel** \(mobile apps only\) - for a grid having no rows, the default behavior is to report on the bottom of the grid the number of rows fetched, in this case zero.
-
-If this checkbox is selected, an additional message is also prompted to the user.
-
-**First level menu height \(pixels\)** - to use only for web apps having two levels of menubars \("Menu level" parameter set to 2\), i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar \(on the bottom on the first level menubar\).
-
-This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
-
-**Second level menu height \(pixels\)** - 
-
-**Grid in edit with double click \(YN\) \(default N\)** - 
-
-**Show alert in menubar \(Y/N\)** - checkbox used to show an icon on the topbar, on the right. This icon highlights when an alert message is arriving for the current logged user \(generated on the server layer through the utils.sendAlertMessage method\). This is a clickable icon: when the user clicks on it, a popup menu is showed, reporting all incoming alert messages \(not read yet\).
-
-**Hide icons in tabs menu \(Y/N\)** - checkbox used to show an icon on the tabs representing opened windows. The icon can be defined in the Window detail.
-
-**Text filter by enter \(Y/N\) \(default N\)** - checkbox used to listen to ENTER pressure: when selected, the end user can move from an input field to the next one, not only using the TAB key but also using the ENTER key.
-
-Note: usually the ENTER key should be used only for lookup  controls, where its pressure lead to the code validation for the text just typed in.
-
-**Show short unique key** - checkbox used to show a more user friendly error message, in case of SQL errors on saving data due to a unique key violation on the database.
-
-If selected, Platform does not show the error coming from the database, but a more user friendly message. You can customize this error message through the Translations functionality, by adding the custom entry:
-
-common.a unique key has been violated
-
-**Toolbar buttons expand \(Y/N\) \(default N\)** - 
-
-**Loading order of the context css files** - "Default" to load all .css files found the app web context in the order they have been written in the file system; "Sort by name" to read them by name. The second option is safer, since it is always predictable and conflicting CSS class names would be read in the clear order.
-
-**Read CSS context files only from css/css\_login folders** - checkbox used to limit the amount of .css files to read form the web public context of the application. As default behavior:
-
-* in the login page, Platform scans and load on the UI all .css files found in the "css\_login" subfolder
-* for the main page \(i.e. after a successful login\), Platform scans and load on the UI all .css files found in the whole public web context, except for the "css\_login" subfolder
-
-If this checkbox is selected, for the main page \(i.e. after a successful login\), Platform scans and load on the UI only .css files found in the "css" subfolder.
-
-**View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
-
-When the checkbox "View asterisk on mandatory controls**"** \(described above\) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the \(\*\) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
-
-**Label position of Designer functionality** - for each input field defined in a form panel, editor panel and filter panel, a label is also included, explaining the meaning of the field.
-
-This label can be showed either on the left of the input field or on top of it.
-
-This parameter allows to define the position of the label: Top or Left \(default\).
+Label position of Designer functionality
 
 
 
 ### USERS
 
-**Supported user languages Component Id**  - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant. 
+Supported user languages Component Id 69
 
-When not settings this parameter, the languages defined through the App Designer are valid for all applications defined in the Platform installation, through the Languages functionality. 
+Action id \(JSServer\) to use after change password
 
-When this parameter is set, the "Language" combobox available in the user detail would show not any more the whole list of languages defined through the Languages functionality, but a subset of it, whose sublist can be filtered according to application logic depending on the company id \(tenant\).
+Action Id \(server-side js\) to be performed after insert/update/delete a user
 
-In any case, if this parameter is filled in, it must be the id of a server-side javascript business component, whose JSON result must be the same required by the "Language" combobox in the user detail window.
+Flag used to hide the warning message when saving user roles \(def. N\)
 
-Example:
+Action Id \(server-side js\) to take before you insert/update/delete a user
 
-```javascript
-utils.setDecodeField("pk.languageId","LANGUAGE_ID");
-
-var langIdsIn = "..."; // my custom app logic
-var json = utils.getPartialResult(
-    "SELECT * FROM SYS11_LANGUAGES WHERE COMPANY_ID= ? AND STATUS='E' and LANGUAGE_ID IN ("+langIdsIn+")",
-    null, 
-    false,true,
-    [userInfo.companyId]
-);
-var res = JSON.parse(json);
-for(var i=0;i<res.valueObjectList.length;i++) {
-    res.valueObjectList[i].pk = {
-        companyId: res.valueObjectList[i].companyId,
-        siteId: res.valueObjectList[i].siteId,
-        languageId: res.valueObjectList[i].languageId
-    };
-}
-
-utils.setReturnValue(JSON.stringify(res));
-```
-
-**Action id \(JSServer\) to use after change password** - this optional parameter can be used to specify a server-side javascript action which will be invoked by Platform, each time a user changes its password. It can be used as a callback for such event and execute some custom logic.
-
-Example:
-
-```javascript
-// in input the predefined "vo" is prefilled with:
-// { 
-//   companyId: "...",
-//   siteId: ...,
-//   username: "...",
-//   oldPassword: "...",
-//   newPassword: "..."
-// }
-
-// after executing some custom logic, it is also possible to block the password change, 
-// by getting back a JSON containg a success: false:
-utils.setReturnValue(JSON.stringify({
-  success: false,
-  message: "the reason..."
-}));
-```
-
-**Action Id \(server-side js\) to be performed after insert/update/delete a user** -  this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user is added/modified or deleted. It can be used as a callback for such event and execute some custom logic.
-
-According to the operation, the input provided to the javascript action is different.
-
-In case of insert:
-
-```javascript
-reqParams = {
-  operationType: "insert"
-}
-
-vo = ... // the user detail content
-
-headers = ... // the ones provided by the browser
-```
-
-In case of update:
-
-```javascript
-reqParams = {
-  operationType: "update"
-}
-
-vo = ... // the user detail content
-
-headers = ... // the ones provided by the browser
-```
-
-In case of deletes:
-
-```javascript
-reqParams = {
-  operationType: "delete"
-}
-
-vo = { valueObjectList: [... ] } // the list of users to delete
-
-headers = ... // the ones provided by the browser
-```
-
-**Flag used to hide the warning message when saving user roles \(def. N\)** - checkbox used to hide the confirm message appearing when the user is saving a user detail
-
-**Action Id \(server-side js\) to take before you insert/update/delete a user** - this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user is about to insert/update or delete users. It can be used as a callback for such event and execute some custom logic, in order to prevent the change in the database and interrupt the operation.
-
-According to the operation, the input provided to the javascript action is different.
-
-In case of insert:
-
-```javascript
-reqParams = {
-  operationType: "insert"
-}
-
-vo = ... // the user detail content
-
-headers = ... // the ones provided by the browser
-
-// after executing some custom logic, it is also possible to block the operation, 
-// by getting back a JSON containg a success: false:
-utils.setReturnValue(JSON.stringify({
-  success: false,
-  message: "the reason..."
-}));
-```
-
-In case of update:
-
-```javascript
-reqParams = {
-  operationType: "update"
-}
-
-vo = ... // the user detail content
-
-headers = ... // the ones provided by the browser
-
-// after executing some custom logic, it is also possible to block the operation, 
-// by getting back a JSON containg a success: false:
-utils.setReturnValue(JSON.stringify({
-  success: false,
-  message: "the reason..."
-}));
-```
-
-In case of deletes:
-
-```javascript
-reqParams = {
-  operationType: "delete"
-}
-
-vo = { valueObjectList: [... ] } // the list of users to delete
-
-headers = ... // the ones provided by the browser
-
-// after executing some custom logic, it is also possible to block the operation, 
-// by getting back a JSON containg a success: false:
-utils.setReturnValue(JSON.stringify({
-  success: false,
-  message: "the reason..."
-}));
-```
-
-**Action id \(JSServer\) to use after application user logout** - this optional parameter can be used to specify a server-side javascript action id which will be invoked by Platform, each time a user has logged out from the web application.
-
-Available inputs are:
-
-```javascript
-userInfo = { ... } // user info
-
-headers = ... // the ones provided by the browser
-```
+Action id \(JSServer\) to use after application user logout
 
 
 
