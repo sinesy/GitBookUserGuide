@@ -317,17 +317,20 @@ Available log types are:
 
 ### LOGIN
 
-Enabled users
+**Enabled users** - a list of usernames, separated by comma \(,\). When this field is filled, the log on is blocked for all users except for the ones specified here. This parameter is helpful during an application upgrade which consists of upgrading the database, importing metadata and web context. During that process, it would not be a good idea to let the end users access the application: through this parameter you can block users from accessing the app, except for the devs. Once finished and tested everything, you should clear up this parameter, so that all end users can access the app again.
 
-Version of Login Form
+**Version of Login Form** - the login page can be customized in a variety of ways; throgu this parameter you ca define how many buttons it contain, among these alternatives:
 
-Show combos for Company and Site \(YN\)
+* Exit + Login Buttons
+* Login + Exit Buttons
 
-Login label in controls
+**Show combos for Company and Site \(YN\)** - 
 
-Access Unavailable message
+**Login label in controls** - 
 
-Translate login labels with browser language
+**Access Unavailable message** - 
+
+**Translate login labels with browser language** - 
 
 
 
