@@ -139,27 +139,77 @@ parameters used to manage the file upload
 
 ### **GOOGLE** 
 
-parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
+Parameters used to integrate the application with the Google Cloud Platform and the Google Domain \(GSuite\)
 
-* Apps domain admin user for Google Service Account
-* Service Account Email
-* Service Account Key
-* Google SSO
-* Client id for web application
-* Client secret for web application
-* Format to extract username from email
-* Apps domain to use for synchronization
-* Apps customer id used for sync
-* Google Sync
-* User query for synchronization
-* Format to extract username from email for sync
-* Fields extracted from user accounts
-* Type of fields extracted from user accounts for sync
-* Fields extracted from group information for sync
-* Type of fields extracted from group information for sync
-* Sync: company, site to use when creating records from Google
+**Google Datastore id** **-** in case of app connected to the Google Datastore NoSQL database, this is the Google Cloud Project Id \(mandatory\)
 
-### \*\*\*\*
+**Namespace list when exporting towards Platform for GA \(, separated\)**  - in case of app connected to the Google Datastore NoSQL database, this is the namespace to use. If not specified, the default namespace will be used.
+
+**Google Service Account Key \(p12 key Base64 encoded\)** - in case of apps connected to any Google Cloud service \(including Google Datastore\), this is the service account key, converted in text \(p12 format, base64\) generated using the Google Cloud Console
+
+**Service Account Email** - in case of apps connected to any Google Cloud service \(including Google Datastore\), this is the service account email generated using the Google Cloud Console; together with the previous parameter, they represent the GCP credentials, essential to access to the GCP services.
+
+**Apps domain admin user for Google Service Account** - in case of apps connected to any Google GSuite service \(now Google Workspace\), this is the service account email generated using the Google GSuite Console
+
+**Google SSO** - **Client id for web application** - 
+
+**Google SSO** - **Client secret for web application** - 
+
+**Google SSO** - **Format to extract username from email** - 
+
+**Google Sync** - **Apps domain to use for synchronization** - the Google Apps domain name \(for example mygoogleappsdomain.com\) from which users and groups must be read. In case of multidomain Google Apps, only the objects of this domain are read. This parameter takes precedence over the next one, customer id.   
+
+**Google Sync** - **Apps customer id used for sync** - in case of multidomain Google Apps, specify the customer id of the Google Apps installation.
+
+**Google Sync** - **User query for synchronization** -  \(opt\) a filter query for users list, as specified in the documentation: [https://developers.google.com/admin-sdk/directory/v1/reference/users/list](https://developers.google.com/admin-sdk/directory/v1/reference/users/list). For example: eMail:a\* to extract only users whose e-mail address starts with “a”.   
+
+**Google Sync** - **Format to extract username from email for sync** - \(opt\) specify this to convert the user email in 4WS.Platform user id. It works like the similar parameter user for SSO. In case of multidomain pay attention that only one parameter can be specified. Default value is {u}. 
+
+**Google Sync** - **Fields extracted from user accounts** - user fields that will be mapped in the destination fields. 
+
+The default value is 
+
+```text
+primaryEmail;description;;;
+```
+
+The available fields name are specified in Google API documentation \([https://developers.google.com/admin-sdk/directory/v1/reference/users\#resource](https://developers.google.com/admin-sdk/directory/v1/reference/users#resource). 
+
+Use the first level attributes, nested attributes are not supported\) and the following custom values: description, name, surname.  
+
+**Google Sync** -  **Type of fields extracted from user accounts for sync** - user field types used to extract the date. 
+
+The default value is 
+
+```text
+UserFormatType;;;;
+```
+
+where the first type indicates that the first field is the user name, in string format. The default are string fields. 
+
+**Google Sync** - **Fields extracted from group information for sync** - group fields that will be mapped in the destination fields. 
+
+The default value is 
+
+```text
+name;description
+```
+
+**Google Sync** - **Type of fields extracted from group information for sync** - user field types used to extract the date. 
+
+The default value is 
+
+```text
+;
+```
+
+indicating two string fields.
+
+**Google Sync** - **Sync: company, site to use when creating records from Google** - 
+
+
+
+\*\*\*\*
 
 ### **LDAP** 
 
@@ -207,7 +257,11 @@ The same parameters can also be redefined at application level.
 
 ### **MOBILE** 
 
-parameters used to integrate a mobile app with Firebase notification system
+Parameters used to integrate a mobile app with Firebase notification system and other settings.
+
+**Google key for autocomplete place in iOS** - the google key defined through the Google Cloud Console to use the Google autocomplete place API within a mobile app for iOS.
+
+**Google key for autocomplete place in Android** - he google key defined through the Google Cloud Console to use the Google autocomplete place API within a mobile app for Android.
 
 
 
