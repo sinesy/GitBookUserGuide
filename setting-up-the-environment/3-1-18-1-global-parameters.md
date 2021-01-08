@@ -213,11 +213,31 @@ parameters used to integrate a mobile app with Firebase notification system
 
 ### **PASSWORD** 
 
-parameters used to define the password policy
+Parameters used to define the password policy.
 
-* Password regular expression: you can define a regular expression for users password
-* Password: number of days to use for the password expiration
-* Password: number of erroneous login attempts
+**Password regular expression Password: regular expression explanation** - you can define a regular expression to respect when defining the passwords in the user detail window or when changing password on the login page. 
+
+Example:
+
+```text
+^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$
+```
+
+**Password: number of days to use for the password expiration** 
+
+**Password: number of erroneous login attempts** - when reached this number for consecutive failed authentications with the same username, the account will be locked. To unlock it, an admin must access the user detail and unlock it.
+
+**Encrypt all passwords \(Y/N\)** - check used to force all passwords defined in PRM01\_USERS to be encrypted. The already existing records with plain passwords will be updated and the PASSWORD field will be a value converted to the encrypted text.
+
+When unselecting this checkbox, all passwords in PRM01\_USERS will be converted to their plain version.
+
+**Number of memorized passwords** - when a password expires, the user if forced to change it and his next access; Platform will not allow the user to type a new password already defined in the past: this parameter defines how many old passwords will be maintained behind the scene and checked to avoid their reuse.
+
+**Send only encrypted passwords to the UI \(def. N\)** - checkbox used to transfer the user list objects and user detail object with the attribute password encrypted, so that it is not possible from the browser inspector to figure out the value of the password by looking at the network layer.
+
+**EMail Template id for resetting password \(example: EN=XXX,IT=XXX or only id for all\)** - a list of template ids, for each language, used when sending an email to the end user who asked for changing password because he forgot his current password.
+
+
 
 
 
@@ -278,7 +298,7 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 **Region name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the region name where the Redis instance will be created in the Google Cloud project
 
-**Rest comand to create an instance**  - in case of auto creation/destroy of the Google service based on Redis, this is an optional value, espressed in JSON format, related to the BODY content to send to GPC to create the instance
+**Rest command to create an instance**  - in case of auto creation/destroy of the Google service based on Redis, this is an optional value, expressed in JSON format, related to the BODY content to send to GPC to create the instance
 
 **Interval when Redis is not working** - in case of auto creation/destroy of the Google service based on Redis, this optional value represents the interval \[0-24\] expressed with hours, where the service is not operating
 
@@ -288,17 +308,17 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 ### **SCHEDULER** 
 
-parameters used by the scheduler module
+Parameters used by the scheduler module
 
-* "From email address" when sending email from Scheduler
-* * Collaboration
-* URL 4WSMonitor
-* Show role id
-* Show site id in users/user roles
-* show/edit site id in user detail
-* day number of log
+**"From email address" when sending email from Scheduler** - email address used by Platform when sending notification emails for a terminated scheduled process, if the dev has configured a notification at process level. This address will be used as the from address in the email messages.
 
-### \*\*\*\*
+**Force the main node for scheduled processes to be fixed \(Y or N def. N\)** - in case of a cluster of nodes where one is dedicated to the batch execution \(scheduled processes and enqueued actions\), this checkbox must be selected; moreover, the next parameter must be set as well.
+
+**SCHEDULER\_IP** - the local IP address of the batch node, i.e. the node to use as "main node".
+
+
+
+\*\*\*\*
 
 ### **UI** 
 
