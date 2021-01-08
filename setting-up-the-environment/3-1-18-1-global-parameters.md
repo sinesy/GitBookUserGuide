@@ -335,6 +335,14 @@ Example:
 ^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$
 ```
 
+which means
+
+* matches a string of 8 or more characters;
+* that contains at least one digit \(d is shorthand for \[0-9\]\);
+* at least one lowercase character and
+* at least one special character and
+* at least one uppercase character.
+
 **Password: number of days to use for the password expiration** 
 
 **Password: number of erroneous login attempts** - when reached this number for consecutive failed authentications with the same username, the account will be locked. To unlock it, an admin must access the user detail and unlock it.
@@ -348,29 +356,6 @@ When unselecting this checkbox, all passwords in PRM01\_USERS will be converted 
 **Send only encrypted passwords to the UI \(def. N\)** - checkbox used to transfer the user list objects and user detail object with the attribute password encrypted, so that it is not possible from the browser inspector to figure out the value of the password by looking at the network layer.
 
 **EMail Template id for resetting password \(example: EN=XXX,IT=XXX or only id for all\)** - a list of template ids, for each language, used when sending an email to the end user who asked for changing password because he forgot his current password.
-
-
-
-
-
-Application Access
-
-* Enable users
-* \(optional\) Access Unavailable message
-* Password: number of erroneous login attempts
-* Order of Grid Export: ordered list of types export for grids
-* Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
-* Password: number of days to use for the password expiration
-* Password regular expression: you can define a regular expression for users password.
-
-  **^\(?=.\*\[a-z\]\)\(?=.\*\[A-Z\]\)\(?=.\*\\d\)\(?=.\*\[@$!%\*?&\]\)\[A-Za-z\\d@$!%\*?&\]{8,}$**
-
-* which means
-  * matches a string of 8 or more characters;
-  * that contains at least one digit \(d is shorthand for \[0-9\]\);
-  * at least one lowercase character and
-  * at least one special character and
-  * at least one uppercase character.
 
 
 
