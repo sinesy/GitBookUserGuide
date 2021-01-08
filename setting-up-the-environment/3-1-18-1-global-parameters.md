@@ -338,23 +338,48 @@ Application Access
 
 Parameters used to define the authentication process
 
-* Login controls to hide
-* Encript all passwords
-* Authentication chain
-* Authentication types in login dialog
-* Destination for the sync process groups/users
-* LDAP sync also groups
-* Synchronization
-* Logical delete of users before sync
-* Company, site couples to use when creating records
-* Fields to manage in 4WS users table
-* Fields to manage in 4WS groups table
-* LDAP user name/surname for email format
-* SSO
-* URL server
-* Manager class name
-* Parameter name id user SSO
-* Parameter name token SSO
+**Show site in users and user roles \(Y/N\)** - checkbox used to define whether the site id column/control must be showed in the users list and in the user detail window. As a default setting, this information is not visible. 
+
+You should check this parameter when you have applications working with multiple site ids.
+
+**Show role id \(Y/N\)** - checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes. 
+
+You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
+
+**Show/edit site in user detail \(Y/N\)** - checkbox used to define whether the site id control must be showed and be editable in the user detail window. As a default setting, this information is not visible and consequently the site id to use when inserting records is always the one owned by the current logged user. 
+
+You should check this parameter only in case you want to be free to define the site id and not let Platform to generate it, i.e. when you have applications working with multiple site ids.
+
+**Login controls to hide**  - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant \(one only company id\) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled. 
+
+This parameter allows not only to define the list of input fields to hide but also the value to preset for them.
+
+Example:
+
+exit,companyId=00000,siteId=100
+
+The example above would hide the exit button, the company id input field and preset it with a value of 00000, hide the site id input field and preset it with a value of 100.
+
+Allowed input fields that can be hidden:
+
+* companyId
+* siteId
+* language
+* exit
+
+**Check function Ids when reading data \(Y/N def. N\)**
+
+**Automatically create users after successful authentication** - checkbox to select to auto-create a user when logging on \(e.g. when the authentication is managed externally by an LDAP server\).
+
+**Update user from external authentication source \(Y/N\)** - checkbox to select in order to auto-update the user detail starting from data coming from external authentication servers \(e.g. LDAP\); if not selected, users are imported from external system but their data are not updated on time.
+
+**Show only enabled roles** - used in the user detail window: if this checkbox is selected, the list of roles to show is filtered by the roles already owned by the current user; if not selected, all users can see all defined roles at application level, but can only select in the grid \(in edit mode\) the ones owned by the current user.
+
+**Autoassign roles to new user \(';' separated list\)** - in case a user is auto-created when logging on \(e.g. when the authentication is managed externally by an LDAP server\), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
+
+If this checkbox is selected, a user not having roles assigned yet, would inherit automatically the role \(or list of roles separated by a comma\) specified through this parameter and consequently he can access successfully the application.
+
+**Default value for login controls** - ?
 
 ### \*\*\*\*
 
