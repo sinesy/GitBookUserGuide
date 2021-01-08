@@ -189,14 +189,19 @@ parameters used to integrate the app with an LDAP server, like MS Active Directo
 
 ### \*\*\*\*
 
-### **Email notification system**
+### MAIL
 
-* SMTP host when sending email
-* \(optional\) SMTP port when sending email
-* \(optional\) SMTP protocol when sending email
-* \(optional\) SMTP username when sending email
-* \(optional\) SMTP password when sending email
-* \(optional\) Use TLS when sending email: E/F
+The same parameters can also be redefined at application level.
+
+**SMTP host when sending email** - the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
+
+**SMTP port when sending email \(opt.\)** - the port used by the SMTP server to accept email messages to send; if not specified, the default port 25 is used; bear in mind that you cannot use the default port 25 if your Platform server has been installed in the Google Cloud Platform, since this port is blocked in the GCP. Moreover, the port also depends on the protocol used: smtp or smtps \(SMTP over SSL\).
+
+**SMTP username when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
+
+**SMTP password when sending email \(opt.\)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
+
+**Use TLS when sending email: E/F \(opt.\)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
 
 ### \*\*\*\*
 
