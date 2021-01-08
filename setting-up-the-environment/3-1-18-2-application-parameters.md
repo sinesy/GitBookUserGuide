@@ -324,13 +324,13 @@ Available log types are:
 * Exit + Login Buttons
 * Login + Exit Buttons
 
-**Show combos for Company and Site \(YN\)** - 
+**Show combos for Company and Site \(YN\)** - checkbox used to replace the input fields for company and site with comboboxes, in roles/users details. 
 
-**Login label in controls** - 
+**Login label in controls** - when the checkbox is selected, in the login page the labels on the left of the input fields are removed and moved within the input fields.
 
-**Access Unavailable message** - 
+**Access Unavailable message** - when the "Enabled users" property is filled in, you can also show a customized message dialog when an end user attempts to access the application; through the current property you can define the text to show in this scenario.
 
-**Translate login labels with browser language** - 
+**Translate login labels with browser language** - checkbox used to auto-set the language in the login page, according to the browser language.
 
 
 
