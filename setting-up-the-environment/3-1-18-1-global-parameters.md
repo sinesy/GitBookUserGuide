@@ -62,18 +62,39 @@ It is strongly recommended to select it.
 
 
 
+### ACTIVITI
+
+These parameters are also defined at application level.
+
+**Tomcat Path of Activiti** - the absolute path to set, related to the installation of Activiti within a Tomcat.
+
+Example: 
+
+/opt/tomcat-activiti/
+
+**Base Rest URL of Activiti** -  base URL of Activiti; it can be an internal URL not a public URL.
+
+Example:
+
+[http://localhost:8280](http://localhost:8280)
+
+**Base Designer URL of Activiti** - base URL of Activiti, used to access Activiti Explorer \(i.e. the BPM designer\); it must be a public URL.
+
+Example:
+
+http://host/
 
 
 
+### ALERT
+
+**Messages main node URL** - to define only in case of a cluster of nodes, where there is batch dedicated node \(main node\); in such a scenario, this parameter must be filled in with the local IP address of such a node.
+
+**Port for the messages main node \(opt.\)** - 
+
+**Protocol for the messages main node \(opt.\)** - 
 
 
-
-
-
-**Activiti** - parameters related to the BPM module
-
-* Base Rest URL
-* Base Designer URL
 
 **Alfresco -** parameters related to the ECM module
 
