@@ -135,13 +135,33 @@ parameters related to the services which allow to convert documents to the PDF f
 
 ### **EXPORT**
 
-parameters related to the xls export module
+Parameters related to the xls export module
+
+**Export to xlsx using HSSF library \(Y/N def. N\)** - 
+
+**Max number of exportable rows in grid** - 
+
+**Max. nr. of concurrent exports before enqueuing them \(def. 1\)** - 
+
+**Path LibreOffice for export** - 
 
 ### \*\*\*\*
 
 ### **FILE UPLOAD** 
 
-parameters used to manage the file upload
+Parameters used to manage the file upload
+
+**File Storage \(FILE\_SYSTEM or GCS or GDRIVE; def. FILE\_SYSTEM\) File System** - this parameter defines the media to use when uploading files, among the 3 alternative medias: Platform server file system, Google Cloud Storage, Google Drive.
+
+**Default path for directories** - an absolute path to use as base dir for all uploaded files \(for all defined directories\), in case of upload based on file system.
+
+**Google Project Id**  - 
+
+**Create subfolders for company and site \(YN def. Y\)** - 
+
+**Loading directory on startup** - 
+
+**\(opt.\) Autodefine file name for uploaded files** - 
 
 ### \*\*\*\*
 
