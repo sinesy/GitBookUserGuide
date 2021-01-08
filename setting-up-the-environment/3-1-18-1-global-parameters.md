@@ -446,23 +446,34 @@ Parameters used by the scheduler module
 
 Parameters used by the UI
 
-**Application icon** - 
-
 **MESSAGES\_IP** - optional parameter, to set in case of a cluster having a main node used as the batch server; in such a scenario, set here the local IP address of the batch server
 
 **MESSAGES\_PWD** - read only parameter, do not change it
 
-**Order of Grid Export** - 
+**Order of Grid Export** - this text parameter allows to define which export formats are supported by the application, when clicking on the export button in a grid: a popup window is prompted where the end user can choose among the export formats supported. This parameter defines the formats list and the order in the combobox. Supported values are:
 
-**View asterisk on mandatory controls \(Y/N\) \(default N\)** - 
+* XLS
+* Extended XLS
+* CSV;
+* CSV,
+
+The parameter value can contain any of these values, separated by the pipe symbol \|
+
+**View asterisk on mandatory controls \(Y/N\) \(default N\)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+
+When this checkbox is selected, an alternative approach is used to highlight the mandatory controls: an asterisk \(\*\) is showed at the right of each label, for each mandatory input control. Consequently, this approach consumes more space horizontally in a window, since a \(\*\) text is also included for each mandatory control.
+
+Moreover, a legend explaining the meaning of the \(\*\) is reported at the bottom of each panel and subpanel.
 
 **Hide Platform logo \(Y/N\)** - 
 
-**Grid in edit with double click \(YN\) \(default N\)** - 
+**Grid in edit with double click \(YN\) \(default N\)** - if this checkbox is selected, a grid can switch to edit mode not only by pressing the edit button but also with a double click on a cell.
 
-**Loading order of the context css files** - 
+**Loading order of the context css files** - "Default" to load all .css files found the app web context in the order they have been written in the file system; "Sort by name" to read them by name. The second option is safer, since it is always predictable and conflicting CSS class names would be read in the clear order.
 
-**View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)** - 
+**View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)** - - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+
+When the checkbox "View asterisk on mandatory controls**"** \(described above\) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the \(\*\) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
 ### \*\*\*\*
 
