@@ -444,15 +444,25 @@ Parameters used by the scheduler module
 
 ### **UI** 
 
-parameters used by the UI
+Parameters used by the UI
 
-* Disable GoogleMaps libs loading
-* Hide Platform logo
-* Max number of exportable row in grid
-* Enable users
-* Access unavailable message
-* Duplicate data per company
-* Application activation key path
+**Application icon** - 
+
+**MESSAGES\_IP** - optional parameter, to set in case of a cluster having a main node used as the batch server; in such a scenario, set here the local IP address of the batch server
+
+**MESSAGES\_PWD** - read only parameter, do not change it
+
+**Order of Grid Export** - 
+
+**View asterisk on mandatory controls \(Y/N\) \(default N\)** - 
+
+**Hide Platform logo \(Y/N\)** - 
+
+**Grid in edit with double click \(YN\) \(default N\)** - 
+
+**Loading order of the context css files** - 
+
+**View asterisk on mandatory controls only when needed \(Y/N\) \(default N\)** - 
 
 ### \*\*\*\*
 
