@@ -135,15 +135,27 @@ parameters related to the services which allow to convert documents to the PDF f
 
 ### **EXPORT**
 
-Parameters related to the xls export module
+Parameters related to the xls export module.
 
-**Export to xlsx using HSSF library \(Y/N def. N\)** - 
+Platform supports a variety of different export formats:
 
-**Max number of exportable rows in grid** - 
+1. csv with ; or , as separator
+2. xls
+3. xlsx
+4. xls with codes instead of decoded descriptions
 
-**Max. nr. of concurrent exports before enqueuing them \(def. 1\)** - 
+In any case, it is possible to use different libraries to execute the export. Not all libraries have the same capability:
 
-**Path LibreOffice for export** - 
+* HSSF library: it is the default settings and consumes a lot of memory during the export process, so it is not recommended to use it for very large exports \(millions of cells\)
+* LibreOffice Portable, a free application to "install" in the Platform server
+
+**Export to xlsx using HSSF library \(Y/N def. N\)** - checkbox used to choose which library to use \(see above\)
+
+**Max number of exportable rows in grid** - this is a very important parameter; it is strongly recommended not to set a too high value \(no more than 100000\), otherwise the memory consumption of the server could lead to memory errors and instabilities. 
+
+**Max. nr. of concurrent exports before enqueuing them \(def. 1\)** - it is recommended to set this parameter, in this way the memory consumption of the server will be under control.
+
+**Path LibreOffice for export** - to fill in only in case the checkbox "Export to xlsx using HSSF library \(Y/N def. N\)".
 
 ### \*\*\*\*
 
@@ -155,13 +167,13 @@ Parameters used to manage the file upload
 
 **Default path for directories** - an absolute path to use as base dir for all uploaded files \(for all defined directories\), in case of upload based on file system.
 
-**Google Project Id**  - 
+**Google Project Id**  - in case of file upload saved on Google Cloud Storage, it is required to specify here the Google Cloud Project Id used by the GCS service.
 
-**Create subfolders for company and site \(YN def. Y\)** - 
+**Create subfolders for company and site \(YN def. Y\)** - in case of a multi-tenancy app, it is possible to auto-create subfolders for each company id / site id, so that each tenant can access and use his own files.
 
 **Loading directory on startup** - 
 
-**\(opt.\) Autodefine file name for uploaded files** - 
+**\(opt.\) Autodefine file name for uploaded files** - in order to ensure file names uniqueness, it is a good idea to select this checkbox: in this way, all uploaded files are automatically renamed to a unique name and cannot in any way override existing files.
 
 ### \*\*\*\*
 
