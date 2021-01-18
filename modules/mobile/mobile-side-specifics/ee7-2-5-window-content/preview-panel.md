@@ -1,4 +1,4 @@
-# Preview panel \(mobile\)
+# Preview panel
 
 Use a Preview Panel for show an HTML content. There are 5 alternative way for use this panel.
 
