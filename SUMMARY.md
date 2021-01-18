@@ -41,7 +41,7 @@
         * [Filter Panel](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-4-filter-panel.md)
         * [Tree Panel](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-5-tree-panel.md)
         * [Google Map Panel](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-6-google-map-panel.md)
-        * [Image Panel](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-7-image-panel.md)
+        * [Preview Panel \(old Image panel\)](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-7-image-panel.md)
         * [Tree + Grid Panel](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-8-tree+grid-panel.md)
         * [Image Gallery](core-features/defining-the-ui/3-1-app-designer/3-1-6-creation-of-a-window/3-1-6-9-image-gallery.md)
       * [Windows list](core-features/defining-the-ui/3-1-app-designer/3-1-7-windows-list.md)
