@@ -17,11 +17,11 @@ You can set up a Preview Panel in these ways:
   * URI/resource to show: a field name related to the object linked to the selected business component which contains the file name
   * image width and height
   * flags to show/hide border and to set panel opacity
-* **to show a read only remote document**, accessible through the web \(a public resource\); in this case, you have to fetch the URL to invoke, showed in an embedded iframe generated automatically by Platform. In such a scenario, you have to choose 
+* **to show a read only URL for a remote document**, accessible through the web \(a public resource\); in this case, you have to fetch the URL to invoke, showed in an embedded iframe generated automatically by Platform. In such a scenario, you have to choose 
   * Preview Format: URL Preview
   * Business component: a detail b.c. used to retrieve a record containing the URL to use to get the web resource to preview
   * URI/resource to show: a field name related to the object linked to the selected business component which contains the URL
-* **to show a read only web resource, starting from a custom HTML fragment**; in this case, you have to choose 
+* **to show a read only HTML, starting from a an HTML template**; in this case, you have to choose 
   * Preview Format: HTML Template
   * URI/resource to show: the HTML template to select; this HTML template should contain a static URL or a dynamic URL where part of it is parameterized as :XXX variables; these variables are replaced on the server side, starting from the internal state.
 
