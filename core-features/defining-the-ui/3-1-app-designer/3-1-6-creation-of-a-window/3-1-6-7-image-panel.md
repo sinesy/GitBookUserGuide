@@ -34,7 +34,7 @@ Optionally, it is possible to select the "**Autoload when opening**" checkbox: u
 A few examples where checking the "Autoload when opening" flag:
 
 * an **image** must be showed and the **business component** has been defined: the business component must contain the file name to use to fill in the preview
-* an **remote document** must be showed and the **business component** has been defined: the business component must contain the URL to use to fill in the preview
+* a **remote document** must be showed and the **business component** has been defined: the business component must contain the URL to use to fill in the preview
 * a **template** is used to fill in the preview and the **HTML fragment is completely filled** either because it is static or the :XXX variables in it are already known on the server-side \(es. :COMPANY\_ID, :USERNAME, etc.\); consequently, do not check this flag if the specified variables are not known simply starting from the server-side user session.
 
 An alternative approach to fill in a preview is using a client-side event linked to some panel already visible and use it to **programatically** fill the content.
