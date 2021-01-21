@@ -43,5 +43,5 @@ a **mobile app** , which consists of an interpreter created once for iOS and And
 * push notifications based on Firebase
 * social media integration \(Facebook login and posts, Google+, etc.\)
 * barcode scanning
-* Estimote eBeacons support
+* Estimote eBeacons support 
 
