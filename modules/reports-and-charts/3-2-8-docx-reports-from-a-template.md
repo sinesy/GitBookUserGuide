@@ -21,13 +21,14 @@ The starting point in the App Designer is the sub-menu **UI -&gt; Reports**:
 When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These are the supported tags:
 
 * **&lt;table&gt;**
-* **&lt;td&gt;**
-* **&lt;tdtranslation&gt;**
-* **&lt;control&gt;**
-* **&lt;translation&gt;**
+  * **&lt;td&gt;**
+  * **&lt;tdtranslation&gt;**
+  * **&lt;control&gt;**
+  * **&lt;translation&gt;**
 * **&lt;subform&gt;**
-* **&lt;subcontrol&gt;**
-* **&lt;subcontroltranslation&gt;** 
+  * **&lt;subcontrol&gt;**
+  * **&lt;subcontroltranslation&gt;** 
+  * **&lt;subimage&gt;**
 * **&lt;bulletlist&gt;**
 * **&lt;numberedlist&gt;**
 
@@ -158,7 +159,41 @@ var res = {
 utils.setReturnValue(JSON.stringify(res)); // the whole content
 ```
 
+### 
 
+### Image replacing
+
+A special tag supported in sub forms  \(not in the main form\) is the &lt;subimage&gt; tag. This tag must be embedded into the docx template just after an already existing image. Unless the other tags, this tag is not replaced by a value \(an image\), the whole tag is replaced by an empty string and the image just before the tag is replaced as well by the image defined as a value for such a tag.
+
+For example, if there is a docx template like this one:
+
+![](../../.gitbook/assets/schermata-2021-01-21-alle-08.55.58.png)
+
+The developer working on the docx template has to provide an image to use as a placeholder: in this way it is possible to position it and also resize it according to the needs. This image must be a .jpg or .png image.
+
+In order to replace the image with another one, you have to **define a sub form** \(since the tag for image can only be used in a sub form\) and connect such a sub form to a **server-side javascript business component.**
+
+![](../../.gitbook/assets/schermata-2021-01-21-alle-09.06.37.png)
+
+In the subform fields definition, you have to choose **Image base64** field type: in this way, Platform would replace the image just before the &lt;subimage&gt; tag with the image you provide through the business component, where you have to specify the image binary content in base64 format.
+
+```javascript
+var json = reqParams.input;
+var obj = JSON.parse(json);
+
+var imageAbsPath = "..."; // an image available in the Platform server file system
+var b64 = utils.readBase64File(imageAbsPath);
+
+var obj = {
+    codArt: "ABC",
+    desc: b64+"" // you have to append an "" in order to convert Java String to Javascript String
+};
+utils.setReturnValue(JSON.stringify(obj));
+```
+
+At this point, when executing the report, the &lt;subimage&gt; tag would be replace by an empty string and the image placeholder with your own image, defined in the business component.
+
+![](../../.gitbook/assets/schermata-2021-01-21-alle-08.59.07.png)
 
 ### Generating the report, starting from the docx template
 
