@@ -332,6 +332,10 @@ Available log types are:
 
 **Translate login labels with browser language** - checkbox used to auto-set the language in the login page, according to the browser language.
 
+**Log last login date/time \(def. N\)**  - checkbox used to enable the logging of the last date+time of a user login: each time a user is logging on successfully, the corresponding record in PRM01_USERS is updated for the fields LAST\__LOGIN and TOTAL\_LOGIN.
+
+Note: the login time is not recorded in case of either a stateless web service login or an element in queue or a scheduled process.
+
 
 
 ### MAIL

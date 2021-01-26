@@ -321,11 +321,6 @@ For more details see:
 
 **Email subject to notify** - the email subject to use when sending notification emails.
 
-  
-**Company id list to replace \(e.g. 00000=A0000,00001=A0001\)** - Fill in this parameter only in the questionable scenario where you are retrieving data from a remote application where data has been stored with a company id different from the one you are using in the current server and you want to match data of the two environments. In such a case, you can replace the company id value coming from the remote data and replace it with the one you specify through this parameter. By and large, you can specify a list of replacements \(a list of company ids to replace and the new values\).
-
-
-
 ### \*\*\*\*
 
 ### **PASSWORD** 
