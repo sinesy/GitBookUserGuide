@@ -138,8 +138,6 @@ It is strongly recommended to select it.
 
 It is strongly recommended to select it.
 
-**Do not set fetch size on SQL queries \(def. N\)** - as default behavior, all SQL queries are limited in size by a number of records equal to the max length specified by a grid + 1. It is strongly recommended not to select this checkbox, otherwise the JDBC driver could fetch a very long result set from the database server and cache it internally: such arbitrary behavior can easily due to  out of memory errors and slow query executions. You can select this checkbox in case you have weird behaviors in the number of rows returned by a business component, such as when you are not enquiring a database table but something else, like a stored function.
-
 
 
 ### ACTIVITI
@@ -333,10 +331,6 @@ Available log types are:
 **Access Unavailable message** - when the "Enabled users" property is filled in, you can also show a customized message dialog when an end user attempts to access the application; through the current property you can define the text to show in this scenario.
 
 **Translate login labels with browser language** - checkbox used to auto-set the language in the login page, according to the browser language.
-
-**Log last login date/time \(def. N\)**  - checkbox used to enable the logging of the last date+time of a user login: each time a user is logging on successfully, the corresponding record in PRM01_USERS is updated for the fields LAST\__LOGIN and TOTAL\_LOGIN.
-
-Note: the login time is not recorded in case of either a stateless web service login or an element in queue or a scheduled process.
 
 
 
