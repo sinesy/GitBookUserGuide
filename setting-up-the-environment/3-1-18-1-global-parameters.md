@@ -60,6 +60,8 @@ It is strongly recommended to select it.
 
 It is strongly recommended to select it.
 
+**Do not set fetch size on SQL queries \(def. N\)** - as default behavior, all SQL queries are limited in size by a number of records equal to the max length specified by a grid + 1. It is strongly recommended not to select this checkbox, otherwise the JDBC driver could fetch a very long result set from the database server and cache it internally: such arbitrary behavior can easily due to  out of memory errors and slow query executions. You can select this checkbox in case you have weird behaviors in the number of rows returned by a business component, such as when you are not enquiring a database table but something else, like a stored function.
+
 
 
 ### ACTIVITI
@@ -320,6 +322,11 @@ For more details see:
 **Wait time before import log \(hrs\)** - a number, expressed in hours, related to the amount of time to wait before automatically retrieve all collected monitored log from the remote Platform installations. This parameter work along with the previous ones.
 
 **Email subject to notify** - the email subject to use when sending notification emails.
+
+  
+**Company id list to replace \(e.g. 00000=A0000,00001=A0001\)** - Fill in this parameter only in the questionable scenario where you are retrieving data from a remote application where data has been stored with a company id different from the one you are using in the current server and you want to match data of the two environments. In such a case, you can replace the company id value coming from the remote data and replace it with the one you specify through this parameter. By and large, you can specify a list of replacements \(a list of company ids to replace and the new values\).
+
+
 
 ### \*\*\*\*
 
