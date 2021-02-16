@@ -21,9 +21,18 @@ After doing that, you can publish them into the applicationsubfolder in two alte
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/filemanager.png)
 
-* using the  **Application -&gt; Import/Export Application**  – in the first folder, named “File Management”, you can upload .zip file including all the content you need to publish and then press the “Import files” button.
+* Using the  **Application -&gt; Import/Export Application**  – in the first folder, named “File Management”, you can upload a .zip file including all the content you need to publish and then press the “Import files” button. 
+* According to the application type \(web vs mobile\), there can be additional settings available: "**Save context on DB**" checkbox allows to save the zip file also into the database; in this way, in case of a cluster environment, files are replaced on the file system with the ones saved in the database, each time a new instance node is created, without having to regenerate the instance template only because some files have changed. DO NOT check it if you do not run your application in a cluster. DO NOT check it in your dev environment.
 
-![](http://4wsplatform.org/wp-content/uploads/2018/01/import.png)
+![](../.gitbook/assets/schermata-2021-02-16-alle-16.55.02.png)
+
+* In case of a mobile app, it is also possible to select **which context to work with**: a mobile app has two contexts
+  * a web context, used when accessing the web front-end executed in the Platform server; this is rarely used, typically when roles and users must be defined
+  * a mobile context \(images, etc.\) sent to a mobile app, each time a synchronization process is executed  and such a context has changed in some way.
+
+![](../.gitbook/assets/schermata-2021-02-16-alle-16.54.31.png)
+
+
 
 **Note** : That .zip file can then be used to import .class or report files. Once launched the import process, the App Designer will recreate the original structure of the custom files, by moving any .classes and .report file it finds to the correct classpath. Remember to restart the web container in order to make Tomcat able to find and load these classes.
 
