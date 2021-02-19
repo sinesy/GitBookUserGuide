@@ -854,7 +854,9 @@ Start voice command \(e.g. platform\)
 
 **Account id** - required as well as "secret key": the value is defined in the Twilio Whatsapp Admin Console
 
+### REPORT DOCX
 
+**\(v6.0.2\) Directory id for report Docx** - you can specify the directory to save docx templates to generate reports. If not specified they are saved in the context of the application.
 
 
 

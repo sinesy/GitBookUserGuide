@@ -62,6 +62,8 @@ It is strongly recommended to select it.
 
 **Do not set fetch size on SQL queries \(def. N\)** - as default behavior, all SQL queries are limited in size by a number of records equal to the max length specified by a grid + 1. It is strongly recommended not to select this checkbox, otherwise the JDBC driver could fetch a very long result set from the database server and cache it internally: such arbitrary behavior can easily due to  out of memory errors and slow query executions. You can select this checkbox in case you have weird behaviors in the number of rows returned by a business component, such as when you are not enquiring a database table but something else, like a stored function.
 
+**\(v5.3.2\) Use minified js files \(def. N\)** - the applications uses minified javascript and css files to reduce the size of running files
+
 
 
 ### ACTIVITI
