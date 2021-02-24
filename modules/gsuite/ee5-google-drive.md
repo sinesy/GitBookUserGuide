@@ -533,7 +533,7 @@ utils.deleteGoogleDriveFileProperty(fileId, key)
 
 ## Update property of a file in Google Drive
 
-Update the property of file in Google Drive.
+\(v6.0.2\) Update the property of file in Google Drive.
 
 ### Syntax
 
@@ -550,5 +550,20 @@ utils.updateGoogleDriveFile(fileId, title, description, mimeType)
 **description**  – the new description of file  
 **mimeType** – the new mime type of file
 
-## 
+## Remove permissions of file
+
+\(v6.0.2\) Remove the permission of file for a user
+
+### Syntax
+
+```javascript
+utils.removeGoogleDriveFilePermissions(userId, fileId, emailUser)
+
+utils.removeGoogleDriveFilePermissions(fileId, title, emailUser)
+```
+
+### Details
+
+**fileId**  – the id of the file in Google Drive  
+**emailUser** – the account of user for which to remove the permission
 
