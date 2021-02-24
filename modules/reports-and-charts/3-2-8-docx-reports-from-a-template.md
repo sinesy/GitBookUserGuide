@@ -16,14 +16,6 @@ The starting point in the App Designer is the sub-menu **UI -&gt; Reports**:
 
 * **Upload Report documents** - after the first docx upload through the "Docx" funcionality reported above, it is possible to update the docx template through this second feature
 
-The template files are archived
-
-* in the application context \(default\)
-* in the file system directory \(specify the dirId into Application Parameters --&gt; Report Docx\)
-* in the bucket of Google Cloud Storage \(specify the dirId into Application Parameters --&gt; Report Docx\)
-
-
-
 ### Templates tags content
 
 When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These are the supported tags:

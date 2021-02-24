@@ -531,3 +531,24 @@ utils.deleteGoogleDriveFileProperty(fileId, key)
 **fileId**  – the id of the file/folder  
 **key**  – the key of the property to get
 
+## Update property of a file in Google Drive
+
+Update the property of file in Google Drive.
+
+### Syntax
+
+```javascript
+utils.updateGoogleDriveFile(userId, fileId, title, description, mimeType)
+
+utils.updateGoogleDriveFile(fileId, title, description, mimeType)
+```
+
+### Details
+
+**fileId**  – the id of the file in Google Drive  
+**title** – the new title of the file  
+**description**  – the new description of file  
+**mimeType** – the new mime type of file
+
+## 
+
