@@ -16,7 +16,7 @@ Required data to specify when defining a report execution are:
 * **text**  to show in the menu item or text button, used to execute the report
 * **report name** , fetched from the list of .jasper files stored within the subfolder in the Platform web context
 * **datastore**  to use when invoking the report, that is to way, the database connection to pass to the report in order to allow the report to retrieve data from a database on its own
-* **report format**  – PDF or XLS
+* **report format**  – PDF or XLS or DOCX \(since 6.0.2\)
 * **list component**  – optional field; it can be used if the report must be filled in with a list of records expressed in JSON format and coming from a business component; the requirement is that the business component must provide a list of records, not a detail business component.
 
 Additional requirements to meet on the iReport side are:
