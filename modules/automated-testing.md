@@ -44,6 +44,9 @@ Here you have to specify:
 * a **collection** it belongs to \(mandatory\); this editable combo-box allows you to choose an already existing collection or simply digit it for the first time
 * the **HTTP request** \(mandatory\), in terms of HTTP method and URL; here you can specify any number of variables, always expressed as 
 * an optional **action** \(web service\), used to link many Test Cases to the same action; this setting does not have any real usage, expect for grouping many Test Cases to a specific action
+* an optional **action** \(a server-side javascript action\) to invoke just before testing the current one; helpful to setup all data needed to run repeatable tests
+* an optional **action** \(a server-side javascript action\) whose content must be appended at the beginning of the verifying code executed at the end of the test; this javascript code represent base code to include in multiple tests, sharing the same verifying logic
+* an optional **automated test** to invoke just before testing the current one; helpful in scenarios where there are tests connected to each other, like when there is a test for the login and another which uses the authentication token retrieved by the login test.
 
 Once pressed the OK button, the Test Cases has been created and added to the list. At this point, it is possible to specify additional details for the test, for example: request parameters, headers, body content, tests to execute on the response.
 
