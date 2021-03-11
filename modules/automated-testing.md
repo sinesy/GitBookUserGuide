@@ -36,7 +36,7 @@ The main part of the window is about the detail of the selected Test Case.
 
 You can **create a new Test Case** by pressing the **New** button on top of the list.
 
-![](../.gitbook/assets/test-new.png)
+![](../.gitbook/assets/schermata-2021-03-11-alle-08.40.49.png)
 
 Here you have to specify:
 
