@@ -101,32 +101,36 @@ Pay attention to the position when you arrange controls, especially for the ones
 
 Let’s take this example, where there are 3 columns and controls have 33% width each, except for the address, which contains a large description and hence is set with a 66% width. The position for the last control can make the difference. Look at this \(wrong\) arrangement:
 
-| name | surname | city |
-| :--- | :--- | :--- |
-|  | address | zip code |
+```text
+name            surname                city
+                address                zip code        
+```
 
 If this panel were resized to a smaller width so that only 2 columns can be showed, the responsive layout would re-arrange it in this way:
 
-| name | surname |
-| :--- | :--- |
-| city | SPACE NOT USED |
-|  | address |
-| zip code | SPACE NOT USED |
+```text
+name            surname                
+city            SPACE NOT USED
+                address                
+zip code        SPACE NOT USED        
+```
 
 which is aesthetically not good, because there are empty spaces and it occupies 4 lines, instead of 3, which could lead to vertically scroll the screen to show part of it.
 
 A better choice would have been:
 
-| name | surname | city |
-| :--- | :--- | :--- |
-|  | zip code | address |
+```text
+name            surname                city            
+                zip code               address        
+```
 
 When this panel is resized to a smaller width so that only 2 columns can be showed, the responsive layout would re-arrange it in this way:
 
-| name | surname |
-| :--- | :--- |
-| city | zip code |
-|  | address |
+```text
+name            surname                
+city            zip code
+                address                        
+```
 
 This is clearly a better choice, since it only requires 3 lines to render the whole content and there are not empty spaces among the controls.
 
