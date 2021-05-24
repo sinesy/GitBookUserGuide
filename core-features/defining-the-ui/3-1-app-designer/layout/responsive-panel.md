@@ -56,7 +56,7 @@ Finally, as for the first scenario, 1 only column will be used:
 
 ![](https://lh6.googleusercontent.com/ZZzBnCGTXX7ZYxV-3wrWqjWJbJwpZiRxrMpTA9ESPx1ixyy_XhJDtY-cb8y7CefuFzNVdhYovK-j4L0YTwcSO8wVNDolnvFX8xoHQGpn0q0tkQAJ6Ts8GHuCwLY6h78Qx-0Zeawt)
 
-## Bad & Good practises
+## Bad & Good practices
 
 Here it is a list of things no to do when configuring a form/filter panel
 
