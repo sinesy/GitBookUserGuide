@@ -4,6 +4,8 @@
 
 This kind of layout makes a form/filter panel content dynamically rendered on a variety of devices and windows having different screen sizes.
 
+In order to set this layout, you have to change the default layout defined at panel level; if not specified, it is "absolute layout". To activate the responsive layout, set it in the "**layout**" combobox control.
+
 A form/filter panel having this layout adapts the content to the viewing environment, so that when there is not enough horizontal space to host all controls designed to be in the same row, these are re-arranged on the next lines. It means that a vertical scrolling can be needed, when there is not enough horizontal space and controls are arranged on multiple lines.
 
 This layout is based on the definition of
