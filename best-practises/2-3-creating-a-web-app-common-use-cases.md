@@ -128,11 +128,14 @@ You can change at any time the codes or descriptions for the code selector by se
 
 ## **Setup a dynamic enumeration of values \(remote combobox\) for a grid column** <a id="setupdynamicenumeration"></a>
 
-If you have already created a grid and need to define a column having a dynamicenumeration of values, coming from database tables, you have to use a static combobox. In order to do that, you have to followthesesteps:
+If you have already created a grid and need to define a column having a dynamic enumeration of values, coming from database tables, you have to use a dynamic combobox. In order to do that, you have to follow these steps:
 
-* select “ **Application Management** ” -&gt; “ **Code Selectors** ” and press the “ **New** ” button, in order to define a new code selector for the remotecombobox
-* choose “ **Remote combobox** ” and set a description for it
-* select the business component to bind to that combobox
+* select “ **Application Management** ” -&gt; “ **Code Selectors** ” and press the “ **New** ” button, in order to define a new code selector for the remote combobox
+* choose “ **Dynamic combobox** ” and set a **description** for it
+
+![](../.gitbook/assets/schermata-2021-05-26-alle-11.31.59.png)
+
+* select the **business component** to bind to that combobox
 * select the field to use for the code; the proposed fields come from the SELECT clause defined in the business component
 * press the “ **Next** ” button at the right bottom area
 * select the field to use for the description to show in the items list of the combobox
@@ -145,6 +148,88 @@ If you have already created a grid and need to define a column having a dynamice
 
 At this point, the grid will use the combobox to decode the codes and show the code description instead.  
 Important note: do not use a remote combobox to show a large amount of data, since the combobox is not a suitable component to use with thousand of data; with high volume of data to show, use a lookup component instead.
+
+Optionally, you can change additional settings available at selector definition window mentioned above:
+
+![](../.gitbook/assets/schermata-2021-05-26-alle-11.32.15.png)
+
+Some of them work together, so you have to set them accordingly:
+
+* Items loading policy 
+  * **Always reload** - this check-box is selected as default setting: it defines whether the combobox must load data every time the user is typing a text; it is recommended to select this field, so that a partially list of items filtered by the text typed by the user can be completely replaced by a new text pattern
+  * **Load all when validating** -  this check-box is NOT selected as default setting at it is strongly recommended not to select it, unless you are sure the list of items is limited in number \(e.g. ano more than a hundred values \); used to define the behavior of the combobox in terms of items loading when typing \(validating\) a text typed
+  * **Load all data in combo** - this check-box is NOT selected as default setting at it is strongly recommended not to select it, unless you are sure the list of items is limited in number \(e.g. ano more than a hundred values \); used to define the behavior of the combobox in terms of items loading when the combobox items window is opened
+  * **Page block size in combo** - as default behavior, a combobox loads only a block of data, in order to reduce the amount of time to wait before showing items and to not overwhelm the UI with a too large numbers of items; the default value is 30 and it is recommended not to increase it
+* **Can sort** + **Sort versus** - these two settings are usually used together: they allow to sort the items list with regards to the code field; the checkbox activates the sorting operation and the "sort versus" combobox represents the sorting versus \(ascending/descending\)
+* **Filtering condition** - defines the SQL operator to use for the filtering SQL query, based on the text typed: the text typed is used to filter the description field and this operator represents how to use it: starts with, contains, equals to, etc. This setting is IGNORED if the "validation attribute" field has been filled in.
+* **Chars before validate** + **Query delay** - these two settings are usually used together: they define the behavior of the combobox when launching the filtering operation, after typing a text. "Chars before validate" represents the number of characters to type before the filtering operation starts, whereas the "query delay" defines the amount of time \(expressed in seconds\) before checking for a minimum amount of characters typed
+* **Customize description** - optional text value; as default behavior, the item showed in the combobox and in the items list window comes from "description" field. In case you need a more fined content, for example the combination of more than one fields and/or static text, you can use this field to override the default behavior and show this mask instead; only fields defined in the data model bound to the selector business component can be used; fields can be referred by surrounding them with brackets {}; any other static text is allowed as well. Example:
+
+```text
+{customerCode} - {corporateName}
+```
+
+* **Automatic selection of text in the list** - as default behavior the checkbox is selected: it auto-selects the item typed
+* **Zero as null value** - in case of numeric type field to validate, this checkbox defines how to manage a 0 value, which is converted behind the scenes as a NULL value
+* **Validation attribute \(opt.\)** - if set, this text field represents an HTTP request parameter name to pass forward to the server-side business component, containing the value typed by the user and used to filter/validate the combobox content. As default behavior \(when this field is empty\), when the user types a text, the HTTP request parameter named "baseFilterNames" is automatically defined and filled with the "description" field name; moreover, a "baseFilterValues" request parameter is also passed forward and filled with the text typed. In case you set the "validation attribute" field, for example with "code", this value overrides the default behavior, so that the "baseFilterValues" is not more passed forward: a new parameter named "code" \(in the example above\) is passed forward and filled with the text typed. In this way, you can easily access and use it in a business component and create a more complex validation logic. An complete example is reported below.
+
+
+
+### How to validate a dynamic combobox by code and value and show both as combobox items
+
+Let's suppose we have a CUSTOMERS table containing a CUSTOMER\_CODE and CORPORATE NAME fields and you need to filter a combobox content according to these two fields.
+
+According to what described above, you can easily show multiple field values as combo items: you simply have to use the "customize description" field and use it to set something like:
+
+```text
+{customerCode} - {corporateName}
+```
+
+In order to validate the text typed either for the code or the description, you can do it using two approaches, according to the business component type you are using.
+
+**A SQL based business component for a list**
+
+In such a scenario, it is up to you define the custom WHERE condition and the simplest way to do it is using the "Additional filters" folder, where you can include an additional condition which is appended to the base one ONLY IF all :XXX variables defined in it are filled as request parameters:
+
+![](../.gitbook/assets/schermata-2021-05-26-alle-12.08.56.png)
+
+In this way, if you set a bind variable having the same name \(uncamel mode\) of the one defined in the ""validation attribute" field of the selector definition, the combobox would pass forward such parameter and it is automatically sued by this additional filter.
+
+
+
+**A Javascript based business component for a list**
+
+**I**n such a scenario, it is up to you define the custom WHERE condition within the javascript code: there cannot be an automatism which injects a SQL condition in part of your javascript. The simplest way is defining something like:
+
+```text
+var sql = 
+    "SELECT CUSTOMERS.CUSTOMER_CODE,CUSTOMERS.CORPORATE_NAME,... "+
+    "FROM CUSTOMERS WHERE ... ";
+
+var params = []; 
+if (reqParams.code!=null) {
+    sql += " AND ( CUSTOMERS.CUSTOMER_CODE = ? OR UPPER(CUSTOMERS.CORPORATE_NAME) LIKE ? )";
+    params.push(reqParams.code.toUpperCase());
+    params.push("%"+reqParams.code.toUpperCase()+"%");
+}
+    
+var json = utils.getPartialResult(
+    sql,
+    null,
+    false,
+    true,
+    params
+);
+utils.setReturnValue(json);
+```
+
+
+
+**Important note**
+
+Do not include complex logic like the one reported above \(OR condition in an already complex WHERE\) in case the result set is particularly large \(100k or more records\), because this is a typical SQL query which can consume a critical amount of resource on the database side.
+
+In any case, pay attention to the exact filtering condition you are defining and create an ad hoc INDEX for such condition: if you are defining an UPPER\(FIELD\) LIKE ... condition, the index would be defined on the aggregated function UPPER and not on the FIELD!
 
 ## Setup a checkbox group in a filter panel
 
