@@ -166,6 +166,7 @@
       * [How to create Datastore entities](modules/google-cloud-platform/datastore/ee4-3-how-to-create-entities.md)
     * [Google Cloud Storage](modules/google-cloud-platform/ee5-google-cloud-storage.md)
   * [Scheduler](modules/scheduler/README.md)
+    * [Manually start a scheduled process](modules/scheduler/manually-start-a-scheduled-process.md)
     * [Scheduler Introduction](modules/scheduler/ee9-1-scheduler-introduction.md)
     * [Process settings](modules/scheduler/ee9-2-process-settings/README.md)
       * [How to define a sequence of consecutive processes](modules/scheduler/ee9-2-process-settings/ee9-2-1-how-to-define-a-sequence-of-consecutive-processes.md)
