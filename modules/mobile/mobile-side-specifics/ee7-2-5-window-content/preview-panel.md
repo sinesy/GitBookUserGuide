@@ -24,3 +24,11 @@ Use a business component that returns a ****PDF url in a specific fields, the pa
 
 In this case you don't use a business component, instead you have to select a Template. You can use an "HTML Template" or an "Alert Template", in this template you can use all the available variables using the syntax `:VARIABLE_NAME`
 
+### additional Configurations 
+
+> Since 6.0.2
+
+The javascript code specified in the additional configurations is injected into the page after page loading.
+
+
+
