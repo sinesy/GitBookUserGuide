@@ -68,6 +68,28 @@ var val = convertToObjectJson(obj);
 return val;
 ```
 
+* **Additional config -** Optionally, it is possibile to define at column level additional settings, which will be injected along with all the others provided by Platform. These settings must be compatible with the ones defined by ExtJS for a Ext.grid.Column and subclasses. In order to add these settings, use the advanced property "Additional Config." where you can specify a list of properties. The content of this property will be included in a more general {...} javascript object containing the column properties. Consequently DO NOT append the {} brackets within this property, since they are already provided by Platform. You have simply to append your properties and separate each of them with a comma ,
+
+  Defining which operators are supported per column An additional setting you can include in the Additional Config property is
+
+  **filterOperators: \[...\]**
+
+  where each element in the array is a string containing an operator to include. You have to specify at least one operator and the operators specified must be compatible with the column type otherwise they will not be included. Supported operators are: 
+
+```javascript
+"=" 
+"<"
+"<="
+">" 
+">=" 
+"<>" 
+"contains" 
+"like" 
+"likeignorecase" 
+"isnull" 
+"isnotnull"
+```
+
 * **Not editable if**  – boolean expression, expressed in javascript, indicating when the cells of the selected column are editable; this property overrides the default behavior of the cells, defined through the combination of grid mode \(insert/edit\) + can insert/can edit properties. This property is useful when the behavior of the cell should change according to a dynamic value, such as "a document state" represented by the value of another attribute of the same row.
 
 Only for a **pivot grid** , these are all the properties defined for a column:
