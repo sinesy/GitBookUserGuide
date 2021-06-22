@@ -42,6 +42,15 @@ These are all properties defined for a control:
 * **Maximum numeric value**  – in case of number type, it is possible to set a maximum number the user can set
 * **Not editable if**  – boolean expression, expressed in javascript, indicating when the control is editable; this property overrides the default behavior of the control, defined through the combination of the form mode \(insert/edit\) + can insert/can edit properties. The property is useful when the behavior of the control should change according to a dynamic value, such as "a document state" represented by the value of another attribute of the same record.
 * **Icon name**  – in case of button type, it is possible to select an icon.
+* **Additional config -** Optionally, it is possibile to define at control level additional settings, which will be injected along with all the others provided by Platform. These settings must be compatible with the ones defined by ExtJS for a Ext.form.Field and subclasses. In order to add these settings, use the advanced property "Additional Config." where you can specify a list of properties. The content of this property will be included in a more general {...} javascript object containing the column properties. Consequently DO NOT append the {} brackets within this property, since they are already provided by Platform. You have simply to append your properties and separate each of them with a comma ,
+
+  For example: for smart controls you can set the grid, the business component and the placeholder text for control 
+
+  ```javascript
+  grid: grid9,
+  compId: 1239,
+  emptyText: Ext.translate.Cache.getTranslation('text'),
+  ```
 
 Allowed application types for controls, according to the related database field type:
 
