@@ -21,7 +21,7 @@ The **image selector** is used to define the fields on which it is possible to s
 
 If you don't want to use a selector image, you can specify a **javascript business component**, where you are free to define the fields to search. A business component is helpful in case you want to customize the behavior of the combobox and return a dynamic content, according to the text typed. However, it is not recommended to "pre-search" data in this business component, because the user experience can degrade because of the wait time for the additional queries.
 
-The component id must be specified through the Additiona config property, using the "compId" attribute.
+The component id must be specified through the Additional config property, using the "compId" attribute.
 
 ![](../../../.gitbook/assets/image%20%283%29.png)
 
@@ -34,7 +34,8 @@ list.push(
         value: reqParams.value,
         type: utils.getResource('article'), // description for the field
         attributeName: 'articleField', //attribute name of field to search
-        img: '/images/article.png' //icon for element
+        img: '/images/article.png', //icon for element
+        operator: 'like'
     }
 );
 list.push(
@@ -42,7 +43,8 @@ list.push(
         value: reqParams.value,
         type: utils.getResource('barcode'), // description for the field
         attributeName: 'barcodeField', //attribute name of field to search
-        img: '/images/barcode.png' //icon for element
+        img: '/images/barcode.png', //icon for element
+        operator: '='
     }
 );
 
@@ -66,6 +68,8 @@ The end user has to type ; text
 Again, the smart filter shows the dropdown list and the end user has to choose a field. Once done that, the smart filter content is changed to: "field: text; secondfield: secondtext" and the linked grid is automatically reloaded with two additional filters:
 
  attribute like '%text%' AND  attribute2 like '%secondtext%' 
+
+If you use the business component, for the smart filter control, you can specify the operator of condition for any attribute \(like, &lt;, &gt;, =, &gt;=, &lt;=\).
 
 
 
