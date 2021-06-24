@@ -73,6 +73,8 @@ Again, the smart filter shows the dropdown list and the end user has to choose a
 
 If you use the business component, for the smart filter control, you can specify the operator of condition for any attribute \(like, &lt;, &gt;, =, &gt;=, &lt;=\).
 
+It is possible to customize the CSS classes for this widget, by overriding the corresponding CSS names in the app.css file.
+
 ## Advanced Filter
 
 The Advanced Filter is available starting from the Smart Filter: when the Smart Filter is linked to a Filter Panel \(which is NOT directly part of the window containing the Smart Filter\), an additional button is shown on the right of the Smart Filter. This button is a switcher: when clicking on it, the Advanced Filter is shown, when clicking on it again, the Advanced Filter is hidden. When clicking again, the same Advanced Filter is shown again.
@@ -85,7 +87,7 @@ To sum up, in order to have an Advanced filter, it is needed to:
 * create a second Filter Panel \(the Advanced Filter\), by clicking on the grid and select Add Filter; do not add this second panel to the window
 * fill in the Referred Panel property in the first panel, related to the Smart Filter Panel; fill it in with the second Filter Panel: in this way, the switcher icon on the Smart Filter will be rendered and used to open the Advanced Filter
 
-
+It is possible to customize the CSS classes for this widget, by overriding the corresponding CSS names in the app.css file.
 
 
 
