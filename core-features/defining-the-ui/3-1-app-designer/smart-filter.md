@@ -1,4 +1,6 @@
-# Smart Filter
+# Smart Filter and Advanced Filter
+
+## Smart Filter
 
 The smart filter is a control available in the filter and editable panels. This control can filter the associated grid for multiple columns and multiple values.
 
@@ -70,6 +72,26 @@ Again, the smart filter shows the dropdown list and the end user has to choose a
  attribute like '%text%' AND  attribute2 like '%secondtext%' 
 
 If you use the business component, for the smart filter control, you can specify the operator of condition for any attribute \(like, &lt;, &gt;, =, &gt;=, &lt;=\).
+
+## Advanced Filter
+
+The Advanced Filter is available starting from the Smart Filter: when the Smart Filter is linked to a Filter Panel \(which is NOT directly part of the window containing the Smart Filter\), an additional button is shown on the right of the Smart Filter. This button is a switcher: when clicking on it, the Advanced Filter is shown, when clicking on it again, the Advanced Filter is hidden. When clicking again, the same Advanced Filter is shown again.
+
+![](../../../.gitbook/assets/schermata-2021-06-24-alle-09.35.25.png)
+
+To sum up, in order to have an Advanced filter, it is needed to:
+
+* create an Editor Panel or a Filter Panel, containing the Smart Filter; such a panel is part of the window containing the grid and the Smart Filter works on such a grid
+* create a second Filter Panel \(the Advanced Filter\), by clicking on the grid and select Add Filter; do not add this second panel to the window
+* fill in the Referred Panel property in the first panel, related to the Smart Filter Panel; fill it in with the second Filter Panel: in this way, the switcher icon on the Smart Filter will be rendered and used to open the Advanced Filter
+
+
+
+
+
+
+
+
 
 
 
