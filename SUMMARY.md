@@ -53,6 +53,8 @@
       * [Code selectors](core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors/README.md)
         * [When not to use a dynamic combo-box](core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors/3-1-10-1-when-not-to-use-a-dynamic-combo-box.md)
       * [Smart Filter and Advanced Filter](core-features/defining-the-ui/3-1-app-designer/smart-filter.md)
+      * [Multi Value Combobox Filter](core-features/defining-the-ui/3-1-app-designer/multi-value-combobox-filter.md)
+      * [Multi Value Tree Filter](core-features/defining-the-ui/3-1-app-designer/multi-value-tree-filter.md)
       * [Buttons](core-features/defining-the-ui/3-1-app-designer/3-1-13-buttons.md)
       * [Translations](core-features/defining-the-ui/3-1-app-designer/3-1-14-translations/README.md)
         * [Translations about GUI components and internationalization settings](core-features/defining-the-ui/3-1-app-designer/3-1-14-translations/3-1-14-1-translations-about-gui-components-and-internationalization-settings.md)
