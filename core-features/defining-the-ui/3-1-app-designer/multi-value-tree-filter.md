@@ -47,7 +47,7 @@ If you want to get all properties of a selected node \(the embedded js object fo
 Example:
 
 ```text
-vasr treeCombo = findOwnerCtByItemId(win, 'filterPanel89').getComponent('controlMULTI_VALUE_TREE');
+var treeCombo = findOwnerCtByItemId(win, 'filterPanel89').getComponent('controlMULTI_VALUE_TREE');
 var currentFilters = treeCombo.currentFilters;
 for(var i=0; i<currentFilters.lenght; i++) {
     console.log(currentFilters[i]['properties']);
