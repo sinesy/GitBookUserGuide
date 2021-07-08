@@ -6,7 +6,7 @@ In order to simplify and speed up the process of window creation, a wizard is av
 Alternatively, you can choose Application -&gt; New functionality and follow the wizard until the last step: Window creation.  
 The result is the same: a form where defining the window settings:
 
-![](http://4wsplatform.org/wp-content/uploads/2015/12/newWindow-1024x445.jpg)
+![](../../../../.gitbook/assets/image%20%2818%29.png)
 
 When the user selects this item, a wizard is prompted to the user to specify the window settings, which are:
 
@@ -17,7 +17,17 @@ When the user selects this item, a wizard is prompted to the user to specify the
 * create menu item too – in addition to the window creation, a menu item is also added to "Other" menu subfolder and link to the window
 * window icon
 * one instance only – flag used to define if there can be one only instance of the window opened
-* note – optional information about the window, not showed at run-time.
+* note – optional information about the window, not showed at run-time
+* auto close - the window doesn't have a close button, the closing of the window is decided by the configurator user
+* popup mode - the window opens as a popup next to the component that requested it. If you want change the position of window popup you can send the coordinates. Example:
+
+```text
+var args = new Object();
+args.parentComponentId = comp.id; //id of component that request the popup
+args.positionx = 100; //optional
+args.positiony = 50; //optional
+openWindow159(args);
+```
 
 The Next step is the selection of the panel type to embed inside the window.  
 After the window creation, it is always possible to manage the window and add/remove or arrange other panels.  
