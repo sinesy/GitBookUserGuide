@@ -27,6 +27,14 @@ The component id must be specified through the Additional config property, using
 
 ![](../../../.gitbook/assets/image%20%283%29.png)
 
+Optionally, it is also possible to customize the dropdown items content through the **tpl** property you can specify in the Additional Config settings. For example, the default value for the tpl property, if not specified, is as follows:
+
+```text
+<div class='x-combo-list-item smart-filter-list-item'><img src='../{img}' /><span> {[this.translate(values.type)]} {value}...</span></div>
+```
+
+
+
 The business component must return a ListResponse object with the attributes required by the smart filter, whose names are reported in the following example:
 
 ```text
