@@ -8,6 +8,7 @@ Platform supports a variety of different **panel containers** , each managing th
 * [accordion panel](accordion-panel.md)
 * [vertical orientation panel](vertical-orientation-panel.md)
 * [horizontal orientation panel](horizontal-orientation-panel.md)
+* [columns panel](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/layout/columns-panel)
 * [table panel](table-panel.md)
 * [generic panel](ggeneric-panel.md)
 * [responsive panel](responsive-panel.md)
