@@ -32,6 +32,7 @@
         * [Accordion panel](core-features/defining-the-ui/3-1-app-designer/layout/accordion-panel.md)
         * [Vertical orientation panel](core-features/defining-the-ui/3-1-app-designer/layout/vertical-orientation-panel.md)
         * [Horizontal orientation panel](core-features/defining-the-ui/3-1-app-designer/layout/horizontal-orientation-panel.md)
+        * [Columns panel](core-features/defining-the-ui/3-1-app-designer/layout/columns-panel.md)
         * [Table panel](core-features/defining-the-ui/3-1-app-designer/layout/table-panel.md)
         * [Generic panel](core-features/defining-the-ui/3-1-app-designer/layout/ggeneric-panel.md)
         * [Responsive panel](core-features/defining-the-ui/3-1-app-designer/layout/responsive-panel.md)
