@@ -144,6 +144,8 @@ Optionally , it is possible to **group columns in multiple groups**, so that the
 
 In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition.
 
+**Important note:** pay attention to the hidden columns. With grouped columns you have not to make "selectable" any other non visibile column and it would be better to make them "not managed as well". As an alternative, you have to move all visible columns at the beginning and move all not selectable, not visibile but managed columns all on the right.
+
 An example of such a definition is the following:
 
 ```javascript

@@ -1,6 +1,6 @@
 # Definition of Data models and Relations
 
-A **data mode**l or **object** is a representation of a database table, including its relations to other tables, defined as foreign keys or manually defined by the user when configuring the data model.  
+A data model is a representation of a database table, including its relations to other tables, defined as foreign keys or manually defined by the user when configuring the data model.  
 For each table it is possible to define the following properties:
 
 * **table name**
@@ -9,26 +9,12 @@ For each table it is possible to define the following properties:
 * name of the field used to manage the **record version** \(for optimistic locking\)
 * flag used to define if version field must be **automatically incremented** or not \(in case a trigger will do that\)
 
-![](../../.gitbook/assets/schermata-2021-08-30-alle-14.00.48.png)
+![](../../.gitbook/assets/schermata-2021-04-06-alle-11.57.12.png)
 
 Through these settings, it is possible to manage automatically several very common tasks: logical delete and optimistic locking.  
-**Logical delete** is used when you do not want to physically delete records, because there are many relations that make that delete complex or maybe because you do not want to lose data, since you could decide to restore logical delete data in the future. In any case, logical delete can be automated by simply defining with is the **field** having that meaning and the **values** it can have: a filtering condition is automatically applied to business components pointing to this data model to retrieve only not logically deleted records. In addition, records are logically deleted automatically, when you cancel a record from the GUI.
-
-It is also possible to mark the deleting time and the user carrying out the delete operation, through the optional fields named **Datetime delete** field and **User id delete** field, the first must be a date+time type database field, whereas the latter a text type database field.
-
-**Optimistic locking** is a common practice used in multi-user applications, used to ensure that a record can be updated by one user per time. Each time a record is updated, the **version** field is incremented and future updates are allowed only if the version value for the update is the one currently stored in the record. This behavior is automatically managed with the version field, if specified.
-
-It is also possible to mark a saving operation on an ad hoc field named **Record changed** field; this field is automatically filled in with the value specified either in **Record inserted** field or **Record updated** field, according to the saving operation \(insert or update, respectively\). In case you are not interested in distinguishing between insert and update, you can simply fill out the two fields with the same value.
-
-The corresponding record field will be automatically managed by platform every time an insert/update operation is executed using either the **insertObject** or **updateObject**.
-
-In case you are manually writing data on a database table using SQL insert/updates \(using utils.executeSql method\), **there is NOT any automatism**: it is up to the developer to manage such a field.
-
-In case the saving operation is performed by Platform using the **CRUD operations mapped to a grid/form**, **the developer has also to set in the panel definition the Default value in insert/update** and set them with the same values specified in the Record inserted/Record updated fields.
-
-Version, logical delete and record changed fields are all optional.
-
-
+**Logical delete** is used when you do not want to physically delete records, because there are many relations that make that delete complex or maybe because you do not want to lose data, since you could decide to restore logical delete data in the future. In any case, logical delete can be automated by simply defining with is the field having that meaning and the values it can have: a filtering condition is automatically appliedto business components pointing to this data model to retrieve only not logically deleted records. In addition, records are logically deleted automatically, when you cancel a record from the GUI.  
+**Optimistic locking** is a common practice used in multi-user applications, used to ensure that a record can be updated by one user per time. Each time a record is updated, the version field is incremented and future updates are allowed only if the version value for the update is the one currently stored in the record. This behavior is automatically managed with the version field, if specified.  
+Version and logical delete fields are optional.
 
 ### Data synchronization from Google Datastore
 
