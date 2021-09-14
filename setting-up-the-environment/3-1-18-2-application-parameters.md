@@ -298,8 +298,6 @@ It is essential to put a limit to the log events to save here. Please always set
 
 **Max days to log per Type \(e.g. QUEUE=1,JS\_ERROR=1\)** - this is more detailed than the previous parameters, where you can distinguish among each even type; you can define the max amount of days for each log type, by separating them using the comma.
 
-**If the following log types are not specified and only "Max days to log" is filled out, then this setting will be applied to all log types**. Consequently, if you want to set a specific limit for a specific log type, you have NOT to specify "Max days to log", but use "Max days to log per Type" instead.
-
 Available log types are:
 
 * QUEUE - a message logged when an element extracted from a queue has been processed, but only in case of calls like: utils.enqueueAction\(....,true\)
@@ -314,7 +312,6 @@ Available log types are:
 * TEST - a message logged each time an automated test is executed
 * EXPORT\_TABLE - a message logged each time an "export from table" is executed
 * APP\_EVENT - a message logged each time an application event is fetched \(e.g. login, out of memory, etc.\)
-* SQLTOOL\_QUERY - queries executed using SqlTool and part of the history available in the Sql Shell panel
 
 
 

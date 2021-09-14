@@ -283,6 +283,16 @@ parameters used to integrate the app with an LDAP server, like MS Active Directo
 
 ### \*\*\*\*
 
+### LOGS
+
+**Max days to log** - this parameter is related to the Table Log, i.e. log saved to CON60\_LOGS table.
+
+It is essential to put a limit to the log events to save here. Please always set it, for example to 60 \(days\).
+
+**If  only "Max days to log" is filled out, then this setting will be applied to all log types**. Consequently, if you want to set a specific limit for a specific log type, you have NOT to define "Max days to log" as a global parameter \(let it empty\), but use **"Max days to log per Type" instead, available as an application parameter \(**[**https://4wsplatform.gitbook.io/user-guide/setting-up-the-environment/3-1-18-2-application-parameters\#logs**](https://4wsplatform.gitbook.io/user-guide/setting-up-the-environment/3-1-18-2-application-parameters#logs)**\)**.
+
+### 
+
 ### MAIL
 
 The same parameters can also be redefined at application level.
