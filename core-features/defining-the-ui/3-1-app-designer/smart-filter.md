@@ -61,6 +61,12 @@ list.push(
 utils.setReturnValue(utils.getListResponse(list, list.length, false));
 ```
 
+Optionally, it is also possibile to customize how many characters to type in the smart filter before the dropdown list is shown: if not specified, it is set to 2 characters. You can override this default value by setting it in the Additional Config property of the smart filter:
+
+```text
+minChars: 1,
+```
+
 
 
 **Behavior**
