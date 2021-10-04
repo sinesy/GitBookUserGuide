@@ -307,7 +307,11 @@ The same parameters can also be redefined at application level.
 
 **Use TLS when sending email: E/F \(opt.\)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
 
-### \*\*\*\*
+**Email Debug** - enable the debug of messages sent/received
+
+
+
+\*\*\*\*
 
 ### **MOBILE** 
 
