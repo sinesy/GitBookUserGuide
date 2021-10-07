@@ -80,7 +80,8 @@ utils.logServiceFileElaboration(
   filename,
   dirId,
   backupFileName,
-  backupDirId
+  backupDirId,
+  note
 );
 ```
 
@@ -94,4 +95,5 @@ The arguments are::
 * **dirId**- optional: defines where the file is located
 * **backupFileName** - optional: in case the current file has been read and after processing it must be deleted, it could be backed up \(i.e. moved “off-line” to another bucket\); in such a scenario, this is the final name for the backuped file
 * **backupDirectoryId** - optional: used in combination with backupFileName; it represents the location of the backuped file
+* **note** - optional: description of file or operation
 
