@@ -10,7 +10,7 @@ These parameters are used by specific functionalities of the interpreted applica
 
 **Starting web page** - URL representing the base URL of this Platform installation; it is recommended to set it up, since it is used widely by Platform, for example when sending emails containing references to this server.
 
-Example: 
+Example:&#x20;
 
 https://yourhouse/platform/
 
@@ -50,7 +50,7 @@ utils.setReturnValue(datasourceId+""); // return the data source id to use, expr
 
 **Screenshots Directory Id** - if filled with a directory id previously set up, it is possible to take screenshots of the interpreted web application (for example when there is a bug) and report it to the dev team. These screenshots will be saved in this directory. Screenshots can be taken using the "copyWebPage" global javascript function, available on the UI, which can be invoked from any point of your web UI.
 
-**Set of allowed variables to set from client side** - in order to secure the server layer, it is a good practice not to pass forward from the UI to the server "custom" variables which can affect the server behavior, since the same client invocations could be carried out from external clients as well. 
+**Set of allowed variables to set from client side** - in order to secure the server layer, it is a good practice not to pass forward from the UI to the server "custom" variables which can affect the server behavior, since the same client invocations could be carried out from external clients as well.&#x20;
 
 However, when some variables are essentials and must be passed to the server, you can declare them through this parameter (specified as a list of separated comma parameter names) and then use the \
 "wagutility/sendcustomappluservar" standard web service, which will accept in input only variables declared through the current parameter.
@@ -106,9 +106,9 @@ else {
 
 **Last context import** - do not change it; it is automatically defined by Platform, each time a web context import has been carried out. Helpful to compare two versions of the same app, installed in different environments (e.g. development vs production)
 
-**Notify action editing** - checkbox  
+**Notify action editing** - checkbox &#x20;
 
-**Manually loaded Digest** - checkbox used in a cluster environment to speed up the web interpreted application; when selected, all metadata and user data (when a user is logging on) is cached internally, so the number of SQL queries is significantly reduced. 
+**Manually loaded Digest** - checkbox used in a cluster environment to speed up the web interpreted application; when selected, all metadata and user data (when a user is logging on) is cached internally, so the number of SQL queries is significantly reduced.&#x20;
 
 Bear in mind that if you select it, you have to clear cache manually on each cluster node, each time you apply a change on metadata or when you import metadata. You can do it through the "Administration -> Force digest update" menu item.
 
@@ -120,7 +120,7 @@ For more details see:
 
 **Hide toast message with alert messages (def. N)** - checkbox used to change the default behavior of the Alert functionality, i.e. showing a toast message each time an alert arrives on the UI. When checking this parameter, the toast message is omitted.
 
-**Show a popup message for the chat (Y/N) **- checkbox used to change the default behavior of the Alert functionality, which does NOT include any dialog message each time an alert arrives on the UI. When checking this parameter, the dialog message is showed. It would make sense to use only one of the two alternative described here: either the toast message or the dialog message. 
+**Show a popup message for the chat (Y/N) **- checkbox used to change the default behavior of the Alert functionality, which does NOT include any dialog message each time an alert arrives on the UI. When checking this parameter, the dialog message is showed. It would make sense to use only one of the two alternative described here: either the toast message or the dialog message.&#x20;
 
 **Do not allow to pass a SQL filter on panel loading** - checkbox used to block any additional condition when invoking the standard web service getlist, used to fetch a list of records (for a grid or a selector). If not checked, it is allowed to pass a SQL fragment to the base SQ query executed on the server side, which would represent a SQL injection risk.
 
@@ -146,7 +146,7 @@ It is strongly recommended to select it.
 
 **Tomcat Path of Activiti** - the absolute path to set, related to the installation of Activiti within a Tomcat.
 
-Example: 
+Example:&#x20;
 
 /opt/tomcat-activiti/
 
@@ -180,37 +180,37 @@ http://host/
 
 ### ALFRESCO
 
-Alfresco: base dir for folders explorer - 
+Alfresco: base dir for folders explorer -&#x20;
 
-Alfresco: URL when connecting to Alfresco Server - 
+Alfresco: URL when connecting to Alfresco Server -&#x20;
 
-Alfresco: sync roles in Alfresco (Y/N) - 
+Alfresco: sync roles in Alfresco (Y/N) -&#x20;
 
-Alfresco: sync users in Alfresco (Y/N) - 
+Alfresco: sync users in Alfresco (Y/N) -&#x20;
 
-Alfresco: Admin Password when connecting to Alfresco Server - 
+Alfresco: Admin Password when connecting to Alfresco Server -&#x20;
 
-Alfresco: Admin Username when connecting to Alfresco Server - 
+Alfresco: Admin Username when connecting to Alfresco Server -&#x20;
 
-Alfresco: model file name when connecting to Alfresco Server - 
+Alfresco: model file name when connecting to Alfresco Server -&#x20;
 
-Alfresco: sync user roles in Alfresco (Y/N) - 
+Alfresco: sync user roles in Alfresco (Y/N) -&#x20;
 
 
 
 ### ARCHIFLOW
 
-ARCHIFLOW_DOMAIN - 
+ARCHIFLOW\_DOMAIN -&#x20;
 
-ARCHIFLOW_BASE_URL - 
+ARCHIFLOW\_BASE\_URL -&#x20;
 
-ARCHIFLOW_LANGUAGE - e.g. 0
+ARCHIFLOW\_LANGUAGE - e.g. 0
 
-ARCHIFLOW_PASSWORD - 
+ARCHIFLOW\_PASSWORD -&#x20;
 
-ARCHIFLOW_USERNAME - 
+ARCHIFLOW\_USERNAME -&#x20;
 
-ARCHIFLOW_DATE_FORMAT - e.g. dd/MM/yyyy
+ARCHIFLOW\_DATE\_FORMAT - e.g. dd/MM/yyyy
 
 
 
@@ -226,7 +226,7 @@ Collaboration
 
 
 
-### CONTACTS_SYNC
+### CONTACTS\_SYNC
 
 Contacts synchronization sources (4WS, LDAP, GOOGLE,...)
 
@@ -260,9 +260,9 @@ Contacts synchronization sources (4WS, LDAP, GOOGLE,...)
 
 **LDAP protocol** (ldap or ldaps. Opt. def. ldap) - protocol to use when connecting to the LDAPO server; a typical value is "ldap", but you have to use "ldaps" in case of LDAP over SSL communication
 
-**LDAP: Password** to use when connecting to LDAP 
+**LDAP: Password** to use when connecting to LDAP&#x20;
 
-**LDAP: Username** to use when connecting to LDAP 
+**LDAP: Username** to use when connecting to LDAP&#x20;
 
 **LDAP account auth format** (e.g. {u}@domain) - example: {u}@sinesy.it
 
@@ -272,15 +272,15 @@ Contacts synchronization sources (4WS, LDAP, GOOGLE,...)
 
 **LDAP: Base path when searching from groups**  - example: ou=xxx,dc=yyy,dc=zzz
 
-**LDAP: Field types** to manage in groups (opt.) 
+**LDAP: Field types** to manage in groups (opt.)&#x20;
 
-**LDAP: Fields** to manage in groups (opt.) 
+**LDAP: Fields** to manage in groups (opt.)&#x20;
 
-**LDAP: Groups filter** (opt.) 
+**LDAP: Groups filter** (opt.)&#x20;
 
-**LDAP attribute for user id** (opt.) DEPRECATED: Autoassign roles to new LDAP user (';' separated list - see PERMISSIONS section) 
+**LDAP attribute for user id** (opt.) DEPRECATED: Autoassign roles to new LDAP user (';' separated list - see PERMISSIONS section)&#x20;
 
-**LDAP: Group key attribute** (opt.) 
+**LDAP: Group key attribute** (opt.)&#x20;
 
 **LDAP: Activate pagination** (true or false, opt., def. true) - set it to true to read users a page a time (see "Query page size" parameter)
 
@@ -288,7 +288,7 @@ Contacts synchronization sources (4WS, LDAP, GOOGLE,...)
 
 **Action Id to use on login** to replace the username - helpful to define a username for Platform to use instead of the one retrieved by the LDAP server, for example to extract the left part of an email address and use it as the username
 
-SYNC_LDAP_GROUP_UNIQUE_NAME
+SYNC\_LDAP\_GROUP\_UNIQUE\_NAME
 
 
 
@@ -298,25 +298,25 @@ SYNC_LDAP_GROUP_UNIQUE_NAME
 
 It is essential to put a limit to the log events to save here. Please always set it, for example to 60 (days).
 
-**Max days to log per Type (e.g. QUEUE=1,JS_ERROR=1)** - this is more detailed than the previous parameters, where you can distinguish among each even type; you can define the max amount of days for each log type, by separating them using the comma.
+**Max days to log per Type (e.g. QUEUE=1,JS\_ERROR=1)** - this is more detailed than the previous parameters, where you can distinguish among each even type; you can define the max amount of days for each log type, by separating them using the comma.
 
 **If the following log types are not specified and only "Max days to log" is filled out, then this setting will be applied to all log types**. Consequently, if you want to set a specific limit for a specific log type, you have NOT to specify "Max days to log", but use "Max days to log per Type" instead.
 
 Available log types are:
 
 * QUEUE - a message logged when an element extracted from a queue has been processed, but only in case of calls like: utils.enqueueAction(....,true)
-* JS_ERROR - a message logged in case of errors when executing a server-side js action (a js/java exception not managed)
+* JS\_ERROR - a message logged in case of errors when executing a server-side js action (a js/java exception not managed)
 * ALERT - a message logged in case of an alert message
 * SMS - a message logged in case of SMS messages sent
 * EMAIL - a message logged in case of email messages sent
-* MOBILE_ERROR - a message logged in case of errors within the mobile app
-* CENTRAL_SYNC_ERROR - a message logged in case of errors when synchronizing a mobile app
-* APP_ANALYSIS - a message logged each time the app is analyzed
+* MOBILE\_ERROR - a message logged in case of errors within the mobile app
+* CENTRAL\_SYNC\_ERROR - a message logged in case of errors when synchronizing a mobile app
+* APP\_ANALYSIS - a message logged each time the app is analyzed
 * NETTEST - a message logged each time a user executes the network test
 * TEST - a message logged each time an automated test is executed
-* EXPORT_TABLE - a message logged each time an "export from table" is executed
-* APP_EVENT - a message logged each time an application event is fetched (e.g. login, out of memory, etc.)
-* SQLTOOL_QUERY - queries executed using SqlTool and part of the history available in the Sql Shell panel
+* EXPORT\_TABLE - a message logged each time an "export from table" is executed
+* APP\_EVENT - a message logged each time an application event is fetched (e.g. login, out of memory, etc.)
+* SQLTOOL\_QUERY - queries executed using SqlTool and part of the history available in the Sql Shell panel
 
 
 
@@ -329,7 +329,7 @@ Available log types are:
 * Exit + Login Buttons
 * Login + Exit Buttons
 
-**Show combos for Company and Site (YN)** - checkbox used to replace the input fields for company and site with comboboxes, in roles/users details. 
+**Show combos for Company and Site (YN)** - checkbox used to replace the input fields for company and site with comboboxes, in roles/users details.&#x20;
 
 **Login label in controls** - when the checkbox is selected, in the login page the labels on the left of the input fields are removed and moved within the input fields.
 
@@ -337,7 +337,7 @@ Available log types are:
 
 **Translate login labels with browser language** - checkbox used to auto-set the language in the login page, according to the browser language.
 
-**Log last login date/time (def. N)**  - checkbox used to enable the logging of the last date+time of a user login: each time a user is logging on successfully, the corresponding record in PRM01_USERS is updated for the fields LAST\__LOGIN and TOTAL_LOGIN.
+**Log last login date/time (def. N)**  - checkbox used to enable the logging of the last date+time of a user login: each time a user is logging on successfully, the corresponding record in PRM01_USERS is updated for the fields LAST\__LOGIN and TOTAL\_LOGIN.
 
 Note: the login time is not recorded in case of either a stateless web service login or an element in queue or a scheduled process.
 
@@ -387,11 +387,11 @@ Google key for autocomplete place in Android
 
 ### PERMISSIONS
 
-**Show role id (Y/N) **- checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes. 
+**Show role id (Y/N) **- checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes.&#x20;
 
 You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
 
-**Login controls to hide exit Check function Ids when reading data (Y/N def. N)** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant (one only company id) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled. 
+**Login controls to hide exit Check function Ids when reading data (Y/N def. N)** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant (one only company id) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled.&#x20;
 
 This parameter allows not only to define the list of input fields to hide but also the value to preset for them.
 
@@ -430,11 +430,11 @@ Remote reports Server URL
 
 
 
-### SECURITY_SYNC
+### SECURITY\_SYNC
 
 As part of the integration with external authentication systems (SSO, LDAP, AD, Google or other federated SSO systems), Platform offers the ability to synchronize the users and/or groups from these sources.
 
-This operation is helpful to have the usernames defined in the LDAP also internally to Platform: only in this case you could associate roles to users. 
+This operation is helpful to have the usernames defined in the LDAP also internally to Platform: only in this case you could associate roles to users.&#x20;
 
 If a user is not defined in Platform too, it would be impossible to refer it and link to it a set of roles!\
 
@@ -464,7 +464,7 @@ http\[s]://secursync
 
 ### SMS
 
-This section represents all settings needed when sending SMS messages from the App Diagnosys functionality, in case there is a notification to send to the specified address (phone number) and the analyzed results are sent to that address. 
+This section represents all settings needed when sending SMS messages from the App Diagnosys functionality, in case there is a notification to send to the specified address (phone number) and the analyzed results are sent to that address.&#x20;
 
 Not all these settings are needed:
 
@@ -502,7 +502,7 @@ All these authentication mechanisms can be combined together, if needed, as an *
 
 **Sync: Company,site couples to use when creating records (opt. def. all) **- this is an optional parameter; if specified, you have to define couples of company + site ids, where the company id is separated by the site id with a comma (,) and a couple with another with a ;
 
-Example: 
+Example:&#x20;
 
 ```javascript
 00888,100;00888,101;00889,100
@@ -514,40 +514,40 @@ If this parameter has not been specified, the default behavior would be to auto-
 
 **Sync: Logical delete of users before sync (opt. def. false) **- (opt. – true or false). If true delete the users from the current source before trying to write the new ones. Default: false. It is important to understand if the source list is full or incremental (only new or updated users): this depends on the sources settings. In the first case the deletion can be enabled, in the second case must be disabled.
 
-**Sync: Fields to manage in 4WS users table (opt.) **- (opt.) semicolon (;) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
+**Sync: Fields to manage in 4WS users table (opt.) **- (opt.) semicolon (;) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields.&#x20;
 
-Default value: “pk.userCodeId;description;password;;”. 
+Default value: “pk.userCodeId;description;password;;”.&#x20;
 
 Note: in the 4WS.Platform DB the user data is spread among different tables that PRM01\_USERS. For example the mail is in SUB01 other info are in PRM08. To fill this fileds with the value from the source, specify the table prefix before the field, for example: SUB01.EMail, SUB01.firstName, SUB01.lastName.
 
-The possible values are: 
+The possible values are:&#x20;
 
-* userInitial: string. User initials 
-* description: string. User description 
-* password: string. User password 
-* dateExpirationPassword: date. Password expiration date 
-* locked: string Y/N. Locked account 
-* lockDate: date. Locking date 
-* erasable: string Y/N. If Y the user can be deleted by the sync process 
-* initValidate: date. User validity starting date 
-* endValidate: date.User validity ending date 
-* isAdmin: string Y/N. The user is admin 
-* SUB01.EMail: string. Email addres 
-* SUB01.firstName: string. Names 
-* SUB01.lastName: string. Surname 
-* SUB01.sex: tipo string M/F/O. Gender 
-* SUB01.address: string. Address 
-* SUB01.zipCode: string. ZIP code 
-* SUB01.city: string. City 
-* SUB01.country: string. Country 
-* SUB01.province: string. Province or state 
-* SUB01.birthdate: date. Birth date 
-* SUB01.telephone: string. Phone number 
-* SUB01.mobile: string. Mobile number 
-* PRM08.languageId: string. ISO2 language code (i.e.: it, en, fr, de …) 
+* userInitial: string. User initials&#x20;
+* description: string. User description&#x20;
+* password: string. User password&#x20;
+* dateExpirationPassword: date. Password expiration date&#x20;
+* locked: string Y/N. Locked account&#x20;
+* lockDate: date. Locking date&#x20;
+* erasable: string Y/N. If Y the user can be deleted by the sync process&#x20;
+* initValidate: date. User validity starting date&#x20;
+* endValidate: date.User validity ending date&#x20;
+* isAdmin: string Y/N. The user is admin&#x20;
+* SUB01.EMail: string. Email addres&#x20;
+* SUB01.firstName: string. Names&#x20;
+* SUB01.lastName: string. Surname&#x20;
+* SUB01.sex: tipo string M/F/O. Gender&#x20;
+* SUB01.address: string. Address&#x20;
+* SUB01.zipCode: string. ZIP code&#x20;
+* SUB01.city: string. City&#x20;
+* SUB01.country: string. Country&#x20;
+* SUB01.province: string. Province or state&#x20;
+* SUB01.birthdate: date. Birth date&#x20;
+* SUB01.telephone: string. Phone number&#x20;
+* SUB01.mobile: string. Mobile number&#x20;
+* PRM08.languageId: string. ISO2 language code (i.e.: it, en, fr, de …)&#x20;
 * PRM08.userImageUrl: string. User image URL.
 
-**Sync: Fields to manage in 4WS groups table (opt.)** - (opt.) semicolon (;) separated list of 4ws.Platform group object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. 
+**Sync: Fields to manage in 4WS groups table (opt.)** - (opt.) semicolon (;) separated list of 4ws.Platform group object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields.&#x20;
 
 Default: “pk.roleId;dictionary.description” (see Prm02Groups fields)
 
@@ -596,15 +596,15 @@ If you set it to "Edit" (in your dev env), these links on labels are clickable a
 
 **Enable menu file (true/false)** - checkbox used to show an additional menu items in menu-bars menus, named "File" and used to include default menu commands, like "Exit".
 
-**Favourite icon suffix** - 
+**Favourite icon suffix** -&#x20;
 
 **Popup windows with closing button (def. N)** - checkbox used to define whether all windows showed in the application which are modal must include also a close button on the top right corner. It is recommended to select it.
 
 **Menu tree width** - in case of a tree menu type (an old menu type), defines the menu window width
 
-**Modal windows with closing button (def. N)** - 
+**Modal windows with closing button (def. N)** -&#x20;
 
-**Enable menu filter (true/false)** - 
+**Enable menu filter (true/false)** -&#x20;
 
 **Status bar height (pixels)** - the status bar is the bottom part of a web application. This parameter allows to define the bottom bar height.
 
@@ -619,7 +619,7 @@ If you set it to "Edit" (in your dev env), these links on labels are clickable a
 
 The parameter value can contain any of these values, separated by the pipe symbol |
 
-**View asterisk on mandatory controls (Y/N) (default N)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+**View asterisk on mandatory controls (Y/N) (default N)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background.&#x20;
 
 When this checkbox is selected, an alternative approach is used to highlight the mandatory controls: an asterisk (\*) is showed at the right of each label, for each mandatory input control. Consequently, this approach consumes more space horizontally in a window, since a (\*) text is also included for each mandatory control.
 
@@ -633,9 +633,9 @@ If this checkbox is selected, an additional message is also prompted to the user
 
 This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
 
-**Second level menu height (pixels)** - 
+**Second level menu height (pixels)** -&#x20;
 
-**Grid in edit with double click (YN) (default N)** - 
+**Grid in edit with double click (YN) (default N)** -&#x20;
 
 **Show alert in menubar (Y/N)** - checkbox used to show an icon on the topbar, on the right. This icon highlights when an alert message is arriving for the current logged user (generated on the server layer through the utils.sendAlertMessage method). This is a clickable icon: when the user clicks on it, a popup menu is showed, reporting all incoming alert messages (not read yet).
 
@@ -651,18 +651,18 @@ If selected, Platform does not show the error coming from the database, but a mo
 
 common.a unique key has been violated
 
-**Toolbar buttons expand (Y/N) (default N)** - 
+**Toolbar buttons expand (Y/N) (default N)** -&#x20;
 
 **Loading order of the context css files** - "Default" to load all .css files found the app web context in the order they have been written in the file system; "Sort by name" to read them by name. The second option is safer, since it is always predictable and conflicting CSS class names would be read in the clear order.
 
-**Read CSS context files only from css/css_login folders** - checkbox used to limit the amount of .css files to read form the web public context of the application. As default behavior:
+**Read CSS context files only from css/css\_login folders** - checkbox used to limit the amount of .css files to read form the web public context of the application. As default behavior:
 
-* in the login page, Platform scans and load on the UI all .css files found in the "css_login" subfolder
-* for the main page (i.e. after a successful login), Platform scans and load on the UI all .css files found in the whole public web context, except for the "css_login" subfolder
+* in the login page, Platform scans and load on the UI all .css files found in the "css\_login" subfolder
+* for the main page (i.e. after a successful login), Platform scans and load on the UI all .css files found in the whole public web context, except for the "css\_login" subfolder
 
 If this checkbox is selected, for the main page (i.e. after a successful login), Platform scans and load on the UI only .css files found in the "css" subfolder.
 
-**View asterisk on mandatory controls only when needed (Y/N) (default N)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background. 
+**View asterisk on mandatory controls only when needed (Y/N) (default N)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background.&#x20;
 
 When the checkbox "View asterisk on mandatory controls**" **(described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
@@ -676,11 +676,11 @@ This parameter allows to define the position of the label: Top or Left (default)
 
 Here it is possible for example to customize the logo dynamically, since the CSS code can support variables expressed as :XXX
 
-Supported variables are 
+Supported variables are&#x20;
 
-:COMPANY_ID 
+:COMPANY\_ID&#x20;
 
-:SITE_ID
+:SITE\_ID
 
 :XXX where XXX is an application parameter
 
@@ -688,34 +688,34 @@ Thanks to that, in a multi-tenancy environment having a cluster, tenant's logo c
 
 ```
 body.loginWindow{ 
-  background-image: url(https://storage.cloud.google.com/:GCS_BUCKET/:COMPANY_ID/100/logo.jpg)
+  background-image: url(https://storage.cloud.google.com/:GCS_BUCKET/:COMPANY_ID/logo.jpg)
 }
 ```
 
-In this example an application parameter named GCS\__BUCKET can be a public bucket including logos for all tenants, stored in a subfolder having name :COMPANY_ID_
+In this example an application parameter named GCS\__BUCKET can be a public bucket including logos for all tenants, stored in a subfolder having name :COMPANY\_ID_
 
 \<bucket>
 
-   00000
+&#x20;  00000
 
-       logo.jpg
+&#x20;      logo.jpg
 
-  00001
+&#x20; 00001
 
-       logo.jpg
+&#x20;      logo.jpg
 
 ...
 
 
 
-In order to make it work, the index_app.jsp must include the companyId parameter as well.
+In order to make it work, the index\_app.jsp must include the companyId parameter as well.
 
-In case you want to mix the default CSS settings with this solution, you can include in the index_app.jsp URL also a noCustomCss=Y parameters
+In case you want to mix the default CSS settings with this solution, you can include in the index\_app.jsp URL also a noCustomCss=Y parameters
 
 To sum up, the custom CSS code is applied only if
 
 * the Custom CSS application parameter is set
-* the request parameter noCustomCss parameter IS NOT included the index_app.jsp URL
+* the request parameter noCustomCss parameter IS NOT included the index\_app.jsp URL
 
 
 
@@ -725,9 +725,9 @@ To sum up, the custom CSS code is applied only if
 
 ### USERS
 
-**Supported user languages Component Id ** - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant. 
+**Supported user languages Component Id ** - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant.&#x20;
 
-When not settings this parameter, the languages defined through the App Designer are valid for all applications defined in the Platform installation, through the Languages functionality. 
+When not settings this parameter, the languages defined through the App Designer are valid for all applications defined in the Platform installation, through the Languages functionality.&#x20;
 
 When this parameter is set, the "Language" combobox available in the user detail would show not any more the whole list of languages defined through the Languages functionality, but a subset of it, whose sublist can be filtered according to application logic depending on the company id (tenant).
 
