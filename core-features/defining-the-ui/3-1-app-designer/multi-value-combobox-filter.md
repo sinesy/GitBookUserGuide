@@ -8,19 +8,18 @@ In an editable panel you can apply the filter manually, through a javascript act
 
 #### Configuration
 
-You can configure the control in the Input Controls folder, where you have to choose the type "**Dynamic Combobox**" and associate a selector; the selector must be a **dynamic selector** having the **Multi Value** checkbox selected \(see image below\).
+You can configure the control in the Input Controls folder, where you have to choose the type "**Dynamic Combobox**" and associate a selector; the selector must be a **dynamic selector** having the **Multi Value **checkbox selected (see image below).
 
-![](../../../.gitbook/assets/image%20%2814%29.png)
+![](<../../../.gitbook/assets/image (14).png>)
 
 When the user types into the multi-value combobox, the typed value is validated and only matching values are shown.
 
-![](../../../.gitbook/assets/image%20%2816%29.png)
+![](<../../../.gitbook/assets/image (16).png>)
 
 You can select an item and the control shows the relative chip. After that, you can type again another text and validation is performed again, in order to add additional items.
 
 You can remove a chip by clicking on the X within it or remove all chips by clicking on the X on the right of the combobox.
 
-![](../../../.gitbook/assets/image%20%2817%29.png)
+![](<../../../.gitbook/assets/image (17).png>)
 
 When you click on the search button, an IN type filter condition is applied to the grid with the selected values.
-

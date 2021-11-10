@@ -1,4 +1,4 @@
-# Preview panel \(mobile\)
+# Preview panel (mobile)
 
 Use a Preview Panel for show an HTML content. There are 5 alternative way for use this panel.
 
@@ -16,7 +16,7 @@ Use a business component that returns an image url in a specific fields, the pan
 
 #### **PDF**
 
-Use a business component that returns a ****PDF url in a specific fields, the panel load that PDF.
+Use a business component that returns a** **PDF url in a specific fields, the panel load that PDF.
 
 #### **HTML Template**
 
@@ -24,11 +24,9 @@ Use a business component that returns a ****PDF url in a specific fields, the pa
 
 In this case you don't use a business component, instead you have to select a Template. You can use an "HTML Template" or an "Alert Template", in this template you can use all the available variables using the syntax `:VARIABLE_NAME`
 
-### additional Configurations 
+### additional Configurations&#x20;
 
 > Since 6.0.2
 
 The javascript code specified in the additional configurations is injected into the page after page loading.
-
-
 

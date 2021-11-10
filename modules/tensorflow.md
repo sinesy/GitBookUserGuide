@@ -41,14 +41,12 @@ A model cannot work with formulas, like the one just expressed. It work with com
 In order to train a model for this type of problem, we need to define the possible solutions as well:
 
 | 0 for a square1 for a rectangle |
-| :--- |
-
+| ------------------------------- |
 
 At this point, we can train the model with a few examples:
 
-| base=1, height=1, solution = 0 \(a square…\)base=2, height=1, solution = 1 \(a rectangle...\)base=1, height=2, solution = 1 \(a rectangle...\) |
-| :--- |
-
+| base=1, height=1, solution = 0 (a square…)base=2, height=1, solution = 1 (a rectangle...)base=1, height=2, solution = 1 (a rectangle...) |
+| ---------------------------------------------------------------------------------------------------------------------------------------- |
 
 This is a very poor training, composed of 3 examples only.
 
@@ -76,7 +74,7 @@ Each time a training session is performed, the accuracy of the updated model can
 
 #### **Prediction**
 
-Once the testing proved the quality of the model though a good level of accuracy \(e.g. 80-90% or more\), the model is ready to use.
+Once the testing proved the quality of the model though a good level of accuracy (e.g. 80-90% or more), the model is ready to use.
 
 It is possible to use the model and make predictions with the data provided in input, expressed through the features defined initially.
 
@@ -88,11 +86,11 @@ A neural network is a system able to make predictions, once trained.
 
 Such a network can be represented like a graph, composed of nodes and edges:
 
-![](https://lh6.googleusercontent.com/1sSCexzcLn8tzakNRFmZl-cQkECPvrMLmk1g5j067gX-TOfn0DQwn6dBb1285SU9xEy088tPcptC-O58QNWfUvHku81_K93CwUDfrrmFUQsOnTT1DdSpcxgpE52tvSy8U6PRSnNY)
+![](https://lh6.googleusercontent.com/1sSCexzcLn8tzakNRFmZl-cQkECPvrMLmk1g5j067gX-TOfn0DQwn6dBb1285SU9xEy088tPcptC-O58QNWfUvHku81\_K93CwUDfrrmFUQsOnTT1DdSpcxgpE52tvSy8U6PRSnNY)
 
 A neural network can be sized along 2 dimensions:
 
-* layers number- i.e. the number of vertical layers, each composed of a set of nodes; these layers represents the possible solutions, so there must be as many layers as the number of solutions \(or more\)
+* layers number- i.e. the number of vertical layers, each composed of a set of nodes; these layers represents the possible solutions, so there must be as many layers as the number of solutions (or more)
 * nodes per layer- it is possible to have the same number of nodes in all layers or define a different number of nodes in each layer, as in the diagram above.
 
 In general, the higher the number of layers/nodes is, the more accurate the model will be, even with very complex problems, that is to say, with problems described by a large number of features.
@@ -119,15 +117,15 @@ Before using it, you have to set a fewapplication settings:
 
 * TensorFlow password, required to authenticate into a TensorFlow server installation, starting from Platform
 * TensorFlow url, a public URL to a TensorFlow server installation
-* TensorBoardurl, a public URL to a Platform TensorBoard server installation \(optional\)
+* TensorBoardurl, a public URL to a Platform TensorBoard server installation (optional)
 
 ![](https://lh3.googleusercontent.com/AzCLSTW-sIqz6IllA9PIpEB49lWa2vCQd2BnH34IEPFtk6Zo6coC3YPGUNbgMYorB53c9aYkzq8X5rShIjVnuIMI3Aa1-AujiiFSud7UrxIXNH7BDfiAK27ehnSMARsS08J2gcc5)
 
-Once defined these settings, you can start using Services -&gt; Machine Learning Models
+Once defined these settings, you can start using Services -> Machine Learning Models
 
 This list reports all models defined. These models are grouped per topic: it is possible to create a new version of a model and use it independently from the original one. All versioned copies are reported as children nodes of a model in this list.
 
-![](https://lh5.googleusercontent.com/0s18rJPSSPwFbFdmebZjwHJaa0Ot12hNqreVW2idWobBMvZIuXUEAnC2kVUmxK1twhW1EuJyrEzZUADSzh8Hpml1Cn8T_48lAtjikuw2qs38A5BhwtsSb3zKuYtjjVIOiwmWvXTU)
+![](https://lh5.googleusercontent.com/0s18rJPSSPwFbFdmebZjwHJaa0Ot12hNqreVW2idWobBMvZIuXUEAnC2kVUmxK1twhW1EuJyrEzZUADSzh8Hpml1Cn8T\_48lAtjikuw2qs38A5BhwtsSb3zKuYtjjVIOiwmWvXTU)
 
 Every model is uniquely identified by a “topic”. Other information reported in this list are:
 
@@ -147,15 +145,15 @@ When pressing the New Model button, a wizard is prompted, in order to fill out a
 
 In thefirst panel, some properties are required:
 
-* **Topic**, identifying the current model; the model name is defined per tenant \(company id\), site and environment.
+* **Topic**, identifying the current model; the model name is defined per tenant (company id), site and environment.
 * **Description**
-* **Total number of possible solutions** \(e.g. 2 for the geometric problem described above\)
+* **Total number of possible solutions** (e.g. 2 for the geometric problem described above)
 * **Bucket name**, in Google Cloud Storage, where all CSV files will be saved, defined as a directory in Platform
-* **Number of training steps**\(default value: 1000\), used to repeat multiple times the examples provided in input
-* **Number of nodes per layer** \(default value: 10\)
+* **Number of training steps**(default value: 1000), used to repeat multiple times the examples provided in input
+* **Number of nodes per layer **(default value: 10)
 * **Optional server-side javascript action to execute after a prediction**, for example to read the solutions just reckoned and use them somewhere, together with other application data.
 
-![](https://lh6.googleusercontent.com/RP6hjI7szAyxAYEcEJBlAhVMUto9bzAfDwD9y5fmutkDYY8jIruiUT-SwgIZ48zzOats7mkP8m6AW-qLtpku8Yj_ULaDplfjqB9zvhXwZX7jM7jtFffcFsyqQcixFzGHfr7-fj4X)
+![](https://lh6.googleusercontent.com/RP6hjI7szAyxAYEcEJBlAhVMUto9bzAfDwD9y5fmutkDYY8jIruiUT-SwgIZ48zzOats7mkP8m6AW-qLtpku8Yj\_ULaDplfjqB9zvhXwZX7jM7jtFffcFsyqQcixFzGHfr7-fj4X)
 
 Once filled out all required information, the wizard prompts a second panel, where a description must be provided for each solution, representing something understandable for the end user.
 
@@ -163,11 +161,11 @@ In the previous panel the total number of solutions has been prompted: here it i
 
 ![](https://lh6.googleusercontent.com/GpKrK7uWsi9jfthBqKqbrFvo3sfxNg253iR6H1aXXqXerORge0IpVEIey0MoLtWz6Bnh5X0s7o7gSSMwcEME4CsnVc6BLikkf0uOr1sQHULuaaXkr-yIsnt07ANpbeAaAiIMnQr6)
 
-Finally, the third panel in the wizard, “Data Extraction” allows to define a SQL query to use to fetch data for the training/testing, in terms of problems \(not solutions too\).
+Finally, the third panel in the wizard, “Data Extraction” allows to define a SQL query to use to fetch data for the training/testing, in terms of problems (not solutions too).
 
 A “Test Query “ button can be used to test the correct syntax of the typed query.
 
-![](https://lh5.googleusercontent.com/21zGoWom1lUiN5JUpBkuZUKfvsFnQE9HhD52MkasW3cCwU1t2q_AlinjQ0-MH1-yFbXU-hhukBfB3YwrL63a3-RS7_YQbWqQVZGN_o9MUAlfjuVwognH_8JVTRgoyd6KDPSCidUn)
+![](https://lh5.googleusercontent.com/21zGoWom1lUiN5JUpBkuZUKfvsFnQE9HhD52MkasW3cCwU1t2q\_AlinjQ0-MH1-yFbXU-hhukBfB3YwrL63a3-RS7\_YQbWqQVZGN\_o9MUAlfjuVwognH\_8JVTRgoyd6KDPSCidUn)
 
 This query is not necessary in case data for training/testing is provided through external CSV files.
 
@@ -184,13 +182,13 @@ Once completed the definition of a model through the wizard described in the pre
 
 In the detail model window, there are 3 buttons which allow to execute the training, testing and prediction.
 
-![](https://lh6.googleusercontent.com/KMCIwq9zo3i5LKicWdvN_Qq5GbHTBq8qtmpW2CV6R1Z8LN5Z5AkhCAm3U6LXlXQiCI1Z5-pQiyCWmllP-x1MFq2fPcJy0AmORYviadq7CHxj8vdGGBWIsPhylrrzc7Btx5zlhsq5)
+![](https://lh6.googleusercontent.com/KMCIwq9zo3i5LKicWdvN\_Qq5GbHTBq8qtmpW2CV6R1Z8LN5Z5AkhCAm3U6LXlXQiCI1Z5-pQiyCWmllP-x1MFq2fPcJy0AmORYviadq7CHxj8vdGGBWIsPhylrrzc7Btx5zlhsq5)
 
 #### **Training in action**
 
 When pressing the training button, a Training window is displayed. Thanks to this window, it is possible to train the model any number of times, starting either from a CSV file written externally and uploaded to Platform or starting from the SQL query defined previously.
 
-![](https://lh5.googleusercontent.com/oKeOkJV48La-a1gwFNTU0kc5QL6ATCrC1AQQT6jmULUUCb5ge1z8l9Zxa8T7FFL_7XvA6-Cs_f4nuSpNhizlNuhurV50DJPGMHCLK3H9b4tFGP0B2q_0mRqoZuB2pPt35SxRQGKg)
+![](https://lh5.googleusercontent.com/oKeOkJV48La-a1gwFNTU0kc5QL6ATCrC1AQQT6jmULUUCb5ge1z8l9Zxa8T7FFL\_7XvA6-Cs\_f4nuSpNhizlNuhurV50DJPGMHCLK3H9b4tFGP0B2q\_0mRqoZuB2pPt35SxRQGKg)
 
 This wizard guides the user step by step, starting from the choice of which source to use to train the model: a CSV file or a SQL query.
 
@@ -208,7 +206,7 @@ In the first case, you can easily create an hand-written CSV.
 
 In the latter case, you have to provide the real file that TensorFlow requires.
 
-![](https://lh3.googleusercontent.com/5W3q8KFtkpqYoo00Ye9D5-cwCSuXChW9e8cvg3vwivc6yiVvTYs3kdk6QlvOvb9UEOHdzkCkXKjF59KYgRd_vWIQ6nhfpptpy0GolMPz7OI6N8crgZNAsZjKRFRuS4K7fL1lnmz5)
+![](https://lh3.googleusercontent.com/5W3q8KFtkpqYoo00Ye9D5-cwCSuXChW9e8cvg3vwivc6yiVvTYs3kdk6QlvOvb9UEOHdzkCkXKjF59KYgRd\_vWIQ6nhfpptpy0GolMPz7OI6N8crgZNAsZjKRFRuS4K7fL1lnmz5)
 
 That file must respect the following requirements:
 
@@ -219,10 +217,9 @@ That file must respect the following requirements:
 For example, in case of recognizing the right geometric shape between a square and a rectangle, there are two only solutions and a CSV file could be something like:
 
 | 1,1,02,1,11,2,1 |
-| :--- |
+| --------------- |
 
-
-The first column is related to the length, the second to the height, the latter is the solution \(0 = square, 1 = rectangle\).
+The first column is related to the length, the second to the height, the latter is the solution (0 = square, 1 = rectangle).
 
 When such a CSV file is uploaded in Platform, it will be enhanced with additional information, needed by TensowFlow:
 
@@ -232,8 +229,7 @@ When such a CSV file is uploaded in Platform, it will be enhanced with additiona
 Consequently, the real CSV file passed forward to TensorFlow would be something like:
 
 | 3,2,0,10,1,1,01,2,1,12,1,2,1 |
-| :--- |
-
+| ---------------------------- |
 
 You can choose to upload the simple CSV file described initially or the complete CSV, including the first “header” row and the row index column.
 
@@ -241,27 +237,27 @@ Once provided this CSV file, click on the Next button on to bottom-right, in ord
 
 All training sessions are reported in the folder named “History”, available in the model detail window.
 
-![](https://lh3.googleusercontent.com/GkxoA5vxaVAa9Is-r8WmACGDzvoHX_NlG3A8EK36beJmwc_fWSCHCI4YvNgeguTGzantiK-AWZA-QDxtywzQwNtqPYRsU6-XbfvoX45EumdiXEd4KiKuoGCo3NOicDWEnLuuJC5m)
+![](https://lh3.googleusercontent.com/GkxoA5vxaVAa9Is-r8WmACGDzvoHX\_NlG3A8EK36beJmwc\_fWSCHCI4YvNgeguTGzantiK-AWZA-QDxtywzQwNtqPYRsU6-XbfvoX45EumdiXEd4KiKuoGCo3NOicDWEnLuuJC5m)
 
 An alternative to uploading an hand-written CSV file is reading application data through the execution of a SQL query.
 
-![](https://lh3.googleusercontent.com/pOzTijbS86BQzad3KQHF_xK_xaoPwtWxEDXAYUFUvzis7R-awD7H-2cYEBBteO2x5IyBLdsjiUW689_mPsE1wCo_oEA6pRATLdoKBqJV4U3DFJpWHpLIQ7lmI-ER2TNgCAdI3Bh2)
+![](https://lh3.googleusercontent.com/pOzTijbS86BQzad3KQHF\_xK\_xaoPwtWxEDXAYUFUvzis7R-awD7H-2cYEBBteO2x5IyBLdsjiUW689\_mPsE1wCo\_oEA6pRATLdoKBqJV4U3DFJpWHpLIQ7lmI-ER2TNgCAdI3Bh2)
 
 In this case,the SQL query must be related to the data problem only, not the solutions.
 
 It is possible to specify from which row starting the data reading and how many rows to read.
 
-These two settings are helpful when you are using the same SQL query multiple times \(for multiple training sessions\), but you want to provide every time a different set of rows, otherwise the training would be the same and consequently useless.
+These two settings are helpful when you are using the same SQL query multiple times (for multiple training sessions), but you want to provide every time a different set of rows, otherwise the training would be the same and consequently useless.
 
 In case of SQL Query, the next step is showing all trained data about problems and providing the right solution for each problem in a grid.
 
-The first column in the grid is editable and represents the solution for each row \(for each problem\).
+The first column in the grid is editable and represents the solution for each row (for each problem).
 
 You have to fill out such column and provide the right solution.
 
 You are free to fill out any number of rows: only the ones filled will be passed forward to TensorFlow, in order to train the model.
 
-![](https://lh3.googleusercontent.com/7tbxjsmJfdXzbPEfAWbtvs3mVSWkFqr-1B9NN73gfk10rpwnb9NGaCO4_LnuYn4Thp1jGuyg4VjfF_Jp_Y_IiHxWbIRaBr6ub8r6QBysIGyIMCMMppgnTj0I1E7tVR5rEDIa35qn)
+![](https://lh3.googleusercontent.com/7tbxjsmJfdXzbPEfAWbtvs3mVSWkFqr-1B9NN73gfk10rpwnb9NGaCO4\_LnuYn4Thp1jGuyg4VjfF\_Jp\_Y\_IiHxWbIRaBr6ub8r6QBysIGyIMCMMppgnTj0I1E7tVR5rEDIa35qn)
 
 Again, you can see the history of all training sessions through the second folder.
 
@@ -289,13 +285,13 @@ In case of CSV file, thismust contain only problem data, NOT solutions,since sol
 
 In case of a SQL query, the default query provided when defining the model is prompted. You can pass it forward or change its WHERE conditions, for example by reducing the amount of records to pass forward or limit the record set.
 
-![](https://lh6.googleusercontent.com/zmHU1-_m9Zp75Qj-NvsCkMpRezZcdetAlR2kdGi-9VTFk-KtzuIyIYTV5N0Lt_GAYPeGo_oweodPA_QK_Cmf9cuA0vBvoWe5JvASv4cjeBo-VdDjaaSGT80ihnFO_PWxha9mtbEQ)
+![](https://lh6.googleusercontent.com/zmHU1-\_m9Zp75Qj-NvsCkMpRezZcdetAlR2kdGi-9VTFk-KtzuIyIYTV5N0Lt\_GAYPeGo\_oweodPA\_QK\_Cmf9cuA0vBvoWe5JvASv4cjeBo-VdDjaaSGT80ihnFO\_PWxha9mtbEQ)
 
 Here the first column is about the solution, which will be sorted out automatically from the prediction activity.
 
 After executing a prediction, solutions sorted out by TensorFlow have been gathered and stored by Platform, together with the unique identifier of each record passed in input.
 
-In this way, it is possible to get this combination **&lt;problem id, solution&gt;** and move them to application tables.
+In this way, it is possible to get this combination** \<problem id, solution>** and move them to application tables.
 
 These solutions can be moved to the application database through the optional “**Prediction field**” in the “**Extraction data**” folder of the model definition: when it is specified, the values for predictions will be stored in that field automatically.
 
@@ -303,18 +299,18 @@ In case of custom needs, including complex business logic to fire after a predic
 
 The server-side javascript action receive in input this attributes in the “vo” predefined object:
 
-* **startTime** \(e.g. “2018/03/23 14:57:30”\)
+* **startTime** (e.g. “2018/03/23 14:57:30”)
 * **topic**
-* **duration** \(expressed in seconds\)
-* **cmd** \(“prediction”\)
+* **duration** (expressed in seconds)
+* **cmd** (“prediction”)
 * **appId**
 * **siteId**
 * **processId**
-* **fileName** \(the CSV file stored in Google Cloud Storage, containing the solutions for each row in input\)
-* **env** \(Platform execution environment\)
+* **fileName** (the CSV file stored in Google Cloud Storage, containing the solutions for each row in input)
+* **env** (Platform execution environment)
 * **companyId**
-* **bucketName** \(Bucket name in the Google Cloud Storage, containing the CSV file received\)
-* **success** \(true or false\)
+* **bucketName** (Bucket name in the Google Cloud Storage, containing the CSV file received)
+* **success** (true or false)
 
 Thanks to it, you can download the CSV file, if needed, or simply used this event to manage data already loaded in your application tables or, in any case, in the table named CON101\_TENSOR\_FLOW\_RESULTS.
 
@@ -322,13 +318,12 @@ Thanks to it, you can download the CSV file, if needed, or simply used this even
 
 TensorBoard is a built-in web console available to check out how the machine learning model is working. It provides a series of diagnosis features to use in order to get more information about the accuracy of the model:
 
-Scalars- provide a set of charts related to the accuracy of the neural network, like “Loss”, reporting the accuracy \(0..1\) along the number of steps \(e.g. 1..1000\)
+Scalars- provide a set of charts related to the accuracy of the neural network, like “Loss”, reporting the accuracy (0..1) along the number of steps (e.g. 1..1000)
 
 ![](https://lh4.googleusercontent.com/Sk8YLaCfELRoVOC5tPAkRubXWN6tRYi1JMiWjMXHZZr6vEQyvU9j19l3VwKP1FRO4aYnD4v8HAIji-kDchpvU8oc7-knWimu9ppyWQ08cj4gRNC89-nD79D5Gvt2ihRkX88ScbxY)
 
 Graphs- a graphical representation of the neural network, as it has been defined internally by TensorFlow.
 
-Distributions- reporting the chart for each solution defined: each solution is represented on a single chart, which is related to a specific layer of the neural network \(hidden\_layer\_xxx\) and the accuracy for each layer.
+Distributions- reporting the chart for each solution defined: each solution is represented on a single chart, which is related to a specific layer of the neural network (hidden\_layer\_xxx) and the accuracy for each layer.
 
-![](https://lh3.googleusercontent.com/PXVcRRJF2EUKQh9vDc7-oAlXRHbXOZdCjskdcts0IMWoXEtQ1fAaA-yxaKeQZbgG1ili5nGatTCD-yyvQ_GzyG-RcVBr3SBCJSdf6N2o-hd__JEMz5_9-0S0-6Xmr4UayhQYKg4m)
-
+![](https://lh3.googleusercontent.com/PXVcRRJF2EUKQh9vDc7-oAlXRHbXOZdCjskdcts0IMWoXEtQ1fAaA-yxaKeQZbgG1ili5nGatTCD-yyvQ\_GzyG-RcVBr3SBCJSdf6N2o-hd\_\_JEMz5\_9-0S0-6Xmr4UayhQYKg4m)

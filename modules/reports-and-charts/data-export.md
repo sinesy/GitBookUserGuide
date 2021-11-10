@@ -10,7 +10,7 @@ The data list comes from
 Exported data formats are:
 
 * **csv**, with comma o semi-colon
-* **4WS.Trade data export format** \(a sort of csv\)
+* **4WS.Trade data export format** (a sort of csv)
 * **SQL insert instructions**, whose syntax depends on the selected target database
 * **Insert data to Google Datastore**
 * **Update data to Google Datastore**
@@ -22,7 +22,7 @@ Moreover, a group of export tasks can be defined, so that each export task in th
 
 It is possible to specify the final destination of the generated files:
 
-* a directory defined through the App Designer, so that the file can be stored on the server file system or on the Google Cloud \(Cloud Storage, Drive, etc\)
+* a directory defined through the App Designer, so that the file can be stored on the server file system or on the Google Cloud (Cloud Storage, Drive, etc)
 * on a virtual folder within an FTP server
 
 Finally, it is possible to automate data export through the embedded Scheduler available in the App Designer, by choosing the export type:
@@ -39,7 +39,7 @@ The definition of a task starts from the **Table Export** menu item, within the 
 
 Table Export functionalities shows all tasks defined until now.
 
-![](../../.gitbook/assets/export_lista.png)
+![](../../.gitbook/assets/export\_lista.png)
 
 Here defined tasks are reported ordered by the export order, defined at task level.
 
@@ -49,7 +49,7 @@ When pressing the Add button, it is possible to create a new export definition. 
 
 A task definition is split up in a sequence of panels, composing a wizard, which drives the user along the definition process.
 
-![](../../.gitbook/assets/export_def.png)
+![](../../.gitbook/assets/export\_def.png)
 
 ## Data export definition
 
@@ -60,24 +60,24 @@ The first step involves the definition of the export format and destination, thr
 It includes the following input fields:
 
 * **Description** - described the jon
-* **Enabled** - flag used to ignore the job execution within an automated export performed by the Scheduler, in case of export of a set of jobs \(export of a group or export all\)
+* **Enabled** - flag used to ignore the job execution within an automated export performed by the Scheduler, in case of export of a set of jobs (export of a group or export all)
 * **Delete content** - not managed at the moment
 * **Export type** - allows to define the export format: CSV, 4WS.Trade data format, SQL insert instructions, insert/update records to Google Datastore, xlsx
-* **Target database type** - optional; used in case of SQL export type: it define the destination database type \(e.g. Oracle, SQL Server\), in order to generate SQL instructions compatible with the selected database type
+* **Target database type** - optional; used in case of SQL export type: it define the destination database type (e.g. Oracle, SQL Server), in order to generate SQL instructions compatible with the selected database type
 * **File name** - export file name
-* **File name policy** - optional value; if specified, the file name is ignored \(except for the file extension, e.g. .csv, .txt\) and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or **'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
-* **Group name** - optional: if specified, it means the current task will be part of a group of jobs sharing the same group name; if this setting is specified, **the "Group zip file name" setting must be specified as well, for ONE job of the group \(the last job\).** None of generated files will be moved to the specified destination, but a single file will be created in the destination location, a zip file, containing all generated files and having file name equal to the group file name property
-* **Group zip file name** - it must be used together with the "group name" field; if specified, at the end of the current job export task, all files already generated will be compressed together in the same .zip file, whose name is the one specified here; that means that _**only the last task in the group should have this field filled**_, since only at the end of all exported tasks, a .zip file should be generated!
-* **Group file name policy** - optional value; if specified, the .zip file name is ignored and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or **'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
+* **File name policy **- optional value; if specified, the file name is ignored (except for the file extension, e.g. .csv, .txt) and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or** 'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
+* **Group name** - optional: if specified, it means the current task will be part of a group of jobs sharing the same group name; if this setting is specified,** the "Group zip file name" setting must be specified as well, for ONE job of the group (the last job).** None of generated files will be moved to the specified destination, but a single file will be created in the destination location, a zip file, containing all generated files and having file name equal to the group file name property
+* **Group zip file name **- it must be used together with the "group name" field; if specified, at the end of the current job export task, all files already generated will be compressed together in the same .zip file, whose name is the one specified here; that means that _**only the last task in the group should have this field filled**_, since only at the end of all exported tasks, a .zip file should be generated!
+* **Group file name policy **- optional value; if specified, the .zip file name is ignored and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or** 'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
 * **Export order** - this field defines the execution order for a set of jobs; it is used only by the Scheduler to figure out the execution order, in case of "export of a group" or "export all" option
-* **Action before export** - server-side javascript action which can be optionally executed before starting the execution process
-* **Action after export** - server-side javascript action which can be optionally executed after the execution process
-* **Export column headers** - checkbox used to export a first row in a CSV file containing the column headers, reckoned as the alias from the SELECT clause. This additional row can be added only when exporting a standard CSV file 
-* **Parameters filler** - it is likely that many SQL extraction queries \(see next section "Extract data from"\) can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically. 
-  * In case of a manual execution, the end user can select a task definition from the tasks list \(see previous section\) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly. 
+* **Action before export **- server-side javascript action which can be optionally executed before starting the execution process
+* **Action after export **- server-side javascript action which can be optionally executed after the execution process
+* **Export column headers** - checkbox used to export a first row in a CSV file containing the column headers, reckoned as the alias from the SELECT clause. This additional row can be added only when exporting a standard CSV file&#x20;
+* **Parameters filler** - it is likely that many SQL extraction queries (see next section "Extract data from") can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically.&#x20;
+  * In case of a manual execution, the end user can select a task definition from the tasks list (see previous section) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly.&#x20;
   * As an alternative, an export process can be started automatically, using the Scheduler. In such a scenario, the parameter values must be provided automatically: for that reason, a business component for a list can be set in "Parameter filler" field. This business component must contain in the SELECT clause all required parameter names. When executing the task, first the business component will be executed and the list of parameter values are retrieved; then for each record read, the job is executed, so that it is possible to automate the job execution multiple time, once for each record read from the business component.
 
-**Copy to folder** - it is optional and can be filled out, in case the exported files must be saved on a directory \(server file system, Google cloud\)
+**Copy to folder **- it is optional and can be filled out, in case the exported files must be saved on a directory (server file system, Google cloud)
 
 **Copy to FTP** - it is optional and can be filled out, in case the exported files must be moved to a virtual folder within an FTP server.
 
@@ -87,7 +87,7 @@ For example, a valid folder definition can be:
 
 LISTINO\_:ENTE\_:FILIALE
 
-Moreover, the other FTP settings \(except for the FTP port\) can be dynamically defined, using variables expressed as :XXX. **Variable values can be set either through the scheduled process parameters or through application/global parameters.** In this way, it is possible to decouple the job definition from the environment where it is executed, allowing to export the job definition and set variables with different values for different environments.
+Moreover, the other FTP settings (except for the FTP port) can be dynamically defined, using variables expressed as :XXX. **Variable values can be set either through the scheduled process parameters or through application/global parameters.** In this way, it is possible to decouple the job definition from the environment where it is executed, allowing to export the job definition and set variables with different values for different environments.
 
 **Additional Settings**
 
@@ -137,7 +137,7 @@ In this example the SQL query exports 5 fields, where one is named "COMPANY\_ID"
 
 The second step in the job definition is related to the data extraction query.
 
-![](../../.gitbook/assets/export_query.png)
+![](../../.gitbook/assets/export\_query.png)
 
 This SQL query can be defined in 2 ways:
 
@@ -152,11 +152,11 @@ Another prompt is always shown to the user at this state: whether updating outpu
 
 In the previous step, the user must specify the main query, i.e. the extraction query to execute.
 
-![](../../.gitbook/assets/export_otherqueries.png)
+![](../../.gitbook/assets/export\_otherqueries.png)
 
 Here it is possible to specify
 
-* an additional query, named "Query executed with an empty db" can be defined; it will be used when \(i\) manually starting the task and the user has chosen such an option when prompted or \(ii\) when automatically starting the task by the Scheduler and the Scheduler parameter named "QUERY\_TYPE" has been specified and set to "I"
+* an additional query, named "Query executed with an empty db" can be defined; it will be used when (i) manually starting the task and the user has chosen such an option when prompted or (ii) when automatically starting the task by the Scheduler and the Scheduler parameter named "QUERY\_TYPE" has been specified and set to "I"
 * SQL statements executed before or after the query for empty db
 * SQL statements executed before or after the standard query
 
@@ -166,7 +166,7 @@ The last two options will be automatically executed by Platform, without any pro
 
 This step allows the user to change a few settings related to the output fields: these are automatically defined by Platform, starting from the main query defined at step 2.
 
-![](../../.gitbook/assets/export_fields.png)
+![](../../.gitbook/assets/export\_fields.png)
 
 If needed, the user can change the target field type or its format, for instance in case of a date type, when it must be converted to a text having a specific format. If not specified, a date type input field is automatically converted to a text value having format "yyyy-MM-dd HH:mm:ss"
 
@@ -176,11 +176,11 @@ The order property plays a very important role: it represents the order inside a
 
 This is the last step in the export task definition: it reports all bind variables found in the SQL extract query.
 
-![](../../.gitbook/assets/export_params.png)
+![](../../.gitbook/assets/export\_params.png)
 
 The use has the chance to specify here the values for all or part of them.
 
-All missing values will be prompted when manually executing a data export \(see first section\).
+All missing values will be prompted when manually executing a data export (see first section).
 
 In case the export is automatically started by the Scheduler, all required values must be specified either as Scheduler parameters or through the **Parameters filler** described in the first step.
 
@@ -190,7 +190,7 @@ If there are bind variables not filled, the export process will fail with an err
 
 Platform Scheduler includes 3 alternative ways to automate the data export execution.
 
-![](../../.gitbook/assets/export_sched.png)
+![](../../.gitbook/assets/export\_sched.png)
 
 **Export single job** - The first option is executing a single data export: in this case, you have also to specify which job to execute, through the "Command to run" field, which is filtered by all defined jobs.
 
@@ -200,7 +200,7 @@ Platform Scheduler includes 3 alternative ways to automate the data export execu
 
 Bind variables are filled according to the following policy:
 
-* values coming from the "Parameters" folder \(last step of job definition\)
+* values coming from the "Parameters" folder (last step of job definition)
 * values defined though the Scheduler parameters
 * values coming from the execution of the SQL query included in the Parameter Filler component
 
@@ -252,4 +252,3 @@ utils.executeQueryWithCallback(
 
 utils.setVariable("BRANCH_CODES",JSON.stringify(map));
 ```
-

@@ -6,7 +6,7 @@ Over time, Jira increased in popularity and features and now it includes a varie
 
 * project management and monitoring
 * agile team oriented tools, including Scrum dashboards and reports, kanban, backlog, epics, sprints and user stories
-* project versioning and planning 
+* project versioning and planning&#x20;
 * bug and activities tracking system
 
 Moreover, Jira provides a powerful Rest API through which it is possible to connect Jira to external applications and tools.
@@ -28,7 +28,7 @@ In order to make it possible for Platform to communicate with Jira, a few settin
 
 * open Application detail window in the App Designer and select to the Application parameters folder
 * expand the JIRA group and fill out the two required parameters:
-  * **JIRA\_URL** - the URL where Jira cloud is installed \(e.g. yourcompanydomain.atlassian.net\)
+  * **JIRA\_URL** - the URL where Jira cloud is installed (e.g. yourcompanydomain.atlassian.net)
   * **JIRA\_PROJECT** - the Jira project name, you have previously defined in Jira
 
 Once saved these values, reload the App Designer, in order allow Platform to add a new menu items about Jira.
@@ -38,7 +38,7 @@ Once saved these values, reload the App Designer, in order allow Platform to add
 Before connecting Platform to Jira, be sure to have a correct Jira cloud environment already available. Within this environment, you have to define:
 
 * Jira users
-* Jira groups \(if any\) and linked users
+* Jira groups (if any) and linked users
 * a Jira project and its permission schema, where users/groups must have been assigned to such a schema
 
 An **agile** setup inside Jira is recommended, in order to use all the amazing features provided by Jira and included in Platform as well.
@@ -59,16 +59,16 @@ As an alternative, you can **Import all users**: in this case, Platform will als
 
 ## User authentication
 
-Once configure what reported above, a Platform user \(which is also a Jira user\) can use any of the functionalities related to Jira in the App Designer. The first time he does it, an input dialog is showed, prompting for the password:
+Once configure what reported above, a Platform user (which is also a Jira user) can use any of the functionalities related to Jira in the App Designer. The first time he does it, an input dialog is showed, prompting for the password:
 
 * in case Platform has been connected to a Cloud Jira installation, the password is the auth token, specific for each user, which can be accessed following the web page reported in foreground
-* in case of a Server \(local\) installation of Jira, the password is NOT the one used by the Jira user to access it, but it is the API password. Each user can generate it by accessing the first time Jira, go to User Profile and press Set Password to specify it.
+* in case of a Server (local) installation of Jira, the password is NOT the one used by the Jira user to access it, but it is the API password. Each user can generate it by accessing the first time Jira, go to User Profile and press Set Password to specify it.
 
 ## Project issues
 
 There are two functionalities available.
 
-**Assigned issues** - related to the only issues assigned to the current logge user.
+**Assigned issues **- related to the only issues assigned to the current logge user.
 
 **All issues**, independent from the assigned user and not necessarelly bounded to a sprint.
 
@@ -78,13 +78,13 @@ This window includes a series of very helpful views, organized hierarchically, f
 
 **Boards** - a board is a Jira organization of issues; typically every Jira project has a default board; optionally, additional boards can be created.
 
-**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board.
+**Epics** - in the agile methodology (Scrum), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board.
 
 Epics are optional and it is possible to simply arrange a single board directly to a set of sprints, which represents a very common scenario.
 
 ![](../.gitbook/assets/epics.png)
 
-**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration.
+**Sprints** - in the agile methodology (Scrum), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration.
 
 The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released.
 
@@ -92,7 +92,7 @@ When selecting a board, the list of sprints are filtered by the currently select
 
 ![](../.gitbook/assets/sprints.png)
 
-**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\).
+**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started (to do), in progress and completed (done).
 
 This view shows the backlog related to the current selected sprint. If not selected, the "active" sprint is used as default setting.
 
@@ -106,12 +106,12 @@ This view shows the backlog related to the current selected sprint. If not selec
 
 The last panel includes a few filter conditions, used to additionally apply filtering values to the issues list:
 
-* **issues state**: to do, in progress, done - the default setting allows to show all issues but not the ones already closed \(done\)
+* **issues state**: to do, in progress, done - the default setting allows to show all issues but not the ones already closed (done)
 * **issue key** - helpful when searching for a specific issue by its key
 
-If a board and sprint has been selected, the "**Report**" button allows to open a web page where showing all available reports from Jira \(e.g. burndown chart, etc\).
+If a board and sprint has been selected, the "**Report**" button allows to open a web page where showing all available reports from Jira (e.g. burndown chart, etc).
 
-![](../.gitbook/assets/j_report.png)
+![](../.gitbook/assets/j\_report.png)
 
 It is possible to show the issue details by double clicking on an issue.
 
@@ -130,7 +130,7 @@ Finally, there are a few commands you can execute form the issue detail window:
 * **Assign to me** - allows to assign the issue to the current logged user
 * **Add comment**
 * **Add worklog**
-* **Change state** - through it, you can change the current issue state: to do, in progress, done
+* **Change state **- through it, you can change the current issue state: to do, in progress, done
 * **Set a version**
 
 Starting from the issues list or from the menu bar, it is also possible to create a new issue from scratch.
@@ -146,6 +146,5 @@ You have always to specify:
 
 Optionally, in case you are defining user stories in a sprint, you can also define:
 
-* a sprint to use to link the issue \(the user story\) to that sprint
+* a sprint to use to link the issue (the user story) to that sprint
 * the story points for that user story
-

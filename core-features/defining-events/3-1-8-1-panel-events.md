@@ -4,7 +4,7 @@ A panel can fire several events, according to the panel type.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/panelEvents-1024x519.jpg)
 
-In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
+In case of a **grid ** (or ** pivot grid** ), these are the allowed events:
 
 * row click
 * row double click
@@ -13,9 +13,9 @@ In case of a **grid**  \(or  **pivot grid** \), these are the allowed events:
 * before the deleting of a row
 * before inserting data in grid/form
 * before editing data in grid/form
-* before data loading 
+* before data loading&#x20;
 
-```text
+```
 gridXXX.store.baseParams.streamExport = "Y"; 
 // use this scriptet to force the grid data export in stream mode, 
 // i.e. to generate the CSV content step by step, when exporting the grid content
@@ -40,11 +40,11 @@ gridXXX.store.baseParams.streamExport = "Y";
 * column model creation
 * multiselection in grid
 * column headers
-* before import row \(Javascript Server only\)
-* after import row \(Javascript Server only\)
+* before import row (Javascript Server only)
+* after import row (Javascript Server only)
 * before export
 
-```text
+```
 return { // all these attributes are optional
   cols: [ 
    // list of columns to prompt in the Export Dialog window: 
@@ -71,7 +71,7 @@ In case of a **detail form** , these are the allowed events:
 * after data saving in insert mode
 * after data saving in edit mode
 * after the deleting of the content
-* on button click \(listen to any additional button added to the top toolbar\)
+* on button click (listen to any additional button added to the top toolbar)
 
 In case of a **tree** , these are the allowed events:
 
@@ -91,4 +91,3 @@ In case of a **detail form** , these are the allowed events:
 * Before data load
 
 For each event it is possible to link an action defined through the "Actions" menu item.
-

@@ -20,9 +20,9 @@ The following window is opened:
 
 Through it a few settings can be set:
 
-* **Border control** - the type of border to apply the selected panel \(e.g. rounded, no border, etc.\)
-* **Border color** - border color for the selected panel 
-* **Shadow direction** - in case of a shadow applied to the panel \(i.e. the shadow color has been set\), it defines the shadow direction \(left/right/top/bottom\) 
+* **Border control** - the type of border to apply the selected panel (e.g. rounded, no border, etc.)
+* **Border color** - border color for the selected panel&#x20;
+* **Shadow direction** - in case of a shadow applied to the panel (i.e. the shadow color has been set), it defines the shadow direction (left/right/top/bottom)&#x20;
 * **Shadow color** - set the color for a shadow; only if set, the shadow is applied
 * **Shadow elevation** - the shadow thickness
 
@@ -37,12 +37,11 @@ Once entered the Controls folder in the panel definition, styles can be defined 
 Styles properties for a graphics control are:
 
 * **Show counter character** - checkbox used to enable/disable the counting of character when typing text in an input field
-* **Disable self correction** - checkbox used to enable/disable the auto-correction of text, when typing an input field
-* **Border control** - the type of border to apply the selected panel \(e.g. rounded, no border, etc.\)
+* **Disable self correction **- checkbox used to enable/disable the auto-correction of text, when typing an input field
+* **Border control** - the type of border to apply the selected panel (e.g. rounded, no border, etc.)
 * **Background color** - background color for the input field
 * **Fore color** - foreground color for the input field
 * **Font face** - font name
 * **Font style** - font style
 * **Font size** - font size
 * **Text align** - text alignment
-

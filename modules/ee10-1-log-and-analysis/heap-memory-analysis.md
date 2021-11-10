@@ -14,10 +14,9 @@ For this reason, it is important to pay attention to the objects which are not b
 
 The result is reported in a dashboard, including the following information:
 
-* **Memory distribution** – it shows how data is spread along the memory: it is likely that the primitive data will be the most representative and the percentage for not primitive data could be so little when compared with raw data that the pie chart could not be able to show it
-* **Memory distribution, no basic data** – this is the memory occupation for all data but the raw data; this can be helpful to identify problems related to a too high number of user sessions or metadata instances
-* **Occupied space** – another representation of the same content, not expresses in % but in absolute value; in a normal situation metadata should consume a few Mbytes, same for user sessions and server-side javascript objects 
-* **Js engines** – in case of multiple executions of server-side javascript actions, as for web services, this is the amount of data instantiated inside the javascript engine: the more web service calls there are, the more javascript engines will be under execution
-* **Session Nr** – the number of user sessions currently active, which are related to the number of end users currently using the app; user sessions should never be more the a few hundreds
-* **Metadata Nr** – the number of metadata instances, which should be as many as the number of supported languages, per app
-
+* **Memory distribution **– it shows how data is spread along the memory: it is likely that the primitive data will be the most representative and the percentage for not primitive data could be so little when compared with raw data that the pie chart could not be able to show it
+* **Memory distribution, no basic data **– this is the memory occupation for all data but the raw data; this can be helpful to identify problems related to a too high number of user sessions or metadata instances
+* **Occupied space **– another representation of the same content, not expresses in % but in absolute value; in a normal situation metadata should consume a few Mbytes, same for user sessions and server-side javascript objects&#x20;
+* **Js engines **– in case of multiple executions of server-side javascript actions, as for web services, this is the amount of data instantiated inside the javascript engine: the more web service calls there are, the more javascript engines will be under execution
+* **Session Nr **– the number of user sessions currently active, which are related to the number of end users currently using the app; user sessions should never be more the a few hundreds
+* **Metadata Nr **– the number of metadata instances, which should be as many as the number of supported languages, per app
