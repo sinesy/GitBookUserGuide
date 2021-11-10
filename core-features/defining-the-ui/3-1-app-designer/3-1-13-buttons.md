@@ -19,6 +19,8 @@ Through buttons it is possible to open windows from parent windows, execute busi
 
 
 
+### Link-type buttons, alignments and group of buttons
+
 For **grid**, **form** and** buttons panels** the following additional properties are also available:&#x20;
 
 * **Group style** - in case a button is part of a group of buttons (i.e. the "Group name" property has been filled), it is possible to specify how to group of buttons must be rendered, among 3 alternatives; all buttons belonging to the same group must have the same group style, which can be:
