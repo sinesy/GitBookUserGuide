@@ -30,7 +30,9 @@ Optionally, it is also possibile to fine tune the dynamic filter behavior, using
 * **dynamicFiltersWidth **- this numeric property is not needed in most of the cases and it can be used in case you want to define a filter/operator combobox width different from the default value (200 pixels)
 * **dynamicFiltersGap **- this numeric property is not needed in most of the cases and it can be used in case you want to define a gap between the filter and operator comboboxes width different value from the one used as default (20 pixels).
 * **dynamicFilters** - this optional numeric property defines how many filters to show; if not specified, 5 filters are shown; if specified, you can define a lower number of filters 2-5 (no more than 5 is allowed)
-* **dynamicFiltersDeltaHeight **- this optional numeric property defines how many pixels to add (remove) after the last dynamic filter and before the Search/Clear buttons.
+*   **dynamicFiltersDeltaBeforeHeight **- this optional numeric property defines how many pixels to add (remove) before the first dynamic filter; helpful when using a custom theme where margins/insets/heights have been changed
+
+    **dynamicFiltersDeltaHeight **- this optional numeric property defines how many pixels to add (remove) after the last dynamic filter and before the Search/Clear buttons; helpful when using a custom theme where margins/insets/heights have been changed.
 
 Example of Additional Config field content of a Filter panel:
 
@@ -42,6 +44,7 @@ dynamicFiltersWidth: 150,
 dynamicFiltersGap: 10,
 dynamicFilters: 2,
 dynamicFiltersDeltaHeight: -50,
+dynamicFiltersDeltaBeforeHeight: -55,
 ```
 
 Result:
