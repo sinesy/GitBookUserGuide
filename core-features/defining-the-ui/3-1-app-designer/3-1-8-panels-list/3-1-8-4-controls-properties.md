@@ -68,6 +68,10 @@ Allowed application types for controls, according to the related database field 
 | Sequence                                     | Sequence                                                                                                                                                                  |
 | File identifier                              | File upload/download                                                                                                                                                      |
 
+
+
+### Files Management
+
 There is a difference between File upload/download, Image Path, File Path control types:\
 **File upload/download** – an upload/download button is showed as graphics control; through that button it is possible to show a dialog window used to download, upload, preview and delete a file; when uploading a file, this will be phisically stored in the server file system starting from the path specified through "directory upload" property in the form controls designer; when saving, the uploaded file will be stored within the following subfolders structure:\
 ///filename.xxx\
@@ -86,4 +90,68 @@ loadImagePanelXXX(vo);
 ```
 
 Note that it is allowed to insert/delete "virtual" controls in this list for added controls to form. This controls are not saved.\
-Not "virtual" controls are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model.
+Not "virtual" controls are automatically synchronized with the fields defined in the select clause of the bounded business component, which are automatically synchronized with the data fields defined in the bounded data model.
+
+
+
+### Progress bar
+
+In case the control type has "progress bar" type, such a control is always readonly and allows to show a rounded progress bar, starting from:
+
+* a **min value** - which must be specified through the corresponding control property; if not specified, it is assumed it is zero
+* a **max value** - which must be specified through the corresponding control property
+* the current value for the form panel vo's attribute
+
+The progress bar is shown with this default rendering:
+
+![](<../../../../.gitbook/assets/Schermata 2021-11-18 alle 18.26.41.png>)
+
+In the app.css file there is this default setting:
+
+```css
+/* progress bar */
+.x-progress-inner {
+	border-radius: 8px;
+}
+.x-progress-bar {
+  border-radius: 8px;
+}
+
+/* light green background color for the progress bar container */
+.x-progress-inner {
+  background-color: #e3f5e3;
+}
+
+/* green background color for the current value */
+.x-progress-bar {
+    background-color: #47ae46;
+    background-image: none;
+    border-top-color: #47ae46;
+    border-bottom-color: #47ae46;
+    border-right-color: #47ae46;
+}
+```
+
+Optionally, it is possible to change the bar background color from green/yellow/red, according to the current value and two limits:
+
+1. green: an integer value representing the interval \[0..green] where the bar is green colored
+2. red: an integer value representing the interval \[green..red] boundaries excluded, where the bar is yellow colored
+3. from the the "red" integer value, the bar is red colored
+
+![](<../../../../.gitbook/assets/Schermata 2021-11-18 alle 18.01.37.png>)
+
+![](<../../../../.gitbook/assets/Schermata 2021-11-18 alle 18.01.47.png>)
+
+![](<../../../../.gitbook/assets/Schermata 2021-11-18 alle 18.01.58.png>)
+
+Moreover, the current value and max value are reported below the bar.
+
+In order to activate the 3 color bar and current/max value labels, 3 additional properties must be set in the "additional config" property of the graphics control:
+
+```
+red: 40,
+green: 10,
+```
+
+In this example, the bar is green colored in the range \[0..10], yellow colored in the range \[11..39] and red colored in the range \[40...]
+
