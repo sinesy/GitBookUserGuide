@@ -28,7 +28,16 @@ For **grid**, **form** and** buttons panels** the following additional propertie
   * as a **single selection** group of buttons, i.e. all buttons are shown close to each other, with round boxes and only one can be clicked per time, since all buttons are toggle buttons; in such a scenario, it is also possible to use the "**Preset**" property to define the button in the group which must be pre-selected
   * as a **multiple selection** group of buttons, i.e. all buttons are shown close to each other, with round boxes and zero or more buttons can be clicked per time and all buttons are toggle buttons
 * **Group name **- used to define a group name (no spaces or special characters are allowed for the group name); all buttons belonging to the same group must have the same group name and they must be defined in a consecutive order.
-* **Alignment** - used to change the default horizontal alignment of a button: it is possibile to align the button to the right border of the panel; this feature is not available for a buttons panel, since its alignment is always horizontal centered.
+* **Alignment** - used to change the default horizontal alignment of a button: it is possibile to align the button to the right border of the panel; this feature is not available for a buttons panel, since its alignment is always horizontal centered. **In case you need to right-align a buttons panel, you can add to the "Additional Config" setting the following scriptlet:**
+
+```
+layoutConfig: {
+  padding:'5',
+  pack:'end',
+  align:'end'
+ },
+```
+
 * **Preset** - flag used in case of a group of panels having "Single selection" group style, to define the one only button in the group receiving a pre-selected state
 * **Button style** - it defines how the button will be rendered: the default style is as a button; as an alternative, it is possible to render it as a link
 
