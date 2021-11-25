@@ -97,7 +97,14 @@ The Advanced Filter is available starting from the Smart Filter: when the Smart 
 
 To sum up, in order to have an Advanced filter, it is needed to:
 
-* create an Editor Panel or a Filter Panel, containing the Smart Filter; such a panel is part of the window containing the grid and the Smart Filter works on such a grid
+*   create an Editor Panel or a Filter Panel, containing the Smart Filter; such a panel is part of the window containing the grid and the Smart Filter works on such a grid
+
+    If you use a Editor Panel you must set the advanced filter to grid
+
+```
+gridXXX.advancedFilterPanel = filterPanelYYY;
+```
+
 * create a second Filter Panel (the Advanced Filter), by clicking on the grid and select Add Filter; do not add this second panel to the window
 * fill in the Referred Panel property in the first panel, related to the Smart Filter Panel; fill it in with the second Filter Panel: in this way, the switcher icon on the Smart Filter will be rendered and used to open the Advanced Filter
 
