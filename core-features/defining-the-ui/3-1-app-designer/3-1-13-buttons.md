@@ -21,13 +21,13 @@ Through buttons it is possible to open windows from parent windows, execute busi
 
 ### Link-type buttons, alignments and group of buttons
 
-For **grid**, **form** and** buttons panels** the following additional properties are also available:&#x20;
+For **grid**, **form** and **buttons panels** the following additional properties are also available:&#x20;
 
 * **Group style** - in case a button is part of a group of buttons (i.e. the "Group name" property has been filled), it is possible to specify how to group of buttons must be rendered, among 3 alternatives; all buttons belonging to the same group must have the same group style, which can be:
   * as a **combobox**, i.e. all buttons belonging to the same group are shown within a combo button (split button), with the first button of the group directly shown as the first choice and directly clickable without opening the combo (helpful to quick choices)
   * as a **single selection** group of buttons, i.e. all buttons are shown close to each other, with round boxes and only one can be clicked per time, since all buttons are toggle buttons; in such a scenario, it is also possible to use the "**Preset**" property to define the button in the group which must be pre-selected
   * as a **multiple selection** group of buttons, i.e. all buttons are shown close to each other, with round boxes and zero or more buttons can be clicked per time and all buttons are toggle buttons
-* **Group name **- used to define a group name (no spaces or special characters are allowed for the group name); all buttons belonging to the same group must have the same group name and they must be defined in a consecutive order.
+* **Group name** - used to define a group name (no spaces or special characters are allowed for the group name); all buttons belonging to the same group must have the same group name and they must be defined in a consecutive order.
 * **Alignment** - used to change the default horizontal alignment of a button: it is possibile to align the button to the right border of the panel; this feature is not available for a buttons panel, since its alignment is always horizontal centered. **In case you need to right-align a buttons panel, you can add to the "Additional Config" setting the following scriptlet:**
 
 ```
@@ -53,7 +53,7 @@ Additional properties to set:
 
 ![](<../../../.gitbook/assets/Schermata 2021-11-10 alle 17.21.33.png>)
 
-Buttons aspect can be customize by overriding the CSS classed defined in the app.css file:
+Buttons aspect can be customize by adding to the theme.css specific application file, the following content:
 
 ```css
 /* group of buttons */
