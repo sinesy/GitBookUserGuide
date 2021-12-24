@@ -120,7 +120,7 @@ For more details see:
 
 **Hide toast message with alert messages (def. N)** - checkbox used to change the default behavior of the Alert functionality, i.e. showing a toast message each time an alert arrives on the UI. When checking this parameter, the toast message is omitted.
 
-**Show a popup message for the chat (Y/N) **- checkbox used to change the default behavior of the Alert functionality, which does NOT include any dialog message each time an alert arrives on the UI. When checking this parameter, the dialog message is showed. It would make sense to use only one of the two alternative described here: either the toast message or the dialog message.&#x20;
+**Show a popup message for the chat (Y/N)** - checkbox used to change the default behavior of the Alert functionality, which does NOT include any dialog message each time an alert arrives on the UI. When checking this parameter, the dialog message is showed. It would make sense to use only one of the two alternative described here: either the toast message or the dialog message.&#x20;
 
 **Do not allow to pass a SQL filter on panel loading** - checkbox used to block any additional condition when invoking the standard web service getlist, used to fetch a list of records (for a grid or a selector). If not checked, it is allowed to pass a SQL fragment to the base SQ query executed on the server side, which would represent a SQL injection risk.
 
@@ -132,7 +132,7 @@ If you have SQL based business components which work with additional SQL filters
 * copy the same base SQL query in the new component, using utils.getPartialResult
 * embed within the new component any custom logic thast previously you defined using addional SQL filters.
 
-**Take into account the difference between UTC and GMT for datetime **- checkbox used to change the date+time value to show in grids/forms, by taking into account the time zone difference between the client and the server.
+**Take into account the difference between UTC and GMT for datetime** - checkbox used to change the date+time value to show in grids/forms, by taking into account the time zone difference between the client and the server.
 
 It is strongly recommended to select it.
 
@@ -150,7 +150,7 @@ Example:&#x20;
 
 /opt/tomcat-activiti/
 
-**Base Rest URL of Activiti **-  base URL of Activiti; it can be an internal URL not a public URL.
+**Base Rest URL of Activiti** -  base URL of Activiti; it can be an internal URL not a public URL.
 
 Example:
 
@@ -168,9 +168,9 @@ http://host/
 
 **Alert message template** - optional text
 
-**Show title in the alert message list (def. N) **- checkbox used to show/hide the title of the message in each alter message arrived
+**Show title in the alert message list (def. N)** - checkbox used to show/hide the title of the message in each alter message arrived
 
-**Disable click on alert message (def. N) **- checkbox used to ignore the click of an alert message and NOT mark it as read
+**Disable click on alert message (def. N)** - checkbox used to ignore the click of an alert message and NOT mark it as read
 
 **List of commands to include in the alter dialog** - optional JSON string, containing a list of commands to add. For more details:
 
@@ -256,7 +256,7 @@ Contacts synchronization sources (4WS, LDAP, GOOGLE,...)
 
 **LDAP checking enabled (opt. def. true)** - can be either true or false, according to the LDAP settings
 
-**LDAP server **- IP or server name of the LDAP server
+**LDAP server** - IP or server name of the LDAP server
 
 **LDAP protocol** (ldap or ldaps. Opt. def. ldap) - protocol to use when connecting to the LDAPO server; a typical value is "ldap", but you have to use "ldaps" in case of LDAP over SSL communication
 
@@ -347,7 +347,7 @@ Note: the login time is not recorded in case of either a stateless web service l
 
 This section is mandatory in case there are functionalities which send email messages, like an email to send with template, app diagnosys, scheduled processes which notifies by email, etc.
 
-**SMTP host when sending email **- the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
+**SMTP host when sending email** - the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
 
 **SMTP port when sending email (opt.)** - the port used by the SMTP server to accept email messages to send; if not specified, the default port 25 is used; bear in mind that you cannot use the default port 25 if your Platform server has been installed in the Google Cloud Platform, since this port is blocked in the GCP. Moreover, the port also depends on the protocol used: smtp or smtps (SMTP over SSL).
 
@@ -355,9 +355,9 @@ This section is mandatory in case there are functionalities which send email mes
 
 **SMTP password when sending email (opt.)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
 
-**Use TLS when sending email: E/F (opt.) **- allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
+**Use TLS when sending email: E/F (opt.)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
 
-**Email Debug **- enable the debug of messages sent/received
+**Email Debug** - enable the debug of messages sent/received
 
 
 
@@ -369,7 +369,7 @@ This section is used in case your application uses Google Map feature and show a
 
 **Google Maps: Start Point Longitude** - default longitude coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
 
-**Google Maps: Start Point Name **- default caption text to show for the default coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
+**Google Maps: Start Point Name** - default caption text to show for the default coordinate to use in case the Google Map panel is not filled in with am initial coordinate. If the panel is filled in with one or more coordinates, this setting is ignored.
 
 **Google Maps: Do not set a default position** - checkbox used to set or not a default coordinate for a Google Map panel which has not been filled with a coordinate. If not checked, the default settings defined above will be used.
 
@@ -387,7 +387,7 @@ Google key for autocomplete place in Android
 
 ### PERMISSIONS
 
-**Show role id (Y/N) **- checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes.&#x20;
+**Show role id (Y/N)** - checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes.&#x20;
 
 You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
 
@@ -410,7 +410,7 @@ Allowed input fields that can be hidden:
 
 **Show only enabled roles** - used in the user detail window: if this checkbox is selected, the list of roles to show is filtered by the roles already owned by the current user; if not selected, all users can see all defined roles at application level, but can only select in the grid (in edit mode) the ones owned by the current user.
 
-**Autoassign roles to new user (';' separated list) **- in case a user is auto-created when logging on (e.g. when the authentication is managed externally by an LDAP server), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
+**Autoassign roles to new user (';' separated list)** - in case a user is auto-created when logging on (e.g. when the authentication is managed externally by an LDAP server), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
 
 If this checkbox is selected, a user not having roles assigned yet, would inherit automatically the role (or list of roles separated by a comma) specified through this parameter and consequently he can access successfully the application.
 
@@ -444,9 +444,9 @@ To enable this feature, the following parameters must be set in the general conf
 
 **Destinations for the sync process groups/users** - semicolon (“;”) separated list of destinations to put information in. Possible values: 4WS. Default: empty list
 
-**Sync users (true/false def. true) **- flag to enable or disable the synchronization of users. Possible values: “true” or “false”. Default: “true”.
+**Sync users (true/false def. true)** - flag to enable or disable the synchronization of users. Possible values: “true” or “false”. Default: “true”.
 
-**Sync also groups (true/false) (opt.) **- flag to enable or disable the synchronization of groups. Possible values: “true” or “false”. Default: “true”.
+**Sync also groups (true/false) (opt.)** - flag to enable or disable the synchronization of groups. Possible values: “true” or “false”. Default: “true”.
 
 **Sources for the sync process groups/users** - semicolon (“;”) separated list of sources to get information from. Possible values are: GOOGLE, LDAP. Default: empty list
 
@@ -454,7 +454,7 @@ To enable this feature, the following parameters must be set in the general conf
 
 **Note**: To configure more than one source per type (LDAP1, LDAP2, …) use this syntax: LDAP1;LDAP2. Where LDAP1/2 is the prefix of the source.
 
-**Note: **You can automate the synchronization of users and roles, using a predefined scheduled process: the following URL must be called:
+**Note:** You can automate the synchronization of users and roles, using a predefined scheduled process: the following URL must be called:
 
 http\[s]://secursync
 
@@ -493,14 +493,14 @@ Platform supports multiple authentication mechanisms:
 
 * **4WS** - the default authentication mechanism, based on the internal table named PRM01\_USERS
 * **LDAP** - when a user is logging on, the authentication process is forwarded to an external LDAP server (e.g. Microsoft Active Directory), containing all user credentials (username + password + additional user properties, like name, last name, email, etc.); in such a scenario, it would be a good idea to activate also the LDAP synchronization feature provided by Platform, in order to retrieve all usernames (not the passwords which are only maintained internally yo the LDAP server) and additional properties and store them in Platform as well; in this way, you can inherit and access all additional properties and link these usernames to the authorization module provided by Platform (i.e. what a user can do after a successful authentication process - permissions)
-* **GMail SSO **- the login page would include also the Google SSO dialog, composed of the Google email input field and password input field and the Login button: in case the user has already logged on Google suite, this login page would automatically recognize the login and by-pass it, by showing after a few seconds the Platform web app main page.
-* _**Custom SSO server **_- you can define a server-side javascript action which would be invoked behind the scenes by Platform when the user attempts to log-on: it is up to this action to figure out if the user is allowed to log on, by invoking external authentication system; this action receives in input the user credential typed by the user in the login page and can pass them forward to external system: finally the action be provide the outcome and even replace some input data with others (e.g. change the username provided by the user and expressed as an email address to a totally different value for the username, provided by the external system).
+* **GMail SSO** - the login page would include also the Google SSO dialog, composed of the Google email input field and password input field and the Login button: in case the user has already logged on Google suite, this login page would automatically recognize the login and by-pass it, by showing after a few seconds the Platform web app main page.
+* _**Custom SSO server**_ - you can define a server-side javascript action which would be invoked behind the scenes by Platform when the user attempts to log-on: it is up to this action to figure out if the user is allowed to log on, by invoking external authentication system; this action receives in input the user credential typed by the user in the login page and can pass them forward to external system: finally the action be provide the outcome and even replace some input data with others (e.g. change the username provided by the user and expressed as an email address to a totally different value for the username, provided by the external system).
 
 All these authentication mechanisms can be combined together, if needed, as an **authentication chain**, that is to say, the authentication process can try more than one mechanisms, combined in sequence, like a chain: for example "4WS + LDAP": try first to authenticate through the default auth mechanism and in case of failure try through the external LDAP server.
 
 **Authentication chain (opt. def. '4ws')** - this parameter is mandatory (here or as global parameter); it defines the authentication chain described above; allowed values are for example: 4WS, 4WS + LDAP, etc.
 
-**Sync: Company,site couples to use when creating records (opt. def. all) **- this is an optional parameter; if specified, you have to define couples of company + site ids, where the company id is separated by the site id with a comma (,) and a couple with another with a ;
+**Sync: Company,site couples to use when creating records (opt. def. all)** - this is an optional parameter; if specified, you have to define couples of company + site ids, where the company id is separated by the site id with a comma (,) and a couple with another with a ;
 
 Example:&#x20;
 
@@ -512,9 +512,9 @@ Platform will use this parameter to auto-create user entries in the internal use
 
 If this parameter has not been specified, the default behavior would be to auto-create usernames for each combination of company and site ids.
 
-**Sync: Logical delete of users before sync (opt. def. false) **- (opt. – true or false). If true delete the users from the current source before trying to write the new ones. Default: false. It is important to understand if the source list is full or incremental (only new or updated users): this depends on the sources settings. In the first case the deletion can be enabled, in the second case must be disabled.
+**Sync: Logical delete of users before sync (opt. def. false)** - (opt. – true or false). If true delete the users from the current source before trying to write the new ones. Default: false. It is important to understand if the source list is full or incremental (only new or updated users): this depends on the sources settings. In the first case the deletion can be enabled, in the second case must be disabled.
 
-**Sync: Fields to manage in 4WS users table (opt.) **- (opt.) semicolon (;) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields.&#x20;
+**Sync: Fields to manage in 4WS users table (opt.)** - (opt.) semicolon (;) separated list of 4ws.Platform user object fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields.&#x20;
 
 Default value: “pk.userCodeId;description;password;;”.&#x20;
 
@@ -565,7 +565,7 @@ TensorFlow url
 
 This section contains a set of properties which change the UI appearance of your web application. The correct values for these settings depend on the chosen theme, since a specific them has a different menu, topbar content, bottom bar, etc.
 
-**Single Document Interface (Y/N) (predef. N) - **check this property only in case you want to create a single document interface, i.e. a very simple web application (like a web site), where there aren't multiple windows to show at the same time (e.g. a list of data + a detail window for a selected row); the SDI paradigm states that only only window is visible at a time and consequently only very basic application UIs can be created.
+**Single Document Interface (Y/N) (predef. N) -** check this property only in case you want to create a single document interface, i.e. a very simple web application (like a web site), where there aren't multiple windows to show at the same time (e.g. a list of data + a detail window for a selected row); the SDI paradigm states that only only window is visible at a time and consequently only very basic application UIs can be created.
 
 **Application icon** - a .ico public file to use as "favourite icon" for the web application (i.e. showed by the browser on the URL bar). If specified, this .ico file is loaded starting from the platform web context.
 
@@ -573,7 +573,7 @@ Example:
 
 \<my app web context>/images/favicon.ico
 
-**Menu levels **- Platform supports a series of different menu types:
+**Menu levels** - Platform supports a series of different menu types:
 
 * popup menu anchored to the left side of the application, opened by clicking on the button on the top-left side (the most modern menu); there is also a variant of this menu, where the application functionalities are organized within this popup window in a hierarchical way, rather than a plain list). This menu is good for applications having a large amount of application functionalities
 * popup menu anchored to the top-right side of the application, opened by clicking on the corresponding button; application functionalities are organized in folders and subfolders, within this popup window. This menu is good for small applications, having a limited amount of application functionalities
@@ -612,10 +612,11 @@ If you set it to "Edit" (in your dev env), these links on labels are clickable a
 
 **Order of Grid Export** - this text parameter allows to define which export formats are supported by the application, when clicking on the export button in a grid: a popup window is prompted where the end user can choose among the export formats supported. This parameter defines the formats list and the order in the combobox. Supported values are:
 
-* XLS
-* Extended XLS
-* CSV;
-* CSV,
+* **XLS** - export in excel
+* **Extended XLS** - export in excel with combo-type columns having "decoded values" instead of the code
+* **CSV;** - export in csv format, with a ";" as a separator
+* **CSV,** - export in csv format, with a ";," as a separator&#x20;
+* **CSV;lang** - export in csv format, with a ";" as a separator and numbers having a decimal separator depending on the language settings
 
 The parameter value can contain any of these values, separated by the pipe symbol |
 
@@ -629,7 +630,7 @@ Moreover, a legend explaining the meaning of the (\*) is reported at the bottom 
 
 If this checkbox is selected, an additional message is also prompted to the user.
 
-**First level menu height (pixels) **- to use only for web apps having two levels of menubars ("Menu level" parameter set to 2), i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar (on the bottom on the first level menubar).
+**First level menu height (pixels)** - to use only for web apps having two levels of menubars ("Menu level" parameter set to 2), i.e. the application functionalities are organized in two levels: a first level bar where a set of menus are reported; when the end user click on one of them, the submenu items for the selected menu are reported in the second level menubar (on the bottom on the first level menubar).
 
 This parameter defines the first level menubar height and should be always set to 0 for all applications not using two levels menubars.
 
@@ -664,7 +665,7 @@ If this checkbox is selected, for the main page (i.e. after a successful login),
 
 **View asterisk on mandatory controls only when needed (Y/N) (default N)** - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background.&#x20;
 
-When the checkbox "View asterisk on mandatory controls**" **(described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
+When the checkbox "View asterisk on mandatory controls**"** (described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
 **Label position of Designer functionality** - for each input field defined in a form panel, editor panel and filter panel, a label is also included, explaining the meaning of the field.
 
@@ -725,7 +726,7 @@ To sum up, the custom CSS code is applied only if
 
 ### USERS
 
-**Supported user languages Component Id ** - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant.&#x20;
+**Supported user languages Component Id** - optional parameters, helpful for a multitenancy application, where the supported languages could vary according to the tenant.&#x20;
 
 When not settings this parameter, the languages defined through the App Designer are valid for all applications defined in the Platform installation, through the Languages functionality.&#x20;
 
@@ -910,7 +911,7 @@ Start voice command (e.g. platform)
 
 **Action id for Whatsapp callback** - optional value: if set, it is a server-side action, defined as PUBLIC web service (i.e. no credentials are required when invoking it); this field is needed only in case you want not only send Whatsapp messages but also get feedbacks, like "message sent" or "message read": this is the callback ws which receives these events from the Whatsapp service.
 
-**Account id **- required as well as "secret key": the value is defined in the Twilio Whatsapp Admin Console
+**Account id** - required as well as "secret key": the value is defined in the Twilio Whatsapp Admin Console
 
 ### REPORT DOCX
 
