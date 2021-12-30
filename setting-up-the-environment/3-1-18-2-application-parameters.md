@@ -59,7 +59,56 @@ Do not let this parameter empty, if you have planned to pass forward variables t
 
 **Application Version** - you should define it each time you export changes to another environment and it represents the current application version, you can show in you About window in the interpreted mobile/web app.
 
-**Customize Datastore** - can be either an action id or a full java class name (namespace included); if set, the action/java class will be invoked each time the application has defined objects (i.e. tables) available in different database schemas, i.e. an object representing the same table in different database schema, typical in a multi-tenancy application, where you have an ad hoc schema for each tenant and all schemas have the same tables in terms of structure but different data stored; this class is invoked and has to provide the right datasource id to use each time.
+**Application Icon Version** - a static URL to a public image to show in the login page and in the desktop bottom area of the application, in case the "**Show Application Version**" check box has been selected
+
+**Show Application Version** - when this checkbox has been selected, the application version text will be shown in the bottom area of the login page, as well as in the bottom area of the application; moreover, if the "**Application Icon Version**" has been specified, such icon will be shown on gthe left of the version text.&#x20;
+
+The default CSS settings for text and icon in the login page are as follows:
+
+```css
+#appVersionDiv {
+    position: relative;
+    font: normal 11px verdana;
+    opacity: 0.9;
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#appIconVersion {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+} 
+```
+
+The default CSS settings for text and icon in the desktop are of the application page are as follows:
+
+```css
+#appVersionBodyDiv {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    text-align: center;
+}
+
+
+#appIconVersionBody {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+```
+
+****
+
+**Customize Datastore** - can be either an action id or a full java class name (namespace included); if set, the action/java class will be invoked each time the application has defined objects (i.e. tables) available in different database schemas, i.e. an object representing the same table in different database schema, typical in a multi-tenancy application, where you have an ad hoc schema for each tenant and all schemas have the same tables in terms of structure but different data stored; this class is invoked and has to provide the right datasource id to use each time
+
+
 
 Example:
 
@@ -103,6 +152,8 @@ else {
     }
 }
 ```
+
+
 
 **Last context import** - do not change it; it is automatically defined by Platform, each time a web context import has been carried out. Helpful to compare two versions of the same app, installed in different environments (e.g. development vs production)
 
