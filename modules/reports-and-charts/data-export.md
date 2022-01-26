@@ -65,19 +65,19 @@ It includes the following input fields:
 * **Export type** - allows to define the export format: CSV, 4WS.Trade data format, SQL insert instructions, insert/update records to Google Datastore, xlsx
 * **Target database type** - optional; used in case of SQL export type: it define the destination database type (e.g. Oracle, SQL Server), in order to generate SQL instructions compatible with the selected database type
 * **File name** - export file name
-* **File name policy **- optional value; if specified, the file name is ignored (except for the file extension, e.g. .csv, .txt) and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or** 'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
-* **Group name** - optional: if specified, it means the current task will be part of a group of jobs sharing the same group name; if this setting is specified,** the "Group zip file name" setting must be specified as well, for ONE job of the group (the last job).** None of generated files will be moved to the specified destination, but a single file will be created in the destination location, a zip file, containing all generated files and having file name equal to the group file name property
-* **Group zip file name **- it must be used together with the "group name" field; if specified, at the end of the current job export task, all files already generated will be compressed together in the same .zip file, whose name is the one specified here; that means that _**only the last task in the group should have this field filled**_, since only at the end of all exported tasks, a .zip file should be generated!
-* **Group file name policy **- optional value; if specified, the .zip file name is ignored and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or** 'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
+* **File name policy** - optional value; if specified, the file name is ignored (except for the file extension, e.g. .csv, .txt) and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or **'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
+* **Group name** - optional: if specified, it means the current task will be part of a group of jobs sharing the same group name; if this setting is specified, **the "Group zip file name" setting must be specified as well, for ONE job of the group (the last job).** None of generated files will be moved to the specified destination, but a single file will be created in the destination location, a zip file, containing all generated files and having file name equal to the group file name property
+* **Group zip file name** - it must be used together with the "group name" field; if specified, at the end of the current job export task, all files already generated will be compressed together in the same .zip file, whose name is the one specified here; that means that _**only the last task in the group should have this field filled**_, since only at the end of all exported tasks, a .zip file should be generated!
+* **Group file name policy** - optional value; if specified, the .zip file name is ignored and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or **'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
 * **Export order** - this field defines the execution order for a set of jobs; it is used only by the Scheduler to figure out the execution order, in case of "export of a group" or "export all" option
-* **Action before export **- server-side javascript action which can be optionally executed before starting the execution process
-* **Action after export **- server-side javascript action which can be optionally executed after the execution process
+* **Action before export** - server-side javascript action which can be optionally executed before starting the execution process
+* **Action after export** - server-side javascript action which can be optionally executed after the execution process
 * **Export column headers** - checkbox used to export a first row in a CSV file containing the column headers, reckoned as the alias from the SELECT clause. This additional row can be added only when exporting a standard CSV file&#x20;
 * **Parameters filler** - it is likely that many SQL extraction queries (see next section "Extract data from") can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically.&#x20;
   * In case of a manual execution, the end user can select a task definition from the tasks list (see previous section) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly.&#x20;
   * As an alternative, an export process can be started automatically, using the Scheduler. In such a scenario, the parameter values must be provided automatically: for that reason, a business component for a list can be set in "Parameter filler" field. This business component must contain in the SELECT clause all required parameter names. When executing the task, first the business component will be executed and the list of parameter values are retrieved; then for each record read, the job is executed, so that it is possible to automate the job execution multiple time, once for each record read from the business component.
 
-**Copy to folder **- it is optional and can be filled out, in case the exported files must be saved on a directory (server file system, Google cloud)
+**Copy to folder** - it is optional and can be filled out, in case the exported files must be saved on a directory (server file system, Google cloud)
 
 **Copy to FTP** - it is optional and can be filled out, in case the exported files must be moved to a virtual folder within an FTP server.
 
@@ -252,3 +252,26 @@ utils.executeQueryWithCallback(
 
 utils.setVariable("BRANCH_CODES",JSON.stringify(map));
 ```
+
+
+
+## Programmatically execute a job
+
+Once defined a job, it is possible to execute it from within a server side javascript action, using either:
+
+```
+var rows = utils.executeExport(Long exportId,String queryType,Map paramValues);
+```
+
+or:
+
+```
+var rows = utils.executeExportsInGroup(String groupName,String queryType,Map paramValues);
+```
+
+or
+
+```
+var rows = utils.executeAllExports(String queryType,Map paramValues);
+```
+
