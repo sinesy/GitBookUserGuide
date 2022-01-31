@@ -23,9 +23,10 @@ Please pay attention to the mandatory properties reported above: if you have not
 
 It is also possible to arrange each subpanel using a few additional settings, which can be defined using the **Additional config** field in the panel detail:
 
-* **tableLayoutWidth: "Y" **- this force the layout manager to use the weight expressed in the panels window instead of the width for the current sub-panel; this is helpful for example for sub-panels having a dynamic width, like a grid
+* **tableLayoutWidth: "Y"** - this force the layout manager to use the weight expressed in the panels window instead of the width for the current sub-panel; this is helpful for example for sub-panels having a dynamic width, like a grid
 * **tableLayoutSetSize: "Y"** - this force the layout manager to use the width calculated through the weight and the height expressed through the panel property, each time there is a resize of the window (and also when the window is shown the first time)
 * **minWidth: xyz** - this can be using in combination with the weight defined for each sub-panel: in case there is not enough space for the current sub-panel (i.e. the proportional width is lower than the minWidth), the ones on its right will be rendered on a new line
+* **tableAutoLayout**: **true**  this can be set on the first component and it is applied to all components in the table container: it is used to auto set the layout so that a grid (or any other variable-width component) can occupy the whole available space; do not set it if you have a highly customizable window (with a lot of CSS o custom events) which can override the default auto layout
 
 **Example**: in the panel container having "table" layout there is a form panel on the left and a grid panel on the right, with weights of 1 and 2 (the grid should occupy the double of the form) and the form must have a minimum width of 300pixel, in any case. Both subpanels have the same height of 500 pixels.
 
@@ -49,7 +50,16 @@ tableLayoutWidth: "Y",
 tableLayoutSetSize: "Y",
 ```
 
+****
 
+#### **Common errors**
+
+Very common errors when configuring a table layout are, from the most serious to the most trivial:
+
+* forgetting the **colspan** & **rowspan** settings in the component added to the table container
+* do not set an **height** for a component
+* do no set a **minWidth** setting (additional config for a form) for a form with a multi column table layout
+* do not set **tableLayoutWidth** & **tableLayoutSetSize** for all variable-width components
 
 
 
