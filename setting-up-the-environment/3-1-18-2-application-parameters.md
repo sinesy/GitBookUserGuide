@@ -392,6 +392,10 @@ Available log types are:
 
 Note: the login time is not recorded in case of either a stateless web service login or an element in queue or a scheduled process.
 
+**Additional link**  - link of a web page to open from the login form.
+
+**Key per label of additional link (from translations)**  - key for the translation of the label for the additional link.
+
 
 
 ### MAIL
