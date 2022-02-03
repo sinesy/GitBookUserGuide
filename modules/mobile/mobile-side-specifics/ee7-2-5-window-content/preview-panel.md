@@ -16,7 +16,7 @@ Use a business component that returns an image url in a specific fields, the pan
 
 #### **PDF**
 
-Use a business component that returns a** **PDF url in a specific fields, the panel load that PDF.
+Use a business component that returns a **** PDF url in a specific fields, the panel load that PDF.
 
 #### **HTML Template**
 

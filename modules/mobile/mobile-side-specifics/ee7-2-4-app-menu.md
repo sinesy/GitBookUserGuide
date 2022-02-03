@@ -6,7 +6,7 @@ No hierarchical menu items can be showed the menu: all menu items must be part o
 
 The app don't have a menu, the developer choose a first window and add to this window the navigation logic.
 
-**Slide menu **
+**Slide menu**&#x20;
 
 A slide menu is similar to the one proposed in Facebook or GMail app.
 

@@ -35,9 +35,9 @@ If tags have been defined for such service (in all service definitions, local an
 
 Try to **fill in one or more tags**, so that the results list will be significantly reduced to one transaction only.
 
-After reducing the results, it will be easier to navigate through the elaborations, probably one for each Platform server. Double click on the elaboration having an **ERROR state **and go into depth to its **messages list**: the original error is likely to be located there.
+After reducing the results, it will be easier to navigate through the elaborations, probably one for each Platform server. Double click on the elaboration having an **ERROR state** and go into depth to its **messages list**: the original error is likely to be located there.
 
-As an alternative, double click on any elaboration matching the filled tags and select the “Logs” folder: press the** “Transaction logs”** button to see all messages for all elaborations of any Platform installation, sharing the same transaction id: not only messages for the current elaboration will be reported, but all of them. Once identified an **error message, double click on it to open the elaboration **which contains it.
+As an alternative, double click on any elaboration matching the filled tags and select the “Logs” folder: press the **“Transaction logs”** button to see all messages for all elaborations of any Platform installation, sharing the same transaction id: not only messages for the current elaboration will be reported, but all of them. Once identified an **error message, double click on it to open the elaboration** which contains it.
 
 **How to trace multiple elaborations for the same failed process**
 

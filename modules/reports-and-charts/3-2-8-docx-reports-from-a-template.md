@@ -5,12 +5,12 @@ Through the App Designer it is possible to define a list of reports and for each
 
 ### Importing a template
 
-The starting point in the App Designer is the sub-menu** UI -> Reports**:
+The starting point in the App Designer is the sub-menu **UI -> Reports**:
 
 * **Docx** - through this functionality, it is possible to the list of reports mentioned above, in terms of:&#x20;
   * **report name**
   * **main business component**, i.e. a business component of a form, used to map \<control> tags; this is the easiest way to create a template: a document containing a few fields to replace. It is possible to make it more complex, by adding additional business components, used to fill in other fields (in sub-forms) or to fill in a list of items (as for a grid)
-  * **a list of docx templates to upload **- one for each supported language; all these templates must have the same layout and contain the same tags to replace; they should differ only for the language used for the text
+  * **a list of docx templates to upload** - one for each supported language; all these templates must have the same layout and contain the same tags to replace; they should differ only for the language used for the text
 
 ![](../../.gitbook/assets/schermata-2020-08-04-alle-09.30.06.png)
 
@@ -64,7 +64,7 @@ The following screenshot reports the the resulting docx, after completing the ma
 
 Values to link to each field can be:
 
-* a **field in the select clause of the main query **(in case of a main report field)
+* a **field in the select clause of the main query** (in case of a main report field)
   * you can map that field to a tag
   *   you can map the prefix of a field in the select clause to a tag, in case of translations not stored in a dictionary table but to a series of fields, one for each language; so if you have a table mapped to the select clause having a set of fields for each language, here you have to map the prefix common to al these fields.
 

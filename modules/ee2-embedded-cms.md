@@ -58,7 +58,7 @@ You can define a unique directory id for all your document types (for all your p
 
 ![](../.gitbook/assets/schermata-2019-05-10-alle-11.03.44.png)
 
-A constraint you have to respect when importing documents is that** a file name must be unique per directory id** : you cannot import two distinct documents having the same name and save them in the same directory.\
+A constraint you have to respect when importing documents is that **a file name must be unique per directory id** : you cannot import two distinct documents having the same name and save them in the same directory.\
 Consequently, it is a good idea to **define distinct directories for different panels/data models, if you are not sure you can have the same file names for different usages**.
 
 ## Directory definition

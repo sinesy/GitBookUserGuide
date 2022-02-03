@@ -1,6 +1,6 @@
 # Service Monitoring
 
-**  **\
+&#x20; ****  \
 ****Example of a distributed system:
 
 ![](https://lh3.googleusercontent.com/mD\_WFcgcaFebYB737QiDcY6M7fInG0uJC7hTVsUB\_BiOF8o4-zJfoAnDecbyWAIwwZKXlzrKSwqXqPS2KEHftlXkYemBNCO-wEPe4cQxl4wn0ITtyOUXbi5YTyVxMO3at-oelacx)
@@ -17,7 +17,7 @@ Platform automatically will manage behind the scenes the “distributed transact
 
 That will make it easier to search for problems risen along the whole distributed system, since it is possible to filter by datetime interval as well as for service code or transaction id.
 
-In any of the services described in the example above, there is a **wide range of problems **that can happen and interrupt the normal execution flow:
+In any of the services described in the example above, there is a **wide range of problems** that can happen and interrupt the normal execution flow:
 
 * authentication failed when invoking a remote web service
 * too many HTTP requests and consequently request are rejected

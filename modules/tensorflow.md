@@ -150,7 +150,7 @@ In thefirst panel, some properties are required:
 * **Total number of possible solutions** (e.g. 2 for the geometric problem described above)
 * **Bucket name**, in Google Cloud Storage, where all CSV files will be saved, defined as a directory in Platform
 * **Number of training steps**(default value: 1000), used to repeat multiple times the examples provided in input
-* **Number of nodes per layer **(default value: 10)
+* **Number of nodes per layer** (default value: 10)
 * **Optional server-side javascript action to execute after a prediction**, for example to read the solutions just reckoned and use them somewhere, together with other application data.
 
 ![](https://lh6.googleusercontent.com/RP6hjI7szAyxAYEcEJBlAhVMUto9bzAfDwD9y5fmutkDYY8jIruiUT-SwgIZ48zzOats7mkP8m6AW-qLtpku8Yj\_ULaDplfjqB9zvhXwZX7jM7jtFffcFsyqQcixFzGHfr7-fj4X)
@@ -291,7 +291,7 @@ Here the first column is about the solution, which will be sorted out automatica
 
 After executing a prediction, solutions sorted out by TensorFlow have been gathered and stored by Platform, together with the unique identifier of each record passed in input.
 
-In this way, it is possible to get this combination** \<problem id, solution>** and move them to application tables.
+In this way, it is possible to get this combination **\<problem id, solution>** and move them to application tables.
 
 These solutions can be moved to the application database through the optional “**Prediction field**” in the “**Extraction data**” folder of the model definition: when it is specified, the values for predictions will be stored in that field automatically.
 

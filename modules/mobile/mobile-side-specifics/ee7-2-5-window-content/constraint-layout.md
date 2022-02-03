@@ -14,7 +14,7 @@ The latter represents another type of panel, an alternative to a generic panel (
 
 ## Constraint panel
 
-You can create a Constraint panel through the **window detail**: as for any other kind of container (generic, tabs, accordion, card, etc.), just go to edit mode in the **Panels **folder and right click on a node in the hierarchical representation of the window content. In the popup menu, choose **Add panel with layout constraint**.
+You can create a Constraint panel through the **window detail**: as for any other kind of container (generic, tabs, accordion, card, etc.), just go to edit mode in the **Panels** folder and right click on a node in the hierarchical representation of the window content. In the popup menu, choose **Add panel with layout constraint**.
 
 After saving this change, you can click on any child of that panel and the folder named **Layout Constraint** will be unlocked.
 
@@ -118,4 +118,4 @@ In the Controls folder, switch to **Advanced** mode, in order to show the Constr
 
 The same window described for the Constraint panel is shown: here you can specify the same settings and set the right anchors for each control.
 
-In addition to constraint panel, in this scenario you can choose** wrap** **content** for the **height** or **width**, this setting will force the control to expand only far enough to contain the values (or child controls) it contains.
+In addition to constraint panel, in this scenario you can choose **wrap** **content** for the **height** or **width**, this setting will force the control to expand only far enough to contain the values (or child controls) it contains.

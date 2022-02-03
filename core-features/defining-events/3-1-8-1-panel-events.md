@@ -4,7 +4,7 @@ A panel can fire several events, according to the panel type.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/panelEvents-1024x519.jpg)
 
-In case of a **grid ** (or ** pivot grid** ), these are the allowed events:
+In case of a **grid** (or **pivot grid** ), these are the allowed events:
 
 * row click
 * row double click

@@ -12,7 +12,7 @@ The main features of a grid are:
   * date, date+time, time
   * numeric field; decimal numbers are supported too and they are configurable in the Web Designer form panel image preview, with buttons to select an image (from the camera/image gallery) and remove it
   * file selector – e.g. a PDF file, with buttons to show the file preview and delete it.testo (per testo e numeri) decoded value, starting from an enumeration of couples \<code, description to show>
-  * **form panel **
+  * **form panel**&#x20;
 * support render for standard columns
 * support render for field on form columns
 

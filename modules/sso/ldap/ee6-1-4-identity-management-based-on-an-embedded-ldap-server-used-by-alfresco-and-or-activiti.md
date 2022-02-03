@@ -23,7 +23,7 @@ class=”it.sinesy.activiti.util.Utils”> <property… “(&(objectClass=person
 
 **Activiti Explorer configuration:**
 
-Open the file **webapps/activiti-explorer/WEB-INF/activiti-standalone-context.xml ** and add the following lines:
+Open the file **webapps/activiti-explorer/WEB-INF/activiti-standalone-context.xml** and add the following lines:
 
 ```
 class=”it.sinesy.activiti.util.Utils”> “cn=ADMIN,dc=com” /> “(&(objectClass=person)(cn={0}))” /> -->

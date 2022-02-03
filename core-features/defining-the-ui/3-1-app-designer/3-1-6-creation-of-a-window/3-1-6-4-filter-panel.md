@@ -27,12 +27,12 @@ Optionally, it is also possibile to fine tune the dynamic filter behavior, using
 * **autoCreateDynamicFilters** - if set to **true**, all 5 filters are shown when opening the filter panel, each occupying a different row. Not only the filter field is shown, but also the operator and input field. As default behavior, all filter fields are pre-filled with the first item in the dropdown list of the combo-box; same for the operator combo-box.
 * **dynamicFiltersWithDistinctFilters** - property available only if the previous one has been set to true; if set to true, the 5 filters are pre-filled with distinct filters, from the first to the 5th one, as reported in the dropdown list of the filter combobox (in case the combobox has less than 5 items, the remaining are filled with the first one)
 * **dynamicFiltersHeight** - this numeric property is not needed in most of the cases and it can be used in case you want to define an height between filters different from the default one
-* **dynamicFiltersWidth **- this numeric property is not needed in most of the cases and it can be used in case you want to define a filter/operator combobox width different from the default value (200 pixels)
-* **dynamicFiltersGap **- this numeric property is not needed in most of the cases and it can be used in case you want to define a gap between the filter and operator comboboxes width different value from the one used as default (20 pixels).
+* **dynamicFiltersWidth** - this numeric property is not needed in most of the cases and it can be used in case you want to define a filter/operator combobox width different from the default value (200 pixels)
+* **dynamicFiltersGap** - this numeric property is not needed in most of the cases and it can be used in case you want to define a gap between the filter and operator comboboxes width different value from the one used as default (20 pixels).
 * **dynamicFilters** - this optional numeric property defines how many filters to show; if not specified, 5 filters are shown; if specified, you can define a lower number of filters 2-5 (no more than 5 is allowed)
-*   **dynamicFiltersDeltaBeforeHeight **- this optional numeric property defines how many pixels to add (remove) before the first dynamic filter; helpful when using a custom theme where margins/insets/heights have been changed
+*   **dynamicFiltersDeltaBeforeHeight** - this optional numeric property defines how many pixels to add (remove) before the first dynamic filter; helpful when using a custom theme where margins/insets/heights have been changed
 
-    **dynamicFiltersDeltaHeight **- this optional numeric property defines how many pixels to add (remove) after the last dynamic filter and before the Search/Clear buttons; helpful when using a custom theme where margins/insets/heights have been changed.
+    **dynamicFiltersDeltaHeight** - this optional numeric property defines how many pixels to add (remove) after the last dynamic filter and before the Search/Clear buttons; helpful when using a custom theme where margins/insets/heights have been changed.
 
 Example of Additional Config field content of a Filter panel:
 

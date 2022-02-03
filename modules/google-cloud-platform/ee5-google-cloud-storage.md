@@ -22,7 +22,7 @@ utils.getGoogleCloudStorageSignedURL(verb,expiration, bucketName, objectName, mi
 
 #### Details
 
-**verb ** – one of ‘GET’, ‘HEAD’, PUT‘’, ‘DELETE’\
+**verb** – one of ‘GET’, ‘HEAD’, PUT‘’, ‘DELETE’\
 **expiration** – This is the timestamp (represented as the number of seconds since the Unix Epoch of 00:00:00 UTC on January 1, 1970) when the signature expires. The server will reject any requests received after this timestamp\
 **bucketName** – the name of the bucket which we want to operate on\
 **objectName** – the name of the object\

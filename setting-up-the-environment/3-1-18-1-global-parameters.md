@@ -8,15 +8,15 @@ The followings are global parameters, grouped per topic:
 
 ### 4WS.PLATFORM
 
-**Database version** - readonly parameter, automatically set by Platform when its service is started; it reports the current version of the database/application.** **
+**Database version** - readonly parameter, automatically set by Platform when its service is started; it reports the current version of the database/application. ****&#x20;
 
 **Index page file** - optional parameter used to define which is the main page for applications.
 
-**Speed up metadata import (def. N) ** - checkbox used to increase the metadata import process, by speeding up the writing operations on database.
+**Speed up metadata import (def. N)** - checkbox used to increase the metadata import process, by speeding up the writing operations on database.
 
 **Offset of Device Application activation key path** - parameter used by the offline module
 
-**Base Mobile Sync Path ** - optional parameter; it represents a base path in the file system of the Platform server, used when creating a new mobile app: it is used as a default base path for the mobile app for all mobile sync content.
+**Base Mobile Sync Path** - optional parameter; it represents a base path in the file system of the Platform server, used when creating a new mobile app: it is used as a default base path for the mobile app for all mobile sync content.
 
 **Force all names to lowercase for headers in HTTP requests (def. Y)** - header names are passed forward in lowercase by many web servers and cloud services, so it would be better to select this checkbox.
 
@@ -40,7 +40,7 @@ https://yourhouse/platform/
 
 **Allow the use of additional filters (low security)** - it is strongly recommended NOT to select this checkbox: if you select it, you can pass forward from the UI to the server layer additional SQL conditions which could represent a security leak (SQL injection).
 
-**Create EntityManager for additional sources (list of packages)** - ** **
+**Create EntityManager for additional sources (list of packages)** - ****&#x20;
 
 **Do not allow to pass a SQL filter on panel loading** - checkbox used to block any additional condition when invoking the standard web service getlist, used to fetch a list of records (for a grid or a selector). If not checked, it is allowed to pass a SQL fragment to the base SQL query executed on the server side, which would represent a SQL injection risk.
 
@@ -52,7 +52,7 @@ If you have SQL based business components which work with additional SQL filters
 * copy the same base SQL query in the new component, using utils.getPartialResult
 * embed within the new component any custom logic thast previously you defined using addional SQL filters.
 
-**Take into account the difference between UTC and GMT for datetime **- checkbox used to change the date+time value to show in grids/forms, by taking into account the time zone difference between the client and the server.
+**Take into account the difference between UTC and GMT for datetime** - checkbox used to change the date+time value to show in grids/forms, by taking into account the time zone difference between the client and the server.
 
 It is strongly recommended to select it.
 
@@ -76,7 +76,7 @@ Example:&#x20;
 
 /opt/tomcat-activiti/
 
-**Base Rest URL of Activiti **-  base URL of Activiti; it can be an internal URL not a public URL.
+**Base Rest URL of Activiti** -  base URL of Activiti; it can be an internal URL not a public URL.
 
 Example:
 
@@ -96,15 +96,15 @@ Parameters related to alert messages in case of a cluster based Platform install
 
 Pre-requisite: the WEB-INF/web.xml file must have been set with "cluster" tag value set to "true"
 
-**Messages messages main node URL **- if set, this public URL will be used to send all notification events; this URL represents the public URL for the main fixed node; use this setting ONLY when you have a cluster where there is a fixed main node; i this parameter is filled, it is&#x20;
+**Messages messages main node URL** - if set, this public URL will be used to send all notification events; this URL represents the public URL for the main fixed node; use this setting ONLY when you have a cluster where there is a fixed main node; i this parameter is filled, it is&#x20;
 
-**Port for the messages main node (opt.) **- this parameter must be filled together with the next one: it represents the internal Tomcat port where the main current node is listen for requests
+**Port for the messages main node (opt.)** - this parameter must be filled together with the next one: it represents the internal Tomcat port where the main current node is listen for requests
 
-**Protocol for the messages main node (opt.) **- this parameter must be filled together with the previous one: it represents the HTTP protocol to use (http vs https) to use when communicating with the internal Tomcat where the main current node is listen for requests
+**Protocol for the messages main node (opt.)** - this parameter must be filled together with the previous one: it represents the HTTP protocol to use (http vs https) to use when communicating with the internal Tomcat where the main current node is listen for requests
 
 
 
-### **ALFRESCO **
+### **ALFRESCO**&#x20;
 
 parameters related to the ECM module
 
@@ -163,7 +163,7 @@ In any case, it is possible to use different libraries to execute the export. No
 
 ### ****
 
-### **FILE UPLOAD **
+### **FILE UPLOAD**&#x20;
 
 Parameters used to manage the file upload
 
@@ -171,7 +171,7 @@ Parameters used to manage the file upload
 
 **Default path for directories** - an absolute path to use as base dir for all uploaded files (for all defined directories), in case of upload based on file system.
 
-**Google Project Id ** - in case of file upload saved on Google Cloud Storage, it is required to specify here the Google Cloud Project Id used by the GCS service.
+**Google Project Id** - in case of file upload saved on Google Cloud Storage, it is required to specify here the Google Cloud Project Id used by the GCS service.
 
 **Create subfolders for company and site (YN def. Y)** - in case of a multi-tenancy app, it is possible to auto-create subfolders for each company id / site id, so that each tenant can access and use his own files.
 
@@ -181,13 +181,13 @@ Parameters used to manage the file upload
 
 ### ****
 
-### **GOOGLE **
+### **GOOGLE**&#x20;
 
 Parameters used to integrate the application with the Google Cloud Platform and the Google Domain (GSuite)
 
-**Google Datastore id** **- **in case of app connected to the Google Datastore NoSQL database, this is the Google Cloud Project Id (mandatory)
+**Google Datastore id** **-** in case of app connected to the Google Datastore NoSQL database, this is the Google Cloud Project Id (mandatory)
 
-**Namespace list when exporting towards Platform for GA (, separated) ** - in case of app connected to the Google Datastore NoSQL database, this is the namespace to use. If not specified, the default namespace will be used.
+**Namespace list when exporting towards Platform for GA (, separated)** - in case of app connected to the Google Datastore NoSQL database, this is the namespace to use. If not specified, the default namespace will be used.
 
 **Google Service Account Key (p12 key Base64 encoded)** - in case of apps connected to any Google Cloud service (including Google Datastore), this is the service account key, converted in text (p12 format, base64) generated using the Google Cloud Console
 
@@ -255,7 +255,7 @@ indicating two string fields.
 
 ****
 
-### **LDAP **
+### **LDAP**&#x20;
 
 parameters used to integrate the app with an LDAP server, like MS Active Directory
 
@@ -297,7 +297,7 @@ It is essential to put a limit to the log events to save here. Please always set
 
 The same parameters can also be redefined at application level.
 
-**SMTP host when sending email **- the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
+**SMTP host when sending email** - the host name of the SMTP server used to send email messages; this parameter is mandatory; examples: smtp.mandrillapp.com or smtp.gmail.com
 
 **SMTP port when sending email (opt.)** - the port used by the SMTP server to accept email messages to send; if not specified, the default port 25 is used; bear in mind that you cannot use the default port 25 if your Platform server has been installed in the Google Cloud Platform, since this port is blocked in the GCP. Moreover, the port also depends on the protocol used: smtp or smtps (SMTP over SSL).
 
@@ -305,9 +305,9 @@ The same parameters can also be redefined at application level.
 
 **SMTP password when sending email (opt.)** - usually an SMTP server requires also credentials in order to accept email messages to send: check it out with the administrator of your SMTP server.
 
-**Use TLS when sending email: E/F (opt.) **- allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
+**Use TLS when sending email: E/F (opt.)** - allowed values are E or F, i.e. enabled or forced and it depends on the SMTP server settings: check it out with the administrator of your SMTP server.
 
-**Email Debug **- enable the debug of messages sent/received
+**Email Debug** - enable the debug of messages sent/received
 
 
 
@@ -382,23 +382,23 @@ When unselecting this checkbox, all passwords in PRM01\_USERS will be converted 
 
 
 
-### **PERMISSIONS **
+### **PERMISSIONS**&#x20;
 
 Parameters used to define the authentication process
 
-**Show site in users and user roles (Y/N) **- checkbox used to define whether the site id column/control must be showed in the users list and in the user detail window. As a default setting, this information is not visible.&#x20;
+**Show site in users and user roles (Y/N)** - checkbox used to define whether the site id column/control must be showed in the users list and in the user detail window. As a default setting, this information is not visible.&#x20;
 
 You should check this parameter when you have applications working with multiple site ids.
 
-**Show role id (Y/N) **- checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes.&#x20;
+**Show role id (Y/N)** - checkbox used to define whether the role id column/control must be showed int he users list and in the user detail window. As a default setting, this information is not visible and consequently the role id is an auto-generated number reckoned by Platform behind the scenes.&#x20;
 
 You should check this parameter only in case you want to be free to define the role id and not let Platform to generate it.
 
-**Show/edit site in user detail (Y/N) **- checkbox used to define whether the site id control must be showed and be editable in the user detail window. As a default setting, this information is not visible and consequently the site id to use when inserting records is always the one owned by the current logged user.&#x20;
+**Show/edit site in user detail (Y/N)** - checkbox used to define whether the site id control must be showed and be editable in the user detail window. As a default setting, this information is not visible and consequently the site id to use when inserting records is always the one owned by the current logged user.&#x20;
 
 You should check this parameter only in case you want to be free to define the site id and not let Platform to generate it, i.e. when you have applications working with multiple site ids.
 
-**Login controls to hide ** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant (one only company id) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled.&#x20;
+**Login controls to hide** - comma separated list of input fields in the login pane to hide. For example in a Platform installation where there is one only tenant (one only company id) or there is only one site id, it is useless to force the end user to specify them each time he logs on and they can be hidden and pre-filled.&#x20;
 
 This parameter allows not only to define the list of input fields to hide but also the value to preset for them.
 
@@ -417,13 +417,13 @@ Allowed input fields that can be hidden:
 
 **Check function Ids when reading data (Y/N def. N)**
 
-**Automatically create users after successful authentication **- checkbox to select to auto-create a user when logging on (e.g. when the authentication is managed externally by an LDAP server).
+**Automatically create users after successful authentication** - checkbox to select to auto-create a user when logging on (e.g. when the authentication is managed externally by an LDAP server).
 
 **Update user from external authentication source (Y/N)** - checkbox to select in order to auto-update the user detail starting from data coming from external authentication servers (e.g. LDAP); if not selected, users are imported from external system but their data are not updated on time.
 
 **Show only enabled roles** - used in the user detail window: if this checkbox is selected, the list of roles to show is filtered by the roles already owned by the current user; if not selected, all users can see all defined roles at application level, but can only select in the grid (in edit mode) the ones owned by the current user.
 
-**Autoassign roles to new user (';' separated list) **- in case a user is auto-created when logging on (e.g. when the authentication is managed externally by an LDAP server), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
+**Autoassign roles to new user (';' separated list)** - in case a user is auto-created when logging on (e.g. when the authentication is managed externally by an LDAP server), no roles have been assigned to him yet and consequently, it would not be possible for him to access the application, since two requirements must be fulfilled: a correct authentication + at least one role assigned to the user.
 
 If this checkbox is selected, a user not having roles assigned yet, would inherit automatically the role (or list of roles separated by a comma) specified through this parameter and consequently he can access successfully the application.
 
@@ -437,7 +437,7 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 **Server host name** - required in case of a fixed Redis server
 
-**Server host port **- required in case of a fixed Redis server
+**Server host port** - required in case of a fixed Redis server
 
 **Instance name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the name used to identify the cache name in the Redis server
 
@@ -451,7 +451,7 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 ### ****
 
-### **SCHEDULER **
+### **SCHEDULER**&#x20;
 
 Parameters used by the scheduler module
 
@@ -496,7 +496,7 @@ Moreover, a legend explaining the meaning of the (\*) is reported at the bottom 
 
 **View asterisk on mandatory controls only when needed (Y/N) (default N)** - - as default settings, all mandatory cells on a grid have a pink color background, if there is not content set yet, in order to highlight where there are cells to fill in before saving data; same for a form panel: all mandatory input controls not filled yet have a pink colored background.&#x20;
 
-When the checkbox "View asterisk on mandatory controls**" **(described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
+When the checkbox "View asterisk on mandatory controls**"** (described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
 ### ****
 

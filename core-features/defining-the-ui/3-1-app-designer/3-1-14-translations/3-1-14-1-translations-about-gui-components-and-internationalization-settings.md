@@ -20,7 +20,7 @@ When creating a new component through the Designer, such as a label, **the user*
 **How to work with translations**\
 The best way to find a panel is to work with the filter on the left: just expand Windows node and then select the right window and select the panel you are interested in, to show its translation in the grid on the right.\
 In order to make it easier the search for a specific component in this dictionary of translations, you can always use the **quick filter panel** by right clicking on a cell of that grid.\
-Moreover, there is a ** filter panel** above the editable grid: it is possible to show in the grid only a subset of the whole dictionary, by showing only the ones:
+Moreover, there is a **filter panel** above the editable grid: it is possible to show in the grid only a subset of the whole dictionary, by showing only the ones:
 
 * to manage – control labels/column headers declared as “to manage”, i.e. visible or not, but in any case managed by the UI
 * visible –control labels/column headers declared as “visible”, i.e. shown as default behavior

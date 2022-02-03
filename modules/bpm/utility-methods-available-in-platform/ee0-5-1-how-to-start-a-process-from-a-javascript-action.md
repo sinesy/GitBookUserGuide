@@ -1,6 +1,6 @@
 # How to start a process from a JavaScript action
 
-var processInstanceId = ** startActivitiProcess** (processId, obj);
+var processInstanceId = **startActivitiProcess** (processId, obj);
 
 * processId: process id
 

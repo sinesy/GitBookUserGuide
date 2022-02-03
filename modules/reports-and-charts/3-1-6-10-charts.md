@@ -16,7 +16,7 @@ When the user chooses this kind of panel in the "Add window" wizard, a few setti
 * **MinMax Value V Axis** : Moves the min or max value of the vertical axis to the specified value; this will be leftward in most charts.
 * **Increment V Axis** : Replaces the automatically generated Y-axis ticks with the specified array. The array values start from Min Value and create tick with +Increment formula.
 * **Legend Field** : field of the legend.
-* **Unique query for all series** , ** Series List** : check it if you want to define a query common to all the series and another query to control how many times to execute the first query, that is to say, one for each record read by the latter query.
+* **Unique query for all series** , **Series List** : check it if you want to define a query common to all the series and another query to control how many times to execute the first query, that is to say, one for each record read by the latter query.
 * **Options** : this field allows to add optional settings , usually to customize the default behavior of a chart, according to the Google Chart options. Example:
 
 ```javascript

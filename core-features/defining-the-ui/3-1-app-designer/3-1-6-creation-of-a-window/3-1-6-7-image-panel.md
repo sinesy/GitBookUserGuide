@@ -58,7 +58,7 @@ if (sel!=null) {
 
 
 
-In case of a **remote document **based preview, you can use the loadImageXX utility method provided by Platform to access the preview panel and force its reloading, starting from a record coming from another panel:
+In case of a **remote document** based preview, you can use the loadImageXX utility method provided by Platform to access the preview panel and force its reloading, starting from a record coming from another panel:
 
 ```
 var sel = gridYYY.getSelectionModel().getSelected(); // the selected row in a grid, used to fetch data used to fill in the preview

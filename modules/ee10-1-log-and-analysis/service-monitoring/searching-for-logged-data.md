@@ -7,11 +7,11 @@ This feature provides a filter panel on the UI through which searching for a var
 Available filters include:
 
 * **application** - if not specified, elaborations are not only the ones gathered locally, but also the ones coming from remote Platform installations, where there can be other applications defined and running; in any case, elaborations are filtered by the company id of the logged user (site id is also filtered according to the site ids bounded to the current logged user)
-* **start date / end date **- elaborations can be filtered by interval or starting from the start datetime or until the specified end datetime
+* **start date / end date** - elaborations can be filtered by interval or starting from the start datetime or until the specified end datetime
 * **service** - the combo-box includes all services defined locally and remote services (fetched through the “Synchronize and search” button)
 * **code** - this is the service code, which can be specified instead of the service (description)
 * **elaboration state** - elaborations are filtered according to the state specified here; i this way it is possible to search for errors only or elaborations not finished yet
-* **transaction id **- a value representing a cross-server transaction; another way to look for all elaborations having the same transaction is simply filtering the transaction directly in the corresponding column (right click with the mouse, to activate the quick filter)
+* **transaction id** - a value representing a cross-server transaction; another way to look for all elaborations having the same transaction is simply filtering the transaction directly in the corresponding column (right click with the mouse, to activate the quick filter)
 * **message code** - this is related to errors; Platform supports a set of pre-defined message codes (e.g. out of memory, database lock, etc.); moreover, a Platform developer can define additional errors (message codes), which can be filtered here; if specified, only elaborations having logged messages with this code will be shown
 * **file name** - in case of elaborations involving files to read/write and logged as messages, it is possible to filter elaborations referring such a files as logged messages
 
@@ -27,7 +27,7 @@ The result list reports the following columns:
 * **code** - service code, related to the elaboration
 * **start/end date** - datetime when the elaboration started and finished; end date is filled only for elaborations terminated without or with errors
 * **duration** - the elaboration duration, expressed in seconds
-* **transaction id **- helpful to aggregate elaborations which share the same transaction
+* **transaction id** - helpful to aggregate elaborations which share the same transaction
 * **elaboration state** - an elaboration can be started, ended correctly, ended/interrupted with errors
 
 The "**Show linked elaborations**" button allows to filter the grid content according to the elaborations related to the same original elaboration which went wrong: when a service under monitoring is set with a number of retries/wait time, it is possible to automate the re-start of the same elaboration (in case of FATAL errors). In such a scenario, this button shows only failed elaborations re-started multiple times. I**f the n-retry for that elaboration completes successfully, the last elaboration is marked as "completed" and all the previous ones (included the original one) are marked as successfully rielaborated (with previous errors).**

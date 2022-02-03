@@ -26,10 +26,10 @@ There are a few settings that can be refined when importing metadata:
 Once pressed the **Import Application** button, a comparison is performed between the metadata to import and the metadata currently defined in the current environment and to replace.\
 The comparison is only about a fewenvironment-related settings:
 
-* ** application parameters**  (e.g. LDAP settings, Email servers, etc.)
-* **global parameters **&#x20;
+* &#x20;**application parameters**  (e.g. LDAP settings, Email servers, etc.)
+* **global parameters**&#x20;
 * **directory paths**&#x20;
-* ** additional datasources**  (database connections)
+* &#x20;**additional datasources**  (database connections)
 * **scheduled processes**  (timing, suspension, etc)
 * **templates**  (email templates)
 

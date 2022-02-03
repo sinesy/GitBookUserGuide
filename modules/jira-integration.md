@@ -68,7 +68,7 @@ Once configure what reported above, a Platform user (which is also a Jira user) 
 
 There are two functionalities available.
 
-**Assigned issues **- related to the only issues assigned to the current logge user.
+**Assigned issues** - related to the only issues assigned to the current logge user.
 
 **All issues**, independent from the assigned user and not necessarelly bounded to a sprint.
 
@@ -130,7 +130,7 @@ Finally, there are a few commands you can execute form the issue detail window:
 * **Assign to me** - allows to assign the issue to the current logged user
 * **Add comment**
 * **Add worklog**
-* **Change state **- through it, you can change the current issue state: to do, in progress, done
+* **Change state** - through it, you can change the current issue state: to do, in progress, done
 * **Set a version**
 
 Starting from the issues list or from the menu bar, it is also possible to create a new issue from scratch.

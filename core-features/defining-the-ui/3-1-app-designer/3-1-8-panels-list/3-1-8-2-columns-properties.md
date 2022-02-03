@@ -68,7 +68,7 @@ var val = convertToObjectJson(obj);
 return val;
 ```
 
-*   **Additional config - **Optionally, it is possibile to define at column level additional settings, which will be injected along with all the others provided by Platform. These settings must be compatible with the ones defined by ExtJS for a Ext.grid.Column and subclasses. In order to add these settings, use the advanced property "Additional Config." where you can specify a list of properties. The content of this property will be included in a more general {...} javascript object containing the column properties. Consequently DO NOT append the {} brackets within this property, since they are already provided by Platform. You have simply to append your properties and separate each of them with a comma ,
+*   **Additional config -** Optionally, it is possibile to define at column level additional settings, which will be injected along with all the others provided by Platform. These settings must be compatible with the ones defined by ExtJS for a Ext.grid.Column and subclasses. In order to add these settings, use the advanced property "Additional Config." where you can specify a list of properties. The content of this property will be included in a more general {...} javascript object containing the column properties. Consequently DO NOT append the {} brackets within this property, since they are already provided by Platform. You have simply to append your properties and separate each of them with a comma ,
 
     Defining which operators are supported per column An additional setting you can include in the Additional Config property is
 

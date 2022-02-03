@@ -37,7 +37,7 @@ Once entered the Controls folder in the panel definition, styles can be defined 
 Styles properties for a graphics control are:
 
 * **Show counter character** - checkbox used to enable/disable the counting of character when typing text in an input field
-* **Disable self correction **- checkbox used to enable/disable the auto-correction of text, when typing an input field
+* **Disable self correction** - checkbox used to enable/disable the auto-correction of text, when typing an input field
 * **Border control** - the type of border to apply the selected panel (e.g. rounded, no border, etc.)
 * **Background color** - background color for the input field
 * **Fore color** - foreground color for the input field

@@ -4,7 +4,7 @@
 
 * a  **web application**  executed within a Java web container such as  **Apache Tomcat 9** ; this web application includes both the  **App Designer**  and  **Web Interpreter**  and can include many other modules
 * a  **Java Virtual Machine** Open JDK 11 – used to run the Java web container
-* a  **Database Repository** , where storing the metadata generated through the App Designer and used by the Web Interpreter to create on the fly the interpreted application or by the ** Mobile Interpreter**  to run the corresponding mobile app.
+* a  **Database Repository** , where storing the metadata generated through the App Designer and used by the Web Interpreter to create on the fly the interpreted application or by the **Mobile Interpreter**  to run the corresponding mobile app.
 
 4WS.Platform is a modular product composed of a set of sub-systems, each focused on a specific topic: authentication and authorization, menu, App Designer, Web Interpreter, etc. represented in the following schema.
 

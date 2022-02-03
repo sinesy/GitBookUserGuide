@@ -63,6 +63,7 @@
         * [Custom code and translations](core-features/defining-the-ui/3-1-app-designer/3-1-14-translations/3-1-14-3-custom-code-and-translations.md)
       * [Application Menu](core-features/defining-the-ui/3-1-app-designer/3-1-15-application-menu.md)
       * [Bulk import binded to a grid](core-features/defining-the-ui/3-1-app-designer/3-1-24-bulk-import-binded-to-a-grid.md)
+      * [Range Date Filter](core-features/defining-the-ui/3-1-app-designer/range-date-filter.md)
     * [Web Interpreter](core-features/defining-the-ui/3-3-web-interpreter/README.md)
       * [Grid components](core-features/defining-the-ui/3-3-web-interpreter/3-3-1-grid-components.md)
       * [Detail forms](core-features/defining-the-ui/3-3-web-interpreter/3-3-2-detail-forms.md)

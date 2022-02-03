@@ -86,7 +86,7 @@ Each of these potential issues must be carefully evaluated and they are discusse
 
 It is not easy to prove that a problem resides on the poor internet connection used by the end user to communicate with the Platform server, since often this issues is temporary and it could not be identified later, when someone else is dealing with that problem and wanting to figure it out.
 
-In order to promptly and easily facilitate the evaluation of this problem, there is a functionality available at AppDesigner level, which can be used to evaluate the client internet connection: simply go to **Help -> Network Test **and a test will be automatically carried out by Platform, related to: latency, download/upload transfer rate. The outcome of this test is reported to the user a few seconds afterwards. The same results are also automatically saved by Platform in CON60\_LOGS, as an application event, which can be shown at any time using the functionality **Monitoring -> Log Server -> Table Logs **and choosing **Net Test** events.
+In order to promptly and easily facilitate the evaluation of this problem, there is a functionality available at AppDesigner level, which can be used to evaluate the client internet connection: simply go to **Help -> Network Test** and a test will be automatically carried out by Platform, related to: latency, download/upload transfer rate. The outcome of this test is reported to the user a few seconds afterwards. The same results are also automatically saved by Platform in CON60\_LOGS, as an application event, which can be shown at any time using the functionality **Monitoring -> Log Server -> Table Logs** and choosing **Net Test** events.
 
 It is possible to include the same network test functionality within the web application, by following these steps:
 
@@ -135,9 +135,9 @@ If the number of end users is higher than a hundred or the number of web service
 
 Another option is to set up a **cluster of servers** in order to manage a wide number of connections, with **auto-scale** option if available, in order to manage peaks of connections.
 
-It is important to execute a **fine tuning of the database **as well, in terms of **max number of concurrent connections** it can manage and optionally increase the default number, according to the number of users/web service calls. The **max nr of database connections at pooler level** can be changed as well, if needed, by editing the **c3p0.properties** file available within WEB-INF/classes folder of the Platform server installation (the property named c3p0.maxPoolSize) and the max time to wait for a connection (property named c3p0.checkoutTimeout, expressed in ms).
+It is important to execute a **fine tuning of the database** as well, in terms of **max number of concurrent connections** it can manage and optionally increase the default number, according to the number of users/web service calls. The **max nr of database connections at pooler level** can be changed as well, if needed, by editing the **c3p0.properties** file available within WEB-INF/classes folder of the Platform server installation (the property named c3p0.maxPoolSize) and the max time to wait for a connection (property named c3p0.checkoutTimeout, expressed in ms).
 
-A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -> Application Log -> Log Statistics **
+A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -> Application Log -> Log Statistics**&#x20;
 
 where all incoming requests are reported and grouped by type and day.
 

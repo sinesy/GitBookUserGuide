@@ -1,7 +1,7 @@
 # Drive
 
 With this integration, developers can automate the upload, download, update and deletion of files in the user’s Google Drive space. This feature is not intended for Google Drive UI substitution, but for basic and automatic operations and processes.\
-**NOTE: ** currently the Google Drive APIs v2 are supported (see documentation).\
+**NOTE:** currently the Google Drive APIs v2 are supported (see documentation).\
 In order to use this feature, you have also to define a few parameters in 4WS.Platform:
 
 * GOOGLE\_SERVACC\_EMAIL
@@ -85,7 +85,7 @@ utils.uploadAndRenameGoogleDriveFileFromFS(fsPath, parentId, fileName, deleteFsF
 **fsPath** – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.\
 **parentId** – the id of the Drive folder where the file must be uploaded to. Can be null, in this case the root folder is used.\
 **fileName** – the new name of the uploaded file. If null the original file name is used.\
-**deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
+**deleteFsFile** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File).
 
 ### Example
@@ -110,11 +110,11 @@ utils.updateGoogleDriveFileFromFS(fileId, fsPath, deleteFsFile, newRevision)
 
 ### Details
 
-**fileId ** – the id of the file to update\
+**fileId** – the id of the file to update\
 **fsPath** – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.\
-**deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
+**deleteFsFile** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
 **fileName** – the new name of the uploaded file. If null the original file name is used.\
-**newRevision ** – true or false. Specifies if a new revision must be created or the file must be overwritten.\
+**newRevision** – true or false. Specifies if a new revision must be created or the file must be overwritten.\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File).
 
 ### Example
@@ -147,10 +147,10 @@ utils.uploadAndRenameGoogleDriveFileInNamedFolderFromFS(fsPath, baseFolderId, fo
 
 **fsPath** – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.\
 **baseFolderId** – the id of the Drive folder where the named folder must be created.\
-**folderName ** – a name of the folder where the file must be uploaded to. This folder must be in the base folder\
-**createFolderIfNotExists ** – true or false. Whether or not to create the **folderName** folder if not exists in the base folder\
+**folderName** – a name of the folder where the file must be uploaded to. This folder must be in the base folder\
+**createFolderIfNotExists** – true or false. Whether or not to create the **folderName** folder if not exists in the base folder\
 **fileName** – the new name of the uploaded file. If null the original file name is used.\
-**deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
+**deleteFsFile** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File).
 
 ## Move a file or folder in a single folder
@@ -177,7 +177,7 @@ utils.moveGoogleDriveFile(fileId, newParents,addToRevision)
 ### **Example**
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.\
-`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);  `\
+`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);`  \
 `utils.setReturnValue(‘{ “name”:”‘ + file.title +'” }’);`
 
 ## Move a file or folder
@@ -248,8 +248,8 @@ utils.deleteGoogleDriveFile(fileId, skipTrash)
 
 ### Details
 
-**fileId ** – the id of the file to delete\
-**skipTrash ** – true or false. Specifies if the file is deleted immediately or moved to trash.
+**fileId** – the id of the file to delete\
+**skipTrash** – true or false. Specifies if the file is deleted immediately or moved to trash.
 
 ### Example
 
@@ -273,7 +273,7 @@ utils.recoverGoogleDriveFile(fileId)
 
 ### Details
 
-**fileId ** – the id of the file to restore from trash\
+**fileId** – the id of the file to restore from trash\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File).
 
 ### Example
@@ -298,7 +298,7 @@ utils.getGoogleDriveFileOpenURL(fileId)
 
 ### Details
 
-**fileId ** – the id of the file\
+**fileId** – the id of the file\
 _Return value_ - a string containing the URL
 
 ## Return the URL to download a file from Google Drive
@@ -313,7 +313,7 @@ utils.getGoogleDriveFileDownloadURL(fileId)
 
 ### Details
 
-**fileId ** – the id of the file\
+**fileId** – the id of the file\
 _Return value_ - a string containing the URL
 
 ## Get the stored versions of the given file
@@ -328,7 +328,7 @@ utils.getGoogleDriveFileRevisions(fileId)
 
 ### Details
 
-**fileId ** – the id of the file\
+**fileId** – the id of the file\
 _Return value_ - a list of the Platform representation of the version of a file (List)
 
 ## Create a folder in Google Drive with the specified parents and optional description
@@ -343,7 +343,7 @@ utils.createGoogleDriveFolder(folderName, parents, description)
 
 ### Details
 
-**folderName ** – the name of the folder\
+**folderName** – the name of the folder\
 **parents** – a list of ids of parent folders. In general one folder.\
 **description** – an optional description of the folder\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File) having the boolean flag "folder" with true value.
@@ -360,7 +360,7 @@ utils.getGoogleDriveFolderContentsIds(folderId, query, trashed)
 
 ### Details
 
-**folderId ** – the id of the folder\
+**folderId** – the id of the folder\
 **query** – an optional query to filter the search (see docs)\
 **trashed** – true or false. Specify if extact also trashed files/folders.\
 _Return value_ - list of strings
@@ -377,7 +377,7 @@ utils.getGoogleDriveFolderContents(folderId, query, trashed)
 
 ### Details
 
-**folderId ** – the id of the folder\
+**folderId** – the id of the folder\
 **query** – an optional query to filter the search (see docs)\
 **trashed** – true or false. Specify if extact also trashed files/folders.\
 _Return value_ - list of the Platform file representation (org.wag.valueobjects.java.File)
@@ -394,8 +394,8 @@ utils.setGoogleDriveFilePermissions(fileId, type, value, role, additionalRoles, 
 
 ### Details
 
-**fileId ** – the id of the file/folder\
-**type ** – the type of sharing, one between “user”, “group”, “domain” or “default”\
+**fileId** – the id of the file/folder\
+**type** – the type of sharing, one between “user”, “group”, “domain” or “default”\
 **value** – the email of the user/group or the domain name\
 **role** – the role one of “reader”, “writer” or “owner”\
 **additionalRoles** – optional string, for example “commenter”\
@@ -419,7 +419,7 @@ utils.setGoogleDriveFileAttributes(fileId, fileAttributes)
 
 ## Tree duplication
 
-Duplicates the folder **sourceFolderId** and all its contents in a folder called **newFolderName** with optional description **newFolderDescription** under folder **destinationFolderId** . It is also possible to specify a **titlePrefix ** to prepend to the title of every duplicated resource (files or folders) and whether or not **copyPermissions** from the original folder to the duplicated forlder.
+Duplicates the folder **sourceFolderId** and all its contents in a folder called **newFolderName** with optional description **newFolderDescription** under folder **destinationFolderId** . It is also possible to specify a **titlePrefix** to prepend to the title of every duplicated resource (files or folders) and whether or not **copyPermissions** from the original folder to the duplicated forlder.
 
 ### Syntax
 
@@ -431,17 +431,17 @@ utils.duplicateGoogleDriveFolderAndContents(sourceFolderId, newFolderName, newFo
 
 ### Details
 
-**sourceFolderId ** – the id of the original folder\
+**sourceFolderId** – the id of the original folder\
 **newFolderName** – the name of the copy of the folder\
-**newFolderDescription ** – optional description for the new folder\
-**destinationFolderId ** – the id of the folder where the copy must be created. Can be "root" for the root drive folder.\
+**newFolderDescription** – optional description for the new folder\
+**destinationFolderId** – the id of the folder where the copy must be created. Can be "root" for the root drive folder.\
 **titlePrefix** – a prefix\
 **copyPermissions** – true or false. Copy the permissions of the original folder in the duplicate folder.\
 _Return value_ - the Platform file representation (org.wag.valueobjects.java.File) having the boolean flag "folder" with true value.
 
 ## Tree permissions
 
-Adds a single permission to a folder and its contents. It is possible to specify a role for files and a role for folders (for example to make folders read only and files read/write). additionlRoles** lets to specify the “commenter” role or other future capabilities. recursive** lets to go deep in the folder tree, otherwise it stops on the first level inside folderId\*\* . Notifications with a message can be sent for every resource.
+Adds a single permission to a folder and its contents. It is possible to specify a role for files and a role for folders (for example to make folders read only and files read/write). additionlRoles **lets to specify the “commenter” role or other future capabilities. recursive** lets to go deep in the folder tree, otherwise it stops on the first level inside folderId\*\* . Notifications with a message can be sent for every resource.
 
 ### Syntax
 
@@ -453,8 +453,8 @@ utils.addPermissionsToGoogleDriveFolder(folderId, type, value, fileRole, folderR
 
 ### Details
 
-**folderId ** – the id of the original folder\
-**type ** – the type of sharing, one between "user", "group", "domain" or "default"\
+**folderId** – the id of the original folder\
+**type** – the type of sharing, one between "user", "group", "domain" or "default"\
 **value** – the email of the user/group or the domain name\
 **fileRole** – the role for files, one of "reader", "writer" or "owner"\
 **folderRole** – the role for folders, one of "reader", "writer" or "ownerv\
@@ -477,8 +477,8 @@ utils.getGoogleDriveFileProperty(fileId, key, visibility)
 
 ### Details
 
-**fileId ** – the id of the file/folder\
-**key ** – the key of the property to get\
+**fileId** – the id of the file/folder\
+**key** – the key of the property to get\
 **visibility** – "PRIVATE" or "PUBLIC"\
 _Return value_ - a String containing the property value.
 
@@ -494,8 +494,8 @@ utils.addGoogleDriveFileProperty(fileId, key, value, visibility)
 
 ### Details
 
-**fileId ** – the id of the file/folder\
-**key ** – the key of the property to get\
+**fileId** – the id of the file/folder\
+**key** – the key of the property to get\
 **value** – the value\
 **visibility** – "PRIVATE" or "PUBLIC"
 
@@ -511,8 +511,8 @@ utils.patchGoogleDriveFileProperty(fileId, key, value, visibility)
 
 ### Details
 
-**fileId ** – the id of the file/folder\
-**key ** – the key of the property to get\
+**fileId** – the id of the file/folder\
+**key** – the key of the property to get\
 **value** – the value\
 **visibility** – "PRIVATE" or "PUBLIC"
 
@@ -528,8 +528,8 @@ utils.deleteGoogleDriveFileProperty(fileId, key)
 
 ### Details
 
-**fileId ** – the id of the file/folder\
-**key ** – the key of the property to get
+**fileId** – the id of the file/folder\
+**key** – the key of the property to get
 
 ## Update property of a file in Google Drive
 
@@ -545,9 +545,9 @@ utils.updateGoogleDriveFile(fileId, title, description, mimeType)
 
 ### Details
 
-**fileId ** – the id of the file in Google Drive\
+**fileId** – the id of the file in Google Drive\
 **title** – the new title of the file\
-**description ** – the new description of file\
+**description** – the new description of file\
 **mimeType** – the new mime type of file
 
 ## Remove permissions of file
@@ -564,5 +564,5 @@ utils.removeGoogleDriveFilePermissions(fileId, title, emailUser)
 
 ### Details
 
-**fileId ** – the id of the file in Google Drive\
+**fileId** – the id of the file in Google Drive\
 **emailUser** – the account of user for which to remove the permission

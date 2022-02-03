@@ -22,7 +22,7 @@ utils.getGoogleContactsFiltered(pages, maxPageResults, searchString, splitEmails
 **pages** – (can be null) the number of pages to retrieve. Every page is a call to Google Contacts APIs. If null all pages are retrieved.\
 **maxPageResults** – (can be null) the max number of contacts to retrieve in every call. If null the Google default limit is used.\
 **searchString** – (can be null) a search string used for full text search on contacts.\
-**splitEmails – ** (can be null) boolean value that indicates to create more contacts results in case of multiple e-mail addresses for a single contact.
+**splitEmails –** (can be null) boolean value that indicates to create more contacts results in case of multiple e-mail addresses for a single contact.
 
 ### Example
 
@@ -54,7 +54,7 @@ utils.getGoogleSharedContactsFiltered(pages, maxPageResults, searchString, split
 **pages** – (can be null) the number of pages to retrieve. Every page is a call to Google Contacts APIs. If null all pages are retrieved.\
 **maxPageResults** – (can be null) the max number of contacts to retrieve in every call. If null the Google default limit is used.\
 **searchString** – (can be null) a search string used for full text search on shared contacts.\
-**splitEmails – ** (can be null) boolean value that indicates to create more contacts results in case of multiple e-mail addresses for a single contact, .
+**splitEmails –** (can be null) boolean value that indicates to create more contacts results in case of multiple e-mail addresses for a single contact, .
 
 ### Example
 
@@ -132,8 +132,8 @@ utils.getGoogleDomainContactsFiltered(pages, maxPageResults, query, orderBy, sor
 **pages** – (can be null) the number of pages to retrieve. Every page is a call to Google Contacts APIs. If null all pages are retrieved.\
 **maxPageResults** – (can be null) the max number of contacts to retrieve in every call. If null the Google default limit is used.\
 **query** – (can be null) a search query. The syntax is explained in the Google Directory API documentation\
-**orderBy – ** (can be null) the property used to sort results\
-**sortOrder – ** (can be null) the sort order. Possible values are "ASCENDING" or "DESCENDING".
+**orderBy –** (can be null) the property used to sort results\
+**sortOrder –** (can be null) the sort order. Possible values are "ASCENDING" or "DESCENDING".
 
 ### Example
 

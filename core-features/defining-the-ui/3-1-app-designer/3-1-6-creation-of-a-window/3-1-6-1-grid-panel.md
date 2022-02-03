@@ -14,7 +14,7 @@
 * flag "**copy enabled**", used to show a "copy" button in the grid toolbar, used to switch to insert mode the grid, add a new row an copy the values from the selected row to the new one
 * number of **columns anchored to the lef**t of the grid (0 by default)
 * boolean javascript expression "**disable when**", to disable everything when the boolean condition is true flags "enable columns permission" and "enable columns profile", used to manage these special features, described in a separate section
-* **find empty **- flag used to include two additional buttons to the quick filter panel: a "Find empty" and "Find not empty" values. These buttons have their own CSS class: "filterempty" and "filternotempty". Use it only with a relational database. When flagging this check-box, you have also to change the x-theme.css content and define how to render these two buttons, according to your theme. If your them does not show icons but it shows text, you could change the grid filter section of your theme in this way:
+* **find empty** - flag used to include two additional buttons to the quick filter panel: a "Find empty" and "Find not empty" values. These buttons have their own CSS class: "filterempty" and "filternotempty". Use it only with a relational database. When flagging this check-box, you have also to change the x-theme.css content and define how to render these two buttons, according to your theme. If your them does not show icons but it shows text, you could change the grid filter section of your theme in this way:
 
 ```javascript
 /* filtro in griglia*/
@@ -177,6 +177,6 @@ return [[
 
 ## Locked columns
 
-Optionally, a group of** locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
+Optionally, a group of **locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
 
 In case **locked columns are combined with grouping columns, a new grid is rendered, composed of a tree+grid,** where grouping columns become tree nodes, which are anchored on the left side of the grid. That means it is not supported a grid having grouped columns+locked columns.

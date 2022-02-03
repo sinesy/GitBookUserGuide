@@ -19,7 +19,7 @@ This list of scheduled processed reports the following columns:
 * **Execution type** - e.g. Server-side javascript action, command from shell, etc.
 * **Frequency and Scheduling** - e.g. execute every day at 10.30 or execute every 5 minutes, etc.
 * **Start Date/time** - when the automatic execution would start in the future
-* **Executing node **- used only in case of a cluster installation, i.e. multiple instance of Platform running the same application: it allows to describe in which node of the cluster this specific scheduled process will be executed
+* **Executing node** - used only in case of a cluster installation, i.e. multiple instance of Platform running the same application: it allows to describe in which node of the cluster this specific scheduled process will be executed
 * **Suspended** - reports if the scheduled process in currently suspended
 * **Next activation** - reckoned every time the list is reloaded: it reports at which date/time this process will be executed for the next time
 * **Last Start/end/duration/exit code/exit message** - report when the last scheduled execution of the process and its outcome

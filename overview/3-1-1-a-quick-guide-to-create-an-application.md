@@ -18,7 +18,7 @@ After logging on, the App Designer requires a few data in order to correctly set
 
 An **application identifier** represents a unique id used to partition any data per application. The user interface of a specific mobile or web application can communicate with the server-side through that id, so that it is possible to work with a specific application on the server layer.\
 The **application title** issetasthe web page title of the web application to run. The Platform Home page reports all the applications configured and the App Designer. Each application in the Home pageis identified by its title.\
-Finally, the ** sub-context path** represents a public web folder, specific for application, used to store a set of static contentlike images, documents, CSS, report templates.\
+Finally, the **sub-context path** represents a public web folder, specific for application, used to store a set of static contentlike images, documents, CSS, report templates.\
 You can uploaded such content once created an empty application and then refer them in any other part of the application.\
 After settings these mandatory fields, you can press the Save button to confirm the creation of the application.\
 This is what is needed in order to create a new web application.\
@@ -73,7 +73,7 @@ Once completedall of these steps, your new configured application is ready to be
 Design tips\
 Creating an application requires a few skills. Skills can be quite limited as long as the application to configure fits the way Platform works and uses the features provided by Platform as they are. The more complex the application to realize is, the more effort and skills are required.\
 The easiest case is when you simply set a **menu type, an application logo** and optionally change the **colors/fonts** included in the “Theme customization” area. In such a scenario, the required skills are minimal.\
-In case you want to ** highly customize the theme** of your application, you have always the chance to work on the CSS files provided by Platform, that you can access through the File Manager functionality. In this case, you need to know also skills about the use of Cascading Style Sheets and work with them.\
+In case you want to **highly customize the theme** of your application, you have always the chance to work on the CSS files provided by Platform, that you can access through the File Manager functionality. In this case, you need to know also skills about the use of Cascading Style Sheets and work with them.\
 The choice of **which menu type to set** in your application, could be driven by these tips:
 
 * if your application is composed of very few menu items, the best choice is the Topbar menu, since it reports all of them on the top area and let you work on the main area to open your windows. Icons to use for such menu type should typically have a size of 16×16 up to 32×32 pixels.

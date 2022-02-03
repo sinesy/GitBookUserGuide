@@ -11,4 +11,4 @@ The returning object would contain the outcome of the process execution and an o
 The method arguments have the following meaning:\
 **UserInfo** – it contains the settings (e.g. the language code to use) linked to the user specified when defining the sheduled process; it is optional. It can be helpful in case a process needs a specific language to work with.\
 **Con48SchedProcess** – the process settings (e.g. the process name, etc.)\
-**Object\[] ** – optional parameters, defined when creating the process.
+**Object\[]** – optional parameters, defined when creating the process.

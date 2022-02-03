@@ -10,14 +10,14 @@ A form/filter panel having this layout adapts the content to the viewing environ
 
 This layout is based on the definition of
 
-* a predefined **number of columns **(field “Columns number”), defined at panel level
+* a predefined **number of columns** (field “Columns number”), defined at panel level
 * for each control to show, a few mandatory properties must be defined:
 *
   * an **Height**
   * the minimum width is equals **Width**
   * a maximun Width (field named “Max Width”)
-  * the **percentage occupied by the control **(field named “% Occuped”) with respect to the number of columns; in the example below, the first line contains 3 controls having the same length: 1/3 (to be more precise: 33%+33%+33%), whereas the second line contains only 2 control, where the first is 33% and the second 66%
-* **Controls under label **(above the control, on the left of it)
+  * the **percentage occupied by the control** (field named “% Occuped”) with respect to the number of columns; in the example below, the first line contains 3 controls having the same length: 1/3 (to be more precise: 33%+33%+33%), whereas the second line contains only 2 control, where the first is 33% and the second 66%
+* **Controls under label** (above the control, on the left of it)
 
 Example with 3 pre-defined columns and no maxWidth set, except for “Sex”:
 

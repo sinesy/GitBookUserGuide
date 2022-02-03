@@ -8,7 +8,7 @@ The information available through a panel detail is split up in several folders:
 * **input parameters**  – a readonly list filled automatically by the Web Designer when creating the panel; the list contains all parameters required by the business component binded to the panel (:VARIABLE…)
 * **output parameters**  – an editable list of parameters to pass to child windows; the user can define these parameters starting from variables, such as fields coming from the linked business component or other system variables (username that identifies the logged user, current language, current date/time, etc)
 * **events**  – list of events defined by the user to link to the panel (e.g. click on a row of the grid, a button pressed, etc.)
-* **buttons panel ** – list of buttons to add to the default toolbar; the button definition includes the following properties:
+* **buttons panel** – list of buttons to add to the default toolbar; the button definition includes the following properties:
   * button text
   * icon
   * action to link to the button (see "Events and Actions" section)

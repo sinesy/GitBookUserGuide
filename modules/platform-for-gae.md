@@ -48,7 +48,7 @@ Supported features are:
 * a set of **request alias**, that you can use to call web services
 * **authentication** based on a fixed token (defined once per GAE instance) or on Platform users
 * **Mem-Cache** support, i.e. a cross-instance data cache, where you can store/read values needed across multiple requests or for a long time, in order to avoid costly and slow Datastore queries
-* **Task Queue **support, i.e. javascript for GAE actions enqueued into an internal queue, processed one at a time, so that there is a limit to the required computational process and it can also provide a better response to HTTP sync calls.&#x20;
+* **Task Queue** support, i.e. javascript for GAE actions enqueued into an internal queue, processed one at a time, so that there is a limit to the required computational process and it can also provide a better response to HTTP sync calls.&#x20;
 
 ## Limitations
 

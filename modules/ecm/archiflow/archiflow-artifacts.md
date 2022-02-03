@@ -17,5 +17,5 @@ Basically, what Platform allows to do is:
 * **insert, update, delete cards**, through the standard grid toolbar buttons
 * **read a card**, where each field of a card is showed as a form control
 * **download/upload/preview** a document linked to card, starting from a specific form control
-* **insert, update, delete **such a card, through the standard form toolbar buttons
+* **insert, update, delete** such a card, through the standard form toolbar buttons
 * **manage programmatically all these operations**, starting from server-side javascript functions, within a server-side javascript action

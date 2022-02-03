@@ -3,7 +3,7 @@
 The integration between Alfresco and Platform does not finish with the exchange of metadata and documents.\
 A very common customization carried out inside Alfresco is the development of web scripts. Web scripts can be easily invoked by Platform: GUI events can be listened by Platform and can invoke actions. A server-side javascript action can be linked to events and used to invoke web scripts.
 
-This is an example of ** how to invoke an Alfresco Web Scripts** from a server-side javascript:
+This is an example of **how to invoke an Alfresco Web Scripts** from a server-side javascript:
 
 ```javascript
 var success = utils.getAlfrescoWebScript(url, false, "GET", null);

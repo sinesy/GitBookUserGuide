@@ -15,7 +15,7 @@ Moreover, the user can create additional panels from the detail of an already ex
 The window detail contains several folders:
 
 * **window settings**  – these settings are the same the user had defined when creating the window through the window wizard
-* **input parameters ** – optional parameters list, required by business components or other parts of the window (panels, window title, panels title, etc.) and passed by the parent window
+* **input parameters** – optional parameters list, required by business components or other parts of the window (panels, window title, panels title, etc.) and passed by the parent window
 * **panels**  – a hierarchical representation of the window, in terms of panels and subpanels.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/windowDetail-1024x486.jpg)
@@ -35,7 +35,7 @@ Supported containers are:
     Finally, a specific folder can be enabled/disabled through the following method:\
     **setEnableTab(‘folderContainerIdentifier’,panelIndex,true|false);**
 * a **vertical folder container**, working like the previous one, but tabs are arranged vertically
-* an ** accordion panel** – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem(“accordionPanelIdentifier”,panelIndex);**
+* an **accordion panel** – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem(“accordionPanelIdentifier”,panelIndex);**
 * a **card panel** – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
 
 ```javascript
@@ -43,21 +43,21 @@ setActiveItem("cardPanelIdentifier",panelIndex);
 ```
 
 * a **vertical/horizontal panel**, where the content is arranged either vertically (1 only scrollable column) or horizontally (1 only scrollable row)
-* a** responsive container (table layout)**, where the content is arranged from left to right, top to bottom and each element can have a weight potentially different from the others and can have a prefixed height or width. According to the avilable space in  the web page (browser size), elements are then arranged and moved in order to occupy the available space without the need for an horizontal bar.
+* a **responsive container (table layout)**, where the content is arranged from left to right, top to bottom and each element can have a weight potentially different from the others and can have a prefixed height or width. According to the avilable space in  the web page (browser size), elements are then arranged and moved in order to occupy the available space without the need for an horizontal bar.
 
 Data panels can be included in any container. Supported data panels are:
 
-* a  **grid, **supporting both read and write operations (CRUD operations)
-* a  **pivot grid, **a special type of grid, where 2 kinds of fields are managed in a special way: (i) a numeric field (grouping field) is spread along multiple columns, where each column represents a value for a second field (identifying field)
-* a ** filter panel**  linked to a grid
-* a ** detail form, **supporting both read and write operations (CRUD operations)
+* a  **grid,** supporting both read and write operations (CRUD operations)
+* a  **pivot grid,** a special type of grid, where 2 kinds of fields are managed in a special way: (i) a numeric field (grouping field) is spread along multiple columns, where each column represents a value for a second field (identifying field)
+* a **filter panel**  linked to a grid
+* a **detail form,** supporting both read and write operations (CRUD operations)
 * an **editable panel**, which is not connected to any data source (as for a detail form), used to manage volatile data
 * a **tree**&#x20;
-* a **preview panel, **which can be used to show an image, a document like a PDF, etc.
+* a **preview panel,** which can be used to show an image, a document like a PDF, etc.
 * an **image gallery**, containing a set of images, spread horizontally (up to N predefined columns) and along the vertical axis
-* a ** map panel**&#x20;
+* a **map panel**&#x20;
 * a **tree+grid panel**, working as a tree, where all data but the first field is arranged in a grid: expanding the value for the first field in the tree, leads to show all other data in the grid row (helpful for instance when showing a BOM)
-* a ** custom panel** , based on a javascript file, created by a programmer and uploaded together with 4WS.Platform, that will be automatically included within the window.
+* a **custom panel** , based on a javascript file, created by a programmer and uploaded together with 4WS.Platform, that will be automatically included within the window.
 
 When the user presses the edit button in the "Panels" folder of the window detail, it is possible to access to a popup menu through right click of the mouse on a tree node. The popup menu content is dynamic and depends on the clicked node: it allows to add subpanes or any other panel types, with these exceptions:
 

@@ -17,7 +17,7 @@ The “**force analysis**” check-box can be used to force the reckon of the ag
 Results are reported in two distinct charts:
 
 * **Total requests nr**, **for each request name**
-* **Requests nr **in total + **CPU usage **+ **Memory usage**, along the specified time interval
+* **Requests nr** in total + **CPU usage** + **Memory usage**, along the specified time interval
 
 Optionally, it is possible to click on any request name on the first chart, in order to detail it on the second chart, where the requests nr will be related along the time, only for the selected request name.
 
