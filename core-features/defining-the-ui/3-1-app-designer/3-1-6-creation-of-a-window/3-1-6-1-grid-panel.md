@@ -119,40 +119,6 @@ These buttons change the current grid mode, according to the following policy:
 * cancel button, from insert/edit mode -> after confirming the operation, the grid is switched to readonly mode and the content reloaded
 * save button, from insert/edit mode -> the grid is switched to readonly mode if the saving operation has been performed successfully.
 
-## Column types
-
-Through the "**type**" property for a column, it is possible to set a wide range of different columns; they differ for the way they are rendered, according to the current cell mode: rendering or editing (i.e. when the user clicks on it and an editor is showed).
-
-Supported types are:
-
-* **Button** - a clickable button is rendered in both modes; a click event can be linked to it, through Column Events folders
-* **CMS File** - it shows a clickable button to use when the grid is used combined with the "Internal CMS module"; the button leads to a File Upload Dialog, to manage File upload/download/Preview and its automatic reading/writing into the CMS module; when this type is set, the **Directory** property must be set as well
-* **Checkbox** - a checkbox is rendered in both modes and the checkbox is clickable in insert/edit grid modes; when this type is set, also Positive/Negative value properties must be set
-* **Counter based on a component** - this type cannot be changed, since it is inherited by the bounded data model
-* **Counter based on a table** - this type cannot be changed, since it is inherited by the bounded data model
-* **Date** - it shows a date formatted according to the current user language; in insert/edit grid mode, the cell is editable and a calendar can be opened to choose the date
-* **Date+Time** - it shows a date+time formatted according to the current user language; in insert/edit grid mode, the cell is editable and a calendar can be opened to choose the date
-* **Dynamic Combobox** - when rendered, a text is showed; the text corresponds to the current code set in the cell; in insert/edit grid mode, a combobox is showed as editor and the user can type a few characters to limit the items list or click on the trigger button to  open the dropdown list, which is always paginated; data is retrieved through the server, where a business component is invoked: data is dynamic; when filling this type, the **Selector** property must be set too. See [https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors) for more details.
-* **File Id** - it shows a clickable button to use when the grid is used combined with the "Alfresco ECM module"; the button leads to a File Upload Dialog, to manage File upload/download/Preview and its automatic reading/writing into the Alfresco module; when this type is set, the **Directory** property must be set as well&#x20;
-* **File Path** - it shows a file name or a button (in insert/edit grid mode) to choose a file; when filling this type, the **Directory** property must be set too
-* **Image URL -** it shows an image as a preview; the cell contains behind the scenes the image file name; cell editing is not allowed; when filling this type, the **Directory** property must be set too
-* **Images Combobox -** when rendered, an image is showed; the image corresponds to the current file name set in the cell; in insert/edit grid mode, a combobox is showed as editor and the user choose among a list of images rendered as combo items; when filling this type, the **Selector** property must be set too. See [https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors) for more details.
-* **Internal counter** - this type cannot be changed, since it is inherited by the bounded data model
-* **Lookup Button** - there is no rendering value for this type; when editing the cell, a "lookup button" is rendered and used to open a "lookup grid", in order to select a code from the list. See [https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors) for more details.
-* **Lookup Cod/Button** - the cell value is showed when rendering the cell; when editing the cell, an "input text field" + "lookup button" are rendered; when losing focus from the cell, the typed text is validated; when clicking on the button a "lookup grid" is showed, in order to select a code from the list. See [https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors) for more details.
-* **Number -** numeric input field, with a large variety of different properties; support for integer/decimal/currency values
-* **Path images** - ?
-* **Sequence/Autoincrement -** this type cannot be changed, since it is inherited by the bounded data model
-* **Static Combobox -** when rendered, a text is showed; the text corresponds to the current code set in the cell; in insert/edit grid mode, a combobox is showed as editor and the user can type a few characters to limit the items list or click on the trigger button to  open the dropdown list, which contains a static predefine list of items (code+description, where description is translated according to the current user language); when filling this type, the **Selector** property must be set too. See [https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors](https://4wsplatform.gitbook.io/user-guide/core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors) for more details.
-* **Text** - text input field
-* **Text area** - multi-line text field (not a very good choice for a grid...)
-* **Time only** - it shows a date formatted according to the current user language; in insert/edit grid mode, the cell is editable and a calendar can be opened to choose the date
-* **Tree Lookup -** no value is showed when rendering the cell; when editing the cell, a "lookup button" is rendered: when clicking on the button a "lookup tree" is showed, in order to select a node from the list (the code to set in the cell); when filling this type, the **Selector** property must be set too
-* **UUID** **-** this type cannot be changed, since it is inherited by the bounded data model
-* **Upload to directory** - an old version type; it is recommended not to use it any more
-
-
-
 ## Summary row
 
 Optionally, a **summary locked row** can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.\
