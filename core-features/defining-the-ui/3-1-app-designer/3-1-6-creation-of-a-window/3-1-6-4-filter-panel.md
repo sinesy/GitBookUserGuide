@@ -53,5 +53,34 @@ Result:
 
 
 
+## Filter types
+
+Through the "**type**" property for a filter, it is possible to set a wide range of different filter controls.
+
+Every control is usually composed of:
+
+* a label; it can be rendered either on the left or on top of the input field
+* an input field; according to the type, the field can be read-only (a button, an image type control) or editable or can miss at all (e.g. a label type control).
+
+Supported types are:
+
+* **Button** - a clickable button; a click event can be linked to it, through Column Events folders
+* **Checkbox** - the checkbox is clickable in insert/edit grid modes; when this type is set, also **Positive**/**Negative** **value** properties must be set
+* **Date** - it shows a date formatted according to the current user language; in insert/edit mode a calendar can be opened to choose the date
+* **Date+Time** - it shows a date+time formatted according to the current user language; in insert/edit mode, a calendar can be opened to choose the date
+* **Dynamic Combobox** - a combobox where the user can type in a few characters to limit the items list or click on the trigger button to  open the dropdown list, which is always paginated; data is retrieved through the server, where a business component is invoked: data is dynamic; when filling this type, the **Selector** property must be set too
+* **HTML Editor** - an HTML editor to use to write formatted text (e.g. with bold, italics, fonts, etc)
+* **Lookup Button** - a "lookup button" is rendered and used to open a "lookup grid", in order to select a code from the list
+* **Lookup Cod/Button** - an "input text field" + "lookup button" are rendered; when losing focus from the input text field, the typed text is validated; when clicking on the button a "lookup grid" is showed, in order to select a code from the list
+* **Lookup Cod/Button Multiselection** - this is available only in a filter panel, NOT in a form/editable panel, since it allows to select multiple values at once and consequently it is incompatible with a form panel where each single-value control is mapped to a table field. An "input text field" + "lookup button" + a list of selected codes are rendered; when losing focus from the input text field, the typed text is validated and in case of valid code, it is added to the list; when clicking on the button a "lookup grid" is showed, in order to select one or more codes at once from the list and add them to the list
+* **Number -** numeric input field, with a large variety of different properties; support for integer/decimal/currency values
+* **Radio button** - a radio button is rendered; they are always used combined with other radio buttons
+* **Static Combobox -** a combobox is showed and the user can type in a few characters to limit the items list or click on the trigger button to  open the dropdown list, which contains a static predefine list of items (code+description, where description is translated according to the current user language); when filling this type, the **Selector** property must be set too
+* **Text** - text input field
+* **Text area** - multi-line text field (not a very good choice for a grid...)
+* **Time only** - it shows a date formatted according to the current user language; a calendar can be opened to choose the date part
+* **Tree Lookup -** a "lookup button" is rendered: when clicking on the button a "lookup tree" is showed, in order to select a node from the list (the code to set in the cell); when filling this type, the **Selector** property must be set too
+* **Upload to directory** - an old version type; it is recommended not to use it any more
+
 
 
