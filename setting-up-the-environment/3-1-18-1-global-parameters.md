@@ -64,7 +64,9 @@ It is strongly recommended to select it.
 
 **(v5.3.2) Use minified js files (def. N)** - the applications uses minified javascript and css files to reduce the size of running files
 
-**Fast metadata loading** - if checked, it speeds up the application reloading process, therefore, it is helpful in a development environment, where metadata is always changing, due to the dev team working on the application all the time. More precisely, when selected, it avoids to reload changes on server-side and client-side actions, which are the most commonly changed artifacts.
+**Fast metadata loading** - if checked, it speeds up the application reloading process, therefore, it is helpful in a development environment, where metadata is always changing, due to the dev team working on the application all the time. More precisely, when selected, it avoids to reload changes on server-side and client-side actions, which are the most commonly changed artifacts.&#x20;
+
+Pay attention that in case of changes in a client-side js action, you have still to reload the web application on your browser, since the code has been already loaded, but the web app reloading will be faster, since no metadata loading process is needed.
 
 
 
