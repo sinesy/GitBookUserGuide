@@ -136,6 +136,17 @@ These are the most common mistakes made when configuring charts:
 * **Donut/Pie**  – the legend must be a text type value; a common error is to pass a numeric value, like when you are showing the distribution per year and the sections of the pie represent different years: in such case, you have to convert the numeric year in a text value, when defining the SQL query in the business component: this is the right place when you have define precisely the data type for each field in the select clause
 * **Gauge**  – a list of gauges are shown for each record read by the defined SQL query. A single column in the SQL selectis required: if you define more than one field in the SQL select, then the number of gauges will be the sum of the records for each field in the select. A common mistake is thinking that a field in the select is required for the legend and a second field for the corresponding values, as for other charts: a gauge does not work in that way. A single field in the select is needed: the field name will be used as the gauge legend, the values for each record as the value of the gauge.
 * **Geolocation**  – this chart is based on the use of Google Maps: in order to use it, you have to purchase a Google account and activate a key for the Google Maps Javascript API. In case the didn’t to that, you will not be able to show the right content in the chart: it will not due to Platform, but on a wrong configuration on your Google account/APIs and that is beyond the support that the Platform team can provide. Additional information about Google configuration can be found here.
+* **Bubble** - this chart requires 3-5 columns (the first 3 are mandatory):&#x20;
+  * Column 0 - \[_string_] An ID for this node. It can be any valid JavaScript string
+  * Column 1 - \[_number_] - X coordinate.
+  * Column 2 - \[_number_] - Y coordinate.
+  * Column 3 - \[_optional_, string or _number_] - An optional value used to calculate a color for this bubble.
+  * Column 4 - \[_optional_, _number_] - An optional value used to define the bubble size.
+* **Treemaps** - this chart requires 3-4 columns (the first 3 are mandatory):&#x20;
+  * Column 0 - \[_string_] An ID for this node. It can be any valid JavaScript string, including spaces, and any length that a string can hold. This value is displayed as the node header.
+  * Column 1 - \[_string_] - The ID of the parent node. If this is a root node, leave this blank. Only one root is allowed per treemap.
+  * Column 2 - \[_number_] - The size of the node. Any positive value is allowed. This value determines the size of the node, computed relative to all other nodes currently shown. For non-leaf nodes, this value is ignored and calculated from the size of all its children.
+  * Column 3 - \[_optional_, _number_] - An optional value used to calculate a color for this node. Any value, positive or negative, is allowed. The color value is first recomputed on a scale from `minColorValue` to `maxColorValue`, and then the node is assigned a color from the gradient between `minColor` and `maxColor`.
 * **Timelane** - this chart requires 4 mandatory columns:&#x20;
   * a lane name, which can include multiple activities along the time, each having the same lane name; a common error is not to define it as a text type
   * a description, related to the activity to draw into a lane
