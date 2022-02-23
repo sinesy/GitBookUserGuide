@@ -9,7 +9,7 @@ This is the list containing all defined services under monitoring.
 
 Through it, any number of services can be configured, through the Add button.
 
-![](../../../.gitbook/assets/schermata-2020-02-24-alle-12.02.36.png)
+![](<../../../.gitbook/assets/image (20).png>)
 
 The detail window requires the following fields:
 
@@ -18,7 +18,8 @@ The detail window requires the following fields:
 * **type** - this represents the type of service to monitor; supported services are: server-side javascript actions, export data from table; according to the service type, the “Command” input field changes and show a different input control, in order to select an action or an export job configuration
 * **command** - the service to monitor (e.g action, export job, etc.); at the moment, only the ones reported above are supported; it means that web services, enqueued actions, actions, scheduled actions, single data export job, a group of export jobs are all supported.
 * **enabled** - flag defining whether the current service must be monitored or not; this flag is helpful to temporary disable the monitoring of services
-* **storage log** - log messages are not stored forever: through this field it is possible to define the maximum amount of logged messages to store, expressed in days; all messages older than this value are automatically deleted (once a day)
+* **storage log** - log messages are not stored forever: through this field it is possible to define the maximum amount of logged messages to store, expressed in days; all messages older than this value are automatically deleted (once a day). If you have defined a BigQuery dataset the messages are not deleted but copied into that.
+* **Erasing historical data** - log messages are not stored forever in BigQuery: through this field it is possible to define the maximum amount of logged messages to store, expressed in days; all messages older than this value are automatically and finally deleted (once a day). Maximun value is 1095 days.
 * **log level** - when a service is under monitoring, each elaboration is automatically saved (in terms of start/end datetime, execution state, I/O); optionally it is possible to append additional log messages for a single elaboration; this messages can be logged or not, according to the log level; Platform can automate log generation for some events (e.g. out of memory FATAL error, javascript ERROR, authentication ERROR, etc.); in addition, Platform developers can include other logged messages, through ad hoc utility methods (described in the next section); each for these can have a specific log level; the “Log level” input field allows to define which logged messages must be saved and others must be ignored: only messages having a log level higher or equal to the ”Log level” are accepted; this is the scale and priorities: FINEST, INFO, DEBUG, ERROR, FATAL; consequently, if “Log level” has been set to “ERROR”, any message having type FINEST, INFO, DEBUG will be ignored, whereas ERROR/FATAL messages are saved. For more details see the section below.
 
 Optional fields that can be specified are:
