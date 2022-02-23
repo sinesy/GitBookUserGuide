@@ -14,7 +14,7 @@ You can configure the control in the Input Controls folder (Range Date type) and
 
 In the application you can view a control with two calendars for the selection of the start and end date, composing the date range.
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 You can set other properties through the "Additional configuration" property of a control:
 

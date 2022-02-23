@@ -19,10 +19,11 @@ In case the “service” combo-box has been specified, additional input fields 
 
 For example, if a “selling” service has been defined with a “barcode” tag, when selecting this service in the filter panel, a “barcode” filter control will be added as well.
 
-![](../../../.gitbook/assets/schermata-2020-02-24-alle-11.56.13.png)
+![](<../../../.gitbook/assets/image (21).png>)
 
 The result list reports the following columns:
 
+* **finder -** if you have defined the BigQuery dataset you can search the old elaborations with the "History" selection
 * **application** - the application id, needed in case of elaborations coming not only from the local server but also from remote servers
 * **code** - service code, related to the elaboration
 * **start/end date** - datetime when the elaboration started and finished; end date is filled only for elaborations terminated without or with errors
