@@ -214,3 +214,26 @@ return [[
 Optionally, a group of **locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
 
 In case **locked columns are combined with grouping columns, a new grid is rendered, composed of a tree+grid,** where grouping columns become tree nodes, which are anchored on the left side of the grid. That means it is not supported a grid having grouped columns+locked columns.
+
+## Additional configuration
+
+Optionally, it is possible to include in the grid definition, additional settings, through the Additional Config multiline field in the grid definition window.
+
+Supported settings are the one reported in the official ExtJS 3.3 documentation:
+
+{% embed url="https://docs.sencha.com/extjs/3.4.0#!/api/Ext.grid.EditorGridPanel" %}
+
+Moreover, a few other settings are supported:
+
+* **overrideBeforeEdit: true,** overrides the default behavior of cell editing in a grid, based on the grid mode and allows to fully customize the grid behavior, independently of the current grid mode. Pay attention to this property, since it can easily lead to data inconsistencies with regards to the saving operations and toolbar state. Use the "before cell editing" event of a grid to customize grid behavior: in the bounded action, return true to allows cell editing, return false to make the cell not editable
+
+
+
+Bear in mind that all settings specified in the "Additiona config" input box must end with a comma.
+
+
+
+
+
+
+
