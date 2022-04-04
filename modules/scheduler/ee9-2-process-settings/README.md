@@ -27,7 +27,8 @@ Required data change according to the " **Execution Type** " chosen. There are s
 * **Export a group -** service used to export a list of  Export from table definitions, the ones belonginh to the same specified group
 * **Export all -** service used to export all  Export from table definitions
 * **Execute the tests of the collection -** service used to execute the automated testings defined for the current application, belonging to the same collection
-*   **Execute all tests -** service used to execute all automated testings defined for the current application
+* **Execute all tests -** service used to execute all automated testings defined for the current application
+*   **Database lock checking** - service used to check the specified database schema and search for locks. In no process parameters have been specified, the default schema is analyzed, searching for locks (blocking and not blocking). If you want to check a specific schema, you can add the process parameter named "**DATASOURCE\_ID**", with numeric type and fill in the value with the corresponding datasource id. If you want to check for blocking locks only, you can add the parameter named "**ONLY\_BLOCKING\_LOCKS**", having text type and value "Y". You can be notified through the email notifications, when the exit code is "-1", i.e. locks found.
 
 
 
