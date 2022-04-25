@@ -6,21 +6,30 @@ Id and Name: they identity the task and they are mandatory; be sure NOT to inclu
 
 
 * Documentation: an optional description of this task
-* Class: **it.sinesy.activiti.services.ExecuteComponentServiceTask**
-* Class fields: in this list of fields, a set of properties must be defined, in order to correctly define the web service invocation:
+* **Class**: **it.sinesy.activiti.services.ExecuteComponentServiceTask**
+
+You can simply select the corresponding value from the combobox: "Platform Web Service":
+
+![](<../../../../.gitbook/assets/image (23).png>)
+
+* **Class fields**: in this list of fields, a set of properties must be defined, in order to correctly define the web service invocation:
   * name: property name to refer
   * string value: value to assign to that property
   * expression: optional expression to set, e.g.\
     ${VARIABLE == ’Test’ ? YES : ’NO’}
 
-A typical web service invocation available within 4WS.Platform would contain the following couples name-value:
+You can simple define the following name-value properties:
 
-* name = applicationId
+![](<../../../../.gitbook/assets/image (19).png>)
+
+A typical web service invocation available within 4WS.Platform would contain the following couples name-value, as in the picture above:
+
+* name = **applicationId**
 * string value =
-* name = companyId
+* name = **companyId**
 * string value =
-* name = url
-* string value = [getList?param1=val1](http://host/:port/platform/getList?param1=val1)**&**param2=val2
+* name = **url**
+* string value = [getList?param1=val1](http://host/:port/platform/getList?param1=val1)**\&amp;**param2=val2
 
 **Important note:** do not add the full URL, including "http://..." because you would create a workflow working only on the environment. In order to make it working in any environment, define exclusively related URLs, i.e. URL starting with the web service name (e.g. executeJs, getlist, etc.)
 
@@ -58,6 +67,48 @@ In order to make more portable a process, the defined tasks should not contain r
 This goal can be reached by omitting the whole URL and use a relative URL instead.\
 This simplification can be done only if the first fixed part of any URL ([http://host:port/webcontextofPlatform](http://host/:port/webcontextofPlatform)) has been defined as an installation parameter in Activiti-Rest db.properties file, where the "baseUrl" property must be set with that value.\
 In this way, every installation would have its own ad hoc absolute path and all processes would remain portable, since they would not contain any more absolute URLs.
+
+
+
+In case your service activity requires a **feedback**, you have also to:
+
+* define a 4th parameter in Class Fields, named "**return**" and filled in with the process property name hosting the feedback
+* use the **utils.setReturnValue(...)** instruction on the js server-side action to provide such a feedback
+
+A few constraints must be respected:
+
+* the feedback MUST always be expressed as a JSON string
+* if you need to work with attributes coming from the JSON string, you'd better postpone a **Script activity** to the Service activity, in order to extract the JSON attributes and set each of them as a process property.
+
+Example:
+
+![](<../../../../.gitbook/assets/image (24).png>)
+
+The Service activity has a Class Field property named "**return**", filled with "**RESPONSE**", i.e. "RESPONSE" would be the javascript object hosting the response coming from thr js server-side action, which would give back a JSON string.
+
+The js server-side action MUST give back something like:
+
+```
+var response = {
+    outcome: outcome
+};
+utils.setReturnValue(JSON.stringify(response));
+```
+
+The Script activity must be defined as:
+
+* Script format: "JavaScript"&#x20;
+* Script:
+
+```
+execution.setVariable("OUTCOME", execution.getVariable("RESPONSE").outcome);
+```
+
+In this way, the JSON string coming from the js server-side action would be converted internally in a js object and the instruction above will extract the attribute "outcome" from the "RESPONSE" js object and store the attribute value to the "OUTCOME" process property.
+
+Any other part of the workflow will be then able to access to the OUTCOME process property.
+
+**Note**: it is possible that such variables are not reported in the Instance process execution or History screens.
 
 ## Example
 

@@ -10,7 +10,7 @@ In an editable panel you can use this control for selecting the start and end da
 
 You can configure the control in the Input Controls folder (Range Date type) and select the "Between" or "Between (excluding date limits)" operator.
 
-![](<../../../.gitbook/assets/image (19).png>)
+![](<../../../.gitbook/assets/image (19) (1).png>)
 
 In the application you can view a control with two calendars for the selection of the start and end date, composing the date range.
 
