@@ -19,7 +19,7 @@ In case the “service” combo-box has been specified, additional input fields 
 
 For example, if a “selling” service has been defined with a “barcode” tag, when selecting this service in the filter panel, a “barcode” filter control will be added as well.
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 The result list reports the following columns:
 

@@ -20,7 +20,7 @@ You can simply select the corresponding value from the combobox: "Platform Web S
 
 You can simple define the following name-value properties:
 
-![](<../../../../.gitbook/assets/image (19).png>)
+![](<../../../../.gitbook/assets/image (19) (1).png>)
 
 A typical web service invocation available within 4WS.Platform would contain the following couples name-value, as in the picture above:
 
