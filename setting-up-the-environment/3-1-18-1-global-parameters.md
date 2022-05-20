@@ -295,7 +295,46 @@ It is essential to put a limit to the log events to save here. Please always set
 
 **If  only "Max days to log" is filled out, then this setting will be applied to all log types**. Consequently, if you want to set a specific limit for a specific log type, you have NOT to define "Max days to log" as a global parameter (let it empty), but use **"Max days to log per Type" instead, available as an application parameter (**[**https://4wsplatform.gitbook.io/user-guide/setting-up-the-environment/3-1-18-2-application-parameters#logs**](https://4wsplatform.gitbook.io/user-guide/setting-up-the-environment/3-1-18-2-application-parameters#logs)**)**.
 
-###
+### LOGIN
+
+**Enable Two Factors authentication** (since 6.0.3) - when activated, the two steps authentication is required: the web app login page will show not only username and password fields, but also the OTP input field where typing the one-time-password generated through a mobile app.
+
+Once enabled this feature, ALL users require to provide the additional OTP when logging on, both on the web app and on the App Designer.
+
+The first time you logon in the web app, a QRCode is displayed and must be captured through the camera of your smartphone, opened starting from: Google Authenticator, Microsoft Authenticator, Twilio Authy.
+
+Once captured the QRCode in one of these apps, you can access to the OTP code: read it and type in the OTP input field of the web app login page.
+
+As reported above, you can install in your mobile app any of these free apps:&#x20;
+
+* Google Authenticator - it is the easiest of the three: it can protect your private keys through your smartphone auth mechanism (e.g. Face ID)
+* Microsoft Authenticator - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID) and it can also backup your private keys in the cloud, but only if you own a Microsoft account.
+* Twilio Authy - as for the others, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID) and it can also backup your private keys in the cloud, by creating a free account in the Authy cloud.
+
+**Disable RTK sensitive parameters after login (def. N)** - flag used to disable sensitive parameters to load in the main page after the login step.
+
+**Enabled users** - list of users, separated by a comma, who can access the web app; helpful to limit temporarely the logon to a restricted set of users, for example when deploying a new app version and need sometime to test it.
+
+**Show combos for Company and Site (YN)** - flag used to show either a combo or an input field for company and site id fields.
+
+**Server-side action before login** - you can optionally specify the id for a server-side js action which will be invoked just after a successful login, in order to carry out an additional checking and optionally interrupt the login (e.g. after checking the browser IP address or the access time).
+
+The action can interrupt the logon through the method:
+
+```
+utils.setReturnValue({ 
+  success: false, 
+  message: "Message to show" 
+  });
+```
+
+**Login label in controls** - set the labels for the login controls
+
+**Access Unavailable message** - message to show in the login page, when the login has been temporarely suspended.
+
+**Translate login labels with browser language** - flag used to automatically translate labels in the login page, according to the browser language.
+
+
 
 ### MAIL
 
