@@ -316,17 +316,39 @@ As reported above, the user can install in his own smartphone any of these free 
 * _Microsoft Authenticator_ - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the user private keys in the cloud (backup), but only if the user owns a Microsoft account.
 * _Twilio Authy_ - as for the others, it can protect the user private keys through his smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the private keys in the cloud, by creating a free account in the Authy cloud. It supports also multiple devices.
 
-As reported above, the user can install in his own smartphone any of these free apps:&#x20;
 
-Once captured the QRCode in one of these apps, the user has also to confirm the QRCode reading by pressing the "S_canned by the Authenticator App_" button. After that, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the web app login page.
 
-The first time you logon in the web app (OTP field with "unset" value...), a QRCode is displayed and must be captured through the camera of your smartphone, opened starting from either Google Authenticator or Microsoft Authenticator or Twilio Authy.
-
-_Failed attempts when typing the OTP count for invalid attempts_ as well as for the invalid password and would lead to lock the account after reaching the maximum attempts.
+**Enable Two Step authentication for web apps** (since 6.0.2) - when activated, the two steps authentication is required in the interpreted the web apps: the login page will show not only username and password fields, but also the OTP input field where typing the one-time-password generated through a mobile app.
 
 Once enabled this feature, the login page would ask ALL users to provide the additional OTP when logging on, through the new _OTP input field_ available in that page.&#x20;
 
-**Enable Two Step authentication for web apps** (since 6.0.2) - when activated, the two steps authentication is required in the interpreted the web apps: the login page will show not only username and password fields, but also the OTP input field where typing the one-time-password generated through a mobile app.
+_Failed attempts when typing the OTP count for invalid attempts_ as well as for the invalid password and would lead to lock the account after reaching the maximum attempts.
+
+The first time you logon in the web app (OTP field with "unset" value...), a QRCode is displayed and must be captured through the camera of your smartphone, opened starting from either Google Authenticator or Microsoft Authenticator or Twilio Authy.
+
+Once captured the QRCode in one of these apps, the user has also to confirm the QRCode reading by pressing the "S_canned by the Authenticator App_" button. After that, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the web app login page.
+
+As reported above, the user can install in his own smartphone any of these free apps:&#x20;
+
+* _Google Authenticator_ - it is the easiest of the three: it can protect your private keys through your smartphone auth mechanism (e.g. Face ID)
+* _Microsoft Authenticator_ - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the user private keys in the cloud (backup), but only if the user owns a Microsoft account.
+* _Twilio Authy_ - as for the others, it can protect the user private keys through his smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the private keys in the cloud, by creating a free account in the Authy cloud. It supports also multiple devices.
+
+**Enable Two Step authentication for App Designer** (since 6.0.2) - when activated, the two steps authentication is required to developers to access the App Designer: the login page will show not only username and password fields, but also the OTP input field where typing the one-time-password generated through a mobile app.
+
+Once enabled this feature, the App Designer login page would ask ALL developers to provide the additional OTP when logging on, through the new _OTP input field_ available in that page.&#x20;
+
+_Failed attempts when typing the OTP count for invalid attempts_ as well as for the invalid password and would lead to lock the account after reaching the maximum attempts.
+
+The first time the developer logon in the App Designer (OTP field with "unset" value...), a QRCode is displayed and must be captured through the camera of his smartphone, opened starting from either Google Authenticator or Microsoft Authenticator or Twilio Authy.
+
+Once captured the QRCode in one of these apps, the user has also to confirm the QRCode reading by pressing the "S_canned by the Authenticator App_" button. After that, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the App Designer login page.
+
+As reported above, the user can install in his own smartphone any of these free apps:&#x20;
+
+* _Google Authenticator_ - it is the easiest of the three: it can protect your private keys through your smartphone auth mechanism (e.g. Face ID)
+* _Microsoft Authenticator_ - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the user private keys in the cloud (backup), but only if the user owns a Microsoft account.
+* _Twilio Authy_ - as for the others, it can protect the user private keys through his smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the private keys in the cloud, by creating a free account in the Authy cloud. It supports also multiple devices.
 
 **Disable RTK sensitive parameters after login (def. N)** - flag used to disable sensitive parameters to load in the main page after the login step.
 
