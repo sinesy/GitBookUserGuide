@@ -305,7 +305,9 @@ _Failed attempts when typing the OTP count for invalid attempts_ as well as for 
 
 The first time you logon in the web app (OTP field with "unset" value...), a QRCode is displayed and must be captured through the camera of the smartphone, opened starting from either Google Authenticator or Microsoft Authenticator or Twilio Authy.
 
-Once captured the QRCode in one of these apps, the user has also to confirm the QRCode reading by pressing the "S_canned by the Authenticator App_" button. After that, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the web app login page.
+Once captured the QRCode in one of these apps, the user has to type the OTP code displayed in the mobile app and press the "Login" button.&#x20;
+
+Similarly, after the first time, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the web app login page.
 
 As reported above, the user can install in his own smartphone any of these free apps:&#x20;
 
@@ -313,7 +315,7 @@ As reported above, the user can install in his own smartphone any of these free 
 * _Microsoft Authenticator_ - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the user private keys in the cloud (backup), but only if the user owns a Microsoft account.
 * _Twilio Authy_ - as for the others, it can protect the user private keys through his smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the private keys in the cloud, by creating a free account in the Authy cloud. It supports also multiple devices.
 
-It is recommended to use the last one, since it is the most completed.
+It is recommended to use the last one, since it is the most complete.
 
 
 
@@ -325,13 +327,17 @@ _Failed attempts when typing the OTP count for invalid attempts_ as well as for 
 
 The first time the developer logon in the App Designer (OTP field with "unset" value...), a QRCode is displayed and must be captured through the camera of his smartphone, opened starting from either Google Authenticator or Microsoft Authenticator or Twilio Authy.
 
-Once captured the QRCode in one of these apps, the user has also to confirm the QRCode reading by pressing the "S_canned by the Authenticator App_" button. After that, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the App Designer login page.
+Once captured the QRCode in one of these apps, the user has to type the OTP code displayed in the mobile app and press the "Login" button.&#x20;
+
+Similarly, after the first time, the user can access to the OTP code in the mobile app, read it and type in the OTP input field of the App Designer login page.
 
 As reported above, the user can install in his own smartphone any of these free apps:&#x20;
 
 * _Google Authenticator_ - it is the easiest of the three: it can protect your private keys through your smartphone auth mechanism (e.g. Face ID)
 * _Microsoft Authenticator_ - as for the previous one, it can protect your private keys through your smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the user private keys in the cloud (backup), but only if the user owns a Microsoft account.
 * _Twilio Authy_ - as for the others, it can protect the user private keys through his smartphone auth mechanism (e.g. Face ID, fingerprint reader) and it can also backup the private keys in the cloud, by creating a free account in the Authy cloud. It supports also multiple devices.
+
+It is recommended to use the last one, since it is the most complete.
 
 **Disable RTK sensitive parameters after login (def. N)** - flag used to disable sensitive parameters to load in the main page after the login step.
 
