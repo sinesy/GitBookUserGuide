@@ -345,17 +345,6 @@ It is recommended to use the last one, since it is the most complete.
 
 **Show combos for Company and Site (YN)** - flag used to show either a combo or an input field for company and site id fields.
 
-**Server-side action before login** - you can optionally specify the id for a server-side js action which will be invoked just after a successful login, in order to carry out an additional checking and optionally interrupt the login (e.g. after checking the browser IP address or the access time).
-
-The action can interrupt the logon through the method:
-
-```
-utils.setReturnValue({ 
-  success: false, 
-  message: "Message to show" 
-  });
-```
-
 **Login label in controls** - set the labels for the login controls
 
 **Access Unavailable message** - message to show in the login page, when the login has been temporarely suspended.
