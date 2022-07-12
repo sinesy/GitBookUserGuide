@@ -7,7 +7,7 @@ Once dropped a Service Task, open its property inspector and choose the "Class" 
 
 Independently of the option chosen, you have to fill in a few properties, through the "Class Fields" property:
 
-![](<../../../../.gitbook/assets/image (22).png>)
+![](<../../../../.gitbook/assets/image (22) (1).png>)
 
 According to the Class selected, different propertied must be defined in the window above. See the sub-sections Web Service, SQL Query and SQL statement for additional details.
 

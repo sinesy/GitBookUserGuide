@@ -206,6 +206,7 @@
   * [File Management](modules/3-1-19-1-file-management.md)
   * [Export and Import of Metadata](modules/3-1-19-export-and-import-of-metadata/README.md)
     * [Application Metadata Management](modules/3-1-19-export-and-import-of-metadata/3-1-19-2-application-metadata-management.md)
+  * [Trigger writing operations](modules/trigger-writing-operations.md)
   * [Audit](modules/audit.md)
   * [BPM](modules/bpm/README.md)
     * [BPMN Introduction](modules/bpm/ee0-1-bpm-introduction.md)

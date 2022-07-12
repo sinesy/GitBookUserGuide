@@ -396,6 +396,17 @@ Note: the login time is not recorded in case of either a stateless web service l
 
 **Key per label of additional link (from translations)**  - key for the translation of the label for the additional link.
 
+**Server-side action before login** - you can optionally specify the id for a server-side js action which will be invoked just after a successful login, in order to carry out an additional checking and optionally interrupt the login (e.g. after checking the browser IP address or the access time).
+
+The action can interrupt the logon through the method:
+
+```
+utils.setReturnValue({ 
+  success: false, 
+  message: "Message to show" 
+  });
+```
+
 
 
 ### MAIL
