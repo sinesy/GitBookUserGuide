@@ -36,4 +36,4 @@ You can set other properties through the "Additional configuration" property of 
 
 If you want to set a default value you can write a string with start and end date with the specified format.
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+![](<../../../.gitbook/assets/image (20) (1) (1).png>)

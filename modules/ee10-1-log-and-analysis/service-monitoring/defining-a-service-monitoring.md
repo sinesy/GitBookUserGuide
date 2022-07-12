@@ -9,7 +9,7 @@ This is the list containing all defined services under monitoring.
 
 Through it, any number of services can be configured, through the Add button.
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20) (1).png>)
 
 The detail window requires the following fields:
 
