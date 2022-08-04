@@ -203,6 +203,25 @@ return {
 
 &#x20;
 
+**error while generating a report using Jasper Report**
+
+If you are executing for the first time a report in a new environment using Jasper Report, you could bump into this error:
+
+```
+// Some codeCould not initialize class net.sf.jasperreports.engine.util.JRStyledTextParser
+java.lang.NoClassDefFoundError: Could not initialize class net.sf.jasperreports.engine.util.JRStyledTextParser
+```
+
+&#x20;If it is so, you have to include a Java directive in the Tomcat service configuration:
+
+```
+-Djava.awt.headless=true
+```
+
+Finally, restart the Tomcat service.
+
+
+
 ## Error while reading email messages
 
 Platform distribution can work within a Tomcat web container or inside Google App Engine container.
