@@ -249,6 +249,53 @@ Alfresco: sync user roles in Alfresco (Y/N) -&#x20;
 
 
 
+### API
+
+**Action Id to retrieve the max num. of requests per company** - At application level, it is possible to define a server-side javascript action to define the max number of _monthly_ requests per company id. This can be helpful for multi-tenancy applications having limits on the number of requests to APIs that a company can invoke monthly.
+
+The action must returns a JSON string having this format:{
+
+```
+{
+   "mycompanyid1": maxValue1,
+   "mycompanyid2": maxValue2,
+   ...
+}
+```
+
+Example:
+
+```
+{
+   "00000": 10000,
+   "00001": 20000,
+   ...
+}
+```
+
+In this way, you can define different limits to different companies, according to the agreement defined for each company, for example by reading a specific table containing such limits.
+
+This action is read the first time a request arrives from a company client (call to api?cmd=...) and it is refreshed automatically every hour and each time a limit is overpassed.
+
+This action can work together with the next one.
+
+
+
+**Action Id to call when overpassing the max num. of requests per company** - At application level, it is possible to define a server-side action automatically invoked by Platform, each time the max number of requests per company is reached. In such a case, this action is invoked, passing forward the following reqParams:
+
+```
+{
+  companyId: "....",
+  max: currentNumOfRequests
+}
+```
+
+Within this action you can define a business logic to increase that limit, for example by changing automatically the agreement for that company (tenant) or block any other request till the next month.&#x20;
+
+In order to block any subsequent request, you can simply get back a { success: false } response.
+
+
+
 ### ARCHIFLOW
 
 ARCHIFLOW\_DOMAIN -&#x20;
