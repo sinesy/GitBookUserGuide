@@ -101,9 +101,13 @@ Independently of the field, additional settings can be defined:
 * format – the format to use for a date/number field;
 * in case of date, the format is expressed according to the Java Format for Date (e.g. yyyy-MM-dd); if not specified, the default date format defined for current language will be used
 * in case of a number, the format is expressed according to the Java Format for Number; if not specified, the default number format defined for current language will be used
-* renderer – a javascript program, used to define the result string to show for the current value; that program can contain any number of js commands and has as input the "vo" variable containing the couples , for each value of the main query.
+* renderer – a javascript program, used to define the result string to show for the current value; that program can contain any number of js commands and has as input the "vo" variable containing the couples , for each value of the main query. The renderer also allows you to customize the display of the value for example by putting it in bold or color font. Example:
 
-The program must terminate by returning the result string to show, through the command: utils.setReturnValue(valueToReturn);
+```xml
+<w:rPr><w:b/><w:color w:val="4F81BD"/></w:rPr>TESTO</w:t></w:r><w:r><w:t>
+```
+
+`The` program must terminate by returning the result string to show, through the command: utils.setReturnValue(valueToReturn);
 
 Example:
 
