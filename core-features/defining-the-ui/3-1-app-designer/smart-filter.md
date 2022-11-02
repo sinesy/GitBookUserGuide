@@ -15,7 +15,7 @@ You can configure the control in the Input Controls folder (Smart Filter type) a
 
 Note that the Operator property is useless, since the filters to apply to the grid use always the contains operator, since **it can be used only of text type fields**. If you need to filter on date/numeric fields, it is likely that the operator can change according to the need: for this scenario, it is better to use the advanced filter.
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 
 The **image selector** is used to define the fields on which it is possible to search and the optional icon.
 
