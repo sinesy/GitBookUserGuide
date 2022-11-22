@@ -226,6 +226,10 @@ Supported settings are the one reported in the official ExtJS 3.3 documentation:
 Moreover, a few other settings are supported:
 
 * **overrideBeforeEdit: true,** overrides the default behavior of cell editing in a grid, based on the grid mode and allows to fully customize the grid behavior, independently of the current grid mode. Pay attention to this property, since it can easily lead to data inconsistencies with regards to the saving operations and toolbar state. Use the "before cell editing" event of a grid to customize grid behavior: in the bounded action, return true to allows cell editing, return false to make the cell not editable
+* **insertUpdateHidden** (since 6.0.2): 'Y' if you want hide the insert or update control in import form ('N' default)
+* **insertUpdateLabelKey** (since 6.0.2): set the key of translation for the label of insert or update control in import form
+* **insertUpdateDisable** (since 6.0.2): 'Y' if you want disable the insert or update control in import form ('N' default)
+* **insertUpdateDefaultValue** (since 6.0.2): 'Y' if you want checked the insert or update control in import form ('N' default)
 
 
 
