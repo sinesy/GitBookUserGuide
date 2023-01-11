@@ -48,4 +48,4 @@ When automating the execution of a process, two data must be provided:
 
 You can define an execution user for each company. The process will be executed only for companies that have a defined user. In test case you can execute a process for only selected company.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>

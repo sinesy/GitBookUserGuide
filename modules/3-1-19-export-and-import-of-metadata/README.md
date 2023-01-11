@@ -12,13 +12,17 @@ The publication process consists of **exporting metadata** from the starting env
 
 In order to export metadata, you have to work on the starting environment where you can use “Import/Export Application” functionality, available in the **Application** menu.
 
+
+
+## Exporting all metadata
+
 Through the “Metadata application management” folder, you can export metadata: you have just to press on the “**Export Application**” button and wait for the .zip file produced by Platform. This .zip file can be downloaded and saved on your local file system.
 
 Moreover, it is strongly recommended to pay attention to the **languages to export**: **** it can happen that you are developing a multi language product and you have define many languages, but only a few of them are actually used in the target env where you wanna import metadata; in such a case, you'd better not to export all languages, but only the ones actually used. This approach can **significantly reduce the amount of time required to import metadata in the target environment**.
 
 Once done that, you are ready to import metadata by working on the target environment: open the same functionality and, this time, upload file .zip file previously exported in the “Application to upload” input field and press “Import Application” button.
 
-![](../../.gitbook/assets/schermata-2021-02-16-alle-16.42.45.png)
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Before doing it, you can optionally set a few settings just below the input field:
 
@@ -41,11 +45,7 @@ This window is shown by pre-setting the most common import configuration, so tha
 
 Actually, this button will not directly start the import process, but only start a checking over the content of the .zip file: the purpose of this checking is described below.
 
-**Additional buttons**
 
-* **Verify objects** - button used to compare the tables descriptions coming from the metadata and the real definition of tables: this feature can be helpful in case of an erroneous disalignment between two environments, to find out the inconsistencies.
-* **Create tables after importing data** - button used to optionally create missing tables starting from the metadata definition; pay attention to this operation: it could not be a good idea to depend on this feature to align two distinct databases, but it can come in handy to quickly and temporarelly fix a disalignment in a production environment.
-* **Export metadata to Platform for GAE** -  this button is visibile only for app configured to be executed within the Google App Engine Container; in such a scenario, you configure the app using the App Designer running on Platform Standard and then export it inside GAE, in order to run the application in this container.
 
 When the import process has been started through the “Import application” button, Platform will analyze the .zip content, searching for metadata which can have differences according to the environment. It is possible that you don’t want to import all of them and Platform will show you all these differences, organized per topic.
 
@@ -77,3 +77,81 @@ At the end of the import process, Platform prompts the user about two optional t
 
 * **re-activate datasources** - in case new data sources have been imported, you have to confirm this activity, so that these data sources will be enabled and be ready to use.
 * **objects checking** - this is the same operation described before when talking about the button named “Verify objects” .
+
+
+
+## **Additional buttons**
+
+A few additional operations are available, apart form the metadata export:
+
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+* **Verify objects** - button used to compare the tables descriptions coming from the metadata and the real definition of tables: this feature can be helpful in case of an erroneous disalignment between two environments, to find out the inconsistencies.
+* **Create/Align tables in BigQuery** - button used to optionally check out the tables that must be defined in BigQuery, compared with the metadata: if there are BigQuery type objects included in the metadata and not yet created as tables in BigQuery, there are automatically created. Same for fields disalignments.
+* **Create tables after importing data** - button used to optionally create missing tables starting from the metadata definition; pay attention to this operation: it could not be a good idea to depend on this feature to align two distinct databases, but it can come in handy to quickly and temporarelly fix a disalignment in a production environment.
+* **Export metadata to Platform for GAE** -  this button is visibile only for app configured to be executed within the Google App Engine Container; in such a scenario, you configure the app using the App Designer running on Platform Standard and then export it inside GAE, in order to run the application in this container.
+* **Compare metadata with a remote environment** - this feature can be used as an alternative to export all metadata (described in the previous section). Through this feature, it is possible to select single parts of metadata and publish them in another environment. It can be helpful to publish for example fixes or specific new parts. Additional information about this feature is reported in the next section.
+
+
+
+## **Compare metadata with a remote environment**
+
+&#x20;This feature allows to compare local metadata (e.g. coming from the development environment) with metadata coming from a remote installation (e.g. production environment).
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+When opening the window, local metadata is automatically loaded. In case there are changed in metadata performed in the last few minutes, it is possibile to press again the "**Local metadata reload**" button to refresh local metadata.
+
+When pressing the "**Fetch remote metadata**" button, a dialog is prompted to the user, in order to connect to the remote installation:
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+The base URL to the Platform installation must be specified, along with the credentials to access to the App Designer, using a remote user enabled to access to the App Designer to publish metadata.
+
+Once pressed the "Metadata remote import" button, metadata is retrieved from the remote server. After that, the comparison between local and remote metadata is automatically started. The time required to do it can changes according to the dimension of the app, from a few seconds up to a minute.
+
+Once completed the comparison, a tree is rendered, showing only new/changed metadata, available in the local env but not in the remote env:
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Instead of showing new/changed metadata in a plain list, it is grouped hiearchically, in order to make it easier for the dev to figure out all metadata to send, related to a specific functionality.
+
+For example, in case of a new menu item opening a new window composed of panels, events, actions, linked to a business component and object, the root node is a PRM04\_FUNCTIONS (menu item), whose child is a window, containing sub-nodes which are panels, columns, controls, events, actions, etc.
+
+It is up to the dev to figure out exactly what to export.
+
+To facilitate such task, there is a filter panel where filtering content by:
+
+* date interval
+* user
+* metadata type (new, changes)
+* component type (panel, actions, etc.)
+
+The tree-grid provides the following information:
+
+* id - the unique identifier of the metadata (e.g. panel id for a panel, etc.)
+* sel - checkbox used to select which metadata to export
+* type - metadata type (e.g. panel, column, etc.)
+* title - metadata title, when available (e.g. window title, panel title, b.c. title, action title, etc.)
+* operation - new or changed metadata&#x20;
+* create user/datetime - the user/date creating the metadata in the local env
+* last update user/datetime - the user/date updating for the last time the metadata in the local env
+
+Moreover, when the dev clicks on a check node to select what to export, all subnodes are automatically checked too, in order to reduce the chance to have inconsistencies when exporting data.
+
+**Important note**: pay attention to ehat you are exporting: it is possible that the export ends with an error due to foreign keys violated, because the metadata selected is not all needed: for that reason there is the automatism  to auto-select checkboxes to subnodes.
+
+Anyway, there are more subdle cases where there are dependecies not depending on the FK, as for a client side action invoking a server-side action: it is up to the dev to know that and take it into account, during the selection process.
+
+
+
+Finally, when pressing the **Metadata** **Export** button, the remote export is started.
+
+The **History** button shows all previous exports correctly finished, in order to figure out what was exported in the past and by whom:
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+When double clicking on a row, a detail window is shown, where the report of all metadata exported is prompted:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
