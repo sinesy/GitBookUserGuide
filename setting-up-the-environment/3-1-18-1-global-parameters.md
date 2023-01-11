@@ -68,6 +68,8 @@ It is strongly recommended to select it.
 
 Pay attention that in case of changes in a client-side js action, you have still to reload the web application on your browser, since the code has been already loaded, but the web app reloading will be faster, since no metadata loading process is needed.
 
+**Smart theme for App Designer** - when selected, the App Designer (applications index, login page and the IDE) will be rendered using a smart theme.
+
 
 
 ### ACTIVITI
