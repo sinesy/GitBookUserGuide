@@ -1,6 +1,6 @@
-# Automated Web Service Testing
+# Automated Testing
 
-Platform allows to quickly create a large portion of your application, using the wizards it provides. Thanks to them, the generated part of application is likely to work perfectly, unless your business logic (SQL layer) has been defined wrongly.
+Platform allows to quickly create a large portion of your application, using the wizards it provides. Thanks to them, the generated part of application is likely to work perfectly, unless your business logic \(SQL layer\) has been defined wrongly.
 
 Apart from that, there is another layer which can be considered critical from a quality point of view: server-side custom logic, written using javascript.
 
@@ -10,13 +10,13 @@ You can create as many server-side javascript actions as you want. These actions
 
 In any case, the problem involved with this source code is that it should be tested.
 
-Platform provides a module to quickly create Test Cases, i.e. HTTP requests you can use to invoke to call and test your web services (your server-side actions). It also allows to define testing conditions, in order to check out whether the response of the web service is the one expected.
+Platform provides a module to quickly create Test Cases, i.e. HTTP requests you can use to invoke to call and test your web services \(your server-side actions\). It also allows to define testing conditions, in order to check out whether the response of the web service is the one expected.
 
 This feature allows you to define:
 
 * HTTP method
 * HTTP request URL
-* query parameters (i.e. parameters included in the URL, after the ?)
+* query parameters \(i.e. parameters included in the URL, after the ?\)
 * header parameters
 * BODY content
 
@@ -26,7 +26,7 @@ Outcomes are also automatically saved in Platform Table Log feature, so that you
 
 ## How to create a Test Case manually
 
-This feature can be accessed through the App Designer menubar: **Services -> Automated Tests**
+This feature can be accessed through the App Designer menubar: **Services -&gt; Automated Tests**
 
 ![](../.gitbook/assets/test-main.png)
 
@@ -40,12 +40,12 @@ You can **create a new Test Case** by pressing the **New** button on top of the 
 
 Here you have to specify:
 
-* a **name** for the Test Case (mandatory)
-* a **collection** it belongs to (mandatory); this editable combo-box allows you to choose an already existing collection or simply digit it for the first time
-* the **HTTP request** (mandatory), in terms of HTTP method and URL; here you can specify any number of variables, always expressed as&#x20;
-* an optional **action** (web service), used to link many Test Cases to the same action; this setting does not have any real usage, expect for grouping many Test Cases to a specific action
-* an optional **action** (a server-side javascript action) to invoke just before testing the current one; helpful to setup all data needed to run repeatable tests
-* an optional **action** (a server-side javascript action) whose content must be appended at the beginning of the verifying code executed at the end of the test; this javascript code represent base code to include in multiple tests, sharing the same verifying logic
+* a **name** for the Test Case \(mandatory\)
+* a **collection** it belongs to \(mandatory\); this editable combo-box allows you to choose an already existing collection or simply digit it for the first time
+* the **HTTP request** \(mandatory\), in terms of HTTP method and URL; here you can specify any number of variables, always expressed as 
+* an optional **action** \(web service\), used to link many Test Cases to the same action; this setting does not have any real usage, expect for grouping many Test Cases to a specific action
+* an optional **action** \(a server-side javascript action\) to invoke just before testing the current one; helpful to setup all data needed to run repeatable tests
+* an optional **action** \(a server-side javascript action\) whose content must be appended at the beginning of the verifying code executed at the end of the test; this javascript code represent base code to include in multiple tests, sharing the same verifying logic
 * an optional **automated test** to invoke just before testing the current one; helpful in scenarios where there are tests connected to each other, like when there is a test for the login and another which uses the authentication token retrieved by the login test.
 
 Once pressed the OK button, the Test Cases has been created and added to the list. At this point, it is possible to specify additional details for the test, for example: request parameters, headers, body content, tests to execute on the response.
@@ -119,7 +119,7 @@ In case of a request successfully executed, a green box is shown on the top, oth
 
 After the execution of each request, the corresponding Test script is automatically executed, if specified in the Tests folder: if it contains instructions like
 
-**utils.addCustomApplUserPar(name,value)**
+**utils.addCustomApplUserPar\(name,value\)**
 
 that value is stored in the current user session and can be referred in any subsequent request, through  reference.
 
@@ -140,3 +140,4 @@ The Generate Test window allows to specify the required information for creating
 * which **kind of Test Case** will be created, among 3 alternatives
 
 ![](../.gitbook/assets/test-gentestfromaction3.png)
+
