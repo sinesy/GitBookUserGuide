@@ -296,6 +296,7 @@
   * [SQL errors management](modules/sql-errors-management.md)
   * [Multidimensional pivot grid](modules/multidimensional-pivot-grid.md)
   * [Automated Testing](modules/automated-testing.md)
+  * [Quality](modules/quality.md)
 * [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises/README.md)
   * [Database design](best-practises/2-1-database-design.md)
