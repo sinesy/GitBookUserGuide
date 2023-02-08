@@ -104,7 +104,7 @@ When opening the window, local metadata is automatically loaded. In case there a
 
 When pressing the "**Fetch remote metadata**" button, a dialog is prompted to the user, in order to connect to the remote installation:
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 The base URL to the Platform installation must be specified, along with the credentials to access to the App Designer, using a remote user enabled to access to the App Designer to publish metadata.
 

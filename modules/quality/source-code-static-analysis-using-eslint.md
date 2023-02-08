@@ -50,7 +50,7 @@ Each time a developer saves the source code for the action, ESlint is invoked be
 
 In addition, in the actions list grid, the column named "Errors in static analysis" is refreshed with the outcome of the analysis:
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (21).png>)
 
 More precisely, a green mark is reported in case there are NOT any bugs. In case of warnings only, the mark remains green.
 
