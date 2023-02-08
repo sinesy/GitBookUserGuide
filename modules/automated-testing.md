@@ -28,7 +28,7 @@ Outcomes are also automatically saved in Platform Table Log feature, so that you
 
 This feature can be accessed through the App Designer menubar: **Services -> Automated Tests**
 
-![](../../.gitbook/assets/test-main.png)
+![](../.gitbook/assets/test-main.png)
 
 You can create as many Test Cases as you want. They are reported in the list on the left, filtered by **collection**. On top of this list there is a combo-box you can use to filter Tests Cases by collection. If not specified, all Tests Cases are reported.
 
@@ -36,7 +36,7 @@ The main part of the window is about the detail of the selected Test Case.
 
 You can **create a new Test Case** by pressing the **New** button on top of the list.
 
-![](../../.gitbook/assets/schermata-2021-03-11-alle-08.40.49.png)
+![](../.gitbook/assets/schermata-2021-03-11-alle-08.40.49.png)
 
 Here you have to specify:
 
@@ -95,7 +95,7 @@ Special variables are  which gets back the current digest value for a mobile app
 * testing expected values, like a response containing an attribute whose value is true
 * saving the response content or part of it and reuse it in the next requests.
 
-![](../../.gitbook/assets/test-forldertests.png)
+![](../.gitbook/assets/test-forldertests.png)
 
 You can specify variables expressed as  both in request parameters, request headers and body content. Predefined variables that do not require to be specified in Environment are: COMPANY\_ID, SITE\_ID, APPLICATION\_ID, APP\_VERSION, USERNAME, DAY, DOW, MONTH, TODAY, NOW, UUID, RANDOM, RANDOM10, RANDOM100, RANDOM1000, COUNTER
 
@@ -105,7 +105,7 @@ Moreover, a top-bar is included, in order to quickly change the URL and a series
 * **Save** - when pressed, the main area is saved, i.e. URL and all 4 folders content
 * **Environment** - this is a cross test case feature, used to define variables which can be referred through  variables in the folders described above. Platform is able to recognize special variable names and auto-set a value for them, when losing focus on the variable name. Recognized variables are: companyId, siteId, username, languageId, applicationId
 
-![](../../.gitbook/assets/test-env.png)
+![](../.gitbook/assets/test-env.png)
 
 ## How to execute a Test Case
 
@@ -115,7 +115,7 @@ When pressing it, the request is executed and when it ends, the response is repo
 
 In case of a request successfully executed, a green box is shown on the top, otherwise, the same box is red colored.
 
-![](../../.gitbook/assets/test.outcom.png)
+![](../.gitbook/assets/test.outcom.png)
 
 After the execution of each request, the corresponding Test script is automatically executed, if specified in the Tests folder: if it contains instructions like
 
@@ -131,7 +131,7 @@ Another way to create a Test Case is starting from a server-side action:
 * click on the **Generate Test** button, which will ask for retrieving the input parameters/headers/body
 * after confirming this dialog, another window is prompted.
 
-![](../../.gitbook/assets/test-gentestfromaction1.png)
+![](../.gitbook/assets/test-gentestfromaction1.png)
 
 The Generate Test window allows to specify the required information for creating a Test Case:
 
@@ -139,4 +139,4 @@ The Generate Test window allows to specify the required information for creating
 * a **Collection** the Test Case belongs to, through an editable combo-box
 * which **kind of Test Case** will be created, among 3 alternatives
 
-![](../../.gitbook/assets/test-gentestfromaction3.png)
+![](../.gitbook/assets/test-gentestfromaction3.png)
