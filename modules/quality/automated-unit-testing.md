@@ -104,5 +104,11 @@ The predefined :EXIT\_MESSAGE variable would generate HTML code containing the r
 
 
 
+Finally, it is also possible to integrate the unit test outcomes with a continuous integration tool like Jenkins, through a Platform web service:
+
+https://myhost/mywebapp/getActions/executeCollection?appId=...\&collection=...\&company...\&siteId=..\&username=..\&password=...
+
+This web service will provide an XML content in JUnit format, containing the outcomes for all unit tests belonging to the specified collection.
+
 
 

@@ -98,13 +98,13 @@ A few additional operations are available, apart form the metadata export:
 
 &#x20;This feature allows to compare local metadata (e.g. coming from the development environment) with metadata coming from a remote installation (e.g. production environment).
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 When opening the window, local metadata is automatically loaded. In case there are changed in metadata performed in the last few minutes, it is possibile to press again the "**Local metadata reload**" button to refresh local metadata.
 
 When pressing the "**Fetch remote metadata**" button, a dialog is prompted to the user, in order to connect to the remote installation:
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 The base URL to the Platform installation must be specified, along with the credentials to access to the App Designer, using a remote user enabled to access to the App Designer to publish metadata.
 
@@ -153,5 +153,5 @@ The **History** button shows all previous exports correctly finished, in order t
 
 When double clicking on a row, a detail window is shown, where the report of all metadata exported is prompted:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 

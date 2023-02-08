@@ -25,7 +25,7 @@ If you don't want to use a selector image, you can specify a **javascript busine
 
 The component id must be specified through the Additional config property, using the "compId" attribute.
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+![](<../../../.gitbook/assets/image (3).png>)
 
 Optionally, it is also possible to customize the dropdown items content through the **tpl** property you can specify in the Additional Config settings. For example, the default value for the tpl property, if not specified, is as follows:
 

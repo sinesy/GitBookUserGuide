@@ -31,7 +31,7 @@ Finally, ESlint must be invoked by Platform. In order to do it, you have first t
 
 Once completed these steps, you can start using ESlint: the next time the App Designer is opened, a new folder will be available in the action detail (for server-side/GAE js actions), where all bugs/smelling code is reported:
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 In this grid are reported all lines of code in the current action which could contain bugs or "smelling code". The columns in this grid are related to:
 
@@ -50,7 +50,7 @@ Each time a developer saves the source code for the action, ESlint is invoked be
 
 In addition, in the actions list grid, the column named "Errors in static analysis" is refreshed with the outcome of the analysis:
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 More precisely, a green mark is reported in case there are NOT any bugs. In case of warnings only, the mark remains green.
 
