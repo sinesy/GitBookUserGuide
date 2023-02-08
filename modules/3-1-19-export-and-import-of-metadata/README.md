@@ -22,7 +22,7 @@ Moreover, it is strongly recommended to pay attention to the **languages to expo
 
 Once done that, you are ready to import metadata by working on the target environment: open the same functionality and, this time, upload file .zip file previously exported in the “Application to upload” input field and press “Import Application” button.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
 
 Before doing it, you can optionally set a few settings just below the input field:
 
