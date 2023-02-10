@@ -16,6 +16,7 @@ In order to install it, follows these steps:
 * prepare a folder where Platform would save all action source code (e.g. /opt/actions/\<myApplicationId> ) and change dir to it
 * download NodeJS if not installed locally yet: **curl -sL https://deb.nodesource.com/setup\_17.x | sudo bash -**
 * install NodeJS: **sudo apt-get install -y nodejs**
+* **apt-mark hold nodejs**
 *   install ESlint: **npm init @eslint/config**
 
     ✔ How would you like to use ESLint? · style
