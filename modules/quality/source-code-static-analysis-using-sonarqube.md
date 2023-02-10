@@ -26,6 +26,7 @@ The remote agent to install where Platform server resides must be first download
 
     [https://docs.sonarqube.org/latest/analyzing-source-code/scanners/sonarscanner/](https://docs.sonarqube.org/latest/analyzing-source-code/scanners/sonarscanner/)&#x20;
 * Create the folder when uncompressing the .zip file (e.g. /opt/sonarscanner)
+* Open bin/sonarscanner file and include -Xmx1024m directive to increase the amount of memory available for this program, otherwise it could not be able to process thousands of source files
 *   Change the ownership to the folder and subfolders: chown platform:platform -R \*
 
     \
