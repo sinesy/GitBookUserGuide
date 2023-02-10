@@ -12,9 +12,41 @@ In order to use it, ESlint must be first installed in the same server where Plat
 
 In order to install it, follows these steps:
 
+* with sudo
+* prepare a folder where Platform would save all action source code (e.g. /opt/actions/\<myApplicationId> ) and change dir to it
 * download NodeJS if not installed locally yet: **curl -sL https://deb.nodesource.com/setup\_17.x | sudo bash -**
 * install NodeJS: **sudo apt-get install -y nodejs**
-* install ESlint: **npm init @eslint/config**
+*   install ESlint: **npm init @eslint/config**
+
+    ✔ How would you like to use ESLint? · style
+
+    ✔ What type of modules does your project use? · esm
+
+    ✔ Which framework does your project use? · none
+
+    ✔ Does your project use TypeScript? · No / Yes
+
+    ✔ Where does your code run? · browser
+
+    ✔ How would you like to define a style for your project? · guide
+
+    ✔ Which style guide do you want to follow? · google
+
+    ✔ What format do you want your config file to be in? · JavaScript
+
+    Checking peerDependencies of eslint-config-standard@latest
+
+    The config that you've selected requires the following dependencies:
+
+
+
+    eslint-config-standard@latest eslint@^8.0.1 eslint-plugin-import@^2.25.2 eslint-plugin-n@^15.0.0 eslint-plugin-promise@^6.0.0
+
+    ✔ Would you like to install them now? · No / Yes
+
+    ✔ Which package manager do you want to use? · npm
+
+
 * initialize it: **npm init**
 * change ownership of folders/files
 
@@ -22,10 +54,10 @@ In order to install it, follows these steps:
 
 Finally, ESlint must be invoked by Platform. In order to do it, you have first to setup a few application parameters available in the QUALITY group,  within the App Designer:
 
-* **ESlint bin path** - the ESlint installation path, including the subfolder "bin", i.e. where the executable command resides; something like  "/opt/eslint/node\_modules/eslint/bin"
-* **JUnit XML file path** - the output path where Platform will create XML files in JUnit format, related to the analysis outcome, for each action; something like "opt/xml/myapp/"; these output files can be helpful in an CI/CD environment like Jenkins, which can read this folder to fetch the analysis
+* **ESlint bin path** - the ESlint installation path, including the subfolder "bin", i.e. where the executable command resides; something like  "/opt/actions/myApplicationId/node\_modules/eslint/bin"
+* **JUnit XML file path** - the output path where Platform will create XML files in JUnit format, related to the analysis outcome, for each action; something like "opt/xml/myApplicationId/"; these output files can be helpful in an CI/CD environment like Jenkins, which can read this folder to fetch the analysis
 * **System commands path** - This path is needed to correctly execute ESlint, which depends on some system commands; something like:  "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin"
-* **Server side js actions path** - The path where Platform will save all action sources, used by ESlink to analyze them; something like: "/opt/actions/myapp/"
+* **Server side js actions path** - The path where Platform will save all action sources, used by ESlink to analyze them; something like: "/opt/actions/myApplicationId/"
 
 ## Using ESlint
 
