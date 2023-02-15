@@ -12,7 +12,9 @@ In order to use it, SonarQube must be first installed somewhere. It is not essen
 
 In order to install it, follows these steps:
 
-* Download the .zip image of SonarQube Community Edition: [https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.8.0.63668.zip](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.8.0.63668.zip)
+*   Download the .zip image of SonarQube Community Edition:
+
+    [https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.0.65466.zip](https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.0.65466.zip)
 * Create a folder where decompressing the .zip file (e.g. /opt/sonarqube)
 * Change the ownership for the folder and subfolders: chown platform:platform -R \*
 * set an env variable: export SONAR\_JAVA\_PATH=pathtojdk11/bin/java
