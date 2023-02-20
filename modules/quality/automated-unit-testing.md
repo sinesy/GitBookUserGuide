@@ -120,9 +120,9 @@ Test-driven development is a software development process relying on software re
 
 The test-driven development cycle is composed of 3 main steps:
 
-**1. **<mark style="color:red;">**Writing the tests first**</mark>**:** the tests should be written before the functionality that is to be tested. To say it in another way, decompose your functionality in functions, but declare functions, DO NOT define them and the function declaration should be carried out in terms of tests to perform: for each function declared, prepare a test for it, i.e. implement all the test but the corresponding function under test.&#x20;
+**1. **<mark style="color:red;">**Writing the tests first**</mark>**:** **the tests should be written before the functionality** that is to be tested. To say it in another way, decompose your functionality in functions, but declare functions, DO NOT define them and the function declaration should be carried out in terms of tests to perform: for each function declared, prepare a test for it, i.e. implement all the test but the corresponding function under test.&#x20;
 
-Since all functions composing the functionality are only declared but not implemented, all test case fails initially: this ensures that the test really works and can catch an error: this is the **red** state.
+Since all functions composing the functionality are only declared but not implemented, **all test case fails initially**: this ensures that the test really works and can catch an error: this is the **red** state.
 
 **2. **<mark style="color:green;">**Implementing the functions under test**</mark>: once the test cases have been implemented and "work", the underlying functionality can be implemented, let's say in the simplest naive way.&#x20;
 
