@@ -120,12 +120,12 @@ Test-driven development is a software development process relying on software re
 
 The test-driven development cycle is composed of 3 main steps:
 
-**1. Writing the tests first:** the tests should be written before the functionality that is to be tested. To say it in another way, decompose your functionality in functions, but declare functions, DO NOT define them and the function declaration should be carried out in terms of tests to perform: for each function declared, prepare a test for it, i.e. implement all the test but the corresponding function under test.&#x20;
+**1. **<mark style="color:red;">**Writing the tests first**</mark>**:** the tests should be written before the functionality that is to be tested. To say it in another way, decompose your functionality in functions, but declare functions, DO NOT define them and the function declaration should be carried out in terms of tests to perform: for each function declared, prepare a test for it, i.e. implement all the test but the corresponding function under test.&#x20;
 
 Since all functions composing the functionality are only declared but not implemented, all test case fails initially: this ensures that the test really works and can catch an error: this is the **red** state.
 
-**2. Implementing the functions under test**: once the test cases have been implemented and "work", the underlying functionality can be implemented, let's say in the simplest naive way.&#x20;
+**2. **<mark style="color:green;">**Implementing the functions under test**</mark>: once the test cases have been implemented and "work", the underlying functionality can be implemented, let's say in the simplest naive way.&#x20;
 
 Test-driven development constantly repeats the steps of adding test cases that fail and then passing them (**green** state).
 
-**3. Refactoring**: the "test-driven development mantra" is the "red/green/refactor" cycle, where red means fail and green means pass: the refactoring of the functions under test is needed for readability and maintainability. In particular, hard-coded test data should be removed. Running the test suite after each refactor helps ensure that no existing functionality is broken.
+**3. **<mark style="color:yellow;">**Refactoring**</mark>: the "test-driven development mantra" is the "red/green/refactor" cycle, where red means fail and green means pass: the refactoring of the functions under test is needed for readability and maintainability. In particular, hard-coded test data should be removed. Running the test suite after each refactor helps ensure that no existing functionality is broken.
