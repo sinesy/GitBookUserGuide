@@ -67,7 +67,26 @@ The first time the folder is opened, Platform proposes 2 fixed methods:
 * **setUpBeforeClass** (as in JUnit),  where the developer can include js code to initialize the test case: it will be invoked by Platform before executing the xxxMethodName functions
 * **tearDownAfterClass** (as in JUnit),  where the developer can include js code to remove data or anything else at the end of the test case: it will be invoked by Platform after executing the xxxMethodName functions
 
-In addition, there is a **xxxMethodName** function, for each method found in the server-side js action.
+In addition, there is a **testxxx** function, for each method found in the server-side js action.&#x20;
+
+Within each testxxx method, you are free to use all js functions available.&#x20;
+
+Moreover you can also set which user to use when executing the test case/action under test, through the following js function:
+
+```
+utils.setUserInfo(String companyId,Long siteId,String username,String languageId)
+```
+
+Finally, a test case method should always contain assertions. These are the available methods:
+
+```
+assertEquals(expected,actual)
+assertNotEquals(expected,actual)
+assertTrue(expected)
+fail(msg)
+```
+
+### Executing a test case
 
 The last button in the toolbar allows to execute manually the unit test and a dialog is prompted at the end to report the results.
 
