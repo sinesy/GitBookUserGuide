@@ -50,6 +50,7 @@
         * [Columns properties](core-features/defining-the-ui/3-1-app-designer/3-1-8-panels-list/3-1-8-2-columns-properties.md)
         * [Controls properties](core-features/defining-the-ui/3-1-app-designer/3-1-8-panels-list/3-1-8-4-controls-properties.md)
         * [Filter properties](core-features/defining-the-ui/3-1-app-designer/3-1-8-panels-list/3-1-8-6-filter-properties.md)
+        * [Supported components](core-features/defining-the-ui/3-1-app-designer/3-1-8-panels-list/supported-components.md)
       * [Variables](core-features/defining-the-ui/3-1-app-designer/3-1-9-variables.md)
       * [Code selectors](core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors/README.md)
         * [When not to use a dynamic combo-box](core-features/defining-the-ui/3-1-app-designer/3-1-10-code-selectors/3-1-10-1-when-not-to-use-a-dynamic-combo-box.md)
