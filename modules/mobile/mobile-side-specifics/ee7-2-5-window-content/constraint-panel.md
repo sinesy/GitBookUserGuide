@@ -4,7 +4,7 @@
 
 A constraint panel can contains multiple panels, you can anchor panels freely using constraints. If you have many panels you could for example place a constraint panel in the center of the window and add all the other panels here, or you can combine the border layout and the constraint panels.
 
-![This is an example.](<../../../../.gitbook/assets/image (1) (1).png>)
+![This is an example.](<../../../../.gitbook/assets/image (1) (1) (1).png>)
 
 You can specify the constraints for each panel inside a constraint panel, use the Layout Constraint folder.
 

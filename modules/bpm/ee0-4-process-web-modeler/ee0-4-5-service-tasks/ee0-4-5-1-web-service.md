@@ -10,7 +10,7 @@ Id and Name: they identity the task and they are mandatory; be sure NOT to inclu
 
 You can simply select the corresponding value from the combobox: "Platform Web Service":
 
-![](<../../../../.gitbook/assets/image (23).png>)
+![](<../../../../.gitbook/assets/image (23) (1).png>)
 
 * **Class fields**: in this list of fields, a set of properties must be defined, in order to correctly define the web service invocation:
   * name: property name to refer

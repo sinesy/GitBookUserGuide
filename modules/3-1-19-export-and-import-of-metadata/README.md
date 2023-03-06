@@ -153,5 +153,5 @@ The **History** button shows all previous exports correctly finished, in order t
 
 When double clicking on a row, a detail window is shown, where the report of all metadata exported is prompted:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption></figcaption></figure>
 
