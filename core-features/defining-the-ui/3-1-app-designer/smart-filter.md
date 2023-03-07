@@ -19,7 +19,7 @@ Note that the Operator property is useless, since the filters to apply to the gr
 
 The **image selector** is used to define the fields on which it is possible to search and the optional icon.
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (1).png>)
 
 If you don't want to use a selector image, you can specify a **javascript business component**, where you are free to define the fields to search. A business component is helpful in case you want to customize the behavior of the combobox and return a dynamic content, according to the text typed. However, it is not recommended to "pre-search" data in this business component, because the user experience can degrade because of the wait time for the additional queries.
 

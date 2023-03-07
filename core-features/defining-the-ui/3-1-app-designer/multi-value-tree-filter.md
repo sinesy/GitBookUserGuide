@@ -17,7 +17,7 @@ Before that, you have to configure a selector having type "Selector from panel":
 
 For this selector, you can specify the **tpl** for the selected item; if not specified, the default behavior is showing in the chip the code + description for the node.
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (1).png>)
 
 If you want to show only the description or any other combination of attributes, you have top use "tpl" property.
 

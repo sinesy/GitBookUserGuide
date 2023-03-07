@@ -149,7 +149,7 @@ Finally, when pressing the **Metadata** **Export** button, the remote export is 
 
 The **History** button shows all previous exports correctly finished, in order to figure out what was exported in the past and by whom:
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
 
 When double clicking on a row, a detail window is shown, where the report of all metadata exported is prompted:
 

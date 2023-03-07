@@ -20,7 +20,7 @@ You can select an item and the control shows the relative chip. After that, you 
 
 You can remove a chip by clicking on the X within it or remove all chips by clicking on the X on the right of the combobox.
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (17) (1).png>)
 
 When you click on the search button, an IN type filter condition is applied to the grid with the selected values.
 
