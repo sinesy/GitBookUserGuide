@@ -60,7 +60,7 @@ In this way, functions can be tested separately and in a specific order.
 
 Platform provides a new folder to prepare unit tests:
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26) (1).png" alt=""><figcaption></figcaption></figure>
 
 The first time the folder is opened, Platform proposes 2 fixed methods:
 
@@ -92,7 +92,7 @@ The last button in the toolbar allows to execute manually the unit test and a di
 
 Moreover, the list of actions is updated with the outcome of the test execution (red vs green).
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (1).png>)
 
 Note that an empty cell means that there is not a unit test defined.
 

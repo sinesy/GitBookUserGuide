@@ -13,11 +13,11 @@ You can configure the control in the Input Controls folder, by selecting the typ
 
 Before that, you have to configure a selector having type "Selector from panel":
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 For this selector, you can specify the **tpl** for the selected item; if not specified, the default behavior is showing in the chip the code + description for the node.
 
-![](<../../../.gitbook/assets/image (10) (1).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 If you want to show only the description or any other combination of attributes, you have top use "tpl" property.
 
@@ -25,7 +25,7 @@ In the web application, the end user can open the tree panel through the button 
 
 The control shows a chip for every selected node.
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11) (1) (1).png>)
 
 To apply the filter on the grid you need to use the "**before search**" event to include the filter condition, since the filtering logic for a tree where you can check very different nodes is too complex to be automated. You can access to the selected codes (i.e. the list of unique identifiers for each selected node), through the combo method **getValue()**;
 

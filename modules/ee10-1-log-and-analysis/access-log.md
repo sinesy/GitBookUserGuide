@@ -13,7 +13,7 @@ In the **Access Log** tab, a few information are reported:
 * browser IP
 * Checkbox - selected when the login failed due to back list policy matching
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (21) (2).png>)
 
 Moreover, the client time zone is also saved, along with the other data reported above, in the CON60\_LOGS table.
 

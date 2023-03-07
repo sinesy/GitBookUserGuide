@@ -9,4 +9,4 @@ The "Description" column is not actually used by the process: it is only provide
 
 You can set a different value of param for each company. If you not set a value for company the process use a default value.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>

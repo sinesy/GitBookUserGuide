@@ -112,7 +112,7 @@ Once pressed the "Metadata remote import" button, metadata is retrieved from the
 
 Once completed the comparison, a tree is rendered, showing only new/changed metadata, available in the local env but not in the remote env:
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure>
 
 Instead of showing new/changed metadata in a plain list, it is grouped hiearchically, in order to make it easier for the dev to figure out all metadata to send, related to a specific functionality.
 
@@ -149,7 +149,7 @@ Finally, when pressing the **Metadata** **Export** button, the remote export is 
 
 The **History** button shows all previous exports correctly finished, in order to figure out what was exported in the past and by whom:
 
-<figure><img src="../../.gitbook/assets/image (8) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 When double clicking on a row, a detail window is shown, where the report of all metadata exported is prompted:
 
