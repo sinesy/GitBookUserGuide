@@ -108,6 +108,12 @@ Pre-requisite: the WEB-INF/web.xml file must have been set with "cluster" tag va
 
 **Protocol for the messages main node (opt.)** - this parameter must be filled together with the previous one: it represents the HTTP protocol to use (http vs https) to use when communicating with the internal Tomcat where the main current node is listen for requests
 
+**Check message policy** - this parameter defines how alert messages are checked out, among 3 alternative approaches:
+
+* Check real time on all server - in case of a cluster of nodes, a message generated on one node is sent to all other nodes in real time
+* Check messages every 45 secs - in case of a cluster of nodes, a message generated on one node is saved on the database and polled every 45 seconds by all other servers
+* Check real time on central node - a message is sent to a single node (for no cluster environments)
+
 
 
 ### **ALFRESCO**&#x20;
