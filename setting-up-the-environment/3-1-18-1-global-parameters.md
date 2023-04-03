@@ -539,13 +539,13 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 ****
 
-## **SAML**
+### **SAML**
 
 **Enable debug in SAML authentication** - checkbox used to enable debug when authenticating via SAML; helpful when testing for the first time the SAML authentication
 
 **Enable SAML authentication** - checkbox used to enable SAML authentication; if not selected, the SAML metadata web service and the SAML authentication will not work
 
-**List of appId,actionId for authentication management** - list of couples applicationId,actionId where each couple is separated by a semicolon ; the server-side js action is invoked each time the SAML authentication is valid and the ACP Platform web service has been invoked; the action can read the request (reqParams) and header (vo) parameters and use them to retrieve the real Platform user to logon.&#x20;
+**List of appId,actionId for authentication management** - list of couples applicationId,actionId where each couple is separated by a semicolon ; the server-side js action is invoked each time the SAML authentication is valid and the ACP Platform web service has been invoked; the action can read the request body (vo) and request headers (reqHeaders) and use them to retrieve the real Platform user to logon.&#x20;
 
 The returned JSON must have the following format:&#x20;
 
