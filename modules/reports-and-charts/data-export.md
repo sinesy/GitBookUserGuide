@@ -186,6 +186,15 @@ In case the export is automatically started by the Scheduler, all required value
 
 If there are bind variables not filled, the export process will fail with an error.
 
+There are a few defaut parameters, having a specific name, which can be used to drive the export behavior:
+
+* **EXPORT\_THREAD\_NR** - an optional number; it represents the number of threads to use when exporting data to Datastore, in order to speed up the writing process; if not specified, it is set to 25
+* &#x20;**MAX\_WRITING\_OPS** - an optional number; it represents the max number of writing operations allowed when exporting data to Datastore; if not specified, no checking is carried out
+* **ERROR\_ON\_MAX\_WO** - an optional flag having Y/N values; if not specified, no checking is carried out; if set to "Y", an exception is fired when the max nr of writing ops is reached&#x20;
+* **WRITING\_OPS** - an optional number; it represents the number of writing operations per block; if not set, its default is 25 (compatible with the Datastore mode)
+
+
+
 ## Scheduling data export
 
 Platform Scheduler includes 3 alternative ways to automate the data export execution.

@@ -8,7 +8,7 @@ A constraint panel can contains multiple panels, you can anchor panels freely us
 
 You can specify the constraints for each panel inside a constraint panel, use the Layout Constraint folder.
 
-![](<../../../../.gitbook/assets/image (1) (2).png>)
+![](<../../../../.gitbook/assets/image (1) (2) (1).png>)
 
 You can also change the constraints runtime using the specific API, see the Javascript API docs.
 
