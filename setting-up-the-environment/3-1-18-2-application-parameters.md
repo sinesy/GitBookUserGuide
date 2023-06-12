@@ -104,7 +104,7 @@ The default CSS settings for text and icon in the desktop are of the application
 
 ```
 
-****
+
 
 **Customize Datastore** - can be either an action id or a full java class name (namespace included); if set, the action/java class will be invoked each time the application has defined objects (i.e. tables) available in different database schemas, i.e. an object representing the same table in different database schema, typical in a multi-tenancy application, where you have an ad hoc schema for each tenant and all schemas have the same tables in terms of structure but different data stored; this class is invoked and has to provide the right datasource id to use each time
 
@@ -490,11 +490,15 @@ This section is used in case your application uses Google Map feature and show a
 
 ### MOBILE
 
-Fee-paying mobile app (Y/N def. N)
+**Fee-paying mobile app (Y/N def. N)** -&#x20;
 
-Google key for autocomplete place in iOS
+**Google key for autocomplete place in iOS** -&#x20;
 
-Google key for autocomplete place in Android
+**Google key for autocomplete place in Android** -&#x20;
+
+**Max nr. of records readonly to prepare during a sync** - optional numeric value, representing the maximum number of records read form Datastore database, when synchronizing a read only table. All records over that value will not be extracted immediately; consequently, the mobile database will be smaller and created in a few seconds. All other records will be extracted on a separated thread, independent from the main sync process. When all remaining data will be ready, a new sqlite database will be prepared and uploaded as a compressed zip file to GCS. Finally, a push notification is sent to the mobile app, in order to force it to download this second database and merge it.&#x20;
+
+**important note:** if you fill in this application parameter, you MUST also enable push notifications in the mobile app.
 
 
 
@@ -563,7 +567,7 @@ To enable this feature, the following parameters must be set in the general conf
 
 **Sources for the sync process groups/users** - semicolon (“;”) separated list of sources to get information from. Possible values are: GOOGLE, LDAP. Default: empty list
 
-****
+
 
 **Note**: To configure more than one source per type (LDAP1, LDAP2, …) use this syntax: LDAP1;LDAP2. Where LDAP1/2 is the prefix of the source.
 
