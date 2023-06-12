@@ -8,7 +8,7 @@ The followings are global parameters, grouped per topic:
 
 ### 4WS.PLATFORM
 
-**Database version** - readonly parameter, automatically set by Platform when its service is started; it reports the current version of the database/application. ****&#x20;
+**Database version** - readonly parameter, automatically set by Platform when its service is started; it reports the current version of the database/application.&#x20;
 
 **Index page file** - optional parameter used to define which is the main page for applications.
 
@@ -40,7 +40,7 @@ https://yourhouse/platform/
 
 **Allow the use of additional filters (low security)** - it is strongly recommended NOT to select this checkbox: if you select it, you can pass forward from the UI to the server layer additional SQL conditions which could represent a security leak (SQL injection).
 
-**Create EntityManager for additional sources (list of packages)** - ****&#x20;
+**Create EntityManager for additional sources (list of packages)** - &#x20;
 
 **Do not allow to pass a SQL filter on panel loading** - checkbox used to block any additional condition when invoking the standard web service getlist, used to fetch a list of records (for a grid or a selector). If not checked, it is allowed to pass a SQL fragment to the base SQL query executed on the server side, which would represent a SQL injection risk.
 
@@ -127,7 +127,7 @@ parameters related to the ECM module
 * sync roles in Alfresco
 * sync user roles in Alfresco
 
-### ****
+###
 
 ### **APP ANALYSIS**&#x20;
 
@@ -141,13 +141,13 @@ Parameters related to the tool used to perform an assessment of the app
 
 **Subject to use in SMS/email after an app analysis** - in case of notification by email, this parameter must be filled in as well.
 
-### ****
+###
 
 ### **DOCX CONVERSION**&#x20;
 
 parameters related to the services which allow to convert documents to the PDF format
 
-### ****
+###
 
 ### **EXPORT**
 
@@ -173,7 +173,7 @@ In any case, it is possible to use different libraries to execute the export. No
 
 **Path LibreOffice for export** - to fill in only in case the checkbox "Export to xlsx using HSSF library (Y/N def. N)".
 
-### ****
+###
 
 ### **FILE UPLOAD**&#x20;
 
@@ -191,7 +191,7 @@ Parameters used to manage the file upload
 
 **(opt.) Autodefine file name for uploaded files** - in order to ensure file names uniqueness, it is a good idea to select this checkbox: in this way, all uploaded files are automatically renamed to a unique name and cannot in any way override existing files.
 
-### ****
+###
 
 ### **GOOGLE**&#x20;
 
@@ -265,7 +265,7 @@ indicating two string fields.
 
 
 
-****
+
 
 ### **LDAP**&#x20;
 
@@ -293,7 +293,7 @@ parameters used to integrate the app with an LDAP server, like MS Active Directo
 * (optional) field types to manage in LDAP groups
 * (optional) LDAP attribute for group id
 
-### ****
+###
 
 ### LOGS
 
@@ -399,7 +399,7 @@ The same parameters can also be redefined at application level.
 
 
 
-****
+
 
 ### **MOBILE**&#x20;
 
@@ -427,12 +427,14 @@ For more details see:
 
 **Email subject to notify** - the email subject to use when sending notification emails.
 
-****\
+\
 **Company id list to replace (e.g. 00000=A0000,00001=A0001)** - Fill in this parameter only in the questionable scenario where you are retrieving data from a remote application where data has been stored with a company id different from the one you are using in the current server and you want to match data of the two environments. In such a case, you can replace the company id value coming from the remote data and replace it with the one you specify through this parameter. By and large, you can specify a list of replacements (a list of company ids to replace and the new values).
 
+**Max nr. of records readonly to prepare during a sync** - optional numeric value, representing the maximum number of records read form Datastore database, when synchronizing a read only table. All records over that value will not be extracted immediately; consequently, the mobile database will be smaller and created in a few seconds. All other records will be extracted on a separated thread, independent from the main sync process. When all remaining data will be ready, a new sqlite database will be prepared and uploaded as a compressed zip file to GCS. Finally, a push notification is sent to the mobile app, in order to force it to download this second database and merge it.&#x20;
 
+**important note:** if you fill in this application parameter, you MUST also enable push notifications in the mobile app.
 
-### ****
+###
 
 ### **PASSWORD**&#x20;
 
@@ -517,7 +519,7 @@ If this checkbox is selected, a user not having roles assigned yet, would inheri
 
 **Default value for login controls** - ?
 
-### ****
+###
 
 ### **REDIS**&#x20;
 
@@ -537,7 +539,7 @@ parameters used to manage the integration with a shared cache for user sessions,
 
 **VPC name** - in case of auto creation/destroy of the Google service based on Redis, this value represents the VPN name used by Redis and by the Compute Engine instances where Platform is running
 
-****
+
 
 ### **SAML**
 
@@ -613,7 +615,7 @@ In case the user is not recognized a JSON having this format should be returned:
 
 **Identity Service Provider Fingerprint algorithm** - to set according to the agreement defined with the Identity Provider (SAML server provider)
 
-****
+
 
 **Note 1**
 
@@ -627,9 +629,9 @@ In order to execute the SAML authentication, you have to set all mandatory setti
 
 https://myhost/platformwebcontext/4ws/saml/index.jsp?appId=MYAPPID
 
-****
 
-****
+
+
 
 ### **SCHEDULER**&#x20;
 
@@ -643,7 +645,7 @@ Parameters used by the scheduler module
 
 
 
-****
+
 
 ### **UI**&#x20;
 
@@ -678,7 +680,7 @@ Moreover, a legend explaining the meaning of the (\*) is reported at the bottom 
 
 When the checkbox "View asterisk on mandatory controls**"** (described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
-### ****
+###
 
 ### &#x20;
 
