@@ -496,9 +496,7 @@ This section is used in case your application uses Google Map feature and show a
 
 **Google key for autocomplete place in Android** -&#x20;
 
-**Max nr. of records readonly to prepare during a sync** - optional numeric value, representing the maximum number of records read form Datastore database, when synchronizing a read only table. All records over that value will not be extracted immediately; consequently, the mobile database will be smaller and created in a few seconds. All other records will be extracted on a separated thread, independent from the main sync process. When all remaining data will be ready, a new sqlite database will be prepared and uploaded as a compressed zip file to GCS. Finally, a push notification is sent to the mobile app, in order to force it to download this second database and merge it.&#x20;
 
-**important note:** if you fill in this application parameter, you MUST also enable push notifications in the mobile app.
 
 
 
