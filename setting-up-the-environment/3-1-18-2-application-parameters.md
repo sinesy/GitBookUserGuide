@@ -191,6 +191,8 @@ It is strongly recommended to select it.
 
 It is strongly recommended to select it.
 
+**Interpreter type** (since 6.0.3) - you can set the type of web application interpreter
+
 
 
 ### ACTIVITI

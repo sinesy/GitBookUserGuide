@@ -68,7 +68,7 @@ It is strongly recommended to select it.
 
 Pay attention that in case of changes in a client-side js action, you have still to reload the web application on your browser, since the code has been already loaded, but the web app reloading will be faster, since no metadata loading process is needed.
 
-**Smart theme for App Designer** - when selected, the App Designer (applications index, login page and the IDE) will be rendered using a smart theme.
+**Smart theme for App Designer** - when selected, the App Designer (applications index, login page and the IDE) will be rendered using a smart theme.&#x20;
 
 
 
@@ -680,7 +680,11 @@ Moreover, a legend explaining the meaning of the (\*) is reported at the bottom 
 
 When the checkbox "View asterisk on mandatory controls**"** (described above) is selected and ALSO this checkbox is selected, a legend explaining a the meaning of the (\*) is reported at the bottom of each panel and ONLY for the subpanels containing at least one mandatory controls. Consequently, the window containing subpanels would consume lesser space in height, since the number of legends to show is minimized.
 
-###
+### Firebase&#x20;
 
-### &#x20;
+Parameters used by the Firebase
+
+**JSON Service Account (Base64 encoded)** (since 6.0.2): this is the service account key for Firebase. You must generate the key from Firebase console and encode it in base64.
+
+**Companies and sites to use when creating users/groups from Firebase** (opt. - COMP1,SITE1;COMP2,SITE2) (since 6.0.2): you can set the couples of company and site to create user from Firebase, after login.
 
