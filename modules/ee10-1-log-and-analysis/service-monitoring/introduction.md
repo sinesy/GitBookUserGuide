@@ -1,7 +1,7 @@
 # Introduction
 
-&#x20; ****  \
-****This module is able to trace the execution of the following **services**:
+&#x20; \
+This module is able to trace the execution of the following **services**:
 
 * data export from SQL query
 * web service remote invocation

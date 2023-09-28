@@ -29,7 +29,7 @@ In case of a process currently running and the "forceRunning" argument se to fal
 
 **{ success: false, errorCode: "ALREADY\_RUNNING" }**
 
-****
+
 
 **Note**: the javascript function is synchronous, that is to say, it lasts as long as the process lasts.
 

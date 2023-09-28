@@ -131,6 +131,7 @@
       * [Google OAuth2](modules/sso/google-sso/ee5-google-oauth2.md)
       * [Identity management based on Google SSO](modules/sso/google-sso/ee6-1-3-identity-management-based-on-google-sso.md)
     * [Custom SSO](modules/sso/custom-sso.md)
+    * [Firebase](modules/sso/firebase.md)
   * [Mobile](modules/mobile/README.md)
     * [Mobile introduction](modules/mobile/ee7-1-mobile-introduction.md)
     * [Offline vs Online](modules/mobile/ee7-2-main-features/README.md)

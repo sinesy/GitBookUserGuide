@@ -1,7 +1,7 @@
 # Defining a service to monitor
 
-&#x20; ****  \
-****The App Designer menu-bar provides the “**Monitoring Services” ->“Monitoring services**” submenu through which it is possible to define any number of services to track.
+&#x20; \
+The App Designer menu-bar provides the “**Monitoring Services” ->“Monitoring services**” submenu through which it is possible to define any number of services to track.
 
 ![](https://lh5.googleusercontent.com/rN4424PTxWdB9jxbqeYIAGzWW3JxM8vhwyT9RCZFumFV0da4FQqHWoL7cPgbOKzKGd\_SlzriTfZxL7P942Hr4vj8StFV5bFzstUgeKSkTiCa2Rf\_SNHW6Hs5HDgjkNdo6IyLTrmx)
 

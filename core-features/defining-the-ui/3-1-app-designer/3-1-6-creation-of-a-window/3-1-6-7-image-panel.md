@@ -25,7 +25,7 @@ You can set up a Preview Panel in these ways:
   * Preview Format: HTML Template
   * URI/resource to show: the HTML template to select; this HTML template should contain a static URL or a dynamic URL where part of it is parameterized as :XXX variables; these variables are replaced on the server side, starting from the internal state.
 
-****
+
 
 ### **Filling in the Preview content**
 

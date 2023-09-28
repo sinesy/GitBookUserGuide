@@ -1,7 +1,7 @@
 # Service Monitoring
 
-&#x20; ****  \
-****Example of a distributed system:
+&#x20; \
+Example of a distributed system:
 
 ![](https://lh3.googleusercontent.com/mD\_WFcgcaFebYB737QiDcY6M7fInG0uJC7hTVsUB\_BiOF8o4-zJfoAnDecbyWAIwwZKXlzrKSwqXqPS2KEHftlXkYemBNCO-wEPe4cQxl4wn0ITtyOUXbi5YTyVxMO3at-oelacx)
 

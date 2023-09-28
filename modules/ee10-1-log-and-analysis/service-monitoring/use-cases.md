@@ -1,6 +1,6 @@
 # Use cases
 
-****\
+\
 **How to define monitored services across multiple Platform servers**
 
 Suppose you have multiple Platform applications, connected with each others through web service remote invocations. A specific data flow born on the first server would extend itself to the second one.

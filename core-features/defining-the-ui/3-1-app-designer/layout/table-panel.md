@@ -50,7 +50,7 @@ tableLayoutWidth: "Y",
 tableLayoutSetSize: "Y",
 ```
 
-****
+
 
 #### **Common errors**
 

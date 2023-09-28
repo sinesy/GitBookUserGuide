@@ -18,7 +18,7 @@ In order to export metadata, you have to work on the starting environment where 
 
 Through the “Metadata application management” folder, you can export metadata: you have just to press on the “**Export Application**” button and wait for the .zip file produced by Platform. This .zip file can be downloaded and saved on your local file system.
 
-Moreover, it is strongly recommended to pay attention to the **languages to export**: **** it can happen that you are developing a multi language product and you have define many languages, but only a few of them are actually used in the target env where you wanna import metadata; in such a case, you'd better not to export all languages, but only the ones actually used. This approach can **significantly reduce the amount of time required to import metadata in the target environment**.
+Moreover, it is strongly recommended to pay attention to the **languages to export**: it can happen that you are developing a multi language product and you have define many languages, but only a few of them are actually used in the target env where you wanna import metadata; in such a case, you'd better not to export all languages, but only the ones actually used. This approach can **significantly reduce the amount of time required to import metadata in the target environment**.
 
 Once done that, you are ready to import metadata by working on the target environment: open the same functionality and, this time, upload file .zip file previously exported in the “Application to upload” input field and press “Import Application” button.
 
