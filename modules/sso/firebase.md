@@ -8,6 +8,8 @@ In Administration --> Global Parameters --> **Firebase** group
 
 You must set the JSON Service Account of Firebase project in base64 (you can get this file from the firebase console) and set the company-site for users creation.
 
+For user privacy, you can decide to hide the users data with "Anonymize users data" parameter.
+
 Example:
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
