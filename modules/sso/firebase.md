@@ -1,3 +1,7 @@
+---
+description: (since 6.0.3)
+---
+
 # Firebase
 
 4WS.Platform EE support Firebase Authentication for mobile applications.
