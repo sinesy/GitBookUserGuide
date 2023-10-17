@@ -26,6 +26,14 @@ gridXXX.store.baseParams.streamExport = "Y";
 // or 
 // (ii) the whole result set is fetched
 
+
+gridXXX.store.baseParams.bigQuery = "Y"; 
+// use this additional property to export in a temporary BigQuery table the content of the BigQuery table
+// read through a server-side js business component
+// linked to a JS type object.
+// Note: in case of a BigQuery type object, this parameter would not be needed
+
+
 ```
 
 * before data saving on copy mode
